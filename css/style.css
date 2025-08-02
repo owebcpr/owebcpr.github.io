@@ -951,6 +951,9 @@
   font-weight: 400;
   line-height: 23px;
 }
+.footer__info_576 {
+  display: none;
+}
 
 @media (max-width: 768px) {
   .footer {
