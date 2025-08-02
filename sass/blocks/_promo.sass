@@ -1,0 +1,170 @@
+﻿.promo
+    min-height: 570px
+    padding-top: 15px
+    background: url(../img/promo.png), url(../img/main-bg.jpeg)
+    background-repeat: no-repeat
+    background-position: center bottom, center top
+    background-size: auto, cover
+    position: relative
+    nav
+        position: fixed
+        top: 0px
+        left: 50%
+        transform: translateX(-50%)
+        z-index: 5
+        height: 40px
+        width: 100%
+        background-color: rgba(4, 36, 107, 0.8)
+    .hamburger
+        display: none
+
+    &-menu
+        height: 40px
+        list-style-type: none
+        margin: 0
+        padding: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        &__list
+            padding-left: 12.5px
+            padding-right: 12.5px
+        &__link
+            color: #f5f5f5
+            font-size: 16px
+            font-weight: 700
+            line-height: 20px
+            text-align: left
+            text-decoration: none
+            padding-bottom: 10px
+            &::after
+                content: ''
+                display: block
+                width: 0
+                height: 2px
+                background-color: #f5f5f5
+                transition: all .5s
+            &:hover
+                &::after
+                    width: 100%
+    &__h2
+        color: rgb(94, 148, 174)
+        font-size: 24px
+        font-weight: 700
+        line-height: 29px
+        text-align: center
+        padding-top: 60px
+    &__title
+        color: rgb(255, 255, 255)
+        font-size: 28px
+        font-weight: 700
+        line-height: 34px
+        text-align: center
+        margin-top: 20px
+    h1
+        color: rgb(255, 255, 255)
+        font-family: Playfair Display
+        font-size: 64px
+        font-weight: 700
+        line-height: 64px
+        text-align: center
+        &::before, &::after
+            content: '<h1> '
+            color: rgb(23, 95, 131)
+            font-family: Playfair Display
+            font-size: 40px
+            font-weight: 900
+            line-height: 53px
+            text-align: left
+        &::after
+            content: ' </h1>'
+
+    img
+        // width: 100%
+        display: block
+        margin-top: 40px
+        position: relative
+        left: 50%
+        bottom: 0
+        transform: translateX(-50%)
+@media(max-width: 992px)
+    .promo
+        min-height: 500px
+        background-size: contain, cover
+        &__h2
+            padding-top: 40px
+        h1
+            font-size: 51px
+            line-height: 51px
+            &::before, &::after
+                font-size: 36px
+        &__title
+            margin-top: 15px
+
+@media(max-width: 768px)
+    .promo
+        min-height: 375px
+        &__h2
+            font-size: 20px
+            padding-top: 15px
+        &__title
+            font-size: 26px
+            margin-top: 10px
+        h1
+            font-size: 42px
+            &::before, &::after
+                font-size: 21px
+        nav
+            background-color: transparent
+        &-menu
+            position: fixed
+            flex-direction: column
+            top: 0
+            left: -100%
+            width: 60%
+            height: 100vh
+            padding: 20px 15px
+            background-color: rgba(4, 36, 107, 0.8)
+            transition: 0.6s all
+            &_active
+                left: 0
+            &__list
+                margin-bottom: 10px
+                margin-top: 10px
+            &__link
+                text-transform: uppercase
+        .hamburger
+            display: block
+            position: absolute
+            right: 10px
+            top: 50%
+            transform: translateY(-50%)
+            width: 26px
+            height: 15px
+
+            span
+                display: block
+                width: 100%
+                height: 2px
+                background-color: #b7b6b6
+                margin-bottom: 3px
+                transition: all 1s
+            &_active
+                span
+                    &:nth-child(1)
+                        transform: translateY(5px) rotate(-45deg)
+                    &:nth-child(2)
+                        display: none
+                    &:nth-child(3)
+                        transform: translateY(0px) rotate(45deg)
+@media(max-width: 576px)
+    .promo
+        min-height: 345px
+        h1
+            font-size: 32px
+            line-height: 35px
+            margin-top: 10px
+            &::before, &::after
+                display: none
+        &-menu
+            width: 80%

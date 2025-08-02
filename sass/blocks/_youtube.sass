@@ -1,0 +1,40 @@
+﻿.youtube
+    min-height: 423px
+    background: linear-gradient(180.00deg, rgb(26, 88, 144) 0%,rgb(120, 170, 216) 161.765%)
+    padding: 55px 0
+    text-align: center
+    &__video
+        margin: 20px 0
+        display: flex
+        justify-content: space-around
+        flex-wrap: wrap
+
+        iframe
+            width: 350px
+            height: 198px
+            box-shadow: 3px 3px 15px #083f91
+            margin: 10px
+    &__logo
+        width: 100%
+        max-width: 500px
+    &__text
+        color: #afddf5
+        a
+            color: #faf2ad
+            text-decoration: none
+            &:hover
+                text-decoration: underline
+
+@media(max-width: 576px)
+    .container
+        padding-left: 0
+        padding-right: 0
+    .youtube
+        padding-top: 20px
+        &__video
+            iframe
+                width: 300px
+                height: auto
+        &__logo
+            width: 80%
+

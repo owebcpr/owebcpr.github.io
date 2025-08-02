@@ -1,0 +1,52 @@
+﻿.carousel
+    height: 690px
+    padding: 55px 0
+    &__wrapper
+        max-width: 700px
+        width: 100%
+        margin: 50px auto 0
+        position: relative
+    &__slider
+        max-width: 100%
+        overflow: hidden
+        &-line
+            display: flex
+            transition: all ease 1s
+            // img
+            //     width: 100%
+    &__prev, &__next
+        background: none
+        border: none
+        position: absolute
+        top: 50%
+        cursor: pointer
+    &__prev, &__next
+        &:active
+            img
+                display: block
+                width: 35px
+    &__prev
+        transform: translate(-50px, -50%)
+        img
+            transform: rotate(180deg)
+    &__next
+        right: 0
+        transform: translate(50px, -50%)
+@media(max-width: 815px)
+    .carousel
+        min-height: 500px
+        height: auto
+        padding-top: 30px
+        padding-bottom: 50px
+        &__wrapper
+            margin-top: 30px
+        &__prev
+            transform: translate(10px, -50%)
+        &__next
+            transform: translate(-10px, -50%)
+@media(max-width: 576px)
+    .carousel
+        padding-top: 20px
+        min-height: 330px
+        height: auto
+        padding-bottom: 30px

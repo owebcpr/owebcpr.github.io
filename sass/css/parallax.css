@@ -1,0 +1,5 @@
+.parallax {
+  height: 100vh;
+  background: url(../img/bg1.jpg) center/cover no-repeat;
+  background-attachment: fixed;
+}/*# sourceMappingURL=parallax.css.map */

@@ -1,0 +1,73 @@
+﻿.program
+    margin-top: 60px
+    padding-top: 30px
+    padding-bottom: 50px
+    min-height: 300px
+    background-color: #fff
+    border-radius: 33px
+    &__wrapper, &__prevent
+        margin: 50px auto 0
+        max-width: 860px
+        width: 100%
+    &__item
+        position: relative
+        width: 100%
+        min-height: 40px
+        padding: 8px 28px 0px 40px
+        border-bottom: 2px solid #e6eff6
+        margin-bottom: 20px
+        transition: .5s all
+    &__title
+        color: rgb(24, 24, 24)
+        font-size: 16px
+        font-weight: 400
+        line-height: 20px
+        text-align: left
+    &__btn
+        display: block
+        position: absolute
+        top: 10px
+        right: 50px
+        border: none
+        background: none
+        -webkit-transition: 1s all
+        transition: 1s all
+        cursor: pointer
+        &_active
+            transform: rotate(180deg)
+            top: 20px
+
+        svg
+            cursor: pointer
+
+    &__content
+        max-height: 0
+        overflow: hidden
+        padding-top: 20px
+        padding-left: 20px
+        color: #054173
+        font-size: 16px
+        font-weight: 400
+        line-height: 20px
+        text-align: left
+        transition: .5s all
+        ul
+            margin-bottom: 20px
+            li
+                margin-top: 5px
+    &__link
+        text-decoration: none
+        color: #1565db
+        &:hover
+            text-decoration: underline
+@media(max-width: 576px)
+    .program
+        margin-top: 10px
+        &__item
+            padding-left: 20px
+            padding-right: 20px
+        &__title
+            max-width: 500px
+            margin-right: 40px
+        &__btn
+            right: 20px
