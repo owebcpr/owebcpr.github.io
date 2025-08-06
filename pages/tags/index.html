@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML-теги та атрибути</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Комунальний заклад – центр позашкільної роботи Путивльської міської ради</h1>
+    </header>
+
+    <main>
+        <h2>Теги – як основа HTML</h2>
+        <p>HTML-сторінки будуються з тегів. Теги — це інструкції для браузера, які пояснюють, як саме відображати вміст.
+        </p>
+
+        <p>Основні теги виглядають ось так:</p>
+        <pre><code class="language-html">
+&lt;p&gt;Це абзац&lt;/p&gt;
+&lt;h1&gt;Заголовок&lt;/h1&gt;
+&lt;a href="https://example.com"&gt;Посилання&lt;/a&gt;
+  </code></pre>
+
+        <h3>Основні теги HTML</h3>
+        <ul>
+            <li><code>&lt;html&gt;...&lt;/html&gt;</code> — кореневий елемент HTML-документа.</li>
+            <li><code>&lt;head&gt;...&lt;/head&gt;</code> — містить службову інформацію про документ (мета-дані,
+                заголовок, стилі).</li>
+            <li><code>&lt;title&gt;...&lt;/title&gt;</code> — назва сторінки, яка відображається у вкладці браузера.
+            </li>
+            <li><code>&lt;body&gt;...&lt;/body&gt;</code> — основний вміст сторінки.</li>
+            <li><code>&lt;h1&gt;...&lt;/h1&gt;</code> до <code>&lt;h6&gt;...&lt;/h6&gt;</code> — заголовки різного
+                рівня.</li>
+            <li><code>&lt;p&gt;...&lt;/p&gt;</code> — абзац тексту.</li>
+            <li><code>&lt;a href="..."&gt;...&lt;/a&gt;</code> — гіперпосилання.</li>
+            <li><code>&lt;img src="..." alt="..."&gt;</code> — зображення.</li>
+            <li><code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code> — списки (неупорядковані та
+                упорядковані).</li>
+            <li><code>&lt;div&gt;...&lt;/div&gt;</code> — універсальний блок.</li>
+            <li><code>&lt;span&gt;...&lt;/span&gt;</code> — вбудований елемент для стилізації частин тексту.</li>
+        </ul>
+
+        <p>Теги можуть бути:</p>
+        <ul>
+            <li><strong>Парними</strong> — мають відкриваючий і закриваючий тег, як <code>&lt;p&gt;...&lt;/p&gt;</code>
+            </li>
+            <li><strong>Одинарними</strong> — закриваються самі, як <code>&lt;br&gt;</code> або <code>&lt;img&gt;</code>
+            </li>
+        </ul>
+
+        <h2>Атрибути тегів</h2>
+        <p>Теги можуть мати атрибути — додаткову інформацію, яка уточнює дію тега.</p>
+        <pre><code class="language-html">
+&lt;img src="cat.jpg" alt="Котик" width="300"&gt;
+  </code></pre>
+        <p>У цьому прикладі:</p>
+        <ul>
+            <li><code>src</code> — шлях до зображення</li>
+            <li><code>alt</code> — текст, що з'являється, якщо зображення не завантажилось</li>
+            <li><code>width</code> — ширина зображення</li>
+        </ul>
+
+        <h2>Emmet-скорочення</h2>
+        <p>Emmet — це інструмент для швидкого набору коду в редакторі, наприклад, VSCode. Спробуй ввести таке
+            скорочення:</p>
+        <pre><code class="language-html">
+ul>li*3
+  </code></pre>
+        <p>І натисни Tab — отримаєш:</p>
+        <pre><code class="language-html">
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+  </code></pre>
+
+    </main>
+
+    <footer>
+        <p>2025 &copy; Гурток "Web-програмування"</p>
+    </footer>
+
+</body>
+
+</html>

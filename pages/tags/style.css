@@ -1,0 +1,42 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header,
+footer {
+    background-color: #00557f;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 0 1em;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #005580;
+}
+
+code {
+    background: #eee;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+}
+
+pre {
+    background: #1e1e1e;
+    padding: 1em;
+    overflow-x: auto;
+    border-radius: 8px;
+    color: white;
+}

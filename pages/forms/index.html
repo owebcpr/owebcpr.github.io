@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форми в HTML</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Комунальний заклад - центр позашкільної роботи</h1>
+    </header>
+    <main>
+        <h2>Форми в HTML</h2>
+        <p>Форми в HTML використовуються для збору інформації від користувачів. Наприклад, реєстрація, входи,
+            голосування та інші дії — все це відбувається через форми.</p>
+
+        <h3>Текстові поля</h3>
+        <p>Для введення тексту використовують тег <code>&lt;input&gt;</code> з атрибутом <code>type="text"</code>.</p>
+        <pre><code>&lt;input type="text" placeholder="Введіть ім'я" name="name"&gt;</code></pre>
+        <form>
+            <label>Ім'я: <input type="text" placeholder="Введіть ім'я" name="name"></label>
+        </form>
+
+        <h3>Поле для введення електронної пошти</h3>
+        <pre><code>&lt;input type="email" placeholder="email@example.com" name="email"&gt;</code></pre>
+        <form>
+            <label>Email: <input type="email" placeholder="email@example.com" name="email"></label>
+        </form>
+
+        <h3>Многострокове поле</h3>
+        <p>Для введення довгого тексту, наприклад коментаря, використовують тег <code>&lt;textarea&gt;</code>.</p>
+        <pre><code>&lt;textarea name="comment" rows="4" cols="40" placeholder="Ваш коментар..."&gt;&lt;/textarea&gt;</code></pre>
+        <form>
+            <label>Коментар:<br>
+                <textarea name="comment" rows="4" cols="40" placeholder="Ваш коментар..."></textarea>
+            </label>
+        </form>
+
+        <h3>Радіокнопки</h3>
+        <p>Радіокнопки дають змогу обрати лише один варіант.</p>
+        <pre><code>
+&lt;input type="radio" name="gender" value="male" checked&gt; Чоловік
+&lt;input type="radio" name="gender" value="female"&gt; Жінка</code></pre>
+        <form>
+            <label><input type="radio" name="gender" value="male" checked> Чоловік</label><br>
+            <label><input type="radio" name="gender" value="female"> Жінка</label>
+        </form>
+
+        <h3>Прапорці (checkbox)</h3>
+        <p>Можна обрати кілька варіантів одразу.</p>
+        <pre><code>
+&lt;input type="checkbox" name="hobby" value="reading"&gt; Читання
+&lt;input type="checkbox" name="hobby" value="sports" checked&gt; Спорт</code></pre>
+        <form>
+            <label><input type="checkbox" name="hobby" value="reading"> Читання</label><br>
+            <label><input type="checkbox" name="hobby" value="sports" checked> Спорт</label>
+        </form>
+
+        <h3>Групування елементів</h3>
+        <p>Для зручності елементи можна групувати за допомогою тегів <code>&lt;fieldset&gt;</code> і
+            <code>&lt;legend&gt;</code>.
+        </p>
+        <pre><code>
+&lt;fieldset&gt;
+  &lt;legend&gt;Контактна інформація&lt;/legend&gt;
+  &lt;input type="text" name="name" placeholder="Ім'я"&gt;
+  &lt;input type="email" name="email" placeholder="Email"&gt;
+&lt;/fieldset&gt;</code></pre>
+        <form>
+            <fieldset>
+                <legend>Контактна інформація</legend>
+                <div class="form-example">
+                    <label>
+                        Ім'я:
+                        <input type="text" name="name" placeholder="Ім'я" style="width: 100%;">
+                    </label>
+                    <label>
+                        Email:
+                        <input type="email" name="email" placeholder="Email" style="width: 100%;">
+                    </label>
+                </div>
+            </fieldset>
+        </form>
+
+        <h3>Списки вибору</h3>
+        <p>Для створення випадаючого списку використовують тег <code>&lt;select&gt;</code>. Атрибут
+            <code>multiple</code> дозволяє вибрати кілька варіантів.
+        </p>
+        <pre><code>
+&lt;select name="language" multiple&gt;
+  &lt;option value="html" selected&gt;HTML&lt;/option&gt;
+  &lt;option value="css"&gt;CSS&lt;/option&gt;
+  &lt;option value="js"&gt;JavaScript&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+        <form>
+            <label>Обери мови:
+                <select name="language">
+                    <option value="html" selected>HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js">JavaScript</option>
+                </select>
+            </label>
+        </form>
+
+        <h3>Кнопки</h3>
+        <p>Форми надсилаються за допомогою кнопок. Тег <code>&lt;button&gt;</code> може містити текст, іконки або
+            HTML-елементи.</p>
+        <pre><code>
+&lt;button type="submit"&gt;Надіслати&lt;/button&gt;
+&lt;button type="reset"&gt;Очистити&lt;/button&gt;</code></pre>
+        <form>
+            <button type="submit">Надіслати</button>
+            <button type="reset">Очистити</button>
+        </form>
+
+        <h3>Атрибути форм</h3>
+        <ul>
+            <li><code>placeholder</code> — підказка в полі введення</li>
+            <li><code>value</code> — значення за замовчуванням</li>
+            <li><code>checked</code> — позначка для радіокнопок і прапорців</li>
+            <li><code>name</code> — назва елемента (потрібна для обробки на сервері)</li>
+        </ul>
+    </main>
+    <footer>
+        2025 &copy; гурток "Web-програмування"
+    </footer>
+</body>
+
+</html>

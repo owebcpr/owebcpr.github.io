@@ -125,6 +125,10 @@
     min-height: 500px;
     background-size: contain, cover;
   }
+  .promo-menu__list {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .promo__h2 {
     padding-top: 40px;
   }
@@ -1026,5 +1030,112 @@
         -ms-flex-order: 3;
             order: 3;
     text-align: center;
+  }
+}
+.news {
+  background: url(../img/news-bg1.png) center/cover no-repeat;
+  padding: 30px 5px;
+  min-height: 300px;
+}
+.news__grid {
+  padding-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.news__item {
+  width: 100%;
+  max-width: 350px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #ddd;
+  padding: 15px;
+  background-color: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.news__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #0056b3;
+  text-decoration: none;
+}
+.news__title:hover {
+  text-decoration: underline;
+}
+.news__image {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.news__description {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #333;
+}
+.news__date {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 10px;
+}
+.news__more {
+  margin-top: auto;
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+.news__more:hover {
+  text-decoration: underline;
+}
+.news__all {
+  display: block;
+  width: 250px;
+  padding: 5px;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+.news__all:hover {
+  color: #085c94;
+}
+
+@media (max-width: 900px) {
+  .news__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 calc(50% - 20px);
+            flex: 1 1 calc(50% - 20px);
+  }
+}
+@media (max-width: 600px) {
+  .news__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
   }
 }/*# sourceMappingURL=style.css.map */

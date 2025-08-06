@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблиці в HTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Комунальний заклад – центр позашкільної роботи Путивльської міської ради</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Таблиці в HTML</h2>
+            <p>Таблиця в HTML використовується для організації даних у рядки та стовпці. Вона створюється за допомогою
+                тегу <code>&lt;table&gt;</code>.</p>
+        </section>
+
+        <section>
+            <h2>Основні теги таблиць</h2>
+            <ul>
+                <li><code>&lt;table&gt;</code> — контейнер для таблиці</li>
+                <li><code>&lt;tr&gt;</code> — table row — рядок таблиці</li>
+                <li><code>&lt;th&gt;</code> — table header — заголовок стовпця</li>
+                <li><code>&lt;td&gt;</code> — table data — звичайна клітинка таблиці</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Проста таблиця</h2>
+            <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Ім'я&lt;/th&gt;
+    &lt;th&gt;Вік&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Оля&lt;/td&gt;
+    &lt;td&gt;12&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Артем&lt;/td&gt;
+    &lt;td&gt;14&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+            <table>
+                <tr>
+                    <th>Ім'я</th>
+                    <th>Вік</th>
+                </tr>
+                <tr>
+                    <td>Оля</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>Артем</td>
+                    <td>14</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Атрибути таблиць</h2>
+            <p>Деякі популярні атрибути:</p>
+            <ul>
+                <li><code>border</code> — товщина рамки таблиці (старий спосіб, краще використовувати CSS)</li>
+                <li><code>colspan</code> — об’єднання кількох стовпців</li>
+                <li><code>rowspan</code> — об’єднання кількох рядків</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Таблиця з об’єднанням комірок</h2>
+            <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th rowspan="2"&gt;Ім'я&lt;/th&gt;
+    &lt;th colspan="2"&gt;Контакти&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Email&lt;/th&gt;
+    &lt;th&gt;Телефон&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Марія&lt;/td&gt;
+    &lt;td&gt;maria@gmail.com&lt;/td&gt;
+    &lt;td&gt;123-456&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+            <table>
+                <tr>
+                    <th rowspan="2">Ім'я</th>
+                    <th colspan="2">Контакти</th>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <th>Телефон</th>
+                </tr>
+                <tr>
+                    <td>Марія</td>
+                    <td>maria@gmail.com</td>
+                    <td>123-456</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Поради</h2>
+            <ul>
+                <li>Завжди використовуйте <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>,
+                    <code>&lt;tfoot&gt;</code> для структурування складних таблиць.
+                </li>
+                <li>Використовуйте CSS для стилізації таблиць.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Цікаво знати</h2>
+            <p>
+                На початку розвитку вебу, ще до появи сучасних підходів до верстки, таблиці активно використовували не
+                лише для відображення даних, а й для створення макетів сторінок. Це дозволяло розміщувати елементи на
+                екрані в рядках і стовпцях, подібно до сітки. Наприклад, «шапка» сайту могла бути одним рядком таблиці,
+                «меню» — другим, а основний вміст — третім. Хоча це було незручно й не зовсім правильно з точки зору
+                семантики, такий підхід довгий час був стандартом.
+            </p>
+            <p>
+                Сьогодні для створення макетів використовують CSS-технології — <code>Flexbox</code>, <code>Grid</code>,
+                або позиціонування. Таблиці ж призначені винятково для структурованих даних.
+            </p>
+
+        </section>
+        <section>
+            <h2>Приклад верстки сторінки за допомогою таблиці</h2>
+            <p>Це спрощений приклад того, як раніше створювали макет сторінки:</p>
+
+            <pre><code class="language-html">&lt;table border="1" width="100%" cellspacing="0" cellpadding="10"&gt;
+  &lt;tr&gt;
+    &lt;td colspan="2"&gt;&lt;strong&gt;Шапка сайту&lt;/strong&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td width="20%"&gt;Меню&lt;/td&gt;
+    &lt;td&gt;Основний вміст&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td colspan="2"&gt;Підвал&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+
+            <p>
+                У цьому прикладі шапка, меню, вміст і підвал сайту — це комірки таблиці. Зараз такі підходи вважаються
+                застарілими, але вони відіграли важливу роль в історії веб-розробки.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>2025 &copy; Гурток "Web-програмування"</p>
+    </footer>
+</body>
+
+</html>

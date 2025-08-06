@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блокові та рядкові елементи. Семантичні теги</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Комунальний заклад – центр позашкільної роботи Путивльської міської ради</h1>
+    </header>
+
+    <main>
+        <h2>Блокові та рядкові елементи</h2>
+        <p>HTML-елементи поділяються на два основних типи: <strong>блокові</strong> та <strong>рядкові</strong>.</p>
+
+        <h3>Блокові елементи</h3>
+        <p>Блокові елементи займають всю ширину свого батьківського елемента і завжди починаються з нового рядка.
+            Приклади блокових елементів:</p>
+        <ul>
+            <li><code>&lt;div&gt;</code> — універсальний блок;</li>
+            <li><code>&lt;p&gt;</code> — абзац тексту;</li>
+            <li><code>&lt;h1&gt;-&lt;h6&gt;</code> — заголовки різних рівнів;</li>
+            <li><code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code> — списки.</li>
+        </ul>
+
+        <pre><code class="language-html">
+&lt;div&gt;
+    &lt;h2&gt;Заголовок&lt;/h2&gt;
+    &lt;p&gt;Це абзац всередині блоку.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+        <h3>Рядкові елементи</h3>
+        <p>Рядкові елементи займають тільки необхідну ширину і не починаються з нового рядка. Приклади:</p>
+        <ul>
+            <li><code>&lt;span&gt;</code> — універсальний рядковий контейнер;</li>
+            <li><code>&lt;a&gt;</code> — гіперпосилання;</li>
+            <li><code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code> — виділення тексту.</li>
+        </ul>
+
+        <pre><code class="language-html">
+&lt;p&gt;Це приклад з &lt;strong&gt;жирним&lt;/strong&gt; словом.&lt;/p&gt;
+</code></pre>
+
+        <h2>Семантичні теги</h2>
+        <p>Семантичні теги описують зміст елемента, що полегшує розуміння структури сторінки як для людей, так і для
+            пошукових систем.</p>
+
+        <ul>
+            <li><code>&lt;header&gt;</code> — заголовок сторінки або розділу;</li>
+            <li><code>&lt;nav&gt;</code> — навігаційне меню;</li>
+            <li><code>&lt;main&gt;</code> — основний вміст сторінки;</li>
+            <li><code>&lt;section&gt;</code> — розділ вмісту;</li>
+            <li><code>&lt;article&gt;</code> — самостійний матеріал або публікація;</li>
+            <li><code>&lt;footer&gt;</code> — нижній колонтитул сторінки або розділу.</li>
+        </ul>
+
+        <pre><code class="language-html">
+&lt;article&gt;
+    &lt;header&gt;
+        &lt;h2&gt;Новина дня&lt;/h2&gt;
+    &lt;/header&gt;
+    &lt;p&gt;Сьогодні ми вивчаємо HTML.&lt;/p&gt;
+&lt;/article&gt;
+</code></pre>
+
+        <h2>Emmet-скорочення</h2>
+        <p>У редакторі Visual Studio Code можна використовувати скорочення Emmet. Наприклад:</p>
+        <pre><code class="language-html">
+div.container>ul>li*3
+</code></pre>
+        <p>Це скорочення створить наступну структуру:</p>
+        <pre><code class="language-html">
+&lt;div class="container"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+    </main>
+
+    <footer>
+        <p>2025 &copy; Гурток "Web-програмування"</p>
+    </footer>
+</body>
+
+</html>
