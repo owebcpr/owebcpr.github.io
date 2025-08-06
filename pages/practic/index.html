@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Верстка html-сторінки. Практичні заняття</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Комунальний заклад – центр позашкільної роботи Путивльської міської ради</h1>
+    </header>
+    <main>
+        <h2>Верстка html-сторінки. Практичні заняття</h2>
+        <p>Сьогодні ми навчимося створювати просту веб-сторінку. Вона буде містити заголовки, текст, зображення, таблицю
+            та форму. Спробуйте зробити приклад у вбудованому редакторі коду та переглянути результат!</p>
+
+        <h3>Приклад структури HTML-сторінки</h3>
+        <p>Ось приклад коду:</p>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="uk"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Моя перша сторінка&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Привіт! Це моя сторінка&lt;/h1&gt;
+  &lt;p&gt;Я вчуся верстати HTML!&lt;/p&gt;
+
+  &lt;h2&gt;Моє фото:&lt;/h2&gt;
+  &lt;img src="https://via.placeholder.com/300x150" alt="Приклад фото"&gt;
+
+  &lt;h2&gt;Моя таблиця&lt;/h2&gt;
+  &lt;table border="1"&gt;
+    &lt;tr&gt;&lt;th&gt;Ім'я&lt;/th&gt;&lt;th&gt;Вік&lt;/th&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Анна&lt;/td&gt;&lt;td&gt;12&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Максим&lt;/td&gt;&lt;td&gt;14&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;
+
+  &lt;h2&gt;Моя форма&lt;/h2&gt;
+  &lt;form&gt;
+    Ім'я: &lt;input type="text"&gt;&lt;br&gt;&lt;br&gt;
+    Email: &lt;input type="email"&gt;&lt;br&gt;&lt;br&gt;
+    &lt;input type="submit" value="Відправити"&gt;
+  &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+
+        <h3>Онлайн-редактор</h3>
+        <p>Введи код у поле нижче та натисни «Запустити код»:</p>
+
+        <div class="tabs">
+            <button class="active" onclick="switchTab('html')">HTML</button>
+            <button onclick="switchTab('css')">CSS</button>
+        </div>
+
+        <div id="html-tab" class="tab-content active">
+            <textarea id="html-code">
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Моя сторінка</title>
+</head>
+<body>
+  <h1>Привіт! Це моя сторінка</h1>
+  <p>Я вчуся верстати HTML та стилізувати за допомогою CSS.</p>
+
+  <h2>Фото</h2>
+  <img src="https://via.placeholder.com/300x150" alt="Фото">
+
+  <h2>Таблиця</h2>
+  <table>
+    <tr><th>Ім’я</th><th>Вік</th></tr>
+    <tr><td>Марія</td><td>10</td></tr>
+    <tr><td>Ігор</td><td>11</td></tr>
+  </table>
+
+  <h2>Форма</h2>
+  <form>
+    Ім’я: <input type="text"><br><br>
+    Email: <input type="email"><br><br>
+    <input type="submit" value="Надіслати">
+  </form>
+</body>
+</html>
+    </textarea>
+        </div>
+
+        <div id="css-tab" class="tab-content">
+            <textarea id="css-code">
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #00557f;
+}
+
+img {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 10px 0;
+}
+
+table {
+  width: 60%;
+  margin: 10px auto;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+}
+
+form {
+  margin-top: 15px;
+}
+
+input[type="text"], input[type="email"] {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background: #00557f;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: #004466;
+}
+    </textarea>
+        </div>
+
+        <button class="btn-run" onclick="runCode()">Запустити код</button>
+        <iframe id="result" class="result"></iframe>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Онлайн-посібник HTML. Усі права захищені.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

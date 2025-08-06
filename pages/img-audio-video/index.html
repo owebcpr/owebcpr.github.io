@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Зображення, аудіо та відео в HTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Комунальний заклад – центр позашкільної роботи Путивльської міської ради</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Як вставити зображення в HTML?</h2>
+            <p>Щоб додати картинку на веб-сторінку, в HTML використовується тег <code>&lt;img&gt;</code>. Це **рядковий
+                тег** (inline), він не займає весь рядок, а лише стільки місця, скільки потрібно для зображення.</p>
+
+            <p>У цього тегу є головний атрибут — <code>src</code> (від англ. "source" — джерело). У ньому ми вказуємо
+                шлях до картинки. Також важливий атрибут <code>alt</code> — альтернативний текст, який показується, якщо
+                картинка не завантажилась.</p>
+
+            <h3>Звідки може бути картинка?</h3>
+            <ul>
+                <li><strong>1. З комп'ютера:</strong> картинка лежить у папці сайту. Наприклад, якщо у нас є папка
+                    <code>images</code> і в ній файл <code>cat.jpg</code>, тоді код буде такий:
+                </li>
+            </ul>
+            <pre>
+&lt;img src="images/cat.jpg" alt="Милий кіт"&gt;
+    </pre>
+
+            <ul>
+                <li><strong>2. З інтернету:</strong> ми вставляємо **URL-адресу** картинки. Наприклад:</li>
+            </ul>
+            <pre>
+&lt;img src="https://www.w3schools.com/html/img_chania.jpg" alt="Краєвид"&gt;
+    </pre>
+
+            <p>Ось приклад картинки з інтернету:</p>
+            <img src="https://www.w3schools.com/html/img_chania.jpg" alt="Краєвид" class="example">
+
+            <h3>Які ще атрибути є у &lt;img&gt;?</h3>
+            <ul>
+                <li><code>width</code> і <code>height</code> — ширина та висота зображення (у пікселях або %).</li>
+                <li><code>title</code> — підказка, що з'явиться при наведенні.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Як вставити аудіо в HTML?</h2>
+            <p>Для додавання звуку на сторінку є тег <code>&lt;audio&gt;</code>. Щоб користувач міг керувати
+                відтворенням, додаємо атрибут <code>controls</code>.</p>
+
+            <h3>Приклад:</h3>
+            <pre>
+&lt;audio controls&gt;
+  &lt;source src="audio/song.mp3" type="audio/mpeg"&gt;
+  Ваш браузер не підтримує аудіо.
+&lt;/audio&gt;
+    </pre>
+
+            <p>Ми вказуємо шлях до аудіофайлу в атрибуті <code>src</code> тега <code>&lt;source&gt;</code>. Для MP3
+                вказуємо <code>type="audio/mpeg"</code>.</p>
+        </section>
+
+        <section>
+            <h2>Як вставити відео?</h2>
+            <p>Відео додається за допомогою тега <code>&lt;video&gt;</code>. Він працює подібно до аудіо: щоб були
+                кнопки керування, додаємо <code>controls</code>.</p>
+
+            <h3>Приклад відео з комп'ютера:</h3>
+            <pre>
+&lt;video controls width="500"&gt;
+  &lt;source src="video/movie.mp4" type="video/mp4"&gt;
+  Ваш браузер не підтримує відео.
+&lt;/video&gt;
+    </pre>
+        </section>
+
+        <section>
+            <h2>Як вставити відео з YouTube?</h2>
+            <p>YouTube дозволяє вбудувати відео через код <code>&lt;iframe&gt;</code>. Для цього натискаємо «Поділитися»
+                під відео → «HTML-код». Ось приклад:</p>
+
+            <pre>
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/Vr3dEE0QXtg?si=Fu4FpKDPbLLCZ9-T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;
+    </pre>
+
+            <p>Ось приклад вставленого відео:</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Vr3dEE0QXtg?si=Fu4FpKDPbLLCZ9-T"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>2025 &copy; Гурток "Web-програмування"</p>
+    </footer>
+
+</body>
+
+</html>
