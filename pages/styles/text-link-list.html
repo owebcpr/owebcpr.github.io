@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS-стилі. Способи завдання стилів. Каскадні таблиці стилів</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Комунальний заклад – центр позашкільної роботи Путивльської міської ради</h1>
+    </header>
+
+    <main>
+        <h1>CSS: Стилі для тексту, посилань, списків</h1>
+
+        <h2>1. Стилі для тексту</h2>
+        <p>Можна змінювати колір, розмір, жирність, стиль тексту, вирівнювання та інше.</p>
+        <pre><code class="language-css">
+p {
+  color: red;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+}
+    </code></pre>
+
+        <h2>2. Стилі для посилань</h2>
+        <p>Можна оформити зовнішній вигляд посилань у різних станах:</p>
+        <pre><code class="language-css">
+a {
+  color: lightblue;
+  text-decoration: none;
+}
+a:hover {
+  color: yellow;
+}
+a:visited {
+  color: gray;
+}
+    </code></pre>
+
+        <h2>3. Стилі для списків</h2>
+        <p>Списки можна стилізувати, змінювати маркери, відступи тощо:</p>
+        <pre><code class="language-css">
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+  color: orange;
+}
+ol {
+  list-style-type: upper-roman;
+  color: lightgreen;
+}
+    </code></pre>
+        <h2>Спробуй самостійно</h2>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('html')">HTML</button>
+            <button class="tab-btn" onclick="switchTab('css')">CSS</button>
+        </div>
+
+        <textarea id="htmlCode" style="display:block;">
+<!-- Параграф з текстом -->
+<p>Це приклад параграфа.</p>
+
+<!-- Посилання -->
+<a href="#">Це посилання</a>
+
+<!-- Невпорядкований список -->
+<ul>
+  <li>Елемент 1</li>
+  <li>Елемент 2</li>
+</ul>
+
+<!-- Впорядкований список -->
+<ol>
+  <li>Крок 1</li>
+  <li>Крок 2</li>
+</ol>
+  </textarea>
+
+        <textarea id="cssCode">
+/* Стилі для параграфа */
+p {
+  color: darkgreen; /* колір тексту */
+  font-size: 20px; /* розмір шрифту */
+}
+
+/* Стилі для посилань */
+a {
+  color: orange; /* колір посилань */
+}
+
+/* Стилі для списків */
+ul, ol {
+  font-weight: bold; /* жирний шрифт */
+}
+  </textarea>
+
+        <iframe id="preview"></iframe>
+    </main>
+
+
+
+
+
+
+    <footer>
+        <p>2025 &copy; Гурток "Web-програмування". Всі права захищені</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/lib/codemirror.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/css/css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/xml/xml.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.16/mode/javascript/javascript.min.js"></script>
+    <script src="script2.js"></script>
+</body>
+
+</html>

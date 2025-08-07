@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS-стилі. Способи завдання стилів. Каскадні таблиці стилів</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Комунальний заклад – центр позашкільної роботи Путивльської міської ради</h1>
+    </header>
+
+    <main>
+        <h2>Способи завдання стилів. Каскадні таблиці стилів</h2>
+
+        <section>
+            <h3>Що таке стилі й навіщо вони потрібні?</h3>
+            <p>
+                CSS (Cascading Style Sheets) — це мова стилів, що дозволяє оформлювати
+                HTML-документи: змінювати кольори, шрифти, відступи, розміщення елементів
+                тощо. Стилі відокремлюють зміст від вигляду й допомагають створити
+                привабливі, адаптивні сайти.
+            </p>
+        </section>
+
+        <section>
+            <h3>Як можна додавати стилі?</h3>
+            <ul>
+                <li><strong>Inline-стилі:</strong> додаються безпосередньо в HTML через атрибут <code>style</code>.</li>
+                <li><strong>Внутрішні стилі:</strong> пишуться в блоці <code>&lt;style&gt;</code> у розділі
+                    <code>&lt;head&gt;</code>.
+                </li>
+                <li><strong>Зовнішній файл:</strong> підключається за допомогою <code>&lt;link&gt;</code>.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Приклади:</h3>
+            <pre><code>&lt;!-- Inline-стиль --&gt;
+&lt;h1 style="color: red;"&gt;Привіт!&lt;/h1&gt;
+
+&lt;!-- Внутрішній стиль --&gt;
+&lt;style&gt;
+  p {
+    color: green;
+    font-size: 18px;
+  }
+&lt;/style&gt;
+
+&lt;!-- Зовнішній стиль --&gt;
+&lt;link rel="stylesheet" href="style.css"&gt;
+</code></pre>
+        </section>
+
+        <section>
+            <h3>Синтаксис CSS</h3>
+            <pre><code>селектор {
+  властивість: значення;
+}
+
+/* приклад */
+h2 {
+  color: #00557f;
+  font-weight: bold;
+}
+</code></pre>
+        </section>
+
+        <section>
+            <h3>Чому таблиця стилів — каскадна?</h3>
+            <p>
+                CSS називається "каскадною" таблицею стилів, бо вона враховує порядок,
+                специфічність та пріоритет правил. Це дозволяє вирішувати конфлікти між
+                різними джерелами стилів:
+            </p>
+            <ol>
+                <li>Inline-стилі мають найвищий пріоритет</li>
+                <li>Далі — внутрішні стилі (в <code>&lt;style&gt;</code>)</li>
+                <li>Найнижчий пріоритет — у зовнішніх файлів</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Приклад без стилів</h3>
+            <div style="border: 1px solid #999; padding: 10px;">
+                <h3>Просто блок</h3>
+                <p>Це приклад HTML без оформлення CSS — виглядає просто і нудно.</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>Інтерактивний редактор: додай стилі сам!</h3>
+            <p>Спробуй змінити кольори, відступи, шрифти у коді нижче за допомогою inline-стилів:</p>
+
+            <textarea id="editor"
+                style="width: 100%; height: 180px; font-family: monospace; border-radius: 8px; padding: 10px;">
+<div style="border: 2px solid black; padding: 20px;">
+  <h3>Привіт!</h3>
+  <p>Який вигляд матиме цей блок — вирішуєш ти!</p>
+</div>
+    </textarea>
+
+            <button onclick="runCode()"
+                style="margin-top: 10px; padding: 10px 20px; border-radius: 6px; background: #00557f; color: white; border: none;">Показати
+                результат</button>
+
+            <div id="output"
+                style="margin-top: 20px; padding: 10px; border: 1px dashed #aaa; border-radius: 8px; background: #f9f9f9;">
+                <em>Результат з’явиться тут...</em>
+            </div>
+
+            <script src="script.js"></script>
+        </section>
+    </main>
+
+
+
+
+    <footer>
+        <p>2025 &copy; Гурток "Web-програмування"</p>
+    </footer>
+
+</body>
+
+</html>
