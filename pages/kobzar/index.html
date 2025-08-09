@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Шляхом Кобзаря: до дня народження Тараса Шевченка</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+    </header>
+    <main>
+        <section>
+            <h2>"Шляхом Кобзаря"</h2>
+            <h3>Цікаві факти про Тараса Шевченка</h3>
+            <p>Тарас Григорович Шевченко — видатний український поет, художник і мислитель. Його називають Кобзарем — за
+                назвою його першої збірки віршів. Народився 9 березня 1814 року в селі Моринці, Черкаської області. Він
+                був кріпаком, але завдяки таланту та допомозі друзів здобув свободу й навчався в Петербурзькій академії
+                мистецтв.</p>
+            <p>Цікаво, що в дитинстві Тарас вивчав малювання потайки — малював на стінах, на корі дерев і на всьому, що
+                траплялось під руку. Його твори написані живою народною мовою, в них — туга за волею, любов до України
+                та глибока мудрість.</p>
+            <div class="image">
+                <img src="img/kobzar.jpg" alt="Тарас Шевченко">
+            </div>
+        </section>
+        <section>
+            <h3>Вірші Шевченка</h3>
+            <p><strong>Заповіт</strong> (1845)</p>
+            <p><em>
+                    Як умру, то поховайте<br>
+                    Мене на могилі<br>
+                    Серед степу широкого<br>
+                    На Вкраїні милій,<br><br>
+                    Щоб лани широкополі,<br>
+                    І Дніпро, і кручі<br>
+                    Було видно, було чути,<br>
+                    Як реве ревучий...<br>
+                </em>
+            </p>
+        </section>
+        <section class="quiz">
+            <h3>Вікторина: Наскільки добре ти знаєш Шевченка?</h3>
+            <div class="question">
+                <p>1. У якому році народився Тарас Шевченко?</p>
+                <button onclick="checkAnswer(this, false)">1804</button>
+                <button onclick="checkAnswer(this, true)">1814</button>
+                <button onclick="checkAnswer(this, false)">1834</button>
+
+            </div>
+            <div class="question">
+                <p>2. Як називається перша збірка поезій Шевченка?</p>
+                <button onclick="checkAnswer(this, false)">Катерина</button>
+                <button onclick="checkAnswer(this, false)">Гайдамаки</button>
+                <button onclick="checkAnswer(this, true)">Кобзар</button>
+            </div>
+        </section>
+
+        <section class="pair-game">
+            <h3>Гра "Знайди пару"</h3>
+            <p class="instructions">Знайди пару до складніших слів з мови Тараса Шевченка!</p>
+            <div class="game-board" id="gameBoard"></div>
+            <div class="result" id="resultMessage"></div>
+        </section>
+        <section class="matching-game">
+            <h3>Словничок давнини</h3>
+            <ul>
+                <li><strong>Обридати</strong> — набридати, ставати неприємним</li>
+                <li><strong>Духовний співець</strong> — поет</li>
+                <li><strong>Гай</strong> — невеликий ліс</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025-2026 Гурток "Web-програмування"</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
