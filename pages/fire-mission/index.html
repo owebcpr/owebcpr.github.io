@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квест: Вогняна місія</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+
+    </header>
+
+    <main class="container">
+        <h2>Квест: Вогняна місія</h2>
+        <p>Пройди всі рівні та стань героєм пожежної безпеки!</p>
+        <!-- Рівень 1 -->
+        <div class="level active" id="level1">
+            <h2>Рівень 1: Що робити?</h2>
+            <p>У кімнаті почав тліти дріт комп’ютера. Твої дії?</p>
+            <div class="answers">
+                <button onclick="checkAnswer(this,true,1)">Вимкнути комп’ютер з розетки і повідомити дорослих</button>
+                <button onclick="checkAnswer(this,false,1)">Продовжити працювати, може саме згасне</button>
+                <button onclick="checkAnswer(this,false,1)">Полити водою</button>
+            </div>
+        </div>
+
+        <!-- Рівень 2 -->
+        <div class="level" id="level2">
+            <h2>Рівень 2: Міні-вікторина</h2>
+            <p>Який номер виклику пожежної служби в Україні?</p>
+            <div class="answers">
+                <button onclick="checkAnswer(this,false,2)">1010</button>
+                <button onclick="checkAnswer(this,true,2)">101</button>
+                <button onclick="checkAnswer(this,false,2)">1122</button>
+            </div>
+        </div>
+
+        <!-- Рівень 3 -->
+        <div class="level" id="level3">
+            <h2>Рівень 3: Перетягування</h2>
+            <p>Перетягни предмети у правильні зони:</p>
+            <div class="drag-container">
+                <div class="draggable" draggable="true" id="item1">Вогнегасник</div>
+                <div class="draggable" draggable="true" id="item2">Сірники</div>
+                <div class="draggable" draggable="true" id="item3">Ліхтарик</div>
+            </div>
+            <div class="drag-container">
+                <div class="dropzone" id="safe">Безпечно</div>
+                <div class="dropzone" id="danger">Небезпечно</div>
+            </div>
+            <button onclick="finishGame()">Завершити квест</button>
+        </div>
+
+        <!-- Фінал -->
+        <div class="level" id="final">
+            <h2>Вітаємо!</h2>
+            <p>Ти успішно пройшов усі рівні квесту і став героєм пожежної безпеки!</p>
+            <img src="img/guy.jpg" alt="Пожежна безпека">
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

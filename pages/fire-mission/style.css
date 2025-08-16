@@ -1,0 +1,112 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #fff8f0;
+  color: #333;
+}
+
+header {
+  background-color: #00557f;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background-color: #00557f;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+
+}
+
+img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 8px;
+  margin: 10px auto;
+  display: block;
+}
+
+h2 {
+  color: #0057b7;
+}
+
+.level {
+  display: none;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.level.active {
+  display: block;
+}
+
+button {
+  background: #e63946;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #c71c2b;
+}
+
+.answers button {
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.correct {
+  background: #38b000 !important;
+}
+
+.wrong {
+  background: #d00000 !important;
+}
+
+.drag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.draggable {
+  padding: 10px;
+  background: #f4a261;
+  border-radius: 8px;
+  cursor: grab;
+}
+
+.dropzone {
+  flex: 1;
+  min-height: 120px;
+  border: 2px dashed #999;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+@media(max-width:600px) {
+  .drag-container {
+    flex-direction: column;
+  }
+}
