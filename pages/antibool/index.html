@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Квест Місія АнтиБулінг</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+</header>
+
+<main>
+  <img src="img/banner.png" alt="Квест Місія АнтиБулінг: Щит Доброти" class="banner">
+
+  <h2>Квест «Місія АнтиБулінг: Щит Доброти»</h2>
+  <p>Булінг — це не просто сварка. Це образи, насмішки, штовхання або приниження, які повторюються та завдають болю. 
+  Ми віримо, що найкращий спосіб протистояти цьому — вчитися повазі, підтримці та дружбі з дитинства.</p>
+
+  <div class="info-block">
+    <h3>Що треба знати про булінг?</h3>
+    <ul>
+      <li><strong>Булінг буває різним:</strong> фізичним (штовхання, бійки), словесним (образи, насмішки), соціальним (ігнорування, виключення з компанії) та кібербулінгом (приниження в інтернеті).</li>
+      <li><strong>Як зрозуміти, що це булінг?</strong> Якщо неприємні дії повторюються та змушують тебе відчувати страх, сором чи безпорадність — це вже булінг.</li>
+      <li><strong>Що робити?</strong> Говорити з дорослими, підтримувати тих, кого ображають, і чітко казати кривднику «Мені неприємно, припини».</li>
+      <li><strong>Разом ми сильніші!</strong> Коли діти підтримують одне одного, кривдникам немає місця для своїх дій.</li>
+    </ul>
+  </div>
+
+  <p>Ми запрошуємо юних учасників гуртка на інтерактивний <strong>квест «Місія АнтиБулінг»</strong>! 
+  Разом ми вирушимо у подорож до чарівної Дружляндії, де Темний Булінг намагається зруйнувати гармонію. 
+  Щоб перемогти його, діти збиратимуть «ключі дружби», виконуючи захопливі завдання, і зрештою створять 
+  <strong>Щит Доброти</strong> — символ підтримки та єдності.</p>
+
+  <h3>На учасників чекають:</h3>
+  <ul>
+    <li>5 цікавих станцій із іграми та творчими завданнями.</li>
+    <li>Можливість навчитися правильно реагувати на булінг.</li>
+    <li>Командний дух, весела атмосфера та море позитиву.</li>
+  </ul>
+  <div class="quiz">
+    <h3>Міні-вікторина</h3>
+    <form id="quizForm">
+      <p><strong>1. Булінг — це…</strong><br>
+        <label><input type="radio" name="q1" value="a"> Дружнє піджартування між друзями</label><br>
+        <label><input type="radio" name="q1" value="b"> Повторювані образи, насмішки чи приниження</label><br>
+        <label><input type="radio" name="q1" value="c"> Гра з елементами змагання</label>
+      </p>
+
+      <p><strong>2. Що слід зробити, якщо ти став свідком булінгу?</strong><br>
+        <label><input type="radio" name="q2" value="a"> Промовчати, щоб «не встрявати»</label><br>
+        <label><input type="radio" name="q2" value="b"> Підтримати постраждалого та звернутися до дорослого</label><br>
+        <label><input type="radio" name="q2" value="c"> Приєднатися до кривдників, щоб бути «в компанії»</label>
+      </p>
+
+      <p><strong>3. Який із цих вчинків є проявом дружби?</strong><br>
+        <label><input type="radio" name="q3" value="a"> Поділитися олівцем із однокласником</label><br>
+        <label><input type="radio" name="q3" value="b"> Насміятися з чужої помилки</label><br>
+        <label><input type="radio" name="q3" value="c"> Ігнорувати, коли хтось просить допомоги</label>
+      </p>
+
+      <p><strong>4. Що таке кібербулінг?</strong><br>
+        <label><input type="radio" name="q4" value="a"> Гра з друзями онлайн</label><br>
+        <label><input type="radio" name="q4" value="b"> Використання інтернету для приниження та образ</label><br>
+        <label><input type="radio" name="q4" value="c"> Змагання у відеоіграх</label>
+      </p>
+
+      <p><strong>5. Що перше варто зробити, якщо тебе ображають?</strong><br>
+        <label><input type="radio" name="q5" value="a"> Мовчати і терпіти</label><br>
+        <label><input type="radio" name="q5" value="b"> Розповісти дорослому, якому довіряєш</label><br>
+        <label><input type="radio" name="q5" value="c"> Образити у відповідь</label>
+      </p>
+
+      <p><strong>6. Як можна підтримати того, кого ображають?</strong><br>
+        <label><input type="radio" name="q6" value="a"> Сміятися разом з кривдниками</label><br>
+        <label><input type="radio" name="q6" value="b"> Сказати йому, що він не один, і допомогти знайти допомогу</label><br>
+        <label><input type="radio" name="q6" value="c"> Відійти й зробити вигляд, що нічого не сталося</label>
+      </p>
+
+      <button type="button" onclick="checkQuiz()">Перевірити відповіді</button>
+    </form>
+    <div id="result" class="result"></div>
+  </div>
+</main>
+
+<footer>
+  <p>© 2025-2026 Гурток "Web-програмування"</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
