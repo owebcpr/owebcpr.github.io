@@ -18,40 +18,97 @@
 
         <section>
             <h3>Інтерактив 1: Пазл нашої держави</h3>
-            <p>Перетягни тільки символи України на карту.</p>
+            <p class="desktop-only">Перетягни тільки символи України на карту.</p>
 
             <!-- Карта України -->
-            <div id="mapZone">
-                <img src="img/map.jpg" alt="Карта України" id="map">
+            <div class="desktop-only">
+                <div id="mapZone" class="mapZone">
+                    <img src="img/map.jpg" alt="Карта України" id="map">
+                </div>
+
+                <!-- Символи -->
+                <div id="symbols">
+
+                    <img src="img/Flag_of_Ukraine.svg" alt="Прапор" class="draggable" draggable="true"
+                        data-correct="true">
+                    <img src="img/Coat_of_Arms_of_Ukraine.png" alt="Герб" class="draggable" draggable="true"
+                        data-correct="true">
+                    <img src="img/kola.webp" alt="CocaCola" class="draggable" draggable="true" data-correct="false">
+                    <img src="img/kalina.jpg" alt="Калина" class="draggable" draggable="true" data-correct="true">
+                    <img src="img/z2-2.jpg" alt="Вишиванка" class="draggable" draggable="true" data-correct="true">
+                    <img src="img/free-png.ru-550.png" alt="McDonalds" class="draggable" draggable="true"
+                        data-correct="false">
+                    <img src="img/Naval_Ensign_of_Japan.svg.png" alt="Прапор Японії" class="draggable" draggable="true"
+                        data-correct="false">
+                </div>
+
+                <p id="result"></p>
+            </div>
+            <!-- MOBILE/TABLET: інфоблок -->
+            <div class="mobile-only" id="symbolsInfo">
+                <h4>Символи України</h4>
+                <div class="symbols-grid">
+                    <div class="symbol-card">
+                        <img src="img/Flag_of_Ukraine.svg" alt="Прапор України">
+                        <h4>Прапор</h4>
+                        <p>Синє небо та жовта пшениця — символ миру й достатку.</p>
+                    </div>
+                    <div class="symbol-card">
+                        <img src="img/Coat_of_Arms_of_Ukraine.png" alt="Герб України">
+                        <h4>Герб (Тризуб)</h4>
+                        <p>Стародавній знак Рюриковичів — символ державності та волі.</p>
+                    </div>
+                    <div class="symbol-card">
+                        <img src="img/kalina.jpg" alt="Калина">
+                        <h4>Калина</h4>
+                        <p>Образ життя, роду та незламності в українській культурі.</p>
+                    </div>
+                    <div class="symbol-card">
+                        <img src="img/z2-2.jpg" alt="Вишиванка">
+                        <h4>Вишиванка</h4>
+                        <p>Оберіг і код нації у візерунках.</p>
+                    </div>
+                </div>
+                <p style="margin-top:10px"><em>На комп’ютері ця частина — інтерактивна гра з перетягуванням символів на
+                        карту 🇺🇦</em></p>
             </div>
 
-            <!-- Символи -->
-            <div id="symbols">
-
-                <img src="img/Flag_of_Ukraine.svg" alt="Прапор" class="draggable" draggable="true" data-correct="true">
-                <img src="img/Coat_of_Arms_of_Ukraine.png" alt="Герб" class="draggable" draggable="true"
-                    data-correct="true">
-                <img src="img/kola.webp" alt="CocaCola" class="draggable" draggable="true" data-correct="false">
-                <img src="img/kalina.jpg" alt="Калина" class="draggable" draggable="true" data-correct="true">
-                <img src="img/z2-2.jpg" alt="Вишиванка" class="draggable" draggable="true" data-correct="true">
-                <img src="img/free-png.ru-550.png" alt="McDonalds" class="draggable" draggable="true"
-                    data-correct="false">
-                <img src="img/Naval_Ensign_of_Japan.svg.png" alt="Прапор Японії" class="draggable" draggable="true"
-                    data-correct="false">
-            </div>
-
-            <p id="result"></p>
         </section>
 
         <section class="canvas">
-            <h3>Інтерактив 2: Прапор моєї мрії</h3>
-            <p>Обери колір і створи власний прапор України!</p>
-            <canvas id="flagCanvas"></canvas>
-            <br><br>
-            <label>Колір: <input type="color" id="colorPicker" value="#0057b7"></label>
-            <label>Товщина лінії: <input type="range" id="brushSize" min="2" max="20" value="5"></label>
-            <button id="clearCanvas">Очистити</button>
-            <button id="saveCanvas">Зберегти прапор</button>
+            <div id="canvas-block">
+                <h2>Прапор моєї мрії</h2>
+                <p>Обери колір і створи власний прапор України!</p>
+                <canvas id="flagCanvas" width="600" height="350"></canvas>
+                <br><br>
+                <label>Колір: <input type="color" id="colorPicker" value="#0057b7"></label>
+                <label>Товщина лінії: <input type="range" id="brushSize" min="2" max="20" value="5"></label>
+                <button id="clearCanvas">Очистити</button>
+                <button id="saveCanvas">Зберегти прапор</button>
+            </div>
+            <div id="info-block" style="display:none;">
+                <h2>Цікаві факти про прапор України</h2>
+                <ul>
+                    <li>Синій колір символізує чисте небо.</li>
+                    <li>Жовтий колір — стиглі пшеничні лани.</li>
+                    <li>У 1918 році прапор вперше затвердили як державний символ.</li>
+                    <li>День Державного прапора відзначається 23 серпня.</li>
+                    <li>У 2016 році в Києві розгорнули найбільший прапор України площею 12 000 м², що дорівнює приблизно
+                        2 футбольним полям!</li>
+                    <li>Український прапор розвівається біля штаб-квартир ООН, ЄС та інших міжнародних організацій.</li>
+                    <li>Існує пісня "Жовто-блакитні" багатьох українських виконавців, присвячена державному прапору.
+                    </li>
+                </ul>
+                <div class="flag-quote">
+                    <p>Прапор — це не просто тканина. Це символ нашої гідності, нашої волі та нашої незалежності.</p>
+                </div>
+            </div>
+            <p id="canvas-info" style="display:none;">
+                <em>
+                    Малювання доступне тільки на комп’ютерах.
+                    Спробуй відкрити сторінку з ПК!
+                </em>
+            </p>
         </section>
     </main>
 
@@ -59,7 +116,7 @@
     <footer>
         <p>&copy; 2025-2026 Гурток "Web-програмування"</p>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
     <script src="script.js"></script>
 </body>
 

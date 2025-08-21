@@ -4,6 +4,7 @@
     color: #333;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .container {
@@ -46,7 +47,7 @@ h2 {
     color: #003366;
 }
 
-#mapZone {
+.mapZone {
     position: relative;
     max-width: 500px;
     margin: 20px auto;
@@ -95,6 +96,72 @@ canvas {
     max-width: 500px;
     width: 100%;
     height: 300px;
+}
+
+.flag-quote {
+    text-align: center;
+    padding: 15px;
+    background: rgba(245, 56, 56, 0.5);
+    border-radius: 10px;
+    border: 1px solid #b5b7c4;
+}
+
+.flag-quote p {
+    font-size: 18px;
+    color: rgb(187, 30, 82);
+}
+
+/* --- Інфоблок (мобільні/планшети) --- */
+#symbolsInfo {
+    margin-top: 14px;
+}
+
+.symbols-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+}
+
+.symbol-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 10px;
+    background: #fffaf3;
+}
+
+.symbol-card img {
+    width: 100%;
+    max-width: 120px;
+    display: block;
+    margin: 6px auto 8px;
+}
+
+.symbol-card h4 {
+    margin: 6px 0;
+    color: #0057b7;
+}
+
+.symbol-card p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.mobile-only {
+    display: none;
+}
+
+.desktop-only {
+    display: block;
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .mobile-only {
+        display: block;
+    }
+
+    .desktop-only {
+        display: none;
+    }
 }
 
 @media(max-width: 576px) {

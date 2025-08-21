@@ -1,141 +1,141 @@
 ﻿// --- Інтерактив 1: Пазл ---
-const symbols = document.querySelectorAll(".draggable");
-const mapZone = document.getElementById("mapZone");
-const result = document.getElementById("result");
+// Визначаємо: чи це пристрій з "грубим" покажчиком (переважно телефони/планшети)
+const isTouchLike = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
 
-let correctCount = 0;
-const totalCorrect = document.querySelectorAll(".draggable[data-correct='true']").length;
+if (!isTouchLike) {
+    const symbols = document.querySelectorAll(".draggable");
+    const mapZone = document.getElementById("mapZone");
+    const result = document.getElementById("result");
 
-// ---- Для миші (стандартний drag&drop) ----
-symbols.forEach(symbol => {
-    symbol.addEventListener("dragstart", e => {
-        e.dataTransfer.setData("text", e.target.dataset.correct);
-        e.dataTransfer.setData("id", e.target.src);
-    });
-});
+    let correctCount = 0;
+    const totalCorrect = document.querySelectorAll(".draggable[data-correct='true']").length;
 
-mapZone.addEventListener("dragover", e => e.preventDefault());
-
-mapZone.addEventListener("drop", e => {
-    e.preventDefault();
-    handleDrop(e.offsetX, e.offsetY, e.dataTransfer.getData("text"), e.dataTransfer.getData("id"));
-});
-
-// ---- Для телефону (touch events) ----
-symbols.forEach(symbol => {
-    symbol.addEventListener("touchstart", e => {
-        const touch = e.touches[0];
-        symbol.dataset.dragging = "true";
-        symbol.dataset.startX = touch.clientX;
-        symbol.dataset.startY = touch.clientY;
+    symbols.forEach(symbol => {
+        symbol.addEventListener("dragstart", e => {
+            e.dataTransfer.setData("text", e.target.dataset.correct);
+            e.dataTransfer.setData("id", e.target.src);
+        });
     });
 
-    symbol.addEventListener("touchmove", e => {
-        const touch = e.touches[0];
-        const elem = e.target;
+    mapZone.addEventListener("dragover", e => e.preventDefault());
 
-        elem.style.position = "absolute";
-        elem.style.left = (touch.pageX - elem.width / 2) + "px";
-        elem.style.top = (touch.pageY - elem.height / 2) + "px";
-        elem.style.zIndex = 1000;
-    });
+    mapZone.addEventListener("drop", e => {
+        e.preventDefault();
+        const isCorrect = e.dataTransfer.getData("text") === "true";
+        const imgSrc = e.dataTransfer.getData("id");
 
-    symbol.addEventListener("touchend", e => {
-        const touch = e.changedTouches[0];
-        const rect = mapZone.getBoundingClientRect();
+        if (isCorrect) {
+            const droppedImg = document.createElement("img");
+            droppedImg.src = imgSrc;
+            droppedImg.style.width = "50px";
+            droppedImg.style.position = "absolute";
+            droppedImg.style.left = (e.offsetX - 25) + "px";
+            droppedImg.style.top = (e.offsetY - 25) + "px";
+            mapZone.appendChild(droppedImg);
 
-        // Перевіряємо, чи відпустили ПАЛЕЦЬ на карті
-        if (
-            touch.clientX >= rect.left &&
-            touch.clientX <= rect.right &&
-            touch.clientY >= rect.top &&
-            touch.clientY <= rect.bottom
-        ) {
-            handleDrop(
-                touch.clientX - rect.left,
-                touch.clientY - rect.top,
-                symbol.dataset.correct,
-                symbol.src
-            );
+            correctCount++;
+            result.innerText = `Молодець! Ти додав символ України ✅ (${correctCount}/${totalCorrect})`;
+            result.style.color = "green";
+
+            if (correctCount === totalCorrect) {
+                setTimeout(() => {
+                    result.innerText = "Вітаємо! Ти зібрав усі символи України!";
+                    result.style.color = "#0057b7";
+                    result.style.fontWeight = "bold";
+                }, 400);
+            }
+        } else {
+            // неправильні на карту не додаємо
+            result.innerText = "Це не символ України ❌";
+            result.style.color = "red";
         }
-
-        // Повертаємо елемент на місце
-        symbol.style.position = "";
-        symbol.style.left = "";
-        symbol.style.top = "";
-        symbol.style.zIndex = "";
-        symbol.dataset.dragging = "false";
     });
-});
-
-// ---- Функція для вставки картинки ----
-function handleDrop(x, y, isCorrect, imgSrc) {
-    const droppedImg = document.createElement("img");
-    droppedImg.src = imgSrc;
-    droppedImg.style.width = "50px";
-    droppedImg.style.position = "absolute";
-    droppedImg.style.left = (x - 25) + "px";
-    droppedImg.style.top = (y - 25) + "px";
-    mapZone.appendChild(droppedImg);
-
-    if (isCorrect === "true") {
-        correctCount++;
-        result.innerText = "Молодець! Ти додав символ України ✅ (" + correctCount + "/" + totalCorrect + ")";
-        result.style.color = "green";
-
-        if (correctCount === totalCorrect) {
-            setTimeout(() => {
-                result.innerText = "Вітаємо! Ти зібрав усі символи України!";
-                result.style.color = "#0057b7";
-                result.style.fontWeight = "bold";
-            }, 500);
-        }
-    } else {
-        result.innerText = "Це не символ України ❌";
-        result.style.color = "red";
-    }
 }
 
-// --- Інтерактив 2: Прапор ---
+
 const canvas = document.getElementById("flagCanvas");
+const canvasBlock = document.getElementById("canvas-block");
+const infoBlock = document.getElementById("info-block");
+const canvasInfo = document.getElementById("canvas-info");
 const ctx = canvas.getContext("2d");
 let painting = false;
 
-function startPosition(e) {
-    painting = true;
-    draw(e);
+// Функция для определения типа устройства
+function isTouchDevice() {
+    return ('ontouchstart' in window) ||
+        (navigator.maxTouchPoints > 0) ||
+        (navigator.msMaxTouchPoints > 0);
 }
 
-function endPosition() {
-    painting = false;
-    ctx.beginPath();
+// Проверка устройства и показ соответствующего блока
+function checkDevice() {
+    if (isTouchDevice()) {
+        // Это мобильное устройство или планшет
+        canvasBlock.style.display = "none";
+        infoBlock.style.display = "block";
+        canvasInfo.style.display = "block";
+    } else {
+        // Это компьютер
+        canvasBlock.style.display = "block";
+        infoBlock.style.display = "none";
+        canvasInfo.style.display = "none";
+
+        // Инициализируем canvas только для компьютеров
+        initCanvas();
+    }
 }
 
-function draw(e) {
-    if (!painting) return;
-    ctx.lineWidth = document.getElementById("brushSize").value;
-    ctx.lineCap = "round";
-    ctx.strokeStyle = document.getElementById("colorPicker").value;
+// Инициализация canvas (только для компьютеров)
+function initCanvas() {
+    function getPos(e) {
+        const rect = canvas.getBoundingClientRect();
+        return { x: e.clientX - rect.left, y: e.clientY - rect.top };
+    }
 
-    ctx.lineTo(e.offsetX, e.offsetY);
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(e.offsetX, e.offsetY);
+    function startPosition(e) {
+        painting = true;
+        const { x, y } = getPos(e);
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+    }
+
+    function endPosition() {
+        painting = false;
+    }
+
+    function draw(e) {
+        if (!painting) return;
+        const { x, y } = getPos(e);
+        ctx.lineWidth = document.getElementById("brushSize").value;
+        ctx.lineCap = "round";
+        ctx.strokeStyle = document.getElementById("colorPicker").value;
+
+        ctx.lineTo(x, y);
+        ctx.stroke();
+    }
+
+    // Добавляем обработчики событий
+    canvas.addEventListener("mousedown", startPosition);
+    canvas.addEventListener("mouseup", endPosition);
+    canvas.addEventListener("mouseleave", endPosition);
+    canvas.addEventListener("mousemove", draw);
+
+    // Очистити
+    document.getElementById("clearCanvas").addEventListener("click", () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    });
+
+    // Зберегти
+    document.getElementById("saveCanvas").addEventListener("click", () => {
+        const link = document.createElement("a");
+        link.download = "prapor-moieyi-mrii.png";
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+    });
 }
 
-canvas.addEventListener("mousedown", startPosition);
-canvas.addEventListener("mouseup", endPosition);
-canvas.addEventListener("mousemove", draw);
+// Проверяем устройство при загрузке страницы
+document.addEventListener("DOMContentLoaded", checkDevice);
 
-// Очистити
-document.getElementById("clearCanvas").addEventListener("click", () => {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-});
-
-// Зберегти
-document.getElementById("saveCanvas").addEventListener("click", () => {
-    const link = document.createElement("a");
-    link.download = "prapor-moieyi-mrii.png";
-    link.href = canvas.toDataURL();
-    link.click();
-});
+// Также проверяем при изменении размера окна (на случай изменения ориентации)
+window.addEventListener("resize", checkDevice);
