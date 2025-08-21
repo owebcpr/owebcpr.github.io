@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>День Незалежності України</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+    </header>
+
+    <main>
+        <h2>Україна в серці – сила в єдності</h2>
+
+        <section>
+            <h3>Інтерактив 1: Пазл нашої держави</h3>
+            <p>Перетягни тільки символи України на карту.</p>
+
+            <!-- Карта України -->
+            <div id="mapZone">
+                <img src="img/map.jpg" alt="Карта України" id="map">
+            </div>
+
+            <!-- Символи -->
+            <div id="symbols">
+
+                <img src="img/Flag_of_Ukraine.svg" alt="Прапор" class="draggable" draggable="true" data-correct="true">
+                <img src="img/Coat_of_Arms_of_Ukraine.png" alt="Герб" class="draggable" draggable="true"
+                    data-correct="true">
+                <img src="img/kola.webp" alt="CocaCola" class="draggable" draggable="true" data-correct="false">
+                <img src="img/kalina.jpg" alt="Калина" class="draggable" draggable="true" data-correct="true">
+                <img src="img/z2-2.jpg" alt="Вишиванка" class="draggable" draggable="true" data-correct="true">
+                <img src="img/free-png.ru-550.png" alt="McDonalds" class="draggable" draggable="true"
+                    data-correct="false">
+                <img src="img/Naval_Ensign_of_Japan.svg.png" alt="Прапор Японії" class="draggable" draggable="true"
+                    data-correct="false">
+            </div>
+
+            <p id="result"></p>
+        </section>
+
+        <section>
+            <h3>Інтерактив 2: Прапор моєї мрії</h3>
+            <p>Обери колір і створи власний прапор України!</p>
+            <canvas id="flagCanvas" width="500" height="300" style="border:1px solid #333; "></canvas>
+            <br>
+            <label>Колір: <input type="color" id="colorPicker" value="#0057b7"></label>
+            <label>Товщина лінії: <input type="range" id="brushSize" min="2" max="20" value="5"></label>
+            <button id="clearCanvas">Очистити</button>
+            <button id="saveCanvas">Зберегти прапор</button>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2025-2026 Гурток "Web-програмування"</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

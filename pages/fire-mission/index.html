@@ -16,7 +16,7 @@
 
     <main class="container">
         <h2>Квест: Вогняна місія</h2>
-        <p>Пройди всі рівні та стань героєм пожежної безпеки!</p>
+        <p class="heading">Пройди всі рівні та стань героєм пожежної безпеки!</p>
         <!-- Рівень 1 -->
         <div class="level active" id="level1">
             <h2>Рівень 1: Що робити?</h2>
@@ -52,9 +52,43 @@
                 <div class="dropzone" id="safe">Безпечно</div>
                 <div class="dropzone" id="danger">Небезпечно</div>
             </div>
-            <button onclick="finishGame()">Завершити квест</button>
+            <div id="message" class="message"></div>
+            <button onclick="finishGame()">Перевірити</button>
+        </div>
+        <!-- Рівень 4 -->
+        <div class="level" id="level4">
+            <h2>Рівень 4: Вибери правильну дію</h2>
+            <p>У кімнаті з’явився дим. Твої дії?</p>
+            <div class="answers">
+                <button onclick="checkAnswer(this,false,4)">Заховатися під стіл</button>
+                <button onclick="checkAnswer(this,false,4)">Відкрити вікна і дихати свіжим повітрям</button>
+                <button onclick="checkAnswer(this,true,4)">Вийти з приміщення і повідомити дорослих</button>
+            </div>
         </div>
 
+        <!-- Рівень 5 -->
+        <div class="level" id="level5">
+            <h2>Рівень 5: Знайди небезпечні предмети</h2>
+            <p>Натисни лише на ті предмети, які можуть бути причиною пожежі:</p>
+            <div class="answers">
+                <button onclick="checkAnswer(this,true,5)">🕯️ Свічка</button>
+                <button onclick="checkAnswer(this,false,5)">📕 Книга</button>
+                <button onclick="checkAnswer(this,true,5)">🔥 Вогонь</button>
+                <button onclick="checkAnswer(this,false,5)">💻 Комп’ютер</button>
+            </div>
+        </div>
+
+        <!-- Рівень 6 -->
+        <div class="level" id="level6">
+            <h2>Рівень 6: Так чи Ні?</h2>
+            <p>Обери правильні твердження:</p>
+            <div class="answers">
+                <button onclick="checkAnswer(this,false,6)">Комп’ютер треба вимикати, висмикуючи кабель із
+                    розетки</button>
+                <button onclick="checkAnswer(this,true,6)">Не можна залишати телефон заряджатися під подушкою</button>
+                <button onclick="checkAnswer(this,true,6)">Вогнегасник допомагає гасити невеликі пожежі</button>
+            </div>
+        </div>
         <!-- Фінал -->
         <div class="level" id="final">
             <h2>Вітаємо!</h2>
