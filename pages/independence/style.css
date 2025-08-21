@@ -85,3 +85,7 @@ h2 {
 #symbols img:hover {
     border: 2px solid #0057b7;
 }
+
+.canvas {
+    padding: 20px;
+}
