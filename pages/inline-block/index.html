@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Блочні та рядкові елементи. Властивості блоків</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Комунальний заклад – центр позашкільної роботи Путивльської міської ради</h1>
+    </header>
+
+    <main>
+        <h2 class="head">Блочні та рядкові елементи. Властивості блоків</h2>
+
+        <h2>1. Що таке блочні елементи?</h2>
+        <p>Блочні елементи займають всю доступну ширину і починаються з нового рядка. Вони можуть містити інші блочні та
+            рядкові елементи.</p>
+        <pre><code class="language-html">
+&lt;div&gt;, &lt;p&gt;, &lt;h1&gt;-&lt;h6&gt;, &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;, &lt;section&gt;, &lt;article&gt;
+        </code></pre>
+
+        <h2>2. Що таке рядкові елементи?</h2>
+        <p>Рядкові елементи займають тільки необхідну ширину і не починають новий рядок. Вони зазвичай містять текст або
+            інші рядкові елементи.</p>
+        <pre><code class="language-html">
+&lt;span&gt;, &lt;a&gt;, &lt;strong&gt;, &lt;em&gt;, &lt;img&gt;, &lt;br&gt;
+        </code></pre>
+
+        <h2>3. Властивості блоків: Margin, Padding, Border</h2>
+
+        <h3>Що таке Box Model?</h3>
+        <p>Кожен блочний елемент має так звану "модель коробки", яка складається з:</p>
+
+        <div class="box-model-demo">
+            <div class="box-model-container">
+                <div class="margin-box">
+                    <span class="label">Margin</span>
+                    <div class="border-box">
+                        <span class="label">Border</span>
+                        <div class="padding-box">
+                            <span class="label">Padding</span>
+                            <div class="content-box">
+                                <span class="label">Контент</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box-model-explanation">
+                <div class="explanation-item">
+                    <div class="color-box margin-color"></div>
+                    <span><strong>Margin</strong> - зовнішній відступ (простір між елементами)</span>
+                </div>
+                <div class="explanation-item">
+                    <div class="color-box border-color"></div>
+                    <span><strong>Border</strong> - рамка навколо елемента</span>
+                </div>
+                <div class="explanation-item">
+                    <div class="color-box padding-color"></div>
+                    <span><strong>Padding</strong> - внутрішній відступ (простір всередині, біля контенту)</span>
+                </div>
+                <div class="explanation-item">
+                    <div class="color-box content-color"></div>
+                    <span><strong>Content</strong> - власне вміст елемента</span>
+                </div>
+            </div>
+        </div>
+
+        <h3>Приклади використання:</h3>
+
+        <div class="examples-container">
+            <div class="example">
+                <h4>Padding (внутрішній відступ)</h4>
+                <div class="code-example">
+                    <pre><code class="language-css">
+div {
+  padding: 20px; /* всі сторони */
+  padding: 10px 20px; /* верх/низ | ліво/право */
+  padding: 5px 10px 15px 20px; /* верх | право | низ | ліво */
+}
+                    </code></pre>
+                </div>
+                <div class="visual-example">
+                    <div class="element-with-padding">
+                        Елемент з padding
+                    </div>
+                </div>
+            </div>
+
+            <div class="example">
+                <h4>Margin (зовнішній відступ)</h4>
+                <div class="code-example">
+                    <pre><code class="language-css">
+div {
+  margin: 30px; /* всі сторони */
+  margin: 15px 30px; /* верх/низ | ліво/право */
+  margin: 10px 20px 30px 40px; /* верх | право | низ | ліво */
+  margin: 0 auto; /* центрування по горизонталі */
+}
+                    </code></pre>
+                </div>
+                <div class="visual-example">
+                    <div class="element-with-margin">
+                        <div class="neighbor">Сусідній елемент</div>
+                        <div class="element">Елемент з margin</div>
+                        <div class="neighbor">Сусідній елемент</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example">
+                <h4>Border (рамка)</h4>
+                <div class="code-example">
+                    <pre><code class="language-css">
+div {
+  border: 2px solid black; /* товщина | стиль | колір */
+  border-radius: 10px; /* закруглення кутів */
+  border-top: 1px dotted red; /* окрема сторона */
+}
+                    </code></pre>
+                </div>
+                <div class="visual-example">
+                    <div class="element-with-border">
+                        Елемент з border
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2>Перевір свої знання!</h2>
+        <p>Перетягни теги у правильні колонки:</p>
+
+        <div class="quiz-container">
+            <div class="tags-container">
+                <div class="tag" draggable="true" data-type="block">div</div>
+                <div class="tag" draggable="true" data-type="inline">span</div>
+                <div class="tag" draggable="true" data-type="block">p</div>
+                <div class="tag" draggable="true" data-type="inline">a</div>
+                <div class="tag" draggable="true" data-type="block">h1</div>
+                <div class="tag" draggable="true" data-type="inline">strong</div>
+                <div class="tag" draggable="true" data-type="block">ul</div>
+                <div class="tag" draggable="true" data-type="inline">img</div>
+                <div class="tag" draggable="true" data-type="block">section</div>
+                <div class="tag" draggable="true" data-type="inline">em</div>
+            </div>
+
+            <div class="columns-container">
+                <div class="column" id="block-column">
+                    <h3>Блочні елементи</h3>
+                    <div class="drop-zone" id="block-drop"></div>
+                </div>
+
+                <div class="column" id="inline-column">
+                    <h3>Рядкові елементи</h3>
+                    <div class="drop-zone" id="inline-drop"></div>
+                </div>
+            </div>
+
+            <button id="check-btn" onclick="checkAnswers()">Перевірити відповіді</button>
+            <div id="result-message"></div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>2025 &copy; Гурток "Web-програмування". Всі права захищені</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

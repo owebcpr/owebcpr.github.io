@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Фонові зображення. Властивості background</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Комунальний заклад – центр позашкільної роботи Путивльської міської ради</h1>
+    </header>
+
+    <main>
+        <h2 class="head">Фонові зображення. Властивості background</h2>
+
+        <h2>1. Що таке фонові зображення?</h2>
+        <p>Фонові зображення дозволяють додавати картинки на задній план елементів. Це можуть бути фотографії, текстури,
+            графічні елементи або шаблони.</p>
+
+        <h2>2. Основні властивості background</h2>
+
+        <h3>background-image</h3>
+        <p>Вказує шлях до зображення:</p>
+        <pre><code class="language-css">
+div {
+  background-image: url('шлях/до/зображення.jpg');
+}
+        </code></pre>
+
+        <h3>background-size</h3>
+        <p>Визначає розмір фонового зображення:</p>
+        <pre><code class="language-css">
+div {
+  background-size: cover;     /* покриває всю область */
+  background-size: contain;   /* вміщає все зображення */
+  background-size: 100% 100%; /* розтягує на всю область */
+  background-size: 200px 150px; /* конкретні розміри */
+}
+        </code></pre>
+
+        <h3>background-position</h3>
+        <p>Визначає позицію зображення:</p>
+        <pre><code class="language-css">
+div {
+  background-position: center;    /* по центру */
+  background-position: top left;  /* в лівому верхньому куті */
+  background-position: 50% 50%;   /* координати */
+  background-position: 20px 10px; /* відступи */
+}
+        </code></pre>
+
+        <h3>background-repeat</h3>
+        <p>Визначає, чи повторюватиметься зображення:</p>
+        <pre><code class="language-css">
+div {
+  background-repeat: no-repeat; /* не повторюється */
+  background-repeat: repeat;    /* повторюється */
+  background-repeat: repeat-x;  /* повторюється по горизонталі */
+  background-repeat: repeat-y;  /* повторюється по вертикалі */
+}
+        </code></pre>
+
+        <h2>3. Спробуй самостійно!</h2>
+        <p>Встав посилання на зображення та налаштуй його відображення:</p>
+
+        <div class="background-editor">
+            <div class="editor-controls">
+                <div class="input-group">
+                    <label for="bg-image">Посилання на зображення:</label>
+                    <input type="text" id="bg-image" placeholder="https://example.com/image.jpg">
+                    <button onclick="loadBackground()">Завантажити</button>
+                </div>
+
+                <div class="controls-row">
+                    <div class="control-group">
+                        <label for="bg-size">Розмір (size):</label>
+                        <select id="bg-size" onchange="updateBackground()">
+                            <option value="cover">cover</option>
+                            <option value="contain">contain</option>
+                            <option value="100% 100%">100% 100%</option>
+                            <option value="auto">auto</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="bg-position">Позиція (position):</label>
+                        <select id="bg-position" onchange="updateBackground()">
+                            <option value="center">center</option>
+                            <option value="top left">top left</option>
+                            <option value="top right">top right</option>
+                            <option value="bottom left">bottom left</option>
+                            <option value="bottom right">bottom right</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="bg-repeat">Повторення (repeat):</label>
+                        <select id="bg-repeat" onchange="updateBackground()">
+                            <option value="no-repeat">no-repeat</option>
+                            <option value="repeat">repeat</option>
+                            <option value="repeat-x">repeat-x</option>
+                            <option value="repeat-y">repeat-y</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview-area">
+                <div id="background-preview">
+                    <p>Тут з'явиться ваше фонове зображення</p>
+                </div>
+            </div>
+
+            <div class="generated-code">
+                <h3>Згенерований CSS код:</h3>
+                <pre id="css-code"><code class="language-css">
+#your-element {
+  background-image: url('ваше_посилання');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+                </code></pre>
+            </div>
+        </div>
+
+        <h2 class="head">4. Приклади готових фонів для тестування</h2>
+        <div class="example-backgrounds">
+            <button
+                onclick="setExampleBackground('https://images.unsplash.com/photo-1506744038136-46273834b3fb')">Гори</button>
+            <button
+                onclick="setExampleBackground('https://images.unsplash.com/photo-1501785888041-af3ef285b470')">Море</button>
+            <button
+                onclick="setExampleBackground('https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07')">Квіти</button>
+            <button
+                onclick="setExampleBackground('https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5')">Ліс</button>
+            <button
+                onclick="setExampleBackground('https://avatanplus.com/files/resources/original/589766358e61c15a0f67414f.jpg')">Текстура</button>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>2025 &copy; Гурток "Web-програмування". Всі права захищені</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

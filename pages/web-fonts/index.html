@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Веб-шрифти. Що це таке та як використовувати</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- Підключаємо веб-шрифти для прикладу -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Comic+Neue:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Комунальний заклад – центр позашкільної роботи Путивльської міської ради</h1>
+    </header>
+
+    <main>
+        <h2 class="head">Веб-шрифти: Як зробити текст красивим</h2>
+
+        <h2>1. Що таке веб-шрифти?</h2>
+        <p><strong>Веб-шрифти</strong> - це спеціальні шрифти, які завантажуються з інтернету і відображаються на
+            веб-сторінках. На
+            відміну від звичайних шрифтів, які повинні бути встановлені на комп'ютері користувача, веб-шрифти працюють
+            навіть якщо у людини немає цього шрифту!</p>
+
+        <div class="example-fonts">
+            <p style="font-family: 'Roboto Slab', serif;">Це текст з веб-шрифтом Roboto Slab</p>
+            <p style="font-family: 'Comic Neue', cursive;">А це - з веб-шрифтом Comic Neue</p>
+        </div>
+
+        <h2>2. Де знайти веб-шрифти?</h2>
+        <p>Існує багато безкоштовних сервісів з веб-шрифтами:</p>
+        <ul class="fonts">
+            <li><strong><a href="https://fonts.google.com/" target="_blank">Google Fonts</a></strong> - найпопулярніша
+                безкоштовна колекція</li>
+            <li><strong><a href="https://www.fonts.com/" target="_blank">Fonts.com</a></strong> - платні та безкоштовні
+                шрифти</li>
+            <li><strong><a href="https://fonts.adobe.com/" target="_blank">Adobe Fonts</a></strong> - для користувачів
+                Adobe Creative Cloud</li>
+            <li><strong><a href="https://www.fontsquirrel.com/" target="_blank">Font Squirrel</a></strong> - безкоштовні
+                шрифти високої якості</li>
+            <li><strong><a href="https://www.dafont.com/" target="_blank">DaFont</a></strong> - велика колекція
+                безкоштовних шрифтів</li>
+            <li><strong><a href="https://www.1001fonts.com/" target="_blank">1001 Fonts</a></strong> - ще один
+                популярний ресурс</li>
+        </ul>
+
+        <h2>3. Як підключити веб-шрифти?</h2>
+        <p>Найпростіший спосіб - через Google Fonts:</p>
+
+        <h3>Спосіб 1: Через посилання в HTML</h3>
+        <pre><code class="language-html">
+&lt;!-- Додаємо в розділ head --&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet"&gt;
+        </code></pre>
+
+        <h3>Спосіб 2: Через import в CSS</h3>
+        <pre><code class="language-css">
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+        </code></pre>
+
+        <h2>4. Як застосовувати веб-шрифти на сторінці?</h2>
+        <p>Після підключення шрифту, використовуйте його в CSS:</p>
+        <pre><code class="language-css">
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Comic Neue', cursive;
+  font-weight: bold;
+}
+        </code></pre>
+
+        <h2>Спробуй самостійно</h2>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('html')">HTML</button>
+            <button class="tab-btn" onclick="switchTab('css')">CSS</button>
+        </div>
+
+        <textarea id="htmlCode" class="code-area">
+<!-- Заголовок з веб-шрифтом -->
+<h1 style="font-family: 'Roboto Slab', serif;">
+  Мій класний заголовок
+</h1>
+
+<!-- Параграф з текстом -->
+<p style="font-family: 'Comic Neue', cursive;">
+  Це текст з веб-шрифтом. Спробуй змінити шрифт у CSS!
+</p>
+
+<!-- Кнопка з особливим шрифтом -->
+<button style="font-family: 'Roboto Slab', serif;">
+  Натисни мене!
+</button>
+</textarea>
+
+        <textarea id="cssCode" class="code-area" style="display: none;">
+/* Підключаємо веб-шрифт */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Comic+Neue&display=swap');
+
+/* Застосовуємо шрифти до елементів */
+body {
+  font-family: 'Comic Neue', cursive;
+  background-color: #f0f8ff;
+}
+
+h1 {
+  font-family: 'Roboto Slab', serif;
+  color: #2c3e50;
+}
+
+button {
+  font-family: 'Roboto Slab', serif;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+</textarea>
+
+        <iframe id="preview"></iframe>
+    </main>
+
+    <footer>
+        <p>2025 &copy; Гурток "Web-програмування". Всі права захищені</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
