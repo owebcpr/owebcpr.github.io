@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Трансформація елементів. Властивість transform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Комунальний заклад – центр позашкільної роботи Путивльської міської ради</h1>
+    </header>
+
+    <main>
+        <h2 class="head">Трансформація елементів. Властивість transform</h2>
+
+        <h2>1. Що таке трансформація?</h2>
+        <p>Трансформація дозволяє змінювати зовнішній вигляд елементів: обертати, переміщувати, масштабувати та нахиляти
+            їх.</p>
+
+        <h2>2. Основні види трансформації</h2>
+
+        <h3>transform: translate()</h3>
+        <p>Переміщує елемент по горизонталі та вертикалі:</p>
+        <pre><code class="language-css">
+div {
+  transform: translate(50px, 20px); /* X, Y */
+  transform: translateX(100px);     /* тільки по X */
+  transform: translateY(-30px);     /* тільки по Y */
+}
+        </code></pre>
+
+        <h3>transform: rotate()</h3>
+        <p>Обертає елемент на заданий кут:</p>
+        <pre><code class="language-css">
+div {
+  transform: rotate(45deg);     /* градуси */
+  transform: rotate(0.5turn);   /* оберти */
+  transform: rotate(3.14rad);   /* радіани */
+}
+        </code></pre>
+
+        <h3>transform: scale()</h3>
+        <p>Масштабує елемент:</p>
+        <pre><code class="language-css">
+div {
+  transform: scale(1.5);        /* X і Y */
+  transform: scale(2, 0.5);     /* X, Y */
+  transform: scaleX(1.2);       /* тільки X */
+  transform: scaleY(0.8);       /* тільки Y */
+}
+        </code></pre>
+
+        <h3>transform: skew()</h3>
+        <p>Нахиляє елемент:</p>
+        <pre><code class="language-css">
+div {
+  transform: skew(30deg);       /* X і Y */
+  transform: skew(20deg, 10deg);/* X, Y */
+  transform: skewX(15deg);      /* тільки X */
+  transform: skewY(-10deg);     /* тільки Y */
+}
+        </code></pre>
+
+        <h3>Комбіновані трансформації</h3>
+        <p>Можна комбінувати кілька трансформацій:</p>
+        <pre><code class="language-css">
+div {
+  transform: translate(50px, 20px) rotate(45deg) scale(1.2);
+}
+        </code></pre>
+
+        <h2>3. Спробуй самостійно!</h2>
+        <p>Експериментуй з трансформаціями:</p>
+
+        <div class="transform-editor">
+            <div class="editor-controls">
+                <div class="transform-presets">
+                    <h3>Готові пресети:</h3>
+                    <div class="preset-buttons">
+                        <button onclick="applyPreset('translate')">Перемістити</button>
+                        <button onclick="applyPreset('rotate')">Обернути</button>
+                        <button onclick="applyPreset('scale')">Збільшити</button>
+                        <button onclick="applyPreset('skew')">Нахилити</button>
+                        <button onclick="applyPreset('combine')">Комбінована</button>
+                        <button onclick="resetTransform()">Скинути</button>
+                    </div>
+                </div>
+
+                <div class="custom-transform">
+                    <h3>Власний код:</h3>
+                    <textarea id="custom-transform" placeholder="transform: translate(50px) rotate(45deg);"></textarea>
+                    <div class="custom-buttons">
+                        <button onclick="applyCustomTransform()">Застосувати</button>
+                        <button onclick="clearCustomTransform()">Очистити</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview-area">
+                <div class="original-element">
+                    <h4>Оригінал</h4>
+                    <div class="element">Element</div>
+                </div>
+
+                <div class="transformed-element">
+                    <h4>Трансформований</h4>
+                    <div id="transform-preview" class="element">Element</div>
+                </div>
+            </div>
+
+            <div class="generated-code">
+                <h3>Активні стилі:</h3>
+                <pre id="css-code"><code class="language-css">
+#element {
+  transform: none;
+}
+                </code></pre>
+            </div>
+        </div>
+
+        <h2>4. Додаткові властивості</h2>
+
+        <h3>transform-origin</h3>
+        <p>Визначає точку, відносно якої відбувається трансформація:</p>
+        <pre><code class="language-css">
+div {
+  transform-origin: center;     /* за замовчуванням */
+  transform-origin: top left;   /* лівий верхній кут */
+  transform-origin: 50px 30px;  /* конкретні координати */
+}
+        </code></pre>
+
+        <h3>transition</h3>
+        <p>Додає плавність анімації трансформації:</p>
+        <pre><code class="language-css">
+div {
+  transition: transform 0.3s ease-in-out;
+}
+div:hover {
+  transform: rotate(45deg);
+}
+        </code></pre>
+
+    </main>
+
+    <footer>
+        <p>2025 &copy; Гурток "Web-програмування". Всі права захищені</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
