@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Мінна безпека</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+    </header>
+
+    <main>
+        <section id="game">
+            <h2>Інтерактивна гра: «Стежками безпеки»</h2>
+            <p>Пройди всі рівні, щоб стати справжнім Захисником безпеки!</p>
+
+            <!-- Рівень 1 -->
+            <div class="level" id="level1">
+                <h3>Рівень 1: Визнач небезпечні предмети</h3>
+                <p>Перетягни предмети у правильні зони: що <b>небезпечне</b>, а що <b>безпечне</b>.</p>
+                <div class="drag-drop-quiz drag-drop-quiz_mb">
+                    <div class="statements">
+                        <div class="card card_mb" draggable="true" data-type="danger">Снаряд у землі</div>
+                        <div class="card card_mb" draggable="true" data-type="safe">М'яч</div>
+                        <div class="card card_mb" draggable="true" data-type="danger">Невідомий металевий предмет</div>
+                        <div class="card card_mb" draggable="true" data-type="safe">Книга</div>
+                    </div>
+                    <div class="dropzones">
+                        <div class="dropzone" data-accept="safe">
+                            <h4>Безпечні</h4>
+                        </div>
+                        <div class="dropzone" data-accept="danger">
+                            <h4>Небезпечні</h4>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn" onclick="checkLevel1()">Перевірити</button>
+                <p id="result1"></p>
+            </div>
+
+            <!-- Рівень 2 -->
+            <div class="level" id="level2" style="display:none;">
+                <h3>Рівень 2: Обери безпечний шлях</h3>
+                <p>Який маршрут обереш?</p>
+                <div class="quiz">
+                    <button class="level2-btn" onclick="nextLevel(2,true)">🏞️ Доріжка в лісі з табличкою
+                        «Міни»</button>
+                    <button class="level2-btn" onclick="nextLevel(2,false)">🌳 Стежка через парк, де грають
+                        діти</button>
+                    <button class="level2-btn" onclick="nextLevel(2,false)">🌾 Поле, де видно підозрілі
+                        предмети</button>
+                </div>
+                <p id="result2"></p>
+            </div>
+
+            <!-- Рівень 3 -->
+            <div class="level" id="level3" style="display:none;">
+                <h3>Рівень 3: Що ти зробиш, якщо знайшов міну?</h3>
+                <ul class="level3-list">
+                    <li><button onclick="finishGame(false)">Візьму її в руки і віднесу</button></li>
+                    <li><button onclick="finishGame(true)">Повідомлю дорослих і службу 101</button></li>
+                    <li><button onclick="finishGame(false)">Сфотографую для друзів</button></li>
+                </ul>
+                <p id="result3"></p>
+            </div>
+            <!-- Рівень 4 -->
+            <div class="level" id="level4" style="display:none;">
+                <h3>Рівень 4: Вибери правильний знак</h3>
+                <p>Який знак попереджає про мінну небезпеку?</p>
+                <div class="quiz">
+                    <button class="level4-btn" onclick="nextLevel4(false)">🚸 Дорога до школи</button>
+                    <button class="level4-btn" onclick="nextLevel4(true)">☠️ Череп і кістки (Міни!)</button>
+                    <button class="level4-btn" onclick="nextLevel4(false)">🚭 Заборонено курити</button>
+                </div>
+                <p id="result4"></p>
+            </div>
+
+            <!-- Рівень 5 -->
+            <div class="level" id="level5" style="display:none;">
+                <h3>Рівень 5: Ситуація</h3>
+                <p>Ти з друзями знайшов підозрілий предмет у полі. Що зробиш?</p>
+                <ul>
+                    <li class="level5-list"><button onclick="finishGameExtra(false)">Візьму його, щоб
+                            роздивитись</button></li>
+                    <li class="level5-list"><button onclick="finishGameExtra(false)">Обійду і залишу іншим</button></li>
+                    <li class="level5-list"><button onclick="finishGameExtra(true)">Зупиню друзів і викличу
+                            дорослих</button></li>
+                </ul>
+                <p id="result5"></p>
+            </div>
+
+
+            <!-- Фінал -->
+            <div id="final" style="display:none;">
+                <h2>Вітаємо! 🎉</h2>
+                <p>Ти успішно пройшов усі рівні та став справжнім <b>Захисником безпеки</b>! 🚀</p>
+                <img src="img/2.jpg" alt="Герой безпеки">
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2025-2026 Гурток "Web-програмування"</p>
+    </footer>
+
+    <script src="mine-trap-script.js"></script>
+</body>
+
+</html>

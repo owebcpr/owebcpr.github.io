@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Позиціонування елементів. Властивість position</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Комунальний заклад – центр позашкільної роботи Путивльської міської ради</h1>
+    </header>
+
+    <main>
+        <h2 class="head">Позиціонування елементів. Властивість position</h2>
+
+        <h2>1. Що таке позиціонування?</h2>
+        <p>Властивість position визначає, як елемент розташовується на сторінці. Коли ми застосовуємо позиціонування
+            (relative, absolute, fixed), ми можемо використовувати властивості:</p>
+        <ul>
+            <li><strong>top</strong> - відступ зверху</li>
+            <li><strong>right</strong> - відступ справа</li>
+            <li><strong>bottom</strong> - відступ знизу</li>
+            <li><strong>left</strong> - відступ зліва</li>
+        </ul>
+        <h2>2. Одиниці виміру: пікселі та відсотки</h2>
+        <p>Властивості позиціонування можна задавати в різних одиницях:</p>
+
+        <h3>Пікселі (px)</h3>
+        <p>Фіксований розмір. 1px = 1 точка на екрані.</p>
+        <pre><code class="language-css">
+.element {
+  position: absolute;
+  top: 50px;    /* 50 пікселів від верху */
+  left: 100px;  /* 100 пікселів зліва */
+}
+        </code></pre>
+
+        <h3>Відсотки (%)</h3>
+        <p>Відносний розмір. Відсотки рахуються від розміру батьківського контейнера:</p>
+        <pre><code class="language-css">
+.element {
+  position: absolute;
+  top: 10%;     /* 10% від висоти батька */
+  left: 20%;    /* 20% від ширини батька */
+}
+        </code></pre>
+        <p><strong>Приклад:</strong> Якщо батьківський контейнер має ширину 500px, то <code>left: 20%</code> = 100px</p>
+        <h2>2. position: relative</h2>
+        <p>Елемент позиціонується відносно свого нормального положення. Залишається в потоці документа - інші елементи
+            "бачать" його на старому місці.</p>
+        <pre><code class="language-css">
+.element {
+  position: relative;
+  top: 20px;
+  left: 30px;
+}
+        </code></pre>
+
+        <div class="interactive-demo">
+            <h3>Спробуй самостійно - Relative:</h3>
+            <div class="demo-controls">
+                <div class="control-group">
+                    <label for="relative-top">Top:</label>
+                    <input type="range" id="relative-top" min="-50" max="50" value="0">
+                    <span id="relative-top-value">0px</span>
+                </div>
+                <div class="control-group">
+                    <label for="relative-left">Left:</label>
+                    <input type="range" id="relative-left" min="-50" max="50" value="0">
+                    <span id="relative-left-value">0px</span>
+                </div>
+            </div>
+            <div class="demo-preview">
+                <div class="relative-container">
+                    <div class="normal-element">Звичайний елемент</div>
+                    <div id="relative-demo" class="demo-element">Relative елемент</div>
+                    <div class="normal-element">Звичайний елемент</div>
+                </div>
+            </div>
+            <div class="demo-code">
+                <pre id="relative-code"><code class="language-css">
+#element {
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+                </code></pre>
+            </div>
+        </div>
+
+        <h2>3. position: absolute</h2>
+        <p>Елемент видаляється з нормального потоку і позиціонується відносно найближчого предка з позиціонуванням (не
+            static).</p>
+        <h4>Якщо батько має позиціонування:</h4>
+        <pre><code class="language-css">
+.container {
+  position: relative; /* Створює контекст */
+}
+.child {
+  position: absolute; /* Позиціонується відносно .container */
+  top: 0;
+  left: 0;
+}
+        </code></pre>
+
+        <h4>Якщо батько НЕ має позиціонування:</h4>
+        <pre><code class="language-css">
+.container {
+  position: static; /* За замовчуванням - не створює контекст */
+}
+.child {
+  position: absolute; /* Позиціонується відносно вікна браузера! */
+  top: 0;
+  left: 0;
+}
+        </code></pre>
+        <p><strong>Важливо:</strong> Інші елементи "не бачать" абсолютно позиціонований елемент і займають його колишнє
+            місце!</p>
+        <pre><code class="language-css">
+.container {
+  position: relative; /* Створюємо контекст */
+}
+.element {
+  position: absolute;
+  top: 50px;
+  right: 40px;
+}
+        </code></pre>
+
+        <div class="interactive-demo">
+            <h3>Спробуй самостійно - Absolute:</h3>
+            <div class="demo-controls">
+                <div class="control-group">
+                    <label for="absolute-top">Top:</label>
+                    <input type="range" id="absolute-top" min="0" max="200" value="50">
+                    <span id="absolute-top-value">50px</span>
+                </div>
+                <div class="control-group">
+                    <label for="absolute-right">Right:</label>
+                    <input type="range" id="absolute-right" min="0" max="200" value="40">
+                    <span id="absolute-right-value">40px</span>
+                </div>
+            </div>
+            <div class="demo-preview">
+                <div class="absolute-container">
+                    <div class="container-info">Контейнер з position: relative</div>
+                    <div class="normal-element">Звичайний елемент (займає місце)</div>
+                    <div id="absolute-demo" class="demo-element">Absolute елемент</div>
+                    <div class="normal-element">Звичайний елемент (займає місце)</div>
+                </div>
+            </div>
+            <div class="demo-code">
+                <pre id="absolute-code"><code class="language-css">
+                    .container {
+#element {
+  position: absolute;
+  top: 50px;
+  right: 40px;
+}
+                </code></pre>
+            </div>
+        </div>
+
+        <h2>4. position: fixed</h2>
+        <p>Елемент позиціонується відносно вікна браузера (viewport). Залишається на одному місці при прокрутці.</p>
+        <p><strong>Увага:</strong> Fixed завжди позиціонується відносно вікна браузера! Це лише імітація для навчання.
+        </p>
+        <pre><code class="language-css">
+.element {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+</code></pre>
+
+        <div class="interactive-demo">
+            <h3>Спробуй самостійно - Fixed (імітація):</h3>
+            <p class="demo-info">Справжній fixed позиціонується відносно вікна браузера. Це лише імітація для навчання!
+            </p>
+            <div class="demo-controls">
+                <div class="control-group">
+                    <label for="fixed-bottom">Bottom:</label>
+                    <input type="range" id="fixed-bottom" min="0" max="100" value="20">
+                    <span id="fixed-bottom-value">20px</span>
+                </div>
+                <div class="control-group">
+                    <label for="fixed-right">Right:</label>
+                    <input type="range" id="fixed-right" min="0" max="100" value="20">
+                    <span id="fixed-right-value">20px</span>
+                </div>
+            </div>
+            <div class="demo-preview">
+                <div class="fixed-container">
+                    <div class="container-info">Імітація вікна браузера</div>
+                    <div class="scroll-content">
+                        <div class="content-item">Прокручуваний контент 1</div>
+                        <div class="content-item">Прокручуваний контент 2</div>
+                        <div class="content-item">Прокручуваний контент 3</div>
+                        <div class="content-item">Прокручуваний контент 4</div>
+                        <div class="content-item">Прокручуваний контент 5</div>
+                        <div class="content-item">Прокручуваний контент 6</div>
+                        <div class="content-item">Прокручуваний контент 7</div>
+                        <div class="content-item">Прокручуваний контент 8</div>
+                        <div id="fixed-demo" class="demo-element">Fixed елемент</div>
+                    </div>
+                </div>
+            </div>
+            <div class="demo-code">
+                <pre id="fixed-code"><code class="language-css">
+#element {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+        </code></pre>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>2025 &copy; Гурток "Web-програмування". Всі права захищені</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

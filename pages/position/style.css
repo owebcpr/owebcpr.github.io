@@ -1,0 +1,408 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header,
+footer {
+    background-color: #00557f;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 0 1em;
+    padding-bottom: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2,
+.title {
+    color: #005580;
+}
+
+.head {
+    font-size: 32px;
+    color: #e66612;
+}
+
+code {
+    background: #eee;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+}
+
+pre {
+    background: #1e1e1e;
+    padding: 1em;
+    overflow-x: auto;
+    border-radius: 8px;
+    color: white;
+}
+
+.example-fonts {
+    background: #f9f9f9;
+    padding: 15px;
+    border-left: 4px solid #00557f;
+    margin: 15px 0;
+    border-radius: 4px;
+}
+
+.video iframe {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto 0;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+iframe {
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 16 / 9;
+    border-radius: 4px;
+    border: none;
+    display: block;
+    margin: 0 auto;
+}
+
+.editor {
+    margin-top: 20px;
+}
+
+textarea {
+    width: 80%;
+    min-height: 200px;
+    font-family: monospace;
+    padding: 10px;
+    font-size: 14px;
+    resize: none;
+    border: 1px solid #ccc;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+}
+
+.tabs button {
+    padding: 6px 12px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background: white;
+}
+
+.tabs button.active {
+    background: #d0d0d0;
+}
+
+iframe.example {
+    width: 100%;
+    max-width: 80%;
+    height: 250px;
+    border: 1px solid #ccc;
+    background: white;
+    margin: 0;
+}
+
+/* Стилі для редактора позиціонування */
+.position-editor {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 2px solid #00557f;
+}
+
+.editor-controls {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.position-presets,
+.position-controls,
+.position-type {
+    flex: 1;
+    min-width: 250px;
+}
+
+.preset-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.preset-buttons button {
+    padding: 10px 15px;
+    background: #00557f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.preset-buttons button:hover {
+    background: #003d5b;
+    transform: translateY(-2px);
+}
+
+.control-group {
+    margin: 10px 0;
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #00557f;
+}
+
+.control-group input[type="range"] {
+    width: 70%;
+    margin-right: 10px;
+}
+
+.control-group span {
+    display: inline-block;
+    min-width: 40px;
+    text-align: right;
+    font-family: monospace;
+}
+
+.position-type select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: white;
+    margin-top: 10px;
+}
+
+.preview-area {
+    margin: 30px 0;
+}
+
+.parent-container {
+    text-align: center;
+}
+
+.parent-container h4 {
+    color: #00557f;
+    margin-bottom: 15px;
+}
+
+/* Стилі для інтерактивних демо */
+.interactive-demo {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 2px solid #00557f;
+}
+
+.demo-controls {
+    display: flex;
+    gap: 20px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.control-group label {
+    font-weight: bold;
+    color: #00557f;
+    min-width: 50px;
+}
+
+.control-group input[type="range"] {
+    width: 120px;
+}
+
+.control-group span {
+    min-width: 50px;
+    font-family: monospace;
+}
+
+.demo-preview {
+    margin: 20px 0;
+    padding: 15px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+/* Relative demo */
+.relative-container {
+    position: relative;
+    padding: 20px;
+    background: #e8f4f8;
+    border: 2px dashed #00557f;
+    border-radius: 6px;
+}
+
+.normal-element {
+    padding: 15px;
+    margin: 10px 0;
+    background: #d1ecf1;
+    border: 1px solid #bee5eb;
+    border-radius: 4px;
+}
+
+/* Absolute demo */
+.absolute-container {
+    position: relative;
+    height: 200px;
+    padding: 20px;
+    background: #e8f4f8;
+    border: 2px dashed #00557f;
+    border-radius: 6px;
+}
+
+.container-info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 12px;
+    color: #666;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    border-radius: 3px;
+}
+
+/* Fixed demo */
+.fixed-container {
+    position: relative;
+    height: 150px;
+    padding: 20px;
+    background: #fff3cd;
+    border: 2px dashed #ffc107;
+    border-radius: 6px;
+}
+
+/* Sticky demo */
+.sticky-container {
+    height: 200px;
+    overflow-y: scroll;
+    padding: 20px;
+    background: #d4edda;
+    border: 2px dashed #28a745;
+    border-radius: 6px;
+}
+
+.scroll-content {
+    height: 400px;
+}
+
+.content-item {
+    padding: 15px;
+    margin: 5px 0;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+}
+
+/* Загальні стилі для демо-елементів */
+.demo-element {
+    width: 200px;
+    padding: 15px;
+    background: linear-gradient(45deg, #00557f, #003d5b);
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#relative-demo {
+    position: relative;
+    background: linear-gradient(45deg, #00557f, #003d5b);
+}
+
+#absolute-demo {
+    position: absolute;
+    background: linear-gradient(45deg, #28a745, #218838);
+}
+
+/* Fixed demo - імітація */
+.fixed-container {
+    position: relative;
+    height: 200px;
+    padding: 20px;
+    background: #fff3cd;
+    border: 2px dashed #ffc107;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.scroll-content {
+    height: 400px;
+    overflow-y: scroll;
+    position: relative;
+    border: 1px solid #ffd67a;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.content-item {
+    padding: 15px;
+    margin: 8px 0;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    height: 50px;
+}
+
+#fixed-demo {
+    position: absolute;
+    background: linear-gradient(45deg, #dc3545, #c82333);
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+/* Стилі для імітації поведінки fixed */
+.fixed-container .scroll-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.fixed-container .scroll-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.fixed-container .scroll-content::-webkit-scrollbar-thumb {
+    background: #ffc107;
+    border-radius: 4px;
+}
+
+.demo-code {
+    margin-top: 15px;
+    padding: 15px;
+    background: #1e1e1e;
+    border-radius: 6px;
+}
+
+.demo-code pre {
+    margin: 0;
+}

@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Мінна безпека</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <h1>Майстер-клас: «Мінний трилер: розвінчуємо міфи та загрози»</h1>
+            <p>Інтерактивна подорож у світ мінної безпеки, де ми розвінчуємо міфи та навчимося розпізнавати реальні
+                загрози</p>
+        </section>
+
+        <div class="myth-buster">
+            <h3>🔍 Міф vs Реальність</h3>
+            <p><strong>Міф:</strong> "Міни завжди легко помітити — вони великі та металеві"</p>
+            <p><strong>Реальність:</strong> Сучасні міни можуть бути крихітними, пластиковими та маскуватися під
+                звичайні предмети! 😱</p>
+        </div>
+
+        <section class="interactive-section">
+            <div class="info-card">
+                <h3>🎯 Де ховається небезпека?</h3>
+                <ul>
+                    <li>Поля та ліси — 45% випадків</li>
+                    <li>Покинуті будівлі — 30%</li>
+                    <li>Водойми та пляжі — 15%</li>
+                    <li>Дороги та узбіччя — 10%</li>
+                </ul>
+                <img src="img/mapa-minnoyi-nebezpeky-900x540.jpg" alt="Карта небезпечних зон"
+                    style="width:100%; margin-top:15px; border-radius:5px;">
+            </div>
+
+            <div class="info-card">
+                <h3>⚠️ ТОП-5 підозрілих предметів</h3>
+                <ol>
+                    <li>Дротики та антени</li>
+                    <li>Бляшанки з дивними кришками</li>
+                    <li>Предмети з дротиками</li>
+                    <li>Металеві коробочки</li>
+                    <li>Камуфльовані предмети</li>
+                </ol>
+                <div class="pulse" style="text-align:center; margin-top:15px; color:#dc3545; font-weight:bold;">
+                    ❌ НІКОЛИ не торкайся!
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h3>🛡️ Алгоритм безпеки</h3>
+                <p>Запам'ятай правило <strong>3К</strong>:</p>
+                <ul>
+                    <li><strong>Зупинись</strong> — не панікуй</li>
+                    <li><strong>Відійди</strong> — на безпечну відстань</li>
+                    <li><strong>Повідом</strong> — дорослим або 101</li>
+                </ul>
+                <img src="https://placehold.co/200x100/28a745/white?text=3К+правило" alt="Правило 3К"
+                    style="width:100%; margin-top:15px; border-radius:5px;">
+            </div>
+        </section>
+
+        <section class="quiz-container">
+            <h2>🧠 Перевір свої знання: Вікторина "Мінний детектив"</h2>
+
+            <div class="quiz-question">
+                <h3>Питання 1: Що робити, якщо побачив підозрілий предмет?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option" data-correct="false">Підійти та розглянути ближче</div>
+                    <div class="quiz-option" data-correct="false">Сфотографувати для соцмереж</div>
+                    <div class="quiz-option" data-correct="true">Відійти та повідомити дорослим</div>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Питання 2: Який номер екстреної служби?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option" data-correct="false">102 - Поліція</div>
+                    <div class="quiz-option" data-correct="false">103 - Швидка</div>
+                    <div class="quiz-option" data-correct="true">101 - Пожежна та рятувальники</div>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <h3>Питання 3: Які міни найнебезпечніші?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option" data-correct="false">Тільки великі металеві</div>
+                    <div class="quiz-option" data-correct="true">Всі види - навіть маленькі пластикові</div>
+                    <div class="quiz-option" data-correct="false">Тільки ті, що мають попереджувальні знаки</div>
+                </div>
+            </div>
+
+            <button class="btn-primary" onclick="checkQuiz()">Перевірити відповіді</button>
+            <div id="quiz-result" style="margin-top:20px; font-weight:bold;"></div>
+        </section>
+
+        <section class="emergency-contacts">
+            <h2>📞 Екстрені контакти</h2>
+            <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div>
+                    <strong>101</strong> - ДСНС (рятувальники)
+                    <p>Дзвони при виявленні вибухонебезпечних предметів</p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div>
+                    <strong>102</strong> - Поліція
+                    <p>Повідомляй про підозрілі предмети та людей</p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📱</div>
+                <div>
+                    <strong>Екстрений номер батьків</strong>
+                    <p>Завжди май з собою контакти дорослих</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>🎮 Інтерактивна гра: "Безпечний шлях"</h2>
+            <p>Обери правильний шлях до школи, уникаючи небезпечних зон!</p>
+            <div style="background:#e8f4f8; padding:20px; border-radius:10px; text-align:center;">
+                <img src="https://placehold.co/600x300/00557f/white?text=Інтерактивна+карта+гри" alt="Інтерактивна гра"
+                    style="width:100%; max-width:600px; border-radius:8px;">
+                <div style="margin-top:20px;">
+                    <button class="btn-primary" onclick="alert('Гра запускається... Обери безпечний маршрут!')">Почати
+                        гру</button>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-top:40px; text-align:center;">
+            <h2>💡 Пам'ятка: Твої безпечні кроки</h2>
+            <div style="background:white; padding:20px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+                <p>Запам'ятай: <strong>Зупинись - Відійди - Повідом</strong></p>
+                <p>Безпека понад цікавість! Краще обійти, ніж ризикувати.</p>
+                <img src="https://placehold.co/400x200/28a745/white?text=Безпека+понад+усе" alt="Безпека понад усе"
+                    style="width:100%; max-width:400px; margin:15px auto; border-radius:5px;">
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>© 2025-2026 Гурток "Web-програмування" | Майстер-клас з мінної безпеки</p>
+    </footer>
+
+    <script src="thriller-script.js"></script>
+</body>
+
+</html>
