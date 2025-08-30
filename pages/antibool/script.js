@@ -41,7 +41,7 @@ function checkQuiz() {
   }
 
   if (score === Object.keys(answers).length) {
-    resultDiv.textContent = `Вітаємо! Ви відповіли правильно на всі ${score} з ${Object.keys(answers).length} питань! 🎉`;
+    resultDiv.textContent = `Вітаємо! Ви відповіли правильно на всі ${score} з ${Object.keys(answers).length} питань!`;
     resultDiv.className = 'result correct';
   } else {
     resultDiv.textContent = `Ви дали ${score} правильних відповідей з ${Object.keys(answers).length}. Подивіться, де помилка, та спробуйте ще раз! 💪`;
