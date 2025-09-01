@@ -35,7 +35,7 @@ footer {
 main {
     max-width: 900px;
     margin: 2em auto;
-    padding: 0 1em;
+    padding: 10px 1em;
     padding-top: 20px;
     background: white;
     border-radius: 8px;
@@ -44,6 +44,7 @@ main {
 
 h2 {
     color: #003366;
+    margin: 0;
 }
 
 pre {
@@ -75,6 +76,7 @@ iframe {
 img {
     display: block;
     max-width: 400px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -98,4 +100,3 @@ img {
 .wrong {
     background: #ffb3b3 !important;
 }
-
