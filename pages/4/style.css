@@ -1,0 +1,50 @@
+﻿/* Додаткові стилі для цієї сторінки */
+.vscode-tip {
+    background: linear-gradient(135deg, #007ACC, #1e3c5c);
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.vscode-tip i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.shortcut-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.shortcut-card {
+    background: #f0f4f8;
+    border-radius: 16px;
+    padding: 15px;
+    text-align: center;
+    font-family: monospace;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-left: 4px solid #007ACC;
+}
+
+.shortcut-card span {
+    color: #007ACC;
+    display: block;
+    font-size: 0.85rem;
+    font-weight: normal;
+    margin-top: 8px;
+}
+
+.emmet-example {
+    background: #1e2a3e;
+    color: #ffd966;
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-family: monospace;
+    display: inline-block;
+    margin: 5px;
+}

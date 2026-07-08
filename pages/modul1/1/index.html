@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Заняття: Що таке HTML | Гурток програмування</title>
+    <!-- Підключення стилів -->
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Шрифти та іконки -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- ШАПКА -->
+    <header class="header">
+        <div class="container header-content">
+            <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+            <div class="nav">
+                <a href="/index.html">Головна</a>
+                <a href="/index.html#program">Заняття</a>
+                <a href="/index.html#contacts">Контакти</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основний контент -->
+    <main class="main-content">
+        <div class="container">
+            <div class="lesson-card">
+                <span class="topic-badge"><i class="fab fa-html5"></i> Основи веброзробки</span>
+                <h2>📄 Що таке HTML. Структура Web-сторінки</h2>
+                <p>🌐 <strong>HTML (HyperText Markup Language)</strong> — це мова розмітки, яка використовується для
+                    створення веб-сторінок. Вона визначає структуру та вміст сторінки: заголовки, абзаци, зображення,
+                    посилання тощо.</p>
+
+                <!-- Що таке HTML -->
+                <div class="info-block">
+                    <h3><i class="fas fa-code"></i> Що таке HTML?</h3>
+                    <p>HTML — це не мова програмування, а <strong>мова розмітки</strong>. Вона складається з
+                        <strong>тегів</strong>, які "говорять" браузеру, як відображати контент. Браузер читає HTML-код
+                        і показує користувачеві гарно оформлену сторінку.
+                    </p>
+                    <div class="tag-example">
+                        <code>&lt;h1&gt;Це заголовок&lt;/h1&gt;</code><br>
+                        <code>&lt;p&gt;Це абзац тексту.&lt;/p&gt;</code><br>
+                        <code>&lt;a href="https://example.com"&gt;Це посилання&lt;/a&gt;</code>
+                    </div>
+                    <p>📌 Кожен тег має відкриваючу <code>&lt;тег&gt;</code> та закриваючу <code>&lt;/тег&gt;</code>
+                        частини. Вміст між ними — це те, що побачить користувач.</p>
+                </div>
+
+                <!-- Структура HTML-документа -->
+                <h3><i class="fas fa-sitemap"></i> Структура HTML-документа</h3>
+                <div class="html-structure">
+                    <div class="structure-line"><code>&lt;!DOCTYPE html&gt;</code> — оголошення типу документа
+                        (повідомляє браузеру, що це HTML5)</div>
+                    <div class="structure-line"><code>&lt;html&gt;</code> — кореневий елемент, у якому міститься вся
+                        сторінка</div>
+                    <div class="structure-line nested"><code>&lt;head&gt;</code> — метадані сторінки (не відображаються
+                        на сторінці)</div>
+                    <div class="structure-line nested2"><code>&lt;title&gt;Назва вкладки&lt;/title&gt;</code> —
+                        заголовок вкладки браузера</div>
+                    <div class="structure-line nested2"><code>&lt;meta charset="UTF-8"&gt;</code> — кодування символів
+                    </div>
+                    <div class="structure-line nested2"><code>&lt;link rel="stylesheet" href="style.css"&gt;</code> —
+                        підключення CSS</div>
+                    <div class="structure-line nested"><code>&lt;/head&gt;</code></div>
+                    <div class="structure-line nested"><code>&lt;body&gt;</code> — тіло сторінки (все, що бачить
+                        користувач)</div>
+                    <div class="structure-line nested2"><code>&lt;h1&gt;Заголовок&lt;/h1&gt;</code></div>
+                    <div class="structure-line nested2"><code>&lt;p&gt;Абзац тексту...&lt;/p&gt;</code></div>
+                    <div class="structure-line nested2"><code>&lt;img src="photo.jpg" alt="Опис"&gt;</code></div>
+                    <div class="structure-line nested"><code>&lt;/body&gt;</code></div>
+                    <div class="structure-line"><code>&lt;/html&gt;</code></div>
+                </div>
+
+                <!-- Як браузер показує HTML -->
+                <div class="example-browser">
+                    <div class="browser-bar">
+                        <div class="browser-dot red"></div>
+                        <div class="browser-dot yellow"></div>
+                        <div class="browser-dot green"></div>
+                        <span style="font-size: 0.8rem; margin-left: 10px;">🔍 Мій перший сайт</span>
+                    </div>
+                    <div class="browser-content">
+                        <h1 style="color: #1e5f7a; margin: 0 0 10px 0;">Ласкаво просимо!</h1>
+                        <p style="margin: 0 0 15px 0;">Це моя перша веб-сторінка, створена за допомогою HTML.</p>
+                        <a href="#" style="color: #ff9f4a;">Дізнатися більше →</a>
+                    </div>
+                </div>
+
+                <!-- Основні теги HTML -->
+                <h3><i class="fas fa-tags"></i> Основні теги HTML</h3>
+                <div class="tools-grid">
+                    <div class="tag-card">
+                        <code>&lt;h1&gt; - &lt;h6&gt;</code>
+                        <h4>Заголовки</h4>
+                        <p>Найважливіший заголовок — h1, далі за спаданням — h2, h3... Використовуються для
+                            структурування контенту.</p>
+                    </div>
+                    <div class="tag-card">
+                        <code>&lt;p&gt;</code>
+                        <h4>Абзац</h4>
+                        <p>Для звичайного тексту. Браузер автоматично додає відступи між абзацами.</p>
+                    </div>
+                    <div class="tag-card">
+                        <code>&lt;a&gt;</code>
+                        <h4>Посилання</h4>
+                        <p>Атрибут <code>href</code> вказує адресу переходу.
+                            <code>&lt;a href="https://google.com"&gt;Google&lt;/a&gt;</code>
+                        </p>
+                    </div>
+                    <div class="tag-card">
+                        <code>&lt;img&gt;</code>
+                        <h4>Зображення</h4>
+                        <p>Атрибути: <code>src</code> (шлях до файлу) та <code>alt</code> (альтернативний текст).</p>
+                    </div>
+                    <div class="tag-card">
+                        <code>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</code>
+                        <h4>Списки</h4>
+                        <p>Маркований (ul) та нумерований (ol) списки. Елементи списку — li.</p>
+                    </div>
+                    <div class="tag-card">
+                        <code>&lt;div&gt;</code>
+                        <h4>Контейнер</h4>
+                        <p>Універсальний блок для групування елементів. Часто використовується з CSS.</p>
+                    </div>
+                </div>
+
+                <!-- Що можна і не можна робити -->
+                <div class="do-dont-grid">
+                    <div class="do-card">
+                        <i class="fas fa-check-circle" style="color: #4caf50; font-size: 1.5rem;"></i>
+                        <h4 style="margin: 10px 0;">✅ Правильно</h4>
+                        <ul style="margin-left: 20px;">
+                            <li>Закривати всі теги, які мають закриваючу пару</li>
+                            <li>Використовувати правильну вкладеність тегів</li>
+                            <li>Додавати alt до зображень</li>
+                            <li>Дотримуватись структури html → head → body</li>
+                        </ul>
+                    </div>
+                    <div class="dont-card">
+                        <i class="fas fa-times-circle" style="color: #f44336; font-size: 1.5rem;"></i>
+                        <h4 style="margin: 10px 0;">❌ Неправильно</h4>
+                        <ul style="margin-left: 20px;">
+                            <li>Забувати закривати теги (наприклад, <code>&lt;p&gt;текст</code>)</li>
+                            <li>Перехресна вкладеність (<code>&lt;b&gt;&lt;i&gt;текст&lt;/b&gt;&lt;/i&gt;</code>)</li>
+                            <li>Використовувати теги для форматування (краще CSS)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Приклад коду -->
+                <div class="vscode-highlight">
+                    <i class="fab fa-html5"></i>
+                    <h4>📝 Приклад повної HTML-сторінки</h4>
+                    <div class="tag-example" style="background: #0d1c2a; margin-top: 10px;">
+                        <pre style="margin: 0; color: #f8f9fa;"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="uk"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Моя перша сторінка&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Вітаю на моєму сайті!&lt;/h1&gt;
+    &lt;p&gt;Це мій перший досвід роботи з HTML.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Вивчаю HTML&lt;/li&gt;
+      &lt;li&gt;Пізнаю CSS&lt;/li&gt;
+      &lt;li&gt;Готуюсь до JavaScript&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;a href="https://www.w3schools.com/html/" target="_blank"&gt;Більше про HTML&lt;/a&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    </div>
+                </div>
+
+                <!-- Відео -->
+                <div class="video-container">
+                    <iframe width="" height="" src="https://www.youtube.com/embed/fokjKDF4Nww"
+                        title="Заняття 3. Структура html. OpenWeb - програмуємо разом!" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Інтерактивна вікторина: Який це тег? -->
+                <div class="quiz-area" id="htmlQuiz">
+                    <h3><i class="fas fa-question-circle"></i> 🧠 Інтерактивна вікторина: Який це HTML-тег?</h3>
+                    <div id="quizHtmlContainer"></div>
+                    <div id="quizHtmlFeedback" class="quiz-feedback"></div>
+                    <button id="checkHtmlQuizBtn">✨ Перевірити відповіді</button>
+                    <button id="resetHtmlQuizBtn" style="background:#7f8c8d;">🔄 Скинути</button>
+                </div>
+
+                <!-- Цікавий факт про HTML -->
+                <div class="random-fact-box">
+                    <button id="randomHtmlFactBtn" class="fact-btn"><i class="fas fa-dice-d6"></i> Цікавий факт про
+                        HTML</button>
+                    <p id="randomHtmlFactDisplay" class="fact-display">Натисни, щоб дізнатися щось нове про HTML!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Гурток Web-програмування | Що таке HTML. Структура Web-сторінки</p>
+            <p><i class="fas fa-heart" style="color:#ff9f4a;"></i> Навчайся безпечно та створюй web-сайти разом з нами!
+            </p>
+        </div>
+    </footer>
+
+    <!-- СКРИПТИ -->
+    <script src="script.js"></script>
+</body>
+
+</html>

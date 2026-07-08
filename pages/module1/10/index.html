@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Практика: Створення таблиць | Гурток програмування</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+            <div class="nav">
+                <a href="/index.html">Головна</a>
+                <a href="#theory">Теорія</a>
+                <a href="#practice">Практика</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="lesson-card">
+                <!-- ==================== ТЕОРЕТИЧНА ЧАСТИНА (ПОВТОРЕННЯ) ==================== -->
+                <section id="theory">
+                    <span class="topic-badge"><i class="fas fa-book-open"></i> Частина 1/2 • Повторення та тренування • 2 години</span>
+                    <h2>📊 Створення таблиць у HTML</h2>
+                    <p>🎯 <strong>Мета заняття:</strong> Повторити основні теги для створення таблиць, потренуватися в редакторі коду та створити власну сторінку з таблицею.</p>
+
+                    <!-- Нагадування про таблиці -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-table"></i> Згадаймо: теги для створення таблиць</h3>
+                        <div class="tags-table">
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;table&gt;</code></div>
+                                <div class="tag-desc">Контейнер для всієї таблиці</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;tr&gt;</code></div>
+                                <div class="tag-desc">Table Row - рядок таблиці</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;td&gt;</code></div>
+                                <div class="tag-desc">Table Data - звичайна комірка</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;th&gt;</code></div>
+                                <div class="tag-desc">Table Header - заголовна комірка (жирний шрифт)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;caption&gt;</code></div>
+                                <div class="tag-desc">Заголовок таблиці</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code></div>
+                                <div class="tag-desc">Групування рядків (голова, тіло, підвал)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Приклад простої таблиці -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-code"></i> Приклад простої таблиці</h3>
+                        <div class="two-columns">
+                            <div class="card">
+                                <div class="code-example">
+                                    &lt;table border="1"&gt;<br>
+                                    &nbsp;&nbsp;&lt;caption&gt;Мій розклад&lt;/caption&gt;<br>
+                                    &nbsp;&nbsp;&lt;tr&gt;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;День&lt;/th&gt;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Справи&lt;/th&gt;<br>
+                                    &nbsp;&nbsp;&lt;/tr&gt;<br>
+                                    &nbsp;&nbsp;&lt;tr&gt;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Понеділок&lt;/td&gt;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Програмування&lt;/td&gt;<br>
+                                    &nbsp;&nbsp;&lt;/tr&gt;<br>
+                                    &lt;/table&gt;
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h4>✨ Результат:</h4>
+                                <table border="1" style="border-collapse: collapse; width: 100%;">
+                                    <caption>Мій розклад</caption>
+                                    <tr>
+                                        <th>День</th>
+                                        <th>Справи</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Понеділок</td>
+                                        <td>Програмування</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ==================== ПРАКТИЧНА ЧАСТИНА (ТРЕНАЖЕР) ==================== -->
+                <section id="practice">
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #27ae60, #1e8449);"><i class="fas fa-laptop-code"></i> Частина 2/2 • Створюємо власну таблицю • 2 години</span>
+                    <h2>💻 Тренуємося створювати таблиці</h2>
+                    <p>💪 <strong>Практичне завдання:</strong> виконай 3 завдання в редакторі коду нижче. Після кожного завдання натискай "Перевірити". Якщо все правильно - отримаєш наступне завдання!</p>
+
+                    <!-- Індикатор прогресу -->
+                    <div class="progress-indicator">
+                        <div class="progress-step" id="step1Done">1️⃣</div>
+                        <div class="progress-line"></div>
+                        <div class="progress-step" id="step2Done">2️⃣</div>
+                        <div class="progress-line"></div>
+                        <div class="progress-step" id="step3Done">3️⃣</div>
+                    </div>
+
+                    <!-- Поточне завдання -->
+                    <div class="current-task" id="currentTask">
+                        <div class="task-header">
+                            <i class="fas fa-star-of-life"></i>
+                            <span id="taskTitle">Завдання 1: Створи таблицю з продуктами</span>
+                        </div>
+                        <div class="task-description" id="taskDescription">
+                            <p>Створи таблицю з продуктами, які потрібно купити. Таблиця повинна мати:</p>
+                            <ul>
+                                <li>Заголовок таблиці: <strong>"Список покупок"</strong> (тег &lt;caption&gt;)</li>
+                                <li>Заголовки колонок: <strong>№</strong>, <strong>Назва</strong>, <strong>Кількість</strong></li>
+                                <li>3 рядки з товарами (наприклад: молоко, хліб, яблука)</li>
+                                <li>Границі таблиці: <strong>border="1"</strong></li>
+                            </ul>
+                            <div class="hint-mini">
+                                <i class="fas fa-lightbulb"></i> Підказка: використай теги: &lt;table&gt;, &lt;caption&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Живий редактор коду -->
+                    <h3><i class="fas fa-laptop-code"></i> ✏️ Напиши код тут:</h3>
+                    <div class="code-editor-panel">
+                        <div class="editor-header">
+                            <div class="editor-dot red"></div>
+                            <div class="editor-dot yellow"></div>
+                            <div class="editor-dot green"></div>
+                            <div class="editor-title">index.html</div>
+                        </div>
+                        <div class="editor-container">
+                            <div class="editor-textarea">
+                                <textarea id="htmlCodeEditor" placeholder="Напиши HTML-код для таблиці..."></textarea>
+                            </div>
+                            <div class="editor-preview">
+                                <div class="preview-frame">
+                                    <iframe id="previewFrame"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="editor-buttons">
+                            <button id="runCodeBtn" class="btn-run"><i class="fas fa-play"></i> Запустити код</button>
+                            <button id="checkTaskBtn" class="btn-check"><i class="fas fa-check-circle"></i> Перевірити</button>
+                        </div>
+                    </div>
+
+                    <!-- Повідомлення про результат -->
+                    <div class="task-feedback" id="taskFeedback"></div>
+                </section>
+
+                <!-- ==================== СТВОРЕННЯ ПРОЄКТУ В VS CODE ==================== -->
+                <section id="vscode-project" style="display: none;">
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #8e44ad, #6c3483);"><i class="fab fa-vs-code"></i> Робота в VS Code</span>
+                    <h2>📁 Створюємо повноцінний HTML-проєкт</h2>
+                    
+                    <div class="project-steps">
+                        <h3><i class="fab fa-vs-code"></i> Як створити HTML-проєкт у Visual Studio Code</h3>
+                        <ol>
+                            <li>📁 Відкрий <strong>Visual Studio Code</strong></li>
+                            <li>📂 Натисни <strong>File → Open Folder</strong> і обери папку для проєкту</li>
+                            <li>➕ У лівій панелі (Explorer) натисни праву кнопку миші → <strong>New File</strong></li>
+                            <li>📄 Назви файл <code>index.html</code></li>
+                            <li>✏️ Пиши код у файлі</li>
+                            <li>🌐 Збережи файл (<kbd>Ctrl+S</kbd>) і відкрий його у браузері</li>
+                        </ol>
+                    </div>
+
+                    <div class="task-card">
+                        <h3><i class="fas fa-bullseye"></i> Фінальне завдання: "Розклад уроків"</h3>
+                        <p>Тепер, коли ти навчився створювати таблиці, створи власну сторінку з таблицею "Мій розклад уроків" у VS Code.</p>
+                        
+                        <div class="task-step">
+                            <div class="step-number">1</div>
+                            <div><strong>Створи файл</strong> <code>index.html</code> у VS Code.</div>
+                        </div>
+                        
+                        <div class="task-step">
+                            <div class="step-number">2</div>
+                            <div><strong>Додай базову структуру</strong> HTML-документа:
+                                <div class="code-snippet" style="margin-top: 8px;">
+                                    &lt;!DOCTYPE html&gt;<br>
+                                    &lt;html lang="uk"&gt;<br>
+                                    &nbsp;&nbsp;&lt;head&gt;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Мій розклад уроків&lt;/title&gt;<br>
+                                    &nbsp;&nbsp;&lt;/head&gt;<br>
+                                    &nbsp;&nbsp;&lt;body&gt;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Тут буде таблиця --&gt;<br>
+                                    &nbsp;&nbsp;&lt;/body&gt;<br>
+                                    &lt;/html&gt;
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="task-step">
+                            <div class="step-number">3</div>
+                            <div><strong>Додай заголовок сторінки</strong> за допомогою тегу <code>&lt;h1&gt;</code> з текстом "Мій розклад уроків".</div>
+                        </div>
+                        
+                        <div class="task-step">
+                            <div class="step-number">4</div>
+                            <div><strong>Створи таблицю</strong> з наступною структурою:
+                                <ul style="margin-top: 8px;">
+                                    <li>Заголовки колонок: "День тижня", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця"</li>
+                                    <li>Рядки: "1 урок", "2 урок", "3 урок", "4 урок", "5 урок"</li>
+                                    <li>Заповни комірки назвами предметів (вигадай самостійно)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="task-step">
+                            <div class="step-number">5</div>
+                            <div><strong>Додай стилі для таблиці</strong> (ми ще не вивчали CSS, але скопіюй цей код у секцію <code>&lt;head&gt;</code>):</div>
+                        </div>
+                    </div>
+
+                    <!-- Блок зі стилями -->
+                    <div class="styles-card">
+                        <h3><i class="fas fa-palette"></i> 🎨 Стилі для таблиці</h3>
+                        <p>Скопіюй цей код у секцію <code>&lt;head&gt;</code> (після тегу <code>&lt;title&gt;</code>):</p>
+                        <div class="code-snippet" style="background: #1e2a3e; color: #ffd966;">
+                            &lt;style&gt;<br>
+                            &nbsp;&nbsp;table {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border-collapse: collapse;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;margin: 20px 0;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;font-family: Arial, sans-serif;<br>
+                            &nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;th, td {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border: 1px solid #ddd;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 12px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br>
+                            &nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;th {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;background-color: #1e5f7a;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;color: white;<br>
+                            &nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;tr:nth-child(even) {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;background-color: #f2f2f2;<br>
+                            &nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;tr:hover {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;background-color: #ffd966;<br>
+                            &nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;h1 {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;color: #1e5f7a;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br>
+                            &nbsp;&nbsp;}<br>
+                            &lt;/style&gt;
+                        </div>
+                        <div class="info-note">
+                            <i class="fas fa-info-circle"></i>
+                            <p>Не хвилюйся, ми ще не вивчали CSS! Просто скопіюй ці стилі — вони зроблять твою таблицю красивою, з кольоровими заголовками, чергуванням рядків та підсвіткою при наведенні.</p>
+                        </div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">6</div>
+                        <div><strong>Збережи файл</strong> (<kbd>Ctrl+S</kbd>) та <strong>відкрий у браузері</strong> (двічі клікни на файлі).</div>
+                    </div>
+
+                    <div class="congrats-box" id="finalCongrats">
+                        <i class="fas fa-trophy"></i>
+                        <h3>🎉 Вітаю! 🎉</h3>
+                        <p>Ти створив свою першу повноцінну веб-сторінку з таблицею та стилями!</p>
+                        <p><strong>Ти справжній веб-розробник! 🌟</strong></p>
+                        <button id="resetProjectBtn" class="btn-run"><i class="fas fa-redo-alt"></i> Почати заново</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Гурток Web-програмування | Практика: створення таблиць</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

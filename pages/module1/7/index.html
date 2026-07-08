@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Гіперпосилання | Теорія + Практика | Гурток програмування</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../5/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+            <div class="nav">
+                <a href="/index.html">Головна</a>
+                <a href="#theory">Теорія</a>
+                <a href="#practice">Практика</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="lesson-card">
+                <!-- ==================== ТЕОРЕТИЧНА ЧАСТИНА ==================== -->
+                <section id="theory">
+                    <span class="topic-badge"><i class="fas fa-book-open"></i> Заняття 1/2 • Теоретична частина • 2 години</span>
+                    <h2>🔗 Гіперпосилання: серце Всесвітньої павутини</h2>
+                    <p>🎯 <strong>Мета заняття:</strong> Зрозуміти, чому посилання — найважливіший елемент інтернету, навчитися створювати посилання різних типів, працювати з якорями та атрибутами.</p>
+
+                    <!-- Історія виникнення -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-history"></i> Історія виникнення: як з'явилися гіперпосилання</h3>
+                        <div class="info-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>У 1965 році Тед Нельсон вигадав термін "гіпертекст" — текст, який може вести до іншого тексту. Але саме сер Тім Бернерс-Лі у 1989 році реалізував цю ідею в HTML. <strong>Посилання — це те, що зробило інтернет Всесвітньою павутиною!</strong> Без посилань веб був би просто набором окремих файлів.</p>
+                        </div>
+                        <div class="fun-fact">
+                            <i class="fas fa-star"></i>
+                            <p><strong>Цікавий факт:</strong> Перше у світі гіперпосилання вело з сайту http://info.cern.ch на інформацію про проект WorldWideWeb. Сьогодні в інтернеті трильйони посилань!</p>
+                        </div>
+                    </div>
+
+                    <!-- Що таке гіперпосилання -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-link"></i> Що таке гіперпосилання?</h3>
+                        <p>Гіперпосилання (або просто <strong>посилання</strong>) — це елемент на веб-сторінці, який дозволяє перейти до іншої сторінки, файлу, розділу або зовнішнього сайту.</p>
+                        <div class="code-example">
+                            &lt;a href="https://google.com"&gt;Перейти на Google&lt;/a&gt;
+                        </div>
+                        <p>Тег <code>&lt;a&gt;</code> (від англ. <em>anchor</em> — якір) — головний тег для створення посилань. Атрибут <code>href</code> вказує адресу переходу.</p>
+                    </div>
+
+                    <!-- Види посилань -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-globe"></i> Види посилань</h3>
+                        <div class="two-columns">
+                            <div class="card">
+                                <h4>🌍 Зовнішні (глобальні)</h4>
+                                <p>Ведуть на інші сайти в інтернеті.</p>
+                                <div class="code-example">
+                                    &lt;a href="https://google.com"&gt;Google&lt;/a&gt;
+                                </div>
+                                <div class="demo-link">
+                                    <a href="#" style="color:#1e5f7a;">→ Приклад: Google</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h4>📁 Внутрішні (локальні)</h4>
+                                <p>Ведуть на інші сторінки вашого сайту.</p>
+                                <div class="code-example">
+                                    &lt;a href="about.html"&gt;Про нас&lt;/a&gt;
+                                </div>
+                                <div class="demo-link">
+                                    <a href="#" style="color:#1e5f7a;">→ Приклад: Про нас</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="two-columns" style="margin-top: 15px;">
+                            <div class="card">
+                                <h4>⚓ Якоря (внутрішньосторінкові)</h4>
+                                <p>Переміщують по сторінці до певного місця.</p>
+                                <div class="code-example">
+                                    &lt;a href="#footer"&gt;До підвалу&lt;/a&gt;
+                                </div>
+                                <div class="demo-link">
+                                    <a href="#" style="color:#1e5f7a;">→ Приклад: До підвалу</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h4>📎 Посилання на файли</h4>
+                                <p>Відкривають або завантажують файли.</p>
+                                <div class="code-example">
+                                    &lt;a href="file.pdf"&gt;Завантажити PDF&lt;/a&gt;
+                                </div>
+                                <div class="demo-link">
+                                    <a href="#" style="color:#1e5f7a;">→ Приклад: Завантажити</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Атрибути посилань -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-cogs"></i> Важливі атрибути посилань</h3>
+                        <div class="tags-table">
+                            <div class="tag-row">
+                                <div class="tag-name"><code>href</code></div>
+                                <div class="tag-desc">Адреса, куди веде посилання (обов'язковий)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>target="_blank"</code></div>
+                                <div class="tag-desc">Відкриває посилання в новій вкладці</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>target="_self"</code></div>
+                                <div class="tag-desc">Відкриває в поточній вкладці (за замовчуванням)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>title</code></div>
+                                <div class="tag-desc">Підказка при наведенні миші</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>download</code></div>
+                                <div class="tag-desc">Завантажує файл замість відкриття</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>rel="nofollow"</code></div>
+                                <div class="tag-desc">Вказує пошуковим системам не враховувати посилання</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Демонстрація "Сайт в сайті" -->
+                    <div class="demo-website">
+                        <h3><i class="fas fa-window-maximize"></i> 🖥️ Демонстрація: Сайт в сайті</h3>
+                        <p>Нижче знаходиться інтерактивна демонстрація роботи посилань. Це не справжній сайт, а наша навчальна пісочниця. Клікай на посилання ліворуч — вміст буде змінюватися праворуч!</p>
+                        
+                        <div class="demo-container">
+                            <div class="demo-sidebar">
+                                <h4><i class="fas fa-link"></i> Навігація</h4>
+                                <ul>
+                                    <li><a href="#" data-demo-page="home" class="demo-link-active">🏠 Головна</a></li>
+                                    <li><a href="#" data-demo-page="about">📖 Про нас</a></li>
+                                    <li><a href="#" data-demo-page="services">⚙️ Послуги</a></li>
+                                    <li><a href="#" data-demo-page="contact">📞 Контакти</a></li>
+                                    <li><a href="#" data-demo-page="external" target="_blank">🔗 Зовнішнє посилання (новий таб)</a></li>
+                                </ul>
+                                <div class="demo-note">
+                                    <i class="fas fa-info-circle"></i>
+                                    <p>Спробуй клікнути на різні посилання! Зверни увагу, як змінюється адреса та контент.</p>
+                                </div>
+                            </div>
+                            <div class="demo-content" id="demoContent">
+                                <div class="demo-loading" id="demoLoading" style="display: none;">
+                                    <i class="fas fa-spinner fa-spin"></i> Завантаження...
+                                </div>
+                                <div id="demoInnerContent">
+                                    <!-- Тут буде вміст -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="code-explanation">
+                            <p><strong>📝 Пояснення:</strong> У цій демонстрації використано JavaScript для імітації роботи посилань. У реальному HTML тег <code>&lt;a&gt;</code> самостійно переводить на іншу сторінку. Атрибут <code>target="_blank"</code> відкриває посилання в новій вкладці.</p>
+                        </div>
+                    </div>
+
+                    <!-- Гра "Знайди правильне посилання" -->
+                    <div class="game-links" id="linksGame">
+                        <h3><i class="fas fa-gamepad"></i> 🎮 Гра: Знайди правильне посилання!</h3>
+                        <div class="game-story">
+                            <i class="fas fa-robot"></i> Робот Боб заблукав у лабіринті веб-сторінок. Допоможи йому знайти правильне посилання, щоб повернутися додому!
+                        </div>
+                        <div class="game-question-links" id="linksQuestion">Як відкрити посилання в новій вкладці?</div>
+                        <div class="links-options" id="linksOptions"></div>
+                        <div class="game-score-links" id="linksScore">Рахунок: 0 / 10</div>
+                        <div class="game-feedback-links" id="linksFeedback"></div>
+                        <div class="game-buttons">
+                            <button id="startLinksBtn" class="btn-run"><i class="fas fa-play"></i> Почати гру</button>
+                            <button id="resetLinksBtn" class="btn-clear"><i class="fas fa-redo-alt"></i> Скинути гру</button>
+                        </div>
+                    </div>
+
+                    <!-- Вікторина -->
+                    <div class="quiz-area" id="tagsQuiz">
+                        <h3><i class="fas fa-question-circle"></i> 📋 Вікторина: Перевір себе</h3>
+                        <div id="quizTagsContainer"></div>
+                        <div id="quizTagsFeedback" class="quiz-feedback"></div>
+                        <button id="checkTagsQuizBtn">✨ Перевірити відповіді</button>
+                        <button id="resetTagsQuizBtn" style="background:#7f8c8d;">🔄 Скинути</button>
+                    </div>
+
+                    <div class="extensions-list">
+                        <h3><i class="fas fa-sticky-note"></i> Що потрібно запам'ятати</h3>
+                        <ul style="margin-left: 25px;">
+                            <li>Посилання створюються тегом <code>&lt;a&gt;</code> з атрибутом <code>href</code></li>
+                            <li><code>target="_blank"</code> — відкриває посилання в новій вкладці</li>
+                            <li>Якорі (<code>#id</code>) дозволяють переміщатися по сторінці</li>
+                            <li>Посилання — це те, що робить веб Всесвітньою павутиною</li>
+                            <li>Завжди додавайте атрибут <code>title</code> для доступності</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- ==================== ПРАКТИЧНА ЧАСТИНА ==================== -->
+                <section id="practice">
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #27ae60, #1e8449);"><i class="fas fa-laptop-code"></i> Заняття 2/2 • Практична частина • 2 години</span>
+                    <h2>💻 Практикуємося з гіперпосиланнями</h2>
+                    <p>💪 <strong>Практичне завдання:</strong> створи власну навігаційну систему, навчися робити зовнішні, внутрішні посилання та якорі.</p>
+
+                    <div class="task-card">
+                        <h3><i class="fas fa-bullseye"></i> Мета практичного заняття</h3>
+                        <ul style="margin-left: 25px; margin-top: 10px;">
+                            <li>Створити меню навігації з кількох сторінок</li>
+                            <li>Додати зовнішні посилання на улюблені сайти</li>
+                            <li>Зробити якоря для швидкої навігації по сторінці</li>
+                            <li>Використати атрибут target="_blank"</li>
+                        </ul>
+                    </div>
+
+                    <h3><i class="fas fa-list-ol"></i> Покрокова інструкція</h3>
+
+                    <div class="task-step">
+                        <div class="step-number">1</div>
+                        <div><strong>Створи базову структуру</strong> HTML-документа.</div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">2</div>
+                        <div><strong>Додай меню навігації</strong> з посиланнями на різні розділи сторінки (якоря).</div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">3</div>
+                        <div><strong>Додай зовнішні посилання</strong> на 3-5 улюблених сайтів з атрибутом target="_blank".</div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">4</div>
+                        <div><strong>Створи "Посилання наверх"</strong> за допомогою якоря.</div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">5</div>
+                        <div><strong>Додай підказки</strong> до посилань через атрибут title.</div>
+                    </div>
+
+                    <!-- Чекліст -->
+                    <div class="task-challenge">
+                        <div class="challenge-title"><i class="fas fa-tasks"></i> 🎯 Завдання-челендж</div>
+                        <p>Створи сторінку <strong>"Моя улюблена подорож"</strong>, яка має містити:</p>
+                        <ul class="checklist" id="challengeChecklist">
+                            <li data-done="false">Меню навігації з 3+ якорями (Про подорож, Галерея, Поради)</li>
+                            <li data-done="false">Зовнішнє посилання на сайт з цікавим місцем (target="_blank")</li>
+                            <li data-done="false">Внутрішнє посилання на іншу сторінку (файл tips.html)</li>
+                            <li data-done="false">Посилання на пошту (mailto:example@mail.com)</li>
+                            <li data-done="false">Посилання "Наверх" в кінці сторінки</li>
+                            <li data-done="false">Атрибут title для кожного посилання</li>
+                        </ul>
+                        <button id="resetChecklistBtn" class="btn-clear" style="margin-top: 10px;"><i class="fas fa-sync-alt"></i> Скинути чекліст</button>
+                    </div>
+
+                    <!-- Живий редактор -->
+                    <h3><i class="fas fa-laptop-code"></i> ✏️ Спробуй сам! Пиши код нижче</h3>
+                    <div class="code-editor-panel">
+                        <div class="editor-header">
+                            <div class="editor-dot red"></div>
+                            <div class="editor-dot yellow"></div>
+                            <div class="editor-dot green"></div>
+                            <div class="editor-title">index.html</div>
+                        </div>
+                        <div class="editor-container">
+                            <div class="editor-textarea">
+                                <textarea id="htmlCodeEditor" placeholder="Напиши свій HTML-код тут..."></textarea>
+                            </div>
+                            <div class="editor-preview">
+                                <div class="preview-frame">
+                                    <iframe id="previewFrame"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="editor-buttons">
+                            <button id="runCodeBtn" class="btn-run"><i class="fas fa-play"></i> Запустити код</button>
+                            <button id="clearCodeBtn" class="btn-clear"><i class="fas fa-trash-alt"></i> Очистити</button>
+                            <button id="loadExampleBtn" class="btn-run" style="background:#3498db;"><i class="fas fa-eye"></i> Завантажити приклад</button>
+                        </div>
+                    </div>
+
+                    <div class="hint-box">
+                        <i class="fas fa-info-circle"></i>
+                        <strong>Приклад готової сторінки:</strong>
+                        <button id="showSolutionBtn" class="solution-btn" style="margin-left: 15px;"><i class="fas fa-eye"></i> Показати приклад</button>
+                        <div id="solutionContent" class="solution-content">
+                            <pre style="margin:0; color:#ffd966;">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Моя улюблена подорож&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1 id="top"&gt;🌍 Моя улюблена подорож: Японія&lt;/h1&gt;
+    
+    &lt;!-- Меню навігації (якоря) --&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#about" title="Перейти до опису подорожі"&gt;Про подорож&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#gallery" title="Перейти до фотогалереї"&gt;Галерея&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#tips" title="Поради мандрівникам"&gt;Поради&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;!-- Зовнішні посилання --&gt;
+    &lt;p&gt;Дізнатися більше: 
+        &lt;a href="https://www.japan.travel/uk/" target="_blank" title="Офіційний туристичний сайт Японії"&gt;
+            Japan Travel
+        &lt;/a&gt;
+    &lt;/p&gt;
+    
+    &lt;!-- Внутрішнє посилання --&gt;
+    &lt;p&gt;&lt;a href="tips.html" title="Корисні поради"&gt;Переглянути поради&lt;/a&gt;&lt;/p&gt;
+    
+    &lt;!-- Посилання на пошту --&gt;
+    &lt;p&gt;📧 Пишіть мені: 
+        &lt;a href="mailto:travel@example.com" title="Написати листа"&gt;travel@example.com&lt;/a&gt;
+    &lt;/p&gt;
+    
+    &lt;h2 id="about"&gt;🗻 Про подорож&lt;/h2&gt;
+    &lt;p&gt;Японія - це неймовірна країна...&lt;/p&gt;
+    
+    &lt;h2 id="gallery"&gt;📸 Галерея&lt;/h2&gt;
+    &lt;p&gt;Тут будуть фотографії...&lt;/p&gt;
+    
+    &lt;h2 id="tips"&gt;💡 Поради&lt;/h2&gt;
+    &lt;p&gt;Поради для подорожі...&lt;/p&gt;
+    
+    &lt;!-- Посилання "Наверх" --&gt;
+    &lt;p&gt;&lt;a href="#top" title="Повернутися наверх"&gt;⬆ Наверх&lt;/a&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </div>
+                    </div>
+
+                    <!-- Контрольна вікторина -->
+                    <div class="quiz-area" id="controlQuiz">
+                        <h3><i class="fas fa-question-circle"></i> 📋 Контрольні питання</h3>
+                        <div id="quizControlContainer"></div>
+                        <div id="quizControlFeedback" class="quiz-feedback"></div>
+                        <button id="checkControlQuizBtn">✨ Перевірити відповіді</button>
+                        <button id="resetControlQuizBtn" style="background:#7f8c8d;">🔄 Скинути</button>
+                    </div>
+
+                    <div class="task-card" style="background: #fef5e8;">
+                        <h3><i class="fas fa-home"></i> Домашнє завдання</h3>
+                        <p>Створи HTML-файл <code>my_links.html</code> з колекцією улюблених сайтів (не менше 10). Додай опис до кожного посилання та атрибут title.</p>
+                    </div>
+
+                    <div class="random-fact-box">
+                        <button id="randomFactBtn" class="fact-btn"><i class="fas fa-dice-d6"></i> Цікавий факт</button>
+                        <p id="randomFactDisplay" class="fact-display">Натисни, щоб дізнатися щось нове!</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Гурток Web-програмування | Гіперпосилання — Теорія + Практика</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

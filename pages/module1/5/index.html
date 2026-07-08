@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Теги заголовків і тексту | Теорія + Практика | Гурток програмування</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+            <div class="nav">
+                <a href="/index.html">Головна</a>
+                <a href="#theory">Теорія</a>
+                <a href="#practice">Практика</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="lesson-card">
+                <!-- ==================== ТЕОРЕТИЧНА ЧАСТИНА ==================== -->
+                <section id="theory">
+                    <span class="topic-badge"><i class="fas fa-book-open"></i> Заняття 1/2 • Теоретична частина • 2 години</span>
+                    <h2>📚 Теги заголовків і тексту</h2>
+                    <p>🎯 <strong>Мета заняття:</strong> Вивчити всі теги для заголовків та форматування тексту, дізнатися історію їх виникнення та навчитися правильно використовувати.</p>
+
+                    <!-- Історія виникнення -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-history"></i> Історія виникнення заголовків у HTML</h3>
+                        <div class="info-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>Коли Тім Бернерс-Лі створював перший веб-сайт у 1991 році, він використав лише 18 тегів. Серед них були і заголовки &lt;h1&gt; - &lt;h6&gt;. Він хотів, щоб документи в інтернеті мали таку ж чітку структуру, як і звичайні книги!</p>
+                        </div>
+                        <div class="fun-fact">
+                            <i class="fas fa-star"></i>
+                            <p><strong>Цікавий факт:</strong> Спочатку планувалося 7 рівнів заголовків, але зупинилися на 6. Вважається, що 7-й рівень (&lt;h7&gt;) ніколи не був впроваджений, бо текст ставав би надто дрібним.</p>
+                        </div>
+                    </div>
+
+                    <!-- Заголовки h1-h6 -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-heading"></i> Заголовки &lt;h1&gt; - &lt;h6&gt;</h3>
+                        <p>Заголовки використовуються для створення ієрархії на сторінці. &lt;h1&gt; - найважливіший, &lt;h6&gt; - найменш важливий.</p>
+                        <div class="demo-headings">
+                            <div class="demo-h1">&lt;h1&gt; Найголовніший заголовок</div>
+                            <div class="demo-h2">&lt;h2&gt; Заголовок другого рівня</div>
+                            <div class="demo-h3">&lt;h3&gt; Заголовок третього рівня</div>
+                            <div class="demo-h4">&lt;h4&gt; Заголовок четвертого рівня</div>
+                            <div class="demo-h5">&lt;h5&gt; Заголовок п'ятого рівня</div>
+                            <div class="demo-h6">&lt;h6&gt; Заголовок шостого рівня</div>
+                        </div>
+                        <div class="warning-box" style="margin-top: 15px;">
+                            <i class="fas fa-info-circle"></i>
+                            <p><strong>Важливо!</strong> На сторінці повинен бути лише один &lt;h1&gt;. Це важливо для пошукових систем (SEO).</p>
+                        </div>
+                    </div>
+
+                    <!-- Теги форматування тексту -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-format"></i> Теги форматування тексту</h3>
+                        <div class="tags-table">
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;strong&gt;...&lt;/strong&gt;</code></div>
+                                <div class="tag-desc"><strong>Жирний текст</strong> (важливий, семантичний)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;b&gt;...&lt;/b&gt;</code></div>
+                                <div class="tag-desc"><b>Жирний текст</b> (тільки візуально)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;em&gt;...&lt;/em&gt;</code></div>
+                                <div class="tag-desc"><em>Курсивний текст</em> (логічний наголос)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;i&gt;...&lt;/i&gt;</code></div>
+                                <div class="tag-desc"><i>Курсивний текст</i> (тільки візуально)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;mark&gt;...&lt;/mark&gt;</code></div>
+                                <div class="tag-desc"><mark>Виділений текст</mark> (як маркером)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;small&gt;...&lt;/small&gt;</code></div>
+                                <div class="tag-desc"><small>Дрібний текст</small></div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;del&gt;...&lt;/del&gt;</code></div>
+                                <div class="tag-desc"><del>Закреслений текст</del></div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;ins&gt;...&lt;/ins&gt;</code></div>
+                                <div class="tag-desc"><ins>Вставлений текст</ins> (підкреслений)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Гра "Лопни кульку" -->
+                    <div class="game-balloon" id="balloonGame">
+                        <h3><i class="fas fa-gamepad"></i> 🎈 Гра: Лопни кульку з правильним тегом!</h3>
+                        <div class="game-question-balloon" id="balloonQuestion">Який тег робить текст жирним (важливим)?</div>
+                        <div class="balloons-container" id="balloonsContainer"></div>
+                        <div class="game-score-balloon" id="balloonScore">Рахунок: 0 / 10</div>
+                        <div class="game-feedback-balloon" id="balloonFeedback"></div>
+                        <div class="game-buttons">
+                            <button id="startBalloonBtn" class="btn-run"><i class="fas fa-play"></i> Почати гру</button>
+                            <button id="resetBalloonBtn" class="btn-clear"><i class="fas fa-redo-alt"></i> Скинути гру</button>
+                        </div>
+                    </div>
+
+                    <!-- Вікторина -->
+                    <div class="quiz-area" id="tagsQuiz">
+                        <h3><i class="fas fa-question-circle"></i> 📋 Вікторина: Перевір себе</h3>
+                        <div id="quizTagsContainer"></div>
+                        <div id="quizTagsFeedback" class="quiz-feedback"></div>
+                        <button id="checkTagsQuizBtn">✨ Перевірити відповіді</button>
+                        <button id="resetTagsQuizBtn" style="background:#7f8c8d;">🔄 Скинути</button>
+                    </div>
+
+                    <div class="extensions-list">
+                        <h3><i class="fas fa-sticky-note"></i> Що потрібно запам'ятати</h3>
+                        <ul style="margin-left: 25px;">
+                            <li>&lt;h1&gt; використовується один раз на сторінці</li>
+                            <li>&lt;strong&gt; та &lt;em&gt; - семантичні теги (важливі для SEO)</li>
+                            <li>&lt;b&gt; та &lt;i&gt; - тільки для візуального оформлення</li>
+                            <li>Заголовки створюють ієрархію документа</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- ==================== ПРАКТИЧНА ЧАСТИНА ==================== -->
+                <section id="practice">
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #27ae60, #1e8449);"><i class="fas fa-laptop-code"></i> Заняття 2/2 • Практична частина • 2 години</span>
+                    <h2>💻 Практикуємося з заголовками та текстом</h2>
+                    <p>💪 <strong>Практичне завдання:</strong> створи структуровану сторінку з правильною ієрархією заголовків та форматуванням тексту.</p>
+
+                    <div class="task-card">
+                        <h3><i class="fas fa-bullseye"></i> Мета практичного заняття</h3>
+                        <ul style="margin-left: 25px; margin-top: 10px;">
+                            <li>Навчитися правильно використовувати заголовки &lt;h1&gt; - &lt;h6&gt;</li>
+                            <li>Потренуватися з тегами форматування тексту</li>
+                            <li>Створити сторінку "Моя улюблена тварина" з правильною структурою</li>
+                        </ul>
+                    </div>
+
+                    <h3><i class="fas fa-list-ol"></i> Покрокова інструкція</h3>
+
+                    <div class="task-step">
+                        <div class="step-number">1</div>
+                        <div><strong>Створи базову структуру</strong> HTML-документа.</div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">2</div>
+                        <div><strong>Додай заголовки:</strong>
+                            <ul style="margin-top: 8px;">
+                                <li>&lt;h1&gt; - головний заголовок сторінки</li>
+                                <li>&lt;h2&gt; - для розділів (Опис, Цікаві факти, Харчування)</li>
+                                <li>&lt;h3&gt; - для підрозділів</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">3</div>
+                        <div><strong>Додай текст з форматуванням:</strong>
+                            <ul style="margin-top: 8px;">
+                                <li>Абзаци &lt;p&gt; з описом</li>
+                                <li>Виділення &lt;strong&gt; та &lt;em&gt;</li>
+                                <li>Списки &lt;ul&gt; або &lt;ol&gt;</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Чекліст -->
+                    <div class="task-challenge">
+                        <div class="challenge-title"><i class="fas fa-tasks"></i> 🎯 Завдання-челендж</div>
+                        <p>Створи сторінку <strong>"Моя улюблена тварина"</strong>, яка має містити:</p>
+                        <ul class="checklist" id="challengeChecklist">
+                            <li data-done="false">Заголовок &lt;h1&gt; з назвою тварини</li>
+                            <li data-done="false">Розділ "Опис" з заголовком &lt;h2&gt; та абзацом &lt;p&gt;</li>
+                            <li data-done="false">Розділ "Цікаві факти" з заголовком &lt;h2&gt; та списком &lt;ul&gt;</li>
+                            <li data-done="false">Виділення важливих слів &lt;strong&gt;</li>
+                            <li data-done="false">Курсивне виділення &lt;em&gt; для наголосу</li>
+                            <li data-done="false">Розділ "Харчування" з заголовком &lt;h3&gt; (підрозділ)</li>
+                        </ul>
+                        <button id="resetChecklistBtn" class="btn-clear" style="margin-top: 10px;"><i class="fas fa-sync-alt"></i> Скинути чекліст</button>
+                    </div>
+
+                    <!-- Живий редактор -->
+                    <h3><i class="fas fa-laptop-code"></i> ✏️ Спробуй сам! Пиши код нижче</h3>
+                    <div class="code-editor-panel">
+                        <div class="editor-header">
+                            <div class="editor-dot red"></div>
+                            <div class="editor-dot yellow"></div>
+                            <div class="editor-dot green"></div>
+                            <div class="editor-title">index.html</div>
+                        </div>
+                        <div class="editor-container">
+                            <div class="editor-textarea">
+                                <textarea id="htmlCodeEditor" placeholder="Напиши свій HTML-код тут..."></textarea>
+                            </div>
+                            <div class="editor-preview">
+                                <div class="preview-frame">
+                                    <iframe id="previewFrame"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="editor-buttons">
+                            <button id="runCodeBtn" class="btn-run"><i class="fas fa-play"></i> Запустити код</button>
+                            <button id="clearCodeBtn" class="btn-clear"><i class="fas fa-trash-alt"></i> Очистити</button>
+                            <button id="loadExampleBtn" class="btn-run" style="background:#3498db;"><i class="fas fa-eye"></i> Завантажити приклад</button>
+                        </div>
+                    </div>
+
+                    <div class="hint-box">
+                        <i class="fas fa-info-circle"></i>
+                        <strong>Приклад готової сторінки:</strong>
+                        <button id="showSolutionBtn" class="solution-btn" style="margin-left: 15px;"><i class="fas fa-eye"></i> Показати приклад</button>
+                        <div id="solutionContent" class="solution-content">
+                            <pre style="margin:0; color:#ffd966;">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Моя улюблена тварина - Панда&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;🐼 Велика панда&lt;/h1&gt;
+    
+    &lt;h2&gt;Опис&lt;/h2&gt;
+    &lt;p&gt;Велика панда - це &lt;strong&gt;рідкісна тварина&lt;/strong&gt;, яка мешкає в гірських регіонах Китаю. Вона відома своїм &lt;em&gt;чорно-білим забарвленням&lt;/em&gt; та любов'ю до бамбука.&lt;/p&gt;
+    
+    &lt;h2&gt;Цікаві факти&lt;/h2&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Панди їдять &lt;strong&gt;до 14 годин на день&lt;/strong&gt;&lt;/li&gt;
+        &lt;li&gt;Новонароджені панди &lt;em&gt;важать лише 100 грамів&lt;/em&gt;&lt;/li&gt;
+        &lt;li&gt;У панд &lt;strong&gt;6 пальців&lt;/strong&gt; на передніх лапах&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;h3&gt;Харчування&lt;/h3&gt;
+    &lt;p&gt;Панди харчуються переважно &lt;strong&gt;бамбуком&lt;/strong&gt; - до &lt;em&gt;38 кг на день&lt;/em&gt;!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </div>
+                    </div>
+
+                    <!-- Контрольна вікторина -->
+                    <div class="quiz-area" id="controlQuiz">
+                        <h3><i class="fas fa-question-circle"></i> 📋 Контрольні питання</h3>
+                        <div id="quizControlContainer"></div>
+                        <div id="quizControlFeedback" class="quiz-feedback"></div>
+                        <button id="checkControlQuizBtn">✨ Перевірити відповіді</button>
+                        <button id="resetControlQuizBtn" style="background:#7f8c8d;">🔄 Скинути</button>
+                    </div>
+
+                    <div class="task-card" style="background: #fef5e8;">
+                        <h3><i class="fas fa-home"></i> Домашнє завдання</h3>
+                        <p>Створи HTML-файл <code>my_hobby.html</code> з розповіддю про своє хобі. Використай заголовки різних рівнів та теги форматування тексту.</p>
+                    </div>
+
+                    <div class="random-fact-box">
+                        <button id="randomFactBtn" class="fact-btn"><i class="fas fa-dice-d6"></i> Цікавий факт</button>
+                        <p id="randomFactDisplay" class="fact-display">Натисни, щоб дізнатися щось нове!</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Гурток Web-програмування | Теги заголовків і тексту — Теорія + Практика</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

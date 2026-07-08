@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Форми на Web-сторінці | Теорія + Практика | Гурток програмування</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+            <div class="nav">
+                <a href="/index.html">Головна</a>
+                <a href="#theory">Теорія</a>
+                <a href="#practice">Практика</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="lesson-card">
+                <!-- ==================== ТЕОРЕТИЧНА ЧАСТИНА ==================== -->
+                <section id="theory">
+                    <span class="topic-badge"><i class="fas fa-book-open"></i> Заняття 1/2 • Теоретична частина • 2 години</span>
+                    <h2>📝 Форми на Web-сторінці</h2>
+                    <p>🎯 <strong>Мета заняття:</strong> Вивчити основні теги для створення форм, різні типи полів введення, кнопки та атрибути форм.</p>
+
+                    <!-- Відео-урок -->
+                    <div class="video-lesson">
+                        <h3><i class="fas fa-video"></i> 🎥 Відео-урок: Форми в HTML</h3>
+                        <div class="video-container">
+                            <iframe width="951" height="535" src="https://www.youtube.com/embed/hIp39eLzJjc" title="Заняття 6. HTML-форми. OpenWeb - програмуємо разом!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="video-caption"><i class="fas fa-info-circle"></i> Подивись відео, щоб дізнатися, як створювати форми для збору інформації від користувачів!</p>
+                    </div>
+
+                    <!-- Що таке форми -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-window-maximize"></i> Що таке форми?</h3>
+                        <p>Форми — це елементи вебсторінки, які дозволяють користувачам вводити та відправляти дані: реєстрація, вхід, пошук, опитування, замовлення тощо.</p>
+                        <div class="info-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>Форми — це "місток" між користувачем і сервером. Саме завдяки формам ми можемо реєструватися, писати коментарі, робити замовлення в інтернет-магазинах!</p>
+                        </div>
+                    </div>
+
+                    <!-- Основний тег form -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-code"></i> Основний тег &lt;form&gt;</h3>
+                        <div class="code-example">
+                            &lt;form action="/send-data" method="POST"&gt;<br>
+                            &nbsp;&nbsp;&lt;!-- Поля форми --&gt;<br>
+                            &lt;/form&gt;
+                        </div>
+                        <div class="tags-table">
+                            <div class="tag-row">
+                                <div class="tag-name"><code>action</code></div>
+                                <div class="tag-desc">Адреса, куди відправляються дані форми</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>method</code></div>
+                                <div class="tag-desc">Метод відправки: GET (видно в URL) або POST (приховано)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>name</code></div>
+                                <div class="tag-desc">Ім'я форми (для ідентифікації)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Типи полів введення -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-keyboard"></i> Основні типи полів &lt;input&gt;</h3>
+                        <div class="tags-table">
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;input type="text"&gt;</code></div>
+                                <div class="tag-desc">Однорядкове текстове поле</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;input type="password"&gt;</code></div>
+                                <div class="tag-desc">Поле для пароля (символи приховані)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;input type="email"&gt;</code></div>
+                                <div class="tag-desc">Поле для email (перевіряє формат)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;input type="number"&gt;</code></div>
+                                <div class="tag-desc">Поле для чисел (з кнопками +/-)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;input type="checkbox"&gt;</code></div>
+                                <div class="tag-desc">Прапорець (можна вибрати кілька)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;input type="radio"&gt;</code></div>
+                                <div class="tag-desc">Перемикач (можна вибрати один з групи)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;input type="date"&gt;</code></div>
+                                <div class="tag-desc">Вибір дати</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;textarea&gt;</code></div>
+                                <div class="tag-desc">Багаторядкове текстове поле</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;select&gt; + &lt;option&gt;</code></div>
+                                <div class="tag-desc">Випадаючий список</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;button&gt;</code> або <code>&lt;input type="submit"&gt;</code></div>
+                                <div class="tag-desc">Кнопка відправки форми</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Важливі атрибути -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-cogs"></i> Важливі атрибути полів</h3>
+                        <div class="two-columns">
+                            <div class="card">
+                                <h4>📌 Основні атрибути</h4>
+                                <div class="code-example">
+                                    &lt;input type="text" <strong>name="username"</strong>&gt;<br>
+                                    &lt;input type="text" <strong>placeholder="Введіть ім'я"</strong>&gt;<br>
+                                    &lt;input type="text" <strong>value="Текст за замовчуванням"</strong>&gt;<br>
+                                    &lt;input type="text" <strong>required</strong>&gt;<br>
+                                    &lt;input type="text" <strong>disabled</strong>&gt;
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h4>✨ Приклад форми</h4>
+                                <div class="demo-form" style="background: #f8f9fa; padding: 15px; border-radius: 12px;">
+                                    <label>Ім'я: <input type="text" placeholder="Ваше ім'я" style="margin: 5px 0; padding: 5px;"></label><br>
+                                    <label>Email: <input type="email" placeholder="email@example.com" style="margin: 5px 0; padding: 5px;"></label><br>
+                                    <label><input type="checkbox"> Підписатися на новини</label><br>
+                                    <button style="margin-top: 10px; padding: 5px 15px;">Надіслати</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Гра "Форма-конструктор: Збери правильну форму" -->
+                    <div class="game-form-match" id="formMatchGame">
+                        <h3><i class="fas fa-puzzle-piece"></i> 🎮 Гра: Форма-конструктор</h3>
+                        <div class="game-rules">
+                            <i class="fas fa-star-of-life"></i> З'єднай поле форми з його призначенням. Клікни на елемент ліворуч, потім на елемент праворуч!
+                        </div>
+                        
+                        <div class="match-container">
+                            <div class="match-column left">
+                                <div class="match-title">📝 Елементи форми</div>
+                                <div id="leftItems" class="match-items">
+                                    <div class="match-item" data-type="text">📝 &lt;input type="text"&gt;</div>
+                                    <div class="match-item" data-type="password">🔒 &lt;input type="password"&gt;</div>
+                                    <div class="match-item" data-type="email">📧 &lt;input type="email"&gt;</div>
+                                    <div class="match-item" data-type="checkbox">✅ &lt;input type="checkbox"&gt;</div>
+                                    <div class="match-item" data-type="radio">🔘 &lt;input type="radio"&gt;</div>
+                                    <div class="match-item" data-type="select">📋 &lt;select&gt; + &lt;option&gt;</div>
+                                    <div class="match-item" data-type="textarea">📄 &lt;textarea&gt;</div>
+                                    <div class="match-item" data-type="submit">🚀 &lt;input type="submit"&gt;</div>
+                                </div>
+                            </div>
+                            
+                            <div class="match-column right">
+                                <div class="match-title">🎯 Призначення</div>
+                                <div id="rightItems" class="match-items">
+                                    <div class="match-item" data-match="email">📩 Для введення електронної пошти</div>
+                                    <div class="match-item" data-match="textarea">📝 Для великого тексту (коментарі, відгуки)</div>
+                                    <div class="match-item" data-match="password">🔐 Для введення пароля (символи приховані)</div>
+                                    
+                                    <div class="match-item" data-match="checkbox">☑️ Для вибору кількох варіантів</div>
+                                    
+                                    <div class="match-item" data-match="select">📌 Випадаючий список (економить місце)</div>
+                                    <div class="match-item" data-match="text">✏️ Для введення тексту (ім'я, назва)</div>
+                                    
+                                    <div class="match-item" data-match="submit">💾 Кнопка для надсилання форми</div>
+                                    <div class="match-item" data-match="radio">⭕ Для вибору одного варіанта з кількох</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="match-progress">
+                            <span id="matchedCount">0</span> / <span id="totalCount">8</span> з'єднано
+                        </div>
+                        <div class="game-buttons">
+                            <button id="resetMatchBtn" class="btn-clear"><i class="fas fa-redo-alt"></i> Почати заново</button>
+                        </div>
+                    </div>
+                    <!-- Вікторина -->
+                    <div class="quiz-area" id="formsQuiz">
+                        <h3><i class="fas fa-question-circle"></i> 📋 Вікторина: Перевір себе</h3>
+                        <div id="quizFormsContainer"></div>
+                        <div id="quizFormsFeedback" class="quiz-feedback"></div>
+                        <button id="checkFormsQuizBtn">✨ Перевірити відповіді</button>
+                        <button id="resetFormsQuizBtn" style="background:#7f8c8d;">🔄 Скинути</button>
+                    </div>
+
+                    <div class="extensions-list">
+                        <h3><i class="fas fa-sticky-note"></i> Що потрібно запам'ятати</h3>
+                        <ul style="margin-left: 25px;">
+                            <li>Форми створюються тегом <code>&lt;form&gt;</code> з атрибутами <code>action</code> та <code>method</code></li>
+                            <li>Поля введення створюються тегом <code>&lt;input&gt;</code> з різними значеннями <code>type</code></li>
+                            <li><code>&lt;label&gt;</code> пов'язує текст з полем для зручності</li>
+                            <li>Атрибут <code>name</code> обов'язковий для відправки даних на сервер</li>
+                            <li><code>required</code> робить поле обов'язковим для заповнення</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- ==================== ПРАКТИЧНА ЧАСТИНА ==================== -->
+                <section id="practice">
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #27ae60, #1e8449);"><i class="fas fa-laptop-code"></i> Заняття 2/2 • Практична частина • 2 години</span>
+                    <h2>💻 Практикуємося з формами</h2>
+                    <p>💪 <strong>Практичне завдання:</strong> створи форму реєстрації на сайті. Використай різні типи полів та налаштуй їх атрибути.</p>
+
+                    <div class="task-card">
+                        <h3><i class="fas fa-bullseye"></i> Мета практичного заняття</h3>
+                        <ul style="margin-left: 25px; margin-top: 10px;">
+                            <li>Створити форму з різними типами полів</li>
+                            <li>Налаштувати атрибути полів (placeholder, required, name)</li>
+                            <li>Додати кнопку відправки</li>
+                            <li>Потренуватися з різними типами input</li>
+                        </ul>
+                    </div>
+
+                    <h3><i class="fas fa-list-ol"></i> Покрокова інструкція</h3>
+
+                    <div class="task-step">
+                        <div class="step-number">1</div>
+                        <div><strong>Створи структуру</strong> форми всередині тегу <code>&lt;form&gt;</code>.</div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">2</div>
+                        <div><strong>Додай текстові поля</strong> (ім'я, email, пароль) з атрибутами <code>placeholder</code> та <code>required</code>.</div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">3</div>
+                        <div><strong>Додай перемикачі (radio)</strong> для вибору статі.</div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">4</div>
+                        <div><strong>Додай прапорці (checkbox)</strong> для вибору інтересів.</div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">5</div>
+                        <div><strong>Додай випадаючий список</strong> для вибору країни.</div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">6</div>
+                        <div><strong>Додай кнопку відправки</strong> <code>&lt;input type="submit"&gt;</code>.</div>
+                    </div>
+
+                    <!-- Практичний редактор коду -->
+                    <h3><i class="fas fa-laptop-code"></i> ✏️ Спробуй сам! Напиши код форми</h3>
+                    <div class="code-editor-panel">
+                        <div class="editor-header">
+                            <div class="editor-dot red"></div>
+                            <div class="editor-dot yellow"></div>
+                            <div class="editor-dot green"></div>
+                            <div class="editor-title">form.html</div>
+                        </div>
+                        <div class="editor-container">
+                            <div class="editor-textarea">
+                                <textarea id="htmlCodeEditor" placeholder="Напиши HTML-код форми..."></textarea>
+                            </div>
+                            <div class="editor-preview">
+                                <div class="preview-frame">
+                                    <iframe id="previewFrame"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="editor-buttons">
+                            <button id="runCodeBtn" class="btn-run"><i class="fas fa-play"></i> Запустити код</button>
+                            <button id="clearCodeBtn" class="btn-clear"><i class="fas fa-trash-alt"></i> Очистити</button>
+                            <button id="loadExampleBtn" class="btn-run" style="background:#3498db;"><i class="fas fa-eye"></i> Завантажити приклад</button>
+                        </div>
+                    </div>
+
+                    <div class="hint-box">
+                        <i class="fas fa-info-circle"></i>
+                        <strong>Приклад готової форми:</strong>
+                        <button id="showSolutionBtn" class="solution-btn" style="margin-left: 15px;"><i class="fas fa-eye"></i> Показати приклад</button>
+                        <div id="solutionContent" class="solution-content">
+                            <pre style="margin:0; color:#ffd966;">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Форма реєстрації&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;📝 Реєстрація на сайті&lt;/h1&gt;
+    
+    &lt;form action="/register" method="POST"&gt;
+        &lt;label&gt;👤 Ім'я: &lt;/label&gt;
+        &lt;input type="text" name="name" placeholder="Введіть ваше ім'я" required&gt;
+        &lt;br&gt;&lt;br&gt;
+        
+        &lt;label&gt;📧 Email: &lt;/label&gt;
+        &lt;input type="email" name="email" placeholder="example@mail.com" required&gt;
+        &lt;br&gt;&lt;br&gt;
+        
+        &lt;label&gt;🔒 Пароль: &lt;/label&gt;
+        &lt;input type="password" name="password" placeholder="Введіть пароль" required&gt;
+        &lt;br&gt;&lt;br&gt;
+        
+        &lt;label&gt;🚻 Стать: &lt;/label&gt;
+        &lt;input type="radio" name="gender" value="male"&gt; Чоловік
+        &lt;input type="radio" name="gender" value="female"&gt; Жінка
+        &lt;br&gt;&lt;br&gt;
+        
+        &lt;label&gt;🎯 Інтереси: &lt;/label&gt;
+        &lt;input type="checkbox" name="interests" value="it"&gt; Програмування
+        &lt;input type="checkbox" name="interests" value="sport"&gt; Спорт
+        &lt;input type="checkbox" name="interests" value="music"&gt; Музика
+        &lt;br&gt;&lt;br&gt;
+        
+        &lt;label&gt;🌍 Країна: &lt;/label&gt;
+        &lt;select name="country"&gt;
+            &lt;option value="ukraine"&gt;Україна&lt;/option&gt;
+            &lt;option value="poland"&gt;Польща&lt;/option&gt;
+            &lt;option value="germany"&gt;Німеччина&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;br&gt;&lt;br&gt;
+        
+        &lt;label&gt;📝 Про себе: &lt;/label&gt;
+        &lt;textarea name="about" rows="4" cols="40" placeholder="Розкажи трохи про себе..."&gt;&lt;/textarea&gt;
+        &lt;br&gt;&lt;br&gt;
+        
+        &lt;input type="submit" value="Зареєструватися"&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </div>
+                    </div>
+
+                    <!-- Контрольна вікторина -->
+                    <div class="quiz-area" id="controlQuiz">
+                        <h3><i class="fas fa-question-circle"></i> 📋 Контрольні питання</h3>
+                        <div id="quizControlContainer"></div>
+                        <div id="quizControlFeedback" class="quiz-feedback"></div>
+                        <button id="checkControlQuizBtn">✨ Перевірити відповіді</button>
+                        <button id="resetControlQuizBtn" style="background:#7f8c8d;">🔄 Скинути</button>
+                    </div>
+
+                    <div class="task-card" style="background: #fef5e8;">
+                        <h3><i class="fas fa-home"></i> Домашнє завдання</h3>
+                        <p>Створи форму зворотного зв'язку для свого сайту: ім'я, email, тема повідомлення, текстове поле та кнопка відправки.</p>
+                    </div>
+
+                    <div class="random-fact-box">
+                        <button id="randomFactBtn" class="fact-btn"><i class="fas fa-dice-d6"></i> Цікавий факт</button>
+                        <p id="randomFactDisplay" class="fact-display">Натисни, щоб дізнатися щось нове!</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Гурток Web-програмування | Форми на Web-сторінці — Теорія + Практика</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

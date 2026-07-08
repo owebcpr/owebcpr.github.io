@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Аудіо та відео на Web-сторінці | Теорія + Практика | Гурток програмування</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+            <div class="nav">
+                <a href="/index.html">Головна</a>
+                <a href="#theory">Теорія</a>
+                <a href="#practice">Практика</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="lesson-card">
+                <!-- ==================== ТЕОРЕТИЧНА ЧАСТИНА ==================== -->
+                <section id="theory">
+                    <span class="topic-badge"><i class="fas fa-book-open"></i> Заняття 1/2 • Теоретична частина • 2 години</span>
+                    <h2>🎬 Аудіо та відео на Web-сторінці</h2>
+                    <p>🎯 <strong>Мета заняття:</strong> Вивчити способи вставки відео та аудіо на веб-сторінку, ознайомитися з тегами &lt;video&gt;, &lt;audio&gt; та &lt;iframe&gt; для вбудовування контенту з YouTube.</p>
+
+                    <!-- Історія -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-history"></i> Як з'явилося відео в інтернеті</h3>
+                        <div class="info-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>Перше відео в інтернеті було завантажено у 1997 році! А у 2005 році з'явився YouTube, який зробив відео доступним для всіх. Сьогодні відео становить понад 80% всього трафіку в інтернеті!</p>
+                        </div>
+                        <div class="fun-fact">
+                            <i class="fas fa-star"></i>
+                            <p><strong>Цікавий факт:</strong> Перший відеоплеєр у браузері з'явився лише у 2009 році з HTML5. До цього для перегляду відео використовували плагін Flash!</p>
+                        </div>
+                    </div>
+
+                    <!-- Тег video -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-video"></i> Тег &lt;video&gt; — вставка відео</h3>
+                        <p>Тег &lt;video&gt; дозволяє вбудувати відеофайл безпосередньо на сторінку зі стандартними елементами керування.</p>
+                        <div class="code-example">
+                            &lt;video controls width="600"&gt;<br>
+                            &nbsp;&nbsp;&lt;source src="video.mp4" type="video/mp4"&gt;<br>
+                            &nbsp;&nbsp;Ваш браузер не підтримує відео<br>
+                            &lt;/video&gt;
+                        </div>
+                        <div class="tags-table">
+                            <div class="tag-row">
+                                <div class="tag-name"><code>controls</code></div>
+                                <div class="tag-desc">Показує кнопки відтворення, паузи, гучності</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>autoplay</code></div>
+                                <div class="tag-desc">Автоматичне відтворення (з обережністю!)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>loop</code></div>
+                                <div class="tag-desc">Зациклює відтворення</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>muted</code></div>
+                                <div class="tag-desc">Вимикає звук за замовчуванням</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>poster</code></div>
+                                <div class="tag-desc">Зображення-заставка до початку відео</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>width / height</code></div>
+                                <div class="tag-desc">Розмір відеоплеєра</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Тег audio -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-music"></i> Тег &lt;audio&gt; — вставка аудіо</h3>
+                        <div class="code-example">
+                            &lt;audio controls&gt;<br>
+                            &nbsp;&nbsp;&lt;source src="music.mp3" type="audio/mpeg"&gt;<br>
+                            &nbsp;&nbsp;Ваш браузер не підтримує аудіо<br>
+                            &lt;/audio&gt;
+                        </div>
+                        <div class="two-columns">
+                            <div class="card">
+                                <h4>🎵 Підтримувані формати</h4>
+                                <ul style="margin-left: 20px;">
+                                    <li><strong>.mp3</strong> — найпоширеніший</li>
+                                    <li><strong>.ogg</strong> — відкритий формат</li>
+                                    <li><strong>.wav</strong> — без стиснення</li>
+                                </ul>
+                            </div>
+                            <div class="card">
+                                <h4>📌 Важливі атрибути</h4>
+                                <div class="code-example">
+                                    controls — панель керування<br>
+                                    autoplay — авто відтворення<br>
+                                    loop — зациклити<br>
+                                    muted — без звуку
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Відео з YouTube -->
+                    <div class="theory-block">
+                        <h3><i class="fab fa-youtube"></i> Вставка відео з YouTube</h3>
+                        <p>Найпростіший спосіб додати відео на сайт — вбудувати його з YouTube за допомогою тегу &lt;iframe&gt;.</p>
+                        
+                        <div class="steps-how-to">
+                            <h4><i class="fas fa-list-ol"></i> Як отримати код для вставки:</h4>
+                            <ol>
+                                <li>📺 Відкрий відео на YouTube</li>
+                                <li>🔘 Натисни кнопку <strong>"Поділитися"</strong> під відео</li>
+                                <li>📋 Обери <strong>"Вбудувати"</strong> (Embed)</li>
+                                <li>📄 Скопіюй код &lt;iframe&gt;</li>
+                                <li>✏️ Встав його на свою сторінку</li>
+                            </ol>
+                        </div>
+
+                        <div class="code-example">
+                            &lt;iframe width="560" height="315" <br>
+                            &nbsp;&nbsp;src="https://www.youtube.com/embed/VIDEO_ID" <br>
+                            &nbsp;&nbsp;frameborder="0" allowfullscreen&gt;<br>
+                            &lt;/iframe&gt;
+                        </div>
+                        
+                        <div class="warning-box">
+                            <i class="fas fa-info-circle"></i>
+                            <p><strong>Зверни увагу!</strong> Замість <code>VIDEO_ID</code> потрібно вставити унікальний код відео з YouTube (наприклад, dQw4w9WgXcQ).</p>
+                        </div>
+                    </div>
+
+                    <!-- Демонстрація відео -->
+                    <div class="demo-video-block">
+                        <h3><i class="fas fa-eye"></i> Жива демонстрація</h3>
+                        <p>Ось приклад вбудованого відео з YouTube (навчальний ролик про HTML):</p>
+                        <div class="demo-video-container">
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/Vr3dEE0QXtg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <p class="demo-note"><i class="fas fa-hand-pointer"></i> Ти можеш натиснути "Поділитися" під будь-яким відео на YouTube та отримати такий самий код!</p>
+                    </div>
+
+                    <!-- Гра "Вгадай атрибут" -->
+                    <div class="game-attribute" id="attributeGame">
+                        <h3><i class="fas fa-gamepad"></i> 🎮 Гра: Вгадай атрибут!</h3>
+                        <div class="game-timer-attr">⏱️ Час: <span id="attrTimer">60</span> сек</div>
+                        <div class="game-story-attr">
+                            <i class="fas fa-robot"></i> Допоможи роботу вивчити атрибути для відео та аудіо!
+                        </div>
+                        <div class="game-question-attr" id="attrQuestion">Який атрибут показує кнопки керування?</div>
+                        <div class="attr-options" id="attrOptions"></div>
+                        <div class="game-score-attr" id="attrScore">Рахунок: 0 / 10</div>
+                        <div class="game-feedback-attr" id="attrFeedback"></div>
+                        <div class="game-buttons">
+                            <button id="startAttrBtn" class="btn-run"><i class="fas fa-play"></i> Почати гру</button>
+                            <button id="resetAttrBtn" class="btn-clear"><i class="fas fa-redo-alt"></i> Скинути</button>
+                        </div>
+                    </div>
+
+                    <!-- Вікторина -->
+                    <div class="quiz-area" id="mediaQuiz">
+                        <h3><i class="fas fa-question-circle"></i> 📋 Вікторина: Перевір себе</h3>
+                        <div id="quizMediaContainer"></div>
+                        <div id="quizMediaFeedback" class="quiz-feedback"></div>
+                        <button id="checkMediaQuizBtn">✨ Перевірити відповіді</button>
+                        <button id="resetMediaQuizBtn" style="background:#7f8c8d;">🔄 Скинути</button>
+                    </div>
+
+                    <div class="extensions-list">
+                        <h3><i class="fas fa-sticky-note"></i> Що потрібно запам'ятати</h3>
+                        <ul style="margin-left: 25px;">
+                            <li>Тег <code>&lt;video&gt;</code> — для вставки відеофайлів</li>
+                            <li>Тег <code>&lt;audio&gt;</code> — для вставки аудіофайлів</li>
+                            <li>Тег <code>&lt;iframe&gt;</code> — для вбудовування відео з YouTube</li>
+                            <li>Атрибут <code>controls</code> додає панель керування</li>
+                            <li>Атрибут <code>autoplay</code> — автовідтворення (краще використовувати з muted)</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- ==================== ПРАКТИЧНА ЧАСТИНА ==================== -->
+                <section id="practice">
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #27ae60, #1e8449);"><i class="fas fa-laptop-code"></i> Заняття 2/2 • Практична частина • 2 години</span>
+                    <h2>💻 Практикуємося з аудіо та відео</h2>
+                    <p>💪 <strong>Практичне завдання:</strong> навчимося вставляти відео з YouTube, а також власні відео та аудіофайли.</p>
+
+                    <!-- Завдання 1: YouTube -->
+                    <div class="task-card">
+                        <h3><i class="fab fa-youtube"></i> Завдання 1: Встав відео з YouTube</h3>
+                        <p>Скопіюй код для вставки з будь-якого відео на YouTube та встав його в редактор нижче.</p>
+                        <div class="steps-how-to" style="margin-top: 10px;">
+                            <h4><i class="fas fa-list-ol"></i> Інструкція:</h4>
+                            <ol>
+                                <li>📺 Відкрий YouTube та обери будь-яке відео</li>
+                                <li>🔘 Натисни <strong>"Поділитися"</strong> → <strong>"Вбудувати"</strong></li>
+                                <li>📋 Скопіюй код (починається з &lt;iframe&gt;)</li>
+                                <li>✏️ Встав його в редактор коду нижче</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- Живий редактор коду -->
+                    <h3><i class="fas fa-laptop-code"></i> ✏️ Спробуй сам! Встав свій код</h3>
+                    <div class="code-editor-panel">
+                        <div class="editor-header">
+                            <div class="editor-dot red"></div>
+                            <div class="editor-dot yellow"></div>
+                            <div class="editor-dot green"></div>
+                            <div class="editor-title">index.html</div>
+                        </div>
+                        <div class="editor-container">
+                            <div class="editor-textarea">
+                                <textarea id="htmlCodeEditor" placeholder="Встав сюди код для вставки відео..."></textarea>
+                            </div>
+                            <div class="editor-preview">
+                                <div class="preview-frame">
+                                    <iframe id="previewFrame"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="editor-buttons">
+                            <button id="runCodeBtn" class="btn-run"><i class="fas fa-play"></i> Запустити код</button>
+                            <button id="clearCodeBtn" class="btn-clear"><i class="fas fa-trash-alt"></i> Очистити</button>
+                            <button id="loadExampleBtn" class="btn-run" style="background:#3498db;"><i class="fas fa-eye"></i> Завантажити приклад</button>
+                        </div>
+                    </div>
+
+                    <!-- Завдання 2: Відео тег -->
+                    <div class="task-card" style="margin-top: 30px;">
+                        <h3><i class="fas fa-video"></i> Завдання 2: Встав власне відео</h3>
+                        <p>Створи код для вставки відео за допомогою тегу <code>&lt;video&gt;</code>. Файл <strong>myvideo.mp4</strong> збережи в папку з проєктом.</p>
+                        <div class="code-snippet" style="margin-top: 10px;">
+                            &lt;video controls width="600"&gt;<br>
+                            &nbsp;&nbsp;&lt;source src="myvideo.mp4" type="video/mp4"&gt;<br>
+                            &nbsp;&nbsp;Ваш браузер не підтримує відео<br>
+                            &lt;/video&gt;
+                        </div>
+                        <div class="hint-mini">
+                            <i class="fas fa-lightbulb"></i> Підказка: додай атрибути <code>autoplay muted loop</code> для автоматичного відтворення без звуку.
+                        </div>
+                    </div>
+
+                    <!-- Завдання 3: Аудіо -->
+                    <div class="task-card">
+                        <h3><i class="fas fa-music"></i> Завдання 3: Встав аудіо</h3>
+                        <p>Створи код для вставки аудіо за допомогою тегу <code>&lt;audio&gt;</code>. Файл <strong>myaudio.mp3</strong> збережи в папку з проєктом.</p>
+                        <div class="code-snippet" style="margin-top: 10px;">
+                            &lt;audio controls&gt;<br>
+                            &nbsp;&nbsp;&lt;source src="myaudio.mp3" type="audio/mpeg"&gt;<br>
+                            &nbsp;&nbsp;Ваш браузер не підтримує аудіо<br>
+                            &lt;/audio&gt;
+                        </div>
+                        <div class="hint-mini">
+                            <i class="fas fa-lightbulb"></i> Підказка: додай атрибут <code>loop</code> для зациклення.
+                        </div>
+                    </div>
+
+                    <!-- Фінальне завдання в VS Code -->
+                    <div class="task-card" style="background: #fef5e8; margin-top: 30px;">
+                        <h3><i class="fas fa-star"></i> 🚀 Фінальне завдання</h3>
+                        <p>Створи в VS Code власну сторінку <code>media.html</code>, яка містить:</p>
+                        <ul style="margin-left: 25px; margin-top: 10px;">
+                            <li>Заголовок <code>&lt;h1&gt;</code> "Моя медіа-сторінка"</li>
+                            <li>Відео з YouTube (будь-яке)</li>
+                            <li>Власне відео (файл video.mp4) з атрибутами <code>controls width="600"</code></li>
+                            <li>Аудіо (файл audio.mp3) з атрибутами <code>controls loop</code></li>
+                            <li>Красиве оформлення (стилі можна взяти з попередніх занять або додати свої)</li>
+                        </ul>
+                    </div>
+
+                    <div class="congrats-box" id="finalCongrats" style="display: none;">
+                        <i class="fas fa-trophy"></i>
+                        <h3>🎉 Вітаю! 🎉</h3>
+                        <p>Ти навчився вставляти відео та аудіо на веб-сторінку!</p>
+                        <p><strong>Ти справжній майстер медіа! 🌟</strong></p>
+                    </div>
+
+                    <div class="random-fact-box">
+                        <button id="randomFactBtn" class="fact-btn"><i class="fas fa-dice-d6"></i> Цікавий факт</button>
+                        <p id="randomFactDisplay" class="fact-display">Натисни, щоб дізнатися щось нове!</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Гурток Web-програмування | Аудіо та відео на Web-сторінці — Теорія + Практика</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,297 @@
+   .topic-badge {
+       display: inline-block;
+       background: linear-gradient(135deg, #ff9f4a, #ff6b2c);
+       color: white;
+       padding: 6px 16px;
+       border-radius: 50px;
+       font-size: 0.85rem;
+       margin-bottom: 15px;
+   }
+
+   /* Сітка професій */
+   .prof-grid {
+       display: grid;
+       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+       gap: 25px;
+       margin: 35px 0;
+   }
+
+   .prof-card {
+       background: linear-gradient(145deg, #ffffff, #f8fafc);
+       border-radius: 28px;
+       padding: 25px 20px;
+       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+       transition: all 0.3s ease;
+       border: 1px solid rgba(30, 95, 122, 0.1);
+       cursor: pointer;
+       position: relative;
+       overflow: hidden;
+   }
+
+   .prof-card:hover {
+       transform: translateY(-8px);
+       box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+       border-color: #ff9f4a;
+   }
+
+   .prof-card i {
+       font-size: 3rem;
+       color: #1e5f7a;
+       margin-bottom: 15px;
+   }
+
+   .prof-card h3 {
+       font-size: 1.5rem;
+       margin: 10px 0;
+       color: #1e5f7a;
+   }
+
+   .prof-card p {
+       color: #2c3e4e;
+       line-height: 1.5;
+       margin: 15px 0;
+   }
+
+   .salary-badge {
+       display: inline-block;
+       background: #e8f5e9;
+       color: #2e7d32;
+       padding: 5px 12px;
+       border-radius: 30px;
+       font-size: 0.85rem;
+       font-weight: bold;
+   }
+
+   /* Анімація при кліку на картку */
+   .prof-card.active {
+       background: linear-gradient(145deg, #e6f4ff, #d4ecfa);
+       border: 2px solid #ff9f4a;
+       transform: scale(1.02);
+   }
+
+   /* Стилі для тесту */
+   .quiz-option {
+       background: white;
+       margin: 12px 0;
+       padding: 12px 18px;
+       border-radius: 60px;
+       border: 1px solid #ddd;
+       cursor: pointer;
+       transition: 0.2s;
+   }
+
+   .quiz-option:hover {
+       background: #ffecce;
+       transform: scale(1.01);
+   }
+
+   .quiz-option.selected {
+       background: #ffd966;
+       border-color: #e67e22;
+       font-weight: bold;
+   }
+
+   .quiz-feedback {
+       margin-top: 20px;
+       font-weight: bold;
+       padding: 12px;
+       border-radius: 30px;
+   }
+
+   /* Стилі для шкали навичок */
+   .skills-container {
+       background: #f0f4f9;
+       border-radius: 28px;
+       padding: 30px;
+       margin: 30px 0;
+   }
+
+   .skill-item {
+       margin: 20px 0;
+       display: flex;
+       align-items: center;
+       gap: 15px;
+       flex-wrap: wrap;
+   }
+
+   .skill-item span:first-child {
+       width: 140px;
+       font-weight: bold;
+       color: #1e5f7a;
+   }
+
+   .skill-bar {
+       flex: 1;
+       height: 12px;
+       background: #e0e7ef;
+       border-radius: 20px;
+       overflow: hidden;
+   }
+
+   .skill-fill {
+       height: 100%;
+       background: linear-gradient(90deg, #ff9f4a, #ff6b2c);
+       border-radius: 20px;
+       transition: width 0.5s ease;
+       width: 0;
+   }
+
+   .skill-percent {
+       width: 45px;
+       font-weight: bold;
+       color: #2c3e4e;
+   }
+
+   /* Блок цікавих фактів */
+   .fact-block {
+       background: linear-gradient(135deg, #fef5e8, #fff8f0);
+       border-radius: 28px;
+       padding: 25px;
+       margin: 35px 0;
+   }
+
+   .fact-list {
+       display: flex;
+       flex-direction: column;
+       gap: 12px;
+   }
+
+   .fact-item {
+       padding: 10px 15px;
+       background: white;
+       border-radius: 20px;
+       border-left: 5px solid #ff9f4a;
+   }
+
+   /* Кар'єрна мапа */
+   .career-map {
+       background: #1e5f7a;
+       border-radius: 28px;
+       padding: 25px;
+       margin: 35px 0;
+       color: white;
+   }
+
+   .career-map h3 {
+       color: white;
+       text-align: center;
+   }
+
+   .steps {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       flex-wrap: wrap;
+       gap: 10px;
+       margin-top: 20px;
+   }
+
+   .step {
+       background: rgba(255, 255, 255, 0.2);
+       backdrop-filter: blur(5px);
+       padding: 12px 18px;
+       border-radius: 20px;
+       text-align: center;
+       min-width: 100px;
+       font-weight: bold;
+   }
+
+   .step-arrow {
+       font-size: 1.8rem;
+       font-weight: bold;
+   }
+
+   /* Випадковий факт */
+   .random-fact-box {
+       background: #2c3e4e;
+       border-radius: 28px;
+       padding: 25px;
+       text-align: center;
+       margin-top: 30px;
+   }
+
+   .fact-btn {
+       background: #ff9f4a;
+       color: #1e2a3e;
+       border: none;
+       padding: 12px 30px;
+       font-size: 1.1rem;
+       font-weight: bold;
+       border-radius: 50px;
+       cursor: pointer;
+       transition: 0.2s;
+   }
+
+   .fact-btn:hover {
+       background: #ffb86c;
+       transform: scale(1.05);
+   }
+
+   .fact-display {
+       background: white;
+       border-radius: 30px;
+       padding: 20px;
+       margin-top: 20px;
+       color: #1e5f7a;
+       font-weight: 500;
+       min-height: 80px;
+   }
+
+   .footer {
+       background: #0b2b3b;
+       color: #ccc;
+       text-align: center;
+       padding: 25px 0;
+       margin-top: 20px;
+   }
+
+   img.illustration {
+       max-width: 100%;
+       border-radius: 20px;
+       margin: 15px 0;
+   }
+
+   .safe-badge {
+       display: inline-flex;
+       align-items: center;
+       gap: 8px;
+       background: #2ecc71;
+       color: white;
+       padding: 5px 15px;
+       border-radius: 40px;
+       font-size: 0.8rem;
+   }
+
+   /* Адаптивність */
+   @media (max-width: 768px) {
+       .prof-grid {
+           grid-template-columns: 1fr;
+       }
+
+       .steps {
+           flex-direction: column;
+       }
+
+       .step-arrow {
+           transform: rotate(90deg);
+       }
+
+       .skill-item {
+           flex-direction: column;
+           align-items: flex-start;
+       }
+
+       .skill-bar {
+           width: 100%;
+       }
+   }
+
+   @media (max-width: 768px) {
+       .lesson-card {
+           padding: 25px;
+       }
+
+       h2 {
+           font-size: 1.6rem;
+       }
+   }

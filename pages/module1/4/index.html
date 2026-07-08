@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Основні теги HTML | Теорія + Практика | Гурток програмування</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+            <div class="nav">
+                <a href="/index.html">Головна</a>
+                <a href="#theory">Теорія</a>
+                <a href="#practice">Практика</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="lesson-card">
+                <!-- ==================== ТЕОРЕТИЧНА ЧАСТИНА ==================== -->
+                <section id="theory">
+                    <span class="topic-badge"><i class="fas fa-book-open"></i> Заняття 1/2 • Теоретична частина • 2 години</span>
+                    <h2>📚 Основні теги HTML</h2>
+                    <p>🎯 <strong>Мета заняття:</strong> Вивчити основні HTML-теги, їх призначення, навчитися розрізняти парні та непарні теги, ознайомитися із сучасними та застарілими тегами.</p>
+
+                    <div class="task-card">
+                        <h3><i class="fas fa-bullseye"></i> Сьогодні ми розглянемо</h3>
+                        <ul style="margin-left: 25px; margin-top: 10px;">
+                            <li>Що таке HTML-теги та як вони працюють</li>
+                            <li>Парні та непарні теги</li>
+                            <li>Основні теги для тексту: <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code></li>
+                            <li>Теги для списків: <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code></li>
+                            <li>Застарілі та сучасні теги HTML5</li>
+                        </ul>
+                    </div>
+
+                    <!-- Що таке теги -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-tag"></i> Що таке HTML-теги?</h3>
+                        <p>Теги — це спеціальні команди, які говорять браузеру, як відображати контент. Вони пишуться в кутових дужках: <code>&lt;тег&gt;</code>.</p>
+                        <div class="info-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>Більшість тегів мають відкриваючу та закриваючу частини: <code>&lt;p&gt;Текст&lt;/p&gt;</code>. Такі теги називаються <strong>парними</strong>.</p>
+                        </div>
+                    </div>
+                    <!-- Відео-урок про основні теги -->
+                    <div class="video-lesson">
+                        <h3><i class="fas fa-video"></i> 🎥 Відео-урок: Основні теги HTML</h3>
+                        <div class="video-container">
+                            <iframe width="" height="" src="https://www.youtube.com/embed/Vr3dEE0QXtg" title="Заняття 4. Основні теги html. OpenWeb - програмуємо разом!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="video-caption"><i class="fas fa-info-circle"></i> Подивись відео, щоб краще зрозуміти тему. Потім виконай практичні завдання нижче!</p>
+                    </div>
+                    <!-- Парні та непарні теги -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-code-branch"></i> Парні та непарні теги</h3>
+                        <div class="two-columns">
+                            <div class="card">
+                                <h4>📖 Парні теги (контейнери)</h4>
+                                <p>Мають відкриваючий та закриваючий тег. Впливають на текст між ними.</p>
+                                <div class="code-example">
+                                    &lt;h1&gt;Заголовок&lt;/h1&gt;<br>
+                                    &lt;p&gt;Абзац тексту&lt;/p&gt;<br>
+                                    &lt;strong&gt;Жирний текст&lt;/strong&gt;<br>
+                                    &lt;em&gt;Курсив&lt;/em&gt;
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h4>⚡ Непарні теги (самозакривні)</h4>
+                                <p>Не мають закриваючого тега. Використовуються для вставки об'єктів.</p>
+                                <div class="code-example">
+                                    &lt;br&gt; — перенос рядка<br>
+                                    &lt;hr&gt; — горизонтальна лінія<br>
+                                    &lt;img src="photo.jpg"&gt; — зображення<br>
+                                    &lt;input type="text"&gt; — поле вводу
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Атрибути тегів -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-cogs"></i> Атрибути тегів: додаткові властивості</h3>
+                        <p>Атрибути — це додаткові параметри, які уточнюють або змінюють поведінку тега. Вони пишуться всередині відкриваючого тега.</p>
+                        
+                        <div class="info-box">
+                            <i class="fas fa-code"></i>
+                            <p><strong>Синтаксис:</strong> <code>&lt;тег атрибут="значення"&gt; вміст &lt;/тег&gt;</code></p>
+                        </div>
+                        
+                        <div class="code-example">
+                            &lt;a href="https://google.com" target="_blank"&gt;Посилання&lt;/a&gt;<br>
+                            &lt;img src="photo.jpg" alt="Моє фото" width="200"&gt;
+                        </div>
+                        
+                        <div class="two-columns">
+                            <div class="card">
+                                <h4>📌 Загальні атрибути (для всіх тегів)</h4>
+                                <div class="code-example">
+                                    <strong>id</strong> — унікальний ідентифікатор<br>
+                                    <strong>class</strong> — клас для групування елементів<br>
+                                    <strong>style</strong> — вбудовані CSS-стилі<br>
+                                    <strong>title</strong> — підказка при наведенні<br>
+                                    <strong>hidden</strong> — приховує елемент
+                                </div>
+                                <div class="code-example" style="margin-top: 10px;">
+                                    &lt;p id="first" class="text" title="Це підказка"&gt;Текст&lt;/p&gt;
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h4>⚡ Індивідуальні атрибути (для конкретних тегів)</h4>
+                                <div class="code-example">
+                                    <strong>href</strong> — для &lt;a&gt; (адреса посилання)<br>
+                                    <strong>src</strong> — для &lt;img&gt; (шлях до зображення)<br>
+                                    <strong>alt</strong> — для &lt;img&gt; (альтернативний текст)<br>
+                                    <strong>type</strong> — для &lt;input&gt; (тип поля)<br>
+                                    <strong>value</strong> — для &lt;input&gt; (значення)
+                                </div>
+                                <div class="code-example" style="margin-top: 10px;">
+                                    &lt;img src="cat.jpg" alt="Пухнастий кіт"&gt;<br>
+                                    &lt;input type="text" value="Привіт"&gt;
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="warning-box">
+                            <i class="fas fa-info-circle"></i>
+                            <p><strong>Важливо!</strong> Атрибути завжди пишуться у відкриваючому тезі. Значення атрибутів беруться в лапки (подвійні або одинарні). Наприклад: <code>class="my-class"</code> або <code>class='my-class'</code>.</p>
+                        </div>
+                        
+                        <!-- Таблиця з популярними атрибутами -->
+                        <h4 style="margin-top: 20px;"><i class="fas fa-table-list"></i> Таблиця популярних атрибутів</h4>
+                        <div class="tags-table">
+                            <div class="tag-row">
+                                <div class="tag-name"><code>id="унікальне_ім'я"</code></div>
+                                <div class="tag-desc">Унікальний ідентифікатор (тільки один на сторінці)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>class="ім'я_класу"</code></div>
+                                <div class="tag-desc">Клас для групування (можна багато однакових)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>style="property: value"</code></div>
+                                <div class="tag-desc">Вбудовані CSS-стилі (зміна кольору, розміру тощо)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>title="текст"</code></div>
+                                <div class="tag-desc">Спливаюча підказка при наведенні</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>href="url"</code></div>
+                                <div class="tag-desc">Адреса переходу (для тега &lt;a&gt;)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>src="шлях"</code></div>
+                                <div class="tag-desc">Шлях до файлу (для &lt;img&gt;, &lt;script&gt;, &lt;iframe&gt;)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>alt="текст"</code></div>
+                                <div class="tag-desc">Альтернативний текст (якщо картинка не завантажилась)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>width="число"</code> / <code>height="число"</code></div>
+                                <div class="tag-desc">Ширина та висота елемента (в пікселях)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>required</code></div>
+                                <div class="tag-desc">Обов'язкове поле форми (не потребує значення)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>disabled</code></div>
+                                <div class="tag-desc">Вимкнений елемент (не потребує значення)</div>
+                            </div>
+                        </div>
+                        
+                        <div class="fun-fact">
+                            <i class="fas fa-star"></i>
+                            <p><strong>Цікавий факт:</strong> Деякі атрибути не потребують значення! Наприклад, <code>required</code>, <code>disabled</code>, <code>hidden</code>, <code>checked</code>. Їх достатньо просто написати всередині тега.</p>
+                        </div>
+                    </div>
+
+                    <!-- Основні теги для тексту -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-heading"></i> Основні теги для роботи з текстом</h3>
+                        <div class="tags-table">
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;h1&gt;...&lt;/h1&gt;</code> — <code>&lt;h6&gt;</code></div>
+                                <div class="tag-desc">Заголовки різних рівнів (від найважливішого до найменш важливого)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;p&gt;...&lt;/p&gt;</code></div>
+                                <div class="tag-desc">Абзац тексту</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;strong&gt;...&lt;/strong&gt;</code></div>
+                                <div class="tag-desc">Жирне виділення (важливий текст)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;em&gt;...&lt;/em&gt;</code></div>
+                                <div class="tag-desc">Курсивне виділення (логічний наголос)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;b&gt;...&lt;/b&gt;</code></div>
+                                <div class="tag-desc">Жирний текст (без логічного значення)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;i&gt;...&lt;/i&gt;</code></div>
+                                <div class="tag-desc">Курсивний текст (без логічного значення)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;br&gt;</code></div>
+                                <div class="tag-desc">Перехід на новий рядок (непарний)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;hr&gt;</code></div>
+                                <div class="tag-desc">Горизонтальна лінія (непарний)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Списки -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-list"></i> Теги для створення списків</h3>
+                        <div class="two-columns">
+                            <div class="card">
+                                <h4>📌 Маркований список (ul)</h4>
+                                <div class="code-example">
+                                    &lt;ul&gt;<br>
+                                    &nbsp;&nbsp;&lt;li&gt;Елемент 1&lt;/li&gt;<br>
+                                    &nbsp;&nbsp;&lt;li&gt;Елемент 2&lt;/li&gt;<br>
+                                    &lt;/ul&gt;
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h4>🔢 Нумерований список (ol)</h4>
+                                <div class="code-example">
+                                    &lt;ol&gt;<br>
+                                    &nbsp;&nbsp;&lt;li&gt;Перший&lt;/li&gt;<br>
+                                    &nbsp;&nbsp;&lt;li&gt;Другий&lt;/li&gt;<br>
+                                    &lt;/ol&gt;
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Застарілі та сучасні теги -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-history"></i> Застарілі теги (не використовувати!)</h3>
+                        <div class="warning-box">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <p>Ці теги більше не підтримуються в HTML5. Використовуй CSS замість них!</p>
+                        </div>
+                        <div class="two-columns">
+                            <div class="card outdated">
+                                <h4>❌ Застарілі</h4>
+                                <div class="code-example">
+                                    &lt;font&gt; — для шрифтів (використовуй CSS)<br>
+                                    &lt;center&gt; — для центрування (CSS: text-align)<br>
+                                    &lt;big&gt; — великий текст (CSS: font-size)<br>
+                                    &lt;strike&gt; — закреслений текст (CSS: text-decoration)<br>
+                                    &lt;u&gt; — підкреслення (CSS: text-decoration)
+                                </div>
+                            </div>
+                            <div class="card modern">
+                                <h4>✅ Сучасні теги HTML5</h4>
+                                <div class="code-example">
+                                    &lt;header&gt; — шапка сайту<br>
+                                    &lt;nav&gt; — навігація<br>
+                                    &lt;main&gt; — головний контент<br>
+                                    &lt;section&gt; — розділ<br>
+                                    &lt;article&gt; — стаття<br>
+                                    &lt;footer&gt; — підвал<br>
+                                    &lt;aside&gt; — бічна панель
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Інтерактив: Гра "Впіймай тег" з таймером -->
+                    <div class="game-area" id="tagGame">
+                        <h3><i class="fas fa-gamepad"></i> 🎮 Гра: Впіймай тег! (з таймером)</h3>
+                        <div class="game-timer">⏱️ Час: <span id="timerValue">45</span> сек</div>
+                        <div class="game-question" id="gameQuestion">Натисни "Почати гру" щоб розпочати!</div>
+                        <div class="game-options" id="gameOptions"></div>
+                        <div class="game-feedback" id="gameFeedback"></div>
+                        <div class="game-score" id="gameScore">Рахунок: 0 / <span id="totalQuestions">10</span></div>
+                        <div class="game-buttons">
+                            <button id="startGameBtn" class="btn-run"><i class="fas fa-play"></i> Почати гру</button>
+                            <button id="resetGameBtn" class="btn-clear"><i class="fas fa-redo-alt"></i> Скинути гру</button>
+                        </div>
+                    </div>
+
+                    <!-- Вікторина про теги -->
+                    <div class="quiz-area" id="tagsQuiz">
+                        <h3><i class="fas fa-question-circle"></i> 📋 Вікторина: Перевір себе</h3>
+                        <div id="quizTagsContainer"></div>
+                        <div id="quizTagsFeedback" class="quiz-feedback"></div>
+                        <button id="checkTagsQuizBtn">✨ Перевірити відповіді</button>
+                        <button id="resetTagsQuizBtn" style="background:#7f8c8d;">🔄 Скинути</button>
+                    </div>
+
+                    <div class="extensions-list">
+                        <h3><i class="fas fa-sticky-note"></i> Що потрібно запам'ятати</h3>
+                        <ul style="margin-left: 25px;">
+                            <li>HTML-теги — це команди для браузера, які пишуться в кутових дужках <code>&lt; &gt;</code></li>
+                            <li><strong>Парні теги</strong> мають відкриваючу і закриваючу частину (наприклад, <code>&lt;p&gt;&lt;/p&gt;</code>)</li>
+                            <li><strong>Непарні теги</strong> не потребують закриття (наприклад, <code>&lt;br&gt;</code>, <code>&lt;hr&gt;</code>)</li>
+                            <li>Застарілі теги (<code>&lt;font&gt;</code>, <code>&lt;center&gt;</code>) замінюються CSS</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- ==================== ПРАКТИЧНА ЧАСТИНА ==================== -->
+                <section id="practice">
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #27ae60, #1e8449);"><i class="fas fa-laptop-code"></i> Заняття 2/2 • Практична частина • 2 години</span>
+                    <h2>💻 Практикуємося з тегами HTML</h2>
+                    <p>💪 <strong>Практичне завдання:</strong> закріпимо знання про HTML-теги на практиці! Ти напишеш свій перший HTML-код і одразу побачиш результат.</p>
+
+                    <div class="task-card">
+                        <h3><i class="fas fa-bullseye"></i> Мета практичного заняття</h3>
+                        <ul style="margin-left: 25px; margin-top: 10px;">
+                            <li>Написати HTML-код з використанням вивчених тегів</li>
+                            <li>Створити сторінку "Моя улюблена книга"</li>
+                            <li>Потренуватися з заголовками, абзацами, списками</li>
+                        </ul>
+                    </div>
+
+                    <!-- Покрокова інструкція -->
+                    <h3><i class="fas fa-list-ol"></i> Покрокова інструкція</h3>
+
+                    <div class="task-step">
+                        <div class="step-number">1</div>
+                        <div><strong>Створи файл</strong> з іменем <code>index.html</code> (або пиши код прямо в редакторі нижче).</div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">2</div>
+                        <div><strong>Додай базову структуру</strong> HTML-документа: <code>&lt;!DOCTYPE html&gt;</code>,
+                            <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>.</div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">3</div>
+                        <div><strong>У <code>&lt;head&gt;</code></strong> додай заголовок сторінки:
+                            <code>&lt;title&gt;Моя улюблена книга&lt;/title&gt;</code> та кодування:
+                            <code>&lt;meta charset="UTF-8"&gt;</code>.</div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">4</div>
+                        <div><strong>У <code>&lt;body&gt;</code></strong> додай:
+                            <ul style="margin-top: 8px;">
+                                <li>Заголовок <code>&lt;h1&gt;</code> з назвою книги</li>
+                                <li>Абзац <code>&lt;p&gt;</code> з описом</li>
+                                <li>Заголовок <code>&lt;h2&gt;</code> "Цікаві факти"</li>
+                                <li>Маркований список <code>&lt;ul&gt;</code> з 3 фактами</li>
+                                <li>Виділення важливих слів за допомогою <code>&lt;strong&gt;</code> або <code>&lt;em&gt;</code></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="hint-box">
+                        <i class="fas fa-lightbulb" style="color: #ff9f4a;"></i>
+                        <strong>Підказка:</strong> Ось базова структура, яка має вийти:
+                        <div class="code-snippet" style="margin-top: 10px;">
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html&gt;<br>
+                            &nbsp;&nbsp;&lt;head&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Моя улюблена книга&lt;/title&gt;<br>
+                            &nbsp;&nbsp;&lt;/head&gt;<br>
+                            &nbsp;&nbsp;&lt;body&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;...&lt;/h1&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;...&lt;/p&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Цікаві факти&lt;/h2&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ul&gt;<br>
+                            &nbsp;&nbsp;&lt;/body&gt;<br>
+                            &lt;/html&gt;
+                        </div>
+                    </div>
+
+                    <!-- Практичне завдання з чеклістом -->
+                    <div class="task-challenge">
+                        <div class="challenge-title"><i class="fas fa-tasks"></i> 🎯 Завдання-челендж</div>
+                        <p>Створи сторінку <strong>"Моя улюблена книга"</strong>, яка має містити:</p>
+                        <ul class="checklist" id="challengeChecklist">
+                            <li data-done="false">Заголовок &lt;h1&gt; з назвою книги</li>
+                            <li data-done="false">Абзац &lt;p&gt; з описом книги</li>
+                            <li data-done="false">Заголовок &lt;h2&gt; "Цікаві факти"</li>
+                            <li data-done="false">Маркований список &lt;ul&gt; з 3 цікавими фактами</li>
+                            <li data-done="false">Виділення слів за допомогою &lt;strong&gt; або &lt;em&gt;</li>
+                            <li data-done="false">Горизонтальну лінію &lt;hr&gt; між розділами (за бажанням)</li>
+                        </ul>
+                        <button id="resetChecklistBtn" class="btn-clear" style="margin-top: 10px;"><i class="fas fa-sync-alt"></i> Скинути чекліст</button>
+                    </div>
+
+                    <!-- ЖИВИЙ РЕДАКТОР КОДУ -->
+                    <h3><i class="fas fa-laptop-code"></i> ✏️ Спробуй сам! Пиши код нижче</h3>
+                    <div class="code-editor-panel">
+                        <div class="editor-header">
+                            <div class="editor-dot red"></div>
+                            <div class="editor-dot yellow"></div>
+                            <div class="editor-dot green"></div>
+                            <div class="editor-title">index.html</div>
+                        </div>
+                        <div class="editor-container">
+                            <div class="editor-textarea">
+                                <textarea id="htmlCodeEditor" placeholder="Напиши свій HTML-код тут..."></textarea>
+                            </div>
+                            <div class="editor-preview">
+                                <div class="preview-frame">
+                                    <iframe id="previewFrame"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="editor-buttons">
+                            <button id="runCodeBtn" class="btn-run"><i class="fas fa-play"></i> Запустити код</button>
+                            <button id="clearCodeBtn" class="btn-clear"><i class="fas fa-trash-alt"></i> Очистити</button>
+                            <button id="loadExampleBtn" class="btn-run" style="background:#3498db;"><i class="fas fa-eye"></i> Завантажити приклад</button>
+                        </div>
+                    </div>
+
+                    <div class="hint-box">
+                        <i class="fas fa-info-circle"></i>
+                        <strong>Приклад готової сторінки:</strong>
+                        <button id="showSolutionBtn" class="solution-btn" style="margin-left: 15px;"><i class="fas fa-eye"></i> Показати приклад</button>
+                        <div id="solutionContent" class="solution-content">
+                            <pre style="margin:0; color:#ffd966;">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Моя улюблена книга&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;🌍 "Мандри Гуллівера" - Джонатан Свіфт&lt;/h1&gt;
+    &lt;p&gt;Це моя улюблена книга, яку я прочитав уже кілька разів. Вона розповідає про неймовірні пригоди Лемюеля Гуллівера у країнах ліліпутів та велетнів.&lt;/p&gt;
+    
+    &lt;hr&gt;
+    
+    &lt;h2&gt;📖 Цікаві факти про книгу&lt;/h2&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Книга була написана &lt;strong&gt;в 1726 році&lt;/strong&gt; і одразу стала бестселером&lt;/li&gt;
+        &lt;li&gt;Спочатку &lt;em&gt;Джонатан Свіфт&lt;/em&gt; видав книгу анонімно&lt;/li&gt;
+        &lt;li&gt;Мова книги вважається &lt;strong&gt;шедевром сатири&lt;/strong&gt; світової літератури&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;p&gt;Я &lt;strong&gt;дуже рекомендую&lt;/strong&gt; прочитати цю книгу кожному!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </div>
+                    </div>
+
+                    <!-- Контрольні питання -->
+                    <div class="quiz-area" id="controlQuiz">
+                        <h3><i class="fas fa-question-circle"></i> 📋 Контрольні питання</h3>
+                        <div id="quizControlContainer"></div>
+                        <div id="quizControlFeedback" class="quiz-feedback"></div>
+                        <button id="checkControlQuizBtn">✨ Перевірити відповіді</button>
+                        <button id="resetControlQuizBtn" style="background:#7f8c8d;">🔄 Скинути</button>
+                    </div>
+
+                    <div class="extensions-list">
+                        <h3><i class="fas fa-sticky-note"></i> Що потрібно запам'ятати</h3>
+                        <ul style="margin-left: 25px;">
+                            <li>Кожен HTML-документ починається з <code>&lt;!DOCTYPE html&gt;</code></li>
+                            <li>Весь контент сторінки знаходиться всередині тегу <code>&lt;body&gt;</code></li>
+                            <li>Мета-тег <code>&lt;meta charset="UTF-8"&gt;</code> потрібен для українських літер</li>
+                            <li>Використовуй <code>&lt;strong&gt;</code> для важливого тексту, <code>&lt;em&gt;</code> для наголосу</li>
+                        </ul>
+                    </div>
+
+                    <div class="task-card" style="background: #fef5e8;">
+                        <h3><i class="fas fa-home"></i> Домашнє завдання</h3>
+                        <p>Створи HTML-файл <code>my_hobby.html</code> з розповіддю про своє хобі. Використай заголовки, абзаци, списки та виділення тексту.</p>
+                    </div>
+
+                    <div class="random-fact-box">
+                        <button id="randomFactBtn" class="fact-btn"><i class="fas fa-dice-d6"></i> Цікавий факт про HTML</button>
+                        <p id="randomFactDisplay" class="fact-display">Натисни, щоб дізнатися щось нове!</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Гурток Web-програмування | Основні теги HTML — Теорія + Практика</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

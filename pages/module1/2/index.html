@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Практика 1: Структура HTML та файлова система | Гурток програмування</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+            <div class="nav">
+                <a href="/index.html">Головна</a>
+                <a href="/index.html#program">Заняття</a>
+                <a href="/index.html#contacts">Контакти</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="lesson-card">
+                <span class="topic-badge"><i class="fas fa-code"></i> Практичне заняття 1/2</span>
+                <h2>📁 Створення HTML-файлів та структура документа</h2>
+                <p>💪 <strong>Практикуємося з файлами та папками!</strong> Сьогодні ми навчимося правильно створювати HTML-проєкти, організовувати файлову структуру та писати базову розмітку.</p>
+
+                <!-- Блок про створення файлів та структуру папок -->
+                <div class="project-setup">
+                    <h3><i class="fab fa-vs-code"></i> 📂 Як організувати HTML-проєкт</h3>
+                    <div class="project-setup-content">
+                        <div class="project-steps">
+                            <ol>
+                                <li>📁 Створи окрему <strong>папку для проєкту</strong> (наприклад, <code>my_site</code>)</li>
+                                <li>📄 У цій папці створи файл <code>index.html</code> — <strong>головну сторінку</strong></li>
+                                <li>📁 Для зображень створи папку <code>images/</code> або <code>img/</code></li>
+                                <li>📁 Для стилів — <code>css/</code>, для скриптів — <code>js/</code></li>
+                                <li>🌐 <strong>index.html</strong> — це ім'я за замовчуванням, яке сервер показує першим</li>
+                            </ol>
+                            <div class="folder-structure" style="margin-top: 15px;">
+                                <i class="fas fa-folder-open"></i> <span class="folder">my_site/</span><br>
+                                &nbsp;&nbsp;📄 <span class="file">index.html</span> &nbsp;<span class="comment">&lt;-- головна сторінка</span><br>
+                                &nbsp;&nbsp;📂 <span class="folder">images/</span> &nbsp;<span class="comment">&lt;-- папка для картинок</span><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp; 🖼️ <span class="file">cat.jpg</span><br>
+                                &nbsp;&nbsp;📂 <span class="folder">css/</span> &nbsp;<span class="comment">&lt;-- папка для стилів</span><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp; 🎨 <span class="file">style.css</span>
+                            </div>
+                        </div>
+                        <div class="project-video">
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/7dpnzsgh5p4" title="Як створити HTML-файл у Visual Studio Code" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                                </iframe>
+                            </div>
+                            <p class="video-note"><i class="fas fa-info-circle"></i> Відео: створення файлу та папок у VS Code</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Загальна структура HTML-документа -->
+                <h3><i class="fas fa-sitemap"></i> 🧱 Загальна структура HTML-документа</h3>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <i class="fas fa-code-branch"></i>
+                        <h4>Обов'язкові частини</h4>
+                        <p>Кожен HTML-документ має:</p>
+                        <ul style="margin-left: 20px; margin-top: 8px;">
+                            <li><code>&lt;!DOCTYPE html&gt;</code> — оголошення типу документа</li>
+                            <li><code>&lt;html&gt;</code> — кореневий елемент</li>
+                            <li><code>&lt;head&gt;</code> — метадані, заголовок, підключення файлів</li>
+                            <li><code>&lt;body&gt;</code> — видимий контент</li>
+                        </ul>
+                    </div>
+                    <div class="tool-card">
+                        <i class="fas fa-info-circle"></i>
+                        <h4>Важливі правила</h4>
+                        <ul style="margin-left: 20px; margin-top: 8px;">
+                            <li>Файл має закінчуватися на <code>.html</code></li>
+                            <li>Ім'я головної сторінки — <code>index.html</code></li>
+                            <li>Теги мають бути закриті</li>
+                            <li>Правильна вкладеність</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="code-snippet">
+                    &lt;!DOCTYPE html&gt;<br>
+                    &lt;html lang="uk"&gt;<br>
+                    &nbsp;&nbsp;&lt;head&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Моя перша сторінка&lt;/title&gt;<br>
+                    &nbsp;&nbsp;&lt;/head&gt;<br>
+                    &nbsp;&nbsp;&lt;body&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Вітаю!&lt;/h1&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Це мій перший HTML-документ&lt;/p&gt;<br>
+                    &nbsp;&nbsp;&lt;/body&gt;<br>
+                    &lt;/html&gt;
+                </div>
+
+                <!-- Практичне завдання на створення файлів та структури -->
+                <div class="task-challenge">
+                    <div class="challenge-title"><i class="fas fa-tasks"></i> 🎯 Завдання-челендж</div>
+                    <p><strong>Завдання:</strong> Створи структуру проєкту "Моє хобі" та напиши базовий HTML-файл.</p>
+                    <ul class="checklist" id="challengeChecklist">
+                        <li data-done="false">📁 Створити папку <code>my_hobby</code> на комп'ютері</li>
+                        <li data-done="false">📄 У папці створити файл <code>index.html</code></li>
+                        <li data-done="false">📁 Створити папку <code>images</code> всередині проєкту</li>
+                        <li data-done="false">🧱 Написати базову структуру HTML (<code>!DOCTYPE, html, head, body</code>)</li>
+                        <li data-done="false">✏️ Додати заголовок сторінки <code>&lt;title&gt;</code> — "Моє хобі"</li>
+                        <li data-done="false">📝 У тілі <code>&lt;body&gt;</code> написати заголовок <code>&lt;h1&gt;</code> і абзац <code>&lt;p&gt;</code> про хобі</li>
+                        <li data-done="false">💾 Зберегти файл і відкрити у браузері</li>
+                    </ul>
+                    <button id="resetChecklistBtn" class="btn-clear" style="margin-top: 10px;"><i class="fas fa-sync-alt"></i> Скинути чекліст</button>
+                </div>
+
+                <!-- ЖИВИЙ РЕДАКТОР КОДУ для тренування структури -->
+                <h3><i class="fas fa-laptop-code"></i> ✏️ Напиши HTML-код з правильною структурою</h3>
+                <div class="code-editor-panel">
+                    <div class="editor-header">
+                        <div class="editor-dot red"></div>
+                        <div class="editor-dot yellow"></div>
+                        <div class="editor-dot green"></div>
+                        <div class="editor-title">index.html</div>
+                    </div>
+                    <div class="editor-container">
+                        <div class="editor-textarea">
+                            <textarea id="htmlCodeEditor" placeholder="Напиши HTML-код з правильною структурою..."></textarea>
+                        </div>
+                        <div class="editor-preview">
+                            <div class="preview-frame">
+                                <iframe id="previewFrame"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="editor-buttons">
+                        <button id="runCodeBtn" class="btn-run"><i class="fas fa-play"></i> Запустити код</button>
+                        <button id="clearCodeBtn" class="btn-clear"><i class="fas fa-trash-alt"></i> Очистити</button>
+                        <button id="loadExampleBtn" class="btn-run" style="background:#3498db;"><i class="fas fa-eye"></i> Показати правильну структуру</button>
+                    </div>
+                </div>
+
+                <!-- Вікторина про файли, папки та структуру HTML -->
+                <div class="quiz-area" id="structureQuiz">
+                    <h3><i class="fas fa-question-circle"></i> 📋 Вікторина: Файли, папки та структура HTML</h3>
+                    <div id="quizStructureContainer"></div>
+                    <div id="quizStructureFeedback" class="quiz-feedback"></div>
+                    <button id="checkStructureQuizBtn">✨ Перевірити відповіді</button>
+                    <button id="resetStructureQuizBtn" style="background:#7f8c8d;">🔄 Скинути</button>
+                </div>
+
+                <!-- Цікаві факти -->
+                <div class="random-fact-box">
+                    <button id="randomFactBtn" class="fact-btn"><i class="fas fa-dice-d6"></i> Цікавий факт про HTML</button>
+                    <p id="randomFactDisplay" class="fact-display">Натисни, щоб дізнатися щось нове!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Гурток Web-програмування | Практика 1: Структура HTML та файлова система</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

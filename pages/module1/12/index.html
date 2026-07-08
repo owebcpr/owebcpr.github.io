@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Практика: Створення форм | Гурток програмування</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+            <div class="nav">
+                <a href="/index.html">Головна</a>
+                <a href="#theory">Повторення</a>
+                <a href="#practice">Тренажер</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="lesson-card">
+                <!-- ==================== ЧАСТИНА 1: ПОВТОРЕННЯ ТЕОРІЇ ==================== -->
+                <section id="theory">
+                    <span class="topic-badge"><i class="fas fa-book-open"></i> Частина 1/2 • Повторення теорії • 2 години</span>
+                    <h2>📝 Створення форм у HTML</h2>
+                    <p>🎯 <strong>Мета заняття:</strong> Повторити основні теги для створення форм, різні типи полів, атрибути та потренуватися в редакторі коду.</p>
+
+                    <!-- Нагадування про форми -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-table"></i> Згадаймо: теги для створення форм</h3>
+                        <div class="tags-table">
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;form&gt;</code></div>
+                                <div class="tag-desc">Контейнер для всієї форми</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;input&gt;</code></div>
+                                <div class="tag-desc">Поле введення (текст, пароль, email, число, прапорець, перемикач)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;label&gt;</code></div>
+                                <div class="tag-desc">Підпис для поля (покращує доступність)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;select&gt; + &lt;option&gt;</code></div>
+                                <div class="tag-desc">Випадаючий список</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;textarea&gt;</code></div>
+                                <div class="tag-desc">Багаторядкове текстове поле</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;button&gt;</code></div>
+                                <div class="tag-desc">Кнопка</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Атрибути форми -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-cogs"></i> Важливі атрибути</h3>
+                        <div class="two-columns">
+                            <div class="card">
+                                <h4>📌 Атрибути &lt;form&gt;</h4>
+                                <div class="code-example">
+                                    action="/send-data" — куди відправляти<br>
+                                    method="POST" — метод відправки<br>
+                                    name="registration" — ім'я форми
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h4>📌 Атрибути &lt;input&gt;</h4>
+                                <div class="code-example">
+                                    type="text" — тип поля<br>
+                                    name="username" — ім'я поля<br>
+                                    placeholder="Введіть ім'я" — підказка<br>
+                                    required — обов'язкове поле
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Приклад простої форми -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-code"></i> Приклад простої форми</h3>
+                        <div class="two-columns">
+                            <div class="card">
+                                <div class="code-example">
+                                    &lt;form action="/register" method="POST"&gt;<br>
+                                    &nbsp;&nbsp;&lt;label&gt;Ім'я:&lt;/label&gt;<br>
+                                    &nbsp;&nbsp;&lt;input type="text" name="name" placeholder="Ваше ім'я" required&gt;<br><br>
+                                    &nbsp;&nbsp;&lt;label&gt;Email:&lt;/label&gt;<br>
+                                    &nbsp;&nbsp;&lt;input type="email" name="email" placeholder="email@example.com"&gt;<br><br>
+                                    &nbsp;&nbsp;&lt;input type="submit" value="Надіслати"&gt;<br>
+                                    &lt;/form&gt;
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h4>✨ Результат:</h4>
+                                <div class="demo-form">
+                                    <label>Ім'я:</label><br>
+                                    <input type="text" placeholder="Ваше ім'я" style="margin: 5px 0; padding: 5px;"><br>
+                                    <label>Email:</label><br>
+                                    <input type="email" placeholder="email@example.com" style="margin: 5px 0; padding: 5px;"><br>
+                                    <button style="margin-top: 10px; padding: 5px 15px;">Надіслати</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #27ae60, #1e8449);"><i class="fas fa-laptop-code"></i> Частина 2/2 • Тренажер • 2 години</span>
+                    <!-- Інтерактивний тренажер -->
+                    <div class="task-card" style="background: #e8f4fd;">
+                        <h3><i class="fas fa-gamepad"></i> 🎮 Інтерактивний тренажер</h3>
+                        <p>Нижче ти знайдеш 3 завдання. Виконуй їх по черзі в редакторі коду. Після кожного завдання натискай "Перевірити".</p>
+                        <ul style="margin-left: 25px; margin-top: 10px;">
+                            <li>✅ Завдання 1: Створи форму входу</li>
+                            <li>✅ Завдання 2: Додай різні типи полів</li>
+                            <li>✅ Завдання 3: Додай випадаючий список та текстову область</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- ==================== ЧАСТИНА 2: ТРЕНАЖЕР ==================== -->
+                <section id="practice">
+                    <h2>💻 Тренуємося створювати форми</h2>
+                    <p>💪 <strong>Практичне завдання:</strong> виконай 3 завдання в редакторі коду нижче. Після кожного завдання натискай "Перевірити".</p>
+
+                    <!-- Індикатор прогресу -->
+                    <div class="progress-indicator">
+                        <div class="progress-step" id="step1Done">1️⃣</div>
+                        <div class="progress-line"></div>
+                        <div class="progress-step" id="step2Done">2️⃣</div>
+                        <div class="progress-line"></div>
+                        <div class="progress-step" id="step3Done">3️⃣</div>
+                    </div>
+
+                    <!-- Поточне завдання -->
+                    <div class="current-task" id="currentTask">
+                        <div class="task-header">
+                            <i class="fas fa-star-of-life"></i>
+                            <span id="taskTitle">Завдання 1: Створи форму входу</span>
+                        </div>
+                        <div class="task-description" id="taskDescription">
+                            <p>Створи форму для входу на сайт. Форма повинна мати:</p>
+                            <ul>
+                                <li>Поле для <strong>логіну</strong> (type="text") з підказкою "Введіть логін"</li>
+                                <li>Поле для <strong>пароля</strong> (type="password") з підказкою "Введіть пароль"</li>
+                                <li>Кнопку <strong>відправки</strong> (type="submit") з текстом "Увійти"</li>
+                                <li>Тег <strong>&lt;form&gt;</strong> з атрибутами action="/login" та method="POST"</li>
+                                <li>Атрибут <strong>required</strong> для обох полів обов'язкове заполнення</li>
+                            </ul>
+                            <div class="hint-mini">
+                                <i class="fas fa-lightbulb"></i> Підказка: використай &lt;form&gt;, &lt;input&gt;, &lt;placeholder&gt;, &lt;value&gt;
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Живий редактор коду -->
+                    <h3><i class="fas fa-laptop-code"></i> ✏️ Напиши код тут:</h3>
+                    <div class="code-editor-panel">
+                        <div class="editor-header">
+                            <div class="editor-dot red"></div>
+                            <div class="editor-dot yellow"></div>
+                            <div class="editor-dot green"></div>
+                            <div class="editor-title">form.html</div>
+                        </div>
+                        <div class="editor-container">
+                            <div class="editor-textarea">
+                                <textarea id="htmlCodeEditor" placeholder="Напиши HTML-код форми..."></textarea>
+                            </div>
+                            <div class="editor-preview">
+                                <div class="preview-frame">
+                                    <iframe id="previewFrame"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="editor-buttons">
+                            <button id="runCodeBtn" class="btn-run"><i class="fas fa-play"></i> Запустити код</button>
+                            <button id="checkTaskBtn" class="btn-check"><i class="fas fa-check-circle"></i> Перевірити</button>
+                            <button id="loadExampleBtn" class="btn-run" style="background:#3498db;"><i class="fas fa-eye"></i> Завантажити приклад</button>
+                        </div>
+                    </div>
+
+                    <!-- Повідомлення про результат -->
+                    <div class="task-feedback" id="taskFeedback"></div>
+                </section>
+
+                <!-- ==================== СТВОРЕННЯ ПРОЄКТУ В VS CODE ==================== -->
+                <section id="vscode-project" style="display: none;">
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #8e44ad, #6c3483);"><i class="fab fa-vs-code"></i> Робота в VS Code</span>
+                    <h2>📁 Створюємо повноцінний HTML-проєкт</h2>
+                    
+                    <div class="project-steps">
+                        <h3><i class="fab fa-vs-code"></i> Як створити HTML-проєкт у Visual Studio Code</h3>
+                        <ol>
+                            <li>📁 Відкрий <strong>Visual Studio Code</strong></li>
+                            <li>📂 Натисни <strong>File → Open Folder</strong> і обери папку для проєкту</li>
+                            <li>➕ У лівій панелі (Explorer) натисни праву кнопку миші → <strong>New File</strong></li>
+                            <li>📄 Назви файл <code>index.html</code></li>
+                            <li>✏️ Пиши код у файлі</li>
+                            <li>🌐 Збережи файл (<kbd>Ctrl+S</kbd>) і відкрий його у браузері</li>
+                        </ol>
+                    </div>
+
+                    <div class="task-card">
+                        <h3><i class="fas fa-bullseye"></i> Фінальне завдання: "Форма реєстрації"</h3>
+                        <p>Тепер, коли ти навчився створювати форми, створи власну сторінку з формою реєстрації у VS Code.</p>
+                        
+                        <div class="task-step">
+                            <div class="step-number">1</div>
+                            <div><strong>Створи файл</strong> <code>index.html</code> у VS Code.</div>
+                        </div>
+                        
+                        <div class="task-step">
+                            <div class="step-number">2</div>
+                            <div><strong>Додай базову структуру</strong> HTML-документа.</div>
+                        </div>
+                        
+                        <div class="task-step">
+                            <div class="step-number">3</div>
+                            <div><strong>Додай заголовок сторінки</strong> за допомогою тегу <code>&lt;h1&gt;</code> з текстом "Реєстрація на сайті".</div>
+                        </div>
+                        
+                        <div class="task-step">
+                            <div class="step-number">4</div>
+                            <div><strong>Створи форму реєстрації</strong> з наступними полями:
+                                <ul style="margin-top: 8px;">
+                                    <li>Ім'я (type="text", required, placeholder)</li>
+                                    <li>Email (type="email", required, placeholder)</li>
+                                    <li>Пароль (type="password", required, placeholder)</li>
+                                    <li>Підтвердження пароля (type="password", required, placeholder)</li>
+                                    <li>Стать (radio: Чоловік, Жінка, Інше)</li>
+                                    <li>Інтереси (checkbox: Програмування, Спорт, Музика, Книги)</li>
+                                    <li>Країна (select: Україна, Польща, Німеччина, Франція)</li>
+                                    <li>Про себе (textarea, rows="4", placeholder)</li>
+                                    <li>Кнопка відправки (type="submit", value="Зареєструватися")</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="task-step">
+                            <div class="step-number">5</div>
+                            <div><strong>Додай стилі для форми</strong> (ми ще не вивчали CSS, але скопіюй цей код у секцію <code>&lt;head&gt;</code>):</div>
+                        </div>
+                    </div>
+
+                    <!-- Блок зі стилями -->
+                    <div class="styles-card">
+                        <h3><i class="fas fa-palette"></i> 🎨 Стилі для форми</h3>
+                        <p>Скопіюй цей код у секцію <code>&lt;head&gt;</code> (після тегу <code>&lt;title&gt;</code>):</p>
+                        <div class="code-snippet" style="background: #1e2a3e; color: #ffd966;">
+                            &lt;style&gt;<br>
+                            &nbsp;&nbsp;* { margin: 0; padding: 0; box-sizing: border-box; }<br>
+                            &nbsp;&nbsp;body {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;min-height: 100vh;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 40px 20px;<br>
+                            &nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;.container { max-width: 600px; margin: 0 auto; }<br>
+                            &nbsp;&nbsp;.form-card {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;background: white;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 20px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 30px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;box-shadow: 0 20px 60px rgba(0,0,0,0.3);<br>
+                            &nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;h1 {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;color: #333;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom: 30px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border-left: 4px solid #764ba2;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;padding-left: 15px;<br>
+                            &nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;label {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;display: block;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;margin: 15px 0 5px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;font-weight: bold;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;color: #555;<br>
+                            &nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;input, select, textarea {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 12px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border: 1px solid #ddd;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 8px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 1rem;<br>
+                            &nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;input:focus, select:focus, textarea:focus {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;outline: none;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border-color: #764ba2;<br>
+                            &nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;.radio-group, .checkbox-group {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;display: flex;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;gap: 20px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;flex-wrap: wrap;<br>
+                            &nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;.radio-group label, .checkbox-group label {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;display: inline-flex;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;align-items: center;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;gap: 5px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;font-weight: normal;<br>
+                            &nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;.radio-group input, .checkbox-group input {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;width: auto;<br>
+                            &nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;button {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 14px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;color: white;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border: none;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 8px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 1.1rem;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;cursor: pointer;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;margin-top: 20px;<br>
+                            &nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;button:hover {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;transform: translateY(-2px);<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;box-shadow: 0 5px 15px rgba(0,0,0,0.2);<br>
+                            &nbsp;&nbsp;}<br>
+                            &lt;/style&gt;
+                        </div>
+                        <div class="info-note">
+                            <i class="fas fa-info-circle"></i>
+                            <p>Не хвилюйся, ми ще не вивчали CSS! Просто скопіюй ці стилі — вони зроблять твою форму красивою, з градієнтним фоном, гарними полями та кнопкою.</p>
+                        </div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">6</div>
+                        <div><strong>Обгорни форму в div</strong> з класом "container" та "form-card".</div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">7</div>
+                        <div><strong>Збережи файл</strong> (<kbd>Ctrl+S</kbd>) та <strong>відкрий у браузері</strong>.</div>
+                    </div>
+
+                    <div class="congrats-box" id="finalCongrats">
+                        <i class="fas fa-trophy"></i>
+                        <h3>🎉 Вітаю! 🎉</h3>
+                        <p>Ти створив свою першу повноцінну форму реєстрації зі стилями!</p>
+                        <p><strong>Ти справжній веб-розробник! 🌟</strong></p>
+                        <button id="resetProjectBtn" class="btn-run"><i class="fas fa-redo-alt"></i> Почати заново</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Гурток Web-програмування | Практика: створення форм</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

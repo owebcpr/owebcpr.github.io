@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Заняття: Налаштування VSCode | Гурток програмування</title>
+    <!-- Підключення стилів -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Шрифти та іконки для кращого вигляду (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- ШАПКА -->
+    <header class="header">
+        <div class="container header-content">
+            <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+            <div class="nav">
+                <a href="/index.html">Головна</a>
+                <a href="/index.html#program">Заняття</a>
+                <a href="/index.html#contacts">Контакти</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основний контент -->
+    <main class="main-content">
+        <div class="container">
+            <div class="lesson-card">
+                <span class="topic-badge"><i class="fab fa-vs-code"></i> Інструменти професіонала</span>
+                <h2>⚙️ Налаштування середовища програмування<br><span style="font-size: 1.3rem;">Visual Studio Code
+                        (VSCode)</span></h2>
+                <p>💻 <strong>Visual Studio Code (VSCode)</strong> — дуже потужний і зручний редактор. Він має багато
+                    функцій, які значно полегшують веброзробку. Давайте розглянемо, як з ним працювати.</p>
+
+                <!-- Створення файлів та папок -->
+                <div class="info-block">
+                    <h3><i class="fas fa-folder-open"></i> Як створити файли та папки у VSCode</h3>
+                    <div class="setup-steps" style="grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));">
+                        <div class="step-card">
+                            <div class="step-number">1</div>
+                            <h4>Відкрий VSCode</h4>
+                            <p>Запусти редактор.</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">2</div>
+                            <h4>Відкрий папку проєкту</h4>
+                            <p><strong>File → Open Folder</strong> — обери папку, де зберігатимеш проєкт.</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">3</div>
+                            <h4>Створи файл / папку</h4>
+                            <p>У лівій панелі (Explorer) → права кнопка миші → <strong>New File</strong> або <strong>New
+                                    Folder</strong>.</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">4</div>
+                            <h4>Назви файл</h4>
+                            <p>Наприклад, <code>index.html</code>, <code>style.css</code> — і файл готовий до
+                                редагування.</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">5</div>
+                            <h4>Відкрий файл</h4>
+                            <p>Просто клікни по ньому у списку зліва.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Встановлення плагінів -->
+                <h3><i class="fas fa-puzzle-piece"></i> Як встановлювати плагіни (розширення)</h3>
+                <div class="tools-grid" style="margin-bottom: 10px;">
+                    <div class="tool-card">
+                        <i class="fas fa-search"></i>
+                        <h4>Крок 1</h4>
+                        <p>Натисни <kbd>Ctrl+Shift+X</kbd> або натисни на іконку <strong>Extensions</strong> у лівій
+                            панелі.</p>
+                    </div>
+                    <div class="tool-card">
+                        <i class="fas fa-keyboard"></i>
+                        <h4>Крок 2</h4>
+                        <p>У полі пошуку введи назву розширення (наприклад: <strong>Live Server</strong>).</p>
+                    </div>
+                    <div class="tool-card">
+                        <i class="fas fa-download"></i>
+                        <h4>Крок 3</h4>
+                        <p>Натисни <strong>Install</strong> — плагін буде встановлено.</p>
+                    </div>
+                </div>
+
+                <!-- Корисні розширення -->
+                <div class="extensions-list">
+                    <h3><i class="fas fa-plug"></i> Корисні розширення для веброзробки</h3>
+                    <div class="ext-grid">
+                        <div class="ext-item"><i class="fas fa-magic"></i> All Autocomplete</div>
+                        <div class="ext-item"><i class="fas fa-code"></i> Auto Close Tag</div>
+                        <div class="ext-item"><i class="fas fa-tag"></i> Auto Complete Tag</div>
+                        <div class="ext-item"><i class="fas fa-sync-alt"></i> Auto Rename Tag</div>
+                        <div class="ext-item"><i class="fas fa-play"></i> Code Runner</div>
+                        <div class="ext-item"><i class="fab fa-js"></i> JavaScript (ES6) snippets</div>
+                        <div class="ext-item"><i class="fas fa-globe"></i> Live Server</div>
+                        <div class="ext-item"><i class="fas fa-clipboard-list"></i> Multiple clipboards for VSCode</div>
+                        <div class="ext-item"><i class="fab fa-sass"></i> Sass</div>
+                        <div class="ext-item"><i class="fas fa-compress-alt"></i> Live Sass Compiler</div>
+                        <div class="ext-item"><i class="fas fa-palette"></i> Theme - Oceanic Next</div>
+                        <div class="ext-item"><i class="fas fa-folder-open"></i> vscode-icons</div>
+                    </div>
+                    <p class="ext-note">💡 Ці розширення значно підвищують зручність та швидкість роботи з кодом.</p>
+                </div>
+
+                <!-- Emmet та скорочення -->
+                <div class="vscode-highlight">
+                    <i class="fab fa-vs-code"></i>
+                    <h4>🚀 Робота з командами та скороченнями (Emmet)</h4>
+                    <p>VSCode підтримує технологію <strong>Emmet</strong> — це скорочення, які розгортаються у
+                        повноцінний HTML-код. Наприклад:</p>
+                    <div style="text-align: center; margin: 15px 0;">
+                        <span class="emmet-example">ul>li*3</span> → створює список із трьох пунктів
+                    </div>
+                    <p>📖 Детальний список команд Emmet: <a href="https://docs.emmet.io/cheat-sheet/"
+                            target="_blank">docs.emmet.io/cheat-sheet/</a></p>
+                </div>
+
+                <!-- Гарячі клавіші -->
+                <h3><i class="fas fa-keyboard"></i> Гарячі клавіші VSCode</h3>
+                <div class="shortcut-grid">
+                    <div class="shortcut-card"><kbd>Ctrl+P</kbd><span>Швидке відкриття файлу</span></div>
+                    <div class="shortcut-card"><kbd>Ctrl+`</kbd><span>Відкрити термінал</span></div>
+                    <div class="shortcut-card"><kbd>Ctrl+/</kbd><span>Закоментувати рядок</span></div>
+                    <div class="shortcut-card"><kbd>Alt+Shift+F</kbd><span>Автоматичне форматування коду</span></div>
+                    <div class="shortcut-card"><kbd>Ctrl+S</kbd><span>Зберегти файл</span></div>
+                    <div class="shortcut-card"><kbd>Ctrl+Shift+P</kbd><span>Command Palette</span></div>
+                    <div class="shortcut-card"><kbd>Ctrl+B</kbd><span>Сховати/показати бічну панель</span></div>
+                    <div class="shortcut-card"><kbd>Ctrl+D</kbd><span>Виділити наступне таке ж слово</span></div>
+                </div>
+                <p>📄 Повний список гарячих клавіш: <a
+                        href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf">keyboard-shortcuts-windows.pdf</a>
+                </p>
+
+                <!-- Відео (залишаємо як наочний матеріал) -->
+                <div class="video-container" style="margin-top: 30px;">
+                    <iframe width="100%" height="400px" src="https://www.youtube.com/embed/7dpnzsgh5p4"
+                        title="Заняття 1. Редактор коду. OpenWeb - програмуємо разом!" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Інтерактивна вікторина: Яке це розширення? -->
+                <div class="quiz-area" id="extensionsQuiz">
+                    <h3><i class="fas fa-question-circle"></i> 🧠 Інтерактивна вікторина: Впізнай розширення VSCode!
+                    </h3>
+                    <div id="quizExtensionsContainer"></div>
+                    <div id="quizExtensionsFeedback" class="quiz-feedback"></div>
+                    <button id="checkExtensionsQuizBtn">✨ Перевірити відповіді</button>
+                    <button id="resetExtensionsQuizBtn" style="background:#7f8c8d;">🔄 Скинути</button>
+                </div>
+
+                <!-- Поради та налаштування -->
+                <div class="vscode-tip">
+                    <i class="fas fa-lightbulb"></i>
+                    <h4>💡 Порада: Налаштуй VSCode під себе!</h4>
+                    <p>Заходь у <strong>File → Preferences → Settings</strong> (або <kbd>Ctrl+,</kbd>) і змінюй шрифт,
+                        тему, розмір відступів — обери те, що тобі зручно.</p>
+                </div>
+
+                <!-- Цікавий факт -->
+                <div class="random-fact-box">
+                    <button id="randomVSCodeFactBtn" class="fact-btn"><i class="fas fa-dice-d6"></i> Цікавий факт про
+                        VSCode</button>
+                    <p id="randomVSCodeFactDisplay" class="fact-display">Натисни, щоб дізнатися щось нове про VSCode!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Гурток Web-програмування | Налаштування середовища VSCode</p>
+            <p><i class="fas fa-heart" style="color:#ff9f4a;"></i> Навчайся безпечно та створюй web-сайти разом з нами!
+            </p>
+        </div>
+    </footer>
+
+    <!-- СКРИПТИ -->
+    <script src="script.js"></script>
+</body>
+
+</html>

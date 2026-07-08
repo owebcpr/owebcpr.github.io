@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Зображення на Web-сторінці | Теорія + Практика | Гурток програмування</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+            <div class="nav">
+                <a href="/index.html">Головна</a>
+                <a href="#theory">Теорія</a>
+                <a href="#practice">Практика</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="lesson-card">
+                <!-- ==================== ТЕОРЕТИЧНА ЧАСТИНА ==================== -->
+                <section id="theory">
+                    <span class="topic-badge"><i class="fas fa-book-open"></i> Заняття 1/2 • Теоретична частина • 2 години</span>
+                    <h2>🖼️ Зображення на Web-сторінці</h2>
+                    <p>🎯 <strong>Мета заняття:</strong> Вивчити тег <code>&lt;img&gt;</code> та його атрибути, навчитися додавати зображення на веб-сторінки, оптимізувати їх та робити сайт візуально привабливим.</p>
+
+                    <!-- Цікавинка: Як виглядали б сайти без зображень -->
+                    <div class="fun-fact-block">
+                        <h3><i class="fas fa-question-circle"></i> 🤔 Цікавинка: Як виглядали б сайти без зображень?</h3>
+                        <div class="comparison">
+                            <div class="without-images">
+                                <h4>❌ Сайт БЕЗ зображень</h4>
+                                <div class="preview-no-img">
+                                    <div class="fake-header">Сайт</div>
+                                    <div class="fake-text">Lorem ipsum dolor sit amet...</div>
+                                    <div class="fake-text">Consectetur adipiscing elit...</div>
+                                    <div class="fake-button">Кнопка</div>
+                                </div>
+                                <p class="example-desc">Нудно, нецікаво, складно сприймати інформацію</p>
+                            </div>
+                            <div class="with-images">
+                                <h4>✅ Сайт ІЗ зображеннями</h4>
+                                <div class="preview-with-img">
+                                    <div class="fake-header">🏠 Сайт</div>
+                                    <div class="fake-img-placeholder">🖼️</div>
+                                    <div class="fake-text">Lorem ipsum dolor sit amet...</div>
+                                    <div class="fake-button">🔘 Кнопка</div>
+                                </div>
+                                <p class="example-desc">Яскраво, привабливо, легко запам'ятовується!</p>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <p><strong>Чи знали ви?</strong> Люди сприймають візуальну інформацію в 60 000 разів швидше, ніж текстову! Сайти з якісними зображеннями викликають більше довіри та залишаються в пам'яті надовго.</p>
+                        </div>
+                    </div>
+
+                    <!-- Тег img та його атрибути -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-image"></i> Тег &lt;img&gt; та його атрибути</h3>
+                        <p>Тег <code>&lt;img&gt;</code> (від англ. <em>image</em> — зображення) використовується для вставки зображень на веб-сторінку. Це <strong>непарний тег</strong>, тому він не потребує закриття.</p>
+                        
+                        <div class="tags-table">
+                            <div class="tag-row">
+                                <div class="tag-name"><code>src</code></div>
+                                <div class="tag-desc">Обов'язковий атрибут! Вказує шлях до файлу зображення</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>alt</code></div>
+                                <div class="tag-desc">Альтернативний текст (показується, якщо зображення не завантажилось)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>width</code> / <code>height</code></div>
+                                <div class="tag-desc">Ширина та висота зображення (в пікселях або відсотках)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>title</code></div>
+                                <div class="tag-desc">Підказка при наведенні миші</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>loading="lazy"</code></div>
+                                <div class="tag-desc">Відкладене завантаження (оптимізація швидкості)</div>
+                            </div>
+                        </div>
+
+                        <div class="code-example">
+                            &lt;img src="images/photo.jpg" alt="Опис зображення" width="300" height="200" title="Підказка"&gt;
+                        </div>
+                    </div>
+
+                    <!-- Формати зображень -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-file-image"></i> Популярні формати зображень</h3>
+                        <div class="two-columns">
+                            <div class="card">
+                                <h4>📷 JPEG / JPG</h4>
+                                <p>Найпопулярніший формат для фотографій. Добре стискається, але не підтримує прозорість.</p>
+                                <div class="format-example">🌄 Фотографії, пейзажі, портрети</div>
+                            </div>
+                            <div class="card">
+                                <h4>🔲 PNG</h4>
+                                <p>Підтримує прозорість. Використовується для логотипів, іконок, графіки.</p>
+                                <div class="format-example">✨ Логотипи, іконки, графіка з прозорістю</div>
+                            </div>
+                            <div class="card">
+                                <h4>🎨 GIF</h4>
+                                <p>Підтримує анімацію. Обмежена кількість кольорів (256).</p>
+                                <div class="format-example">🎬 Анімація, прості гіфки</div>
+                            </div>
+                            <div class="card">
+                                <h4>⚡ WebP</h4>
+                                <p>Сучасний формат від Google. Краще стиснення, ніж JPEG та PNG.</p>
+                                <div class="format-example">🚀 Швидке завантаження сайтів</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Шляхи до зображень -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-folder-open"></i> 📂 Шляхи до зображень: як правильно вказати шлях до файлу</h3>
+                        <p>Щоб браузер знайшов зображення, потрібно правильно вказати шлях у атрибуті <code>src</code>. Шляхи бувають <strong>абсолютні</strong> та <strong>відносні</strong>.</p>
+                        
+                        <div class="two-columns">
+                            <div class="card">
+                                <h4>🌐 Абсолютні шляхи (URL)</h4>
+                                <p>Вказують повну адресу зображення в інтернеті. Починаються з <code>http://</code> або <code>https://</code>.</p>
+                                <div class="code-example">
+                                    &lt;img src="https://example.com/images/photo.jpg" alt="Фото з інтернету"&gt;
+                                </div>
+                                <div class="warning-box" style="margin-top: 10px; padding: 10px;">
+                                    <i class="fas fa-globe"></i>
+                                    <p style="font-size: 0.85rem;">✔️ Працює з будь-якого місця<br>
+                                    ❌ Потребує інтернету<br>
+                                    ❌ Якщо сайт видалить фото — воно зникне</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h4>📁 Відносні шляхи</h4>
+                                <p>Вказують шлях відносно поточної HTML-сторінки. Найкращий варіант для локальних файлів!</p>
+                                <div class="code-example">
+                                    &lt;img src="photo.jpg" alt="Фото поруч"&gt;
+                                </div>
+                                <div class="success-box" style="margin-top: 10px; padding: 10px; background: #e8f8f0; border-radius: 12px;">
+                                    <i class="fas fa-check-circle" style="color: #27ae60;"></i>
+                                    <p style="font-size: 0.85rem;">✔️ Працює без інтернету<br>
+                                    ✔️ Не залежить від зовнішніх сайтів<br>
+                                    ✔️ Легко переносити проект</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="theory-block" style="margin-top: 20px;">
+                            <h4><i class="fas fa-diagram-project"></i> Як правильно писати відносні шляхи у VS Code?</h4>
+                            <div class="paths-table">
+                                <div class="path-row">
+                                    <div class="path-case">📄 Файл <strong>index.html</strong> і зображення <strong>cat.jpg</strong> в одній папці</div>
+                                    <div class="path-code"><code>&lt;img src="cat.jpg"&gt;</code></div>
+                                    <div class="path-desc">Просто назва файлу</div>
+                                </div>
+                                <div class="path-row">
+                                    <div class="path-case">📁 Зображення в папці <strong>images/</strong> (поруч з index.html)</div>
+                                    <div class="path-code"><code>&lt;img src="images/cat.jpg"&gt;</code></div>
+                                    <div class="path-desc">Назва папки + / + назва файлу</div>
+                                </div>
+                                <div class="path-row">
+                                    <div class="path-case">📂 Зображення в папці <strong>images/gallery/</strong> (вкладена папка)</div>
+                                    <div class="path-code"><code>&lt;img src="images/gallery/cat.jpg"&gt;</code></div>
+                                    <div class="path-desc">Вкладені папки через /</div>
+                                </div>
+                                <div class="path-row">
+                                    <div class="path-case">⬆️ Зображення на рівень вище (в батьківській папці)</div>
+                                    <div class="path-code"><code>&lt;img src="../cat.jpg"&gt;</code></div>
+                                    <div class="path-desc"><code>../</code> — піднятися на один рівень вгору</div>
+                                </div>
+                                <div class="path-row">
+                                    <div class="path-case">⬆️⬆️ Зображення на два рівні вище</div>
+                                    <div class="path-code"><code>&lt;img src="../../cat.jpg"&gt;</code></div>
+                                    <div class="path-desc"><code>../../</code> — піднятися на два рівні вгору</div>
+                                </div>
+                                <div class="path-row">
+                                    <div class="path-case">🏠 Кореневий шлях (починається з /)</div>
+                                    <div class="path-code"><code>&lt;img src="/images/cat.jpg"&gt;</code></div>
+                                    <div class="path-desc">Шукає від кореня сайту (не завжди працює локально)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info-box" style="margin-top: 20px;">
+                            <i class="fas fa-folder-tree"></i>
+                            <div>
+                                <strong>📁 Приклад структури папок:</strong><br>
+                                <code style="background: #1e2a3e; color: #ffd966; display: inline-block; padding: 10px; border-radius: 8px; margin-top: 8px;">
+                                    my_site/<br>
+                                    ├── index.html          (головна сторінка)<br>
+                                    ├── about.html<br>
+                                    ├── images/<br>
+                                    │   ├── cat.jpg         → src="images/cat.jpg"<br>
+                                    │   ├── dog.png<br>
+                                    │   └── gallery/<br>
+                                    │       └── photo.jpg   → src="images/gallery/photo.jpg"<br>
+                                    └── css/<br>
+                                        └── style.css
+                                </code>
+                                <p style="margin-top: 10px;">💡 <strong>Порада:</strong> У VS Code при наборі <code>src="</code> з'являється підказка — обирай файл зі списку, щоб не помилитися!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Гра "Перетягни зображення" -->
+                    <div class="game-drag-drop" id="dragDropGame">
+                        <h3><i class="fas fa-gamepad"></i> 🎮 Гра: Перетягни зображення в правильний контейнер!</h3>
+                        <div class="game-story">
+                            <i class="fas fa-palette"></i> Допоможи дизайнеру розкласти зображення по правильних категоріях!
+                        </div>
+                        
+                        <div class="drag-drop-areas">
+                            <div class="drag-items" id="dragItems">
+                                <h4>📦 Перетягни зображення:</h4>
+                                <div class="items-container" id="itemsContainer">
+                                    <!-- Тут будуть елементи для перетягування -->
+                                    <div class="drag-item" data-type="jpg" draggable="true">🖼️ photo.jpg</div>
+                                    <div class="drag-item" data-type="png" draggable="true">🎨 logo.png</div>
+                                    <div class="drag-item" data-type="gif" draggable="true">🎬 animation.gif</div>
+                                    <div class="drag-item" data-type="jpg" draggable="true">🌄 sunset.jpg</div>
+                                    <div class="drag-item" data-type="png" draggable="true">⭐ icon.png</div>
+                                    <div class="drag-item" data-type="webp" draggable="true">🚀 image.webp</div>
+                                </div>
+                            </div>
+                            
+                            <div class="drop-zones">
+                                <div class="drop-zone" data-accept="jpg">
+                                    <div class="drop-zone-title">📷 JPEG/JPG</div>
+                                    <div class="drop-zone-container" id="dropZoneJpg"></div>
+                                </div>
+                                <div class="drop-zone" data-accept="png">
+                                    <div class="drop-zone-title">🔲 PNG</div>
+                                    <div class="drop-zone-container" id="dropZonePng"></div>
+                                </div>
+                                <div class="drop-zone" data-accept="gif">
+                                    <div class="drop-zone-title">🎨 GIF</div>
+                                    <div class="drop-zone-container" id="dropZoneGif"></div>
+                                </div>
+                                <div class="drop-zone" data-accept="webp">
+                                    <div class="drop-zone-title">⚡ WebP</div>
+                                    <div class="drop-zone-container" id="dropZoneWebp"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="game-message" id="dragGameMessage"></div>
+                        <div class="game-score-drag" id="dragGameScore">Зібрано: 0 / 6</div>
+                        <div class="game-buttons">
+                            <button id="startDragBtn" class="btn-run"><i class="fas fa-play"></i> Почати гру</button>
+                            <button id="resetDragBtn" class="btn-clear"><i class="fas fa-redo-alt"></i> Скинути</button>
+                        </div>
+                    </div>
+
+                    <!-- Вікторина -->
+                    <div class="quiz-area" id="tagsQuiz">
+                        <h3><i class="fas fa-question-circle"></i> 📋 Вікторина: Перевір себе</h3>
+                        <div id="quizTagsContainer"></div>
+                        <div id="quizTagsFeedback" class="quiz-feedback"></div>
+                        <button id="checkTagsQuizBtn">✨ Перевірити відповіді</button>
+                        <button id="resetTagsQuizBtn" style="background:#7f8c8d;">🔄 Скинути</button>
+                    </div>
+
+                    <div class="extensions-list">
+                        <h3><i class="fas fa-sticky-note"></i> Що потрібно запам'ятати</h3>
+                        <ul style="margin-left: 25px;">
+                            <li>Тег <code>&lt;img&gt;</code> — непарний, не потребує закриття</li>
+                            <li>Атрибут <code>src</code> — обов'язковий (шлях до зображення)</li>
+                            <li>Атрибут <code>alt</code> — опис зображення (для доступності та SEO)</li>
+                            <li>JPEG — для фото, PNG — для прозорості, GIF — для анімації</li>
+                            <li>Атрибут <code>loading="lazy"</code> пришвидшує завантаження сторінки</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- ==================== ПРАКТИЧНА ЧАСТИНА ==================== -->
+                <section id="practice">
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #27ae60, #1e8449);"><i class="fas fa-laptop-code"></i> Заняття 2/2 • Практична частина • 2 години</span>
+                    <h2>💻 Практикуємося зі зображеннями</h2>
+                    <p>💪 <strong>Практичне завдання:</strong> навчися додавати зображення на веб-сторінку, змінювати їх розмір та додавати альтернативний текст.</p>
+
+                    <div class="task-card">
+                        <h3><i class="fas fa-bullseye"></i> Мета практичного заняття</h3>
+                        <ul style="margin-left: 25px; margin-top: 10px;">
+                            <li>Навчитися додавати зображення за допомогою тега &lt;img&gt;</li>
+                            <li>Працювати з атрибутами src, alt, width, height</li>
+                            <li>Покращити готову сторінку, додавши зображення</li>
+                        </ul>
+                    </div>
+
+                    <!-- Демонстрація "Було - Стало" -->
+                    <div class="demo-before-after">
+                        <h3><i class="fas fa-chart-line"></i> 📊 Було / Стало: Додаємо зображення</h3>
+                        <div class="comparison-demo">
+                            <div class="before">
+                                <h4>😕 БУЛО (без зображень)</h4>
+                                <div class="before-preview">
+                                    <h2>Моє хобі - фотографія</h2>
+                                    <p>Фотографія — це моє улюблене заняття. Я люблю фотографувати природу та тварин.</p>
+                                    <ul>
+                                        <li>Подорожі</li>
+                                        <li>Пейзажі</li>
+                                        <li>Портрети</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="after">
+                                <h4>😍 СТАЛО (зі зображеннями)</h4>
+                                <div class="after-preview" id="afterPreview">
+                                    <h2>Моє хобі - фотографія</h2>
+                                    <div class="image-placeholders">
+                                        <div class="img-placeholder" data-img="camera">📷 Фотоапарат</div>
+                                        <div class="img-placeholder" data-img="nature">🌄 Природа</div>
+                                        <div class="img-placeholder" data-img="animal">🐕 Тварини</div>
+                                    </div>
+                                    <p>Фотографія — це моє улюблене заняття. Я люблю фотографувати природу та тварин.</p>
+                                    <ul>
+                                        <li>Подорожі</li>
+                                        <li>Пейзажі</li>
+                                        <li>Портрети</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="code-hint">
+                            <i class="fas fa-code"></i> Для додавання зображень використовуй: <code>&lt;img src="шлях/до/файлу.jpg" alt="опис"&gt;</code>
+                        </div>
+                    </div>
+
+                    <h3><i class="fas fa-list-ol"></i> Покрокова інструкція</h3>
+
+                    <div class="task-step">
+                        <div class="step-number">1</div>
+                        <div><strong>Створи базову структуру</strong> HTML-документа.</div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">2</div>
+                        <div><strong>Додай зображення</strong> за допомогою тега <code>&lt;img&gt;</code>.</div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">3</div>
+                        <div><strong>Додай атрибути</strong> <code>src</code>, <code>alt</code>, <code>width</code>, <code>height</code>.</div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">4</div>
+                        <div><strong>Покращ сторінку</strong> "Моє хобі", додавши зображення до кожного пункту.</div>
+                    </div>
+
+                    <!-- Чекліст -->
+                    <div class="task-challenge">
+                        <div class="challenge-title"><i class="fas fa-tasks"></i> 🎯 Завдання-челендж</div>
+                        <p>Створи сторінку <strong>"Моє хобі"</strong> зі зображеннями, яка має містити:</p>
+                        <ul class="checklist" id="challengeChecklist">
+                            <li data-done="false">Заголовок &lt;h1&gt; з назвою хобі</li>
+                            <li data-done="false">Головне зображення (шириною 300-400px)</li>
+                            <li data-done="false">Абзац з описом хобі</li>
+                            <li data-done="false">Список з 3+ елементів, кожен з яких має маленьке зображення (іконку)</li>
+                            <li data-done="false">Атрибут alt для кожного зображення</li>
+                        </ul>
+                        <button id="resetChecklistBtn" class="btn-clear" style="margin-top: 10px;"><i class="fas fa-sync-alt"></i> Скинути чекліст</button>
+                    </div>
+
+                    <!-- Живий редактор -->
+                    <h3><i class="fas fa-laptop-code"></i> ✏️ Спробуй сам! Пиши код нижче</h3>
+                    <div class="code-editor-panel">
+                        <div class="editor-header">
+                            <div class="editor-dot red"></div>
+                            <div class="editor-dot yellow"></div>
+                            <div class="editor-dot green"></div>
+                            <div class="editor-title">my_hobby.html</div>
+                        </div>
+                        <div class="editor-container">
+                            <div class="editor-textarea">
+                                <textarea id="htmlCodeEditor" placeholder="Напиши свій HTML-код тут..."></textarea>
+                            </div>
+                            <div class="editor-preview">
+                                <div class="preview-frame">
+                                    <iframe id="previewFrame"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="editor-buttons">
+                            <button id="runCodeBtn" class="btn-run"><i class="fas fa-play"></i> Запустити код</button>
+                            <button id="clearCodeBtn" class="btn-clear"><i class="fas fa-trash-alt"></i> Очистити</button>
+                            <button id="loadExampleBtn" class="btn-run" style="background:#3498db;"><i class="fas fa-eye"></i> Завантажити приклад</button>
+                        </div>
+                    </div>
+
+                    <div class="hint-box">
+                        <i class="fas fa-info-circle"></i>
+                        <strong>Приклад готової сторінки:</strong>
+                        <button id="showSolutionBtn" class="solution-btn" style="margin-left: 15px;"><i class="fas fa-eye"></i> Показати приклад</button>
+                        <div id="solutionContent" class="solution-content">
+                            <pre style="margin:0; color:#ffd966;">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Моє хобі - Фотографія&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;📸 Моє хобі - фотографія&lt;/h1&gt;
+    
+    &lt;img src="images/camera.jpg" alt="Фотоапарат" width="400"&gt;
+    
+    &lt;p&gt;Фотографія — це моє улюблене заняття. Я люблю фотографувати природу та тварин. Ось що мені подобається найбільше:&lt;/p&gt;
+    
+    &lt;ul&gt;
+        &lt;li&gt;
+            &lt;img src="images/travel-icon.png" alt="Подорожі" width="30"&gt;
+            Подорожувати та фотографувати нові місця
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/nature-icon.png" alt="Природа" width="30"&gt;
+            Знімати пейзажі та захід сонця
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;img src="images/animals-icon.png" alt="Тварини" width="30"&gt;
+            Фотографувати тварин у дикій природі
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;p&gt;Фотографія допомагає мені &lt;strong&gt;запам'ятовувати важливі моменти&lt;/strong&gt; та ділитися ними з іншими!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </div>
+                    </div>
+
+                    <!-- Контрольна вікторина -->
+                    <div class="quiz-area" id="controlQuiz">
+                        <h3><i class="fas fa-question-circle"></i> 📋 Контрольні питання</h3>
+                        <div id="quizControlContainer"></div>
+                        <div id="quizControlFeedback" class="quiz-feedback"></div>
+                        <button id="checkControlQuizBtn">✨ Перевірити відповіді</button>
+                        <button id="resetControlQuizBtn" style="background:#7f8c8d;">🔄 Скинути</button>
+                    </div>
+
+                    <div class="task-card" style="background: #fef5e8;">
+                        <h3><i class="fas fa-home"></i> Домашнє завдання</h3>
+                        <p>Створи HTML-файл <code>gallery.html</code> з галереєю з 5+ зображень. Додай опис до кожного зображення (атрибут alt) та підписи.</p>
+                    </div>
+
+                    <div class="random-fact-box">
+                        <button id="randomFactBtn" class="fact-btn"><i class="fas fa-dice-d6"></i> Цікавий факт про зображення</button>
+                        <p id="randomFactDisplay" class="fact-display">Натисни, щоб дізнатися щось нове!</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Гурток Web-програмування | Зображення на Web-сторінці — Теорія + Практика</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

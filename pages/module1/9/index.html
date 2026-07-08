@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Таблиці в HTML | Теорія + Практика | Гурток програмування</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+            <div class="nav">
+                <a href="/index.html">Головна</a>
+                <a href="#theory">Теорія</a>
+                <a href="#practice">Практика</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="lesson-card">
+                <!-- ==================== ТЕОРЕТИЧНА ЧАСТИНА ==================== -->
+                <section id="theory">
+                    <span class="topic-badge"><i class="fas fa-book-open"></i> Заняття 1/2 • Теоретична частина • 2 години</span>
+                    <h2>📊 Таблиці в HTML</h2>
+                    <p>🎯 <strong>Мета заняття:</strong> Вивчити теги для створення таблиць, навчитися об'єднувати комірки, дізнатися історію табличної верстки та сучасне використання таблиць.</p>
+
+                    <!-- Історія: таблична верстка -->
+                    <div class="fun-fact-block">
+                        <h3><i class="fas fa-history"></i> 📜 Історія: Таблиці та верстка сайтів</h3>
+                        <div class="info-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>У 90-х роках, коли CSS ще не існувало, <strong>таблиці використовували для верстки цілих сайтів!</strong> Дизайнери вкладали таблиці одну в одну, щоб створити складні макети. Це називалося <strong>"табличною версткою"</strong>. Сьогодні це вважається застарілим методом, але знати його корисно для розуміння історії веб-розробки.</p>
+                        </div>
+                        <div class="comparison">
+                            <div class="old-way">
+                                <h4>🕰️ Таблична верстка (90-ті)</h4>
+                                <div class="preview-old">
+                                    <div class="fake-table">
+                                        <div class="fake-tr">
+                                            <div class="fake-td" style="background:#ff9f4a;">Шапка</div>
+                                        </div>
+                                        <div class="fake-tr">
+                                            <div class="fake-td" style="background:#e8f4fd;">Меню</div>
+                                            <div class="fake-td" style="background:#fef5e8;">Контент</div>
+                                        </div>
+                                        <div class="fake-tr">
+                                            <div class="fake-td" style="background:#2c3e4e;">Футер</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="example-desc">Складні вкладені таблиці, важко змінювати дизайн</p>
+                            </div>
+                            <div class="new-way">
+                                <h4>✨ Сучасна верстка (CSS Grid/Flex)</h4>
+                                <div class="preview-new">
+                                    <div class="fake-grid">
+                                        <div class="fake-header" style="background:#ff9f4a;">Шапка</div>
+                                        <div class="fake-flex">
+                                            <div class="fake-sidebar" style="background:#e8f4fd;">Меню</div>
+                                            <div class="fake-content" style="background:#fef5e8;">Контент</div>
+                                        </div>
+                                        <div class="fake-footer" style="background:#2c3e4e;">Футер</div>
+                                    </div>
+                                </div>
+                                <p class="example-desc">Чистий код, легко змінювати, адаптивність</p>
+                            </div>
+                        </div>
+                        <div class="warning-box">
+                            <i class="fas fa-info-circle"></i>
+                            <p><strong>Важливо!</strong> Сьогодні таблиці використовуються <strong>тільки для табличних даних</strong>: розклади, прайс-листи, турнірні таблиці, табелі успішності тощо. Для верстки сайтів використовують CSS Grid та Flexbox.</p>
+                        </div>
+                    </div>
+
+                    <!-- Де використовують таблиці сьогодні -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-chart-simple"></i> 📌 Де використовують таблиці сьогодні?</h3>
+                        <div class="two-columns">
+                            <div class="card">
+                                <h4>📋 Розклади</h4>
+                                <p>Розклад уроків, поїздів, автобусів</p>
+                            </div>
+                            <div class="card">
+                                <h4>💰 Прайс-листи</h4>
+                                <p>Ціни на товари та послуги</p>
+                            </div>
+                            <div class="card">
+                                <h4>🏆 Турнірні таблиці</h4>
+                                <p>Результати змагань</p>
+                            </div>
+                            <div class="card">
+                                <h4>📊 Табелі успішності</h4>
+                                <p>Оцінки студентів</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Теги для створення таблиць -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-code"></i> 🏗️ Теги для створення таблиць</h3>
+                        <div class="tags-table">
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;table&gt;</code></div>
+                                <div class="tag-desc">Контейнер для всієї таблиці</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;tr&gt;</code> (table row)</div>
+                                <div class="tag-desc">Рядок таблиці</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;td&gt;</code> (table data)</div>
+                                <div class="tag-desc">Комірка з даними</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;th&gt;</code> (table header)</div>
+                                <div class="tag-desc">Заголовкова комірка (жирний шрифт, центрування)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;thead&gt;</code></div>
+                                <div class="tag-desc">Групує заголовки таблиці</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;tbody&gt;</code></div>
+                                <div class="tag-desc">Групує основний вміст таблиці</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;tfoot&gt;</code></div>
+                                <div class="tag-desc">Групує підсумки таблиці</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>&lt;caption&gt;</code></div>
+                                <div class="tag-desc">Заголовок таблиці (підпис)</div>
+                            </div>
+                        </div>
+
+                        <div class="code-example">
+                            &lt;table border="1"&gt;<br>
+                            &nbsp;&nbsp;&lt;tr&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Ім'я&lt;/th&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Вік&lt;/th&gt;<br>
+                            &nbsp;&nbsp;&lt;/tr&gt;<br>
+                            &nbsp;&nbsp;&lt;tr&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Марія&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;15&lt;/td&gt;<br>
+                            &nbsp;&nbsp;&lt;/tr&gt;<br>
+                            &lt;/table&gt;
+                        </div>
+                    </div>
+
+                    <!-- Об'єднання комірок та атрибути -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-merge"></i> 🔗 Об'єднання комірок</h3>
+                        <div class="two-columns">
+                            <div class="card">
+                                <h4>📏 <code>colspan</code> — об'єднання по горизонталі</h4>
+                                <div class="code-example">
+                                    &lt;td colspan="2"&gt;Текст&lt;/td&gt;
+                                </div>
+                                <p>Розтягує комірку на 2 стовпці</p>
+                            </div>
+                            <div class="card">
+                                <h4>📐 <code>rowspan</code> — об'єднання по вертикалі</h4>
+                                <div class="code-example">
+                                    &lt;td rowspan="3"&gt;Текст&lt;/td&gt;
+                                </div>
+                                <p>Розтягує комірку на 3 рядки</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Атрибути таблиць (історичні та сучасні) -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-palette"></i> 🎨 Атрибути таблиць (історія та сучасність)</h3>
+                        <div class="warning-box">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <p><strong>Увага!</strong> Раніше для оформлення таблиць використовували атрибути: <code>border</code>, <code>bgcolor</code>, <code>cellpadding</code>, <code>cellspacing</code>, <code>width</code>, <code>height</code>, <code>align</code>, <code>valign</code>. <strong>Сьогодні все це робиться за допомогою CSS!</strong></p>
+                        </div>
+                        <div class="comparison-css">
+                            <div class="old-css">
+                                <h4>❌ Застарілі атрибути (не використовувати!)</h4>
+                                <div class="code-example">
+                                    &lt;table border="1" cellpadding="10" cellspacing="5" bgcolor="#e8f4fd" width="500"&gt;<br>
+                                    &nbsp;&nbsp;&lt;tr align="center" valign="middle"&gt;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;td height="50"&gt;Текст&lt;/td&gt;<br>
+                                    &nbsp;&nbsp;&lt;/tr&gt;<br>
+                                    &lt;/table&gt;
+                                </div>
+                            </div>
+                            <div class="new-css">
+                                <h4>✅ Сучасний підхід (CSS)</h4>
+                                <div class="code-example">
+                                    &lt;style&gt;<br>
+                                    &nbsp;&nbsp;table { border-collapse: collapse; width: 500px; }<br>
+                                    &nbsp;&nbsp;td { border: 1px solid #000; padding: 10px; }<br>
+                                    &nbsp;&nbsp;tr { background: #e8f4fd; text-align: center; }<br>
+                                    &lt;/style&gt;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="success-box">
+                            <i class="fas fa-css3-alt"></i>
+                            <p>У практичній частині ми будемо використовувати <strong>CSS для стилізації таблиць</strong> — це сучасний і правильний підхід!</p>
+                        </div>
+                    </div>
+
+                    <!-- Гра "Склади таблицю" -->
+                    <div class="game-build" id="buildGame">
+                        <h3><i class="fas fa-gamepad"></i> 🎮 Гра: Склади правильну таблицю!</h3>
+                        <div class="game-story">
+                            <i class="fas fa-user-astronaut"></i> Допоможи досліднику скласти таблицю результатів експерименту! Перетягни елементи в правильний порядок.
+                        </div>
+                        
+                        <div class="build-question" id="buildQuestion">
+                            <strong>📋 Завдання:</strong> Склади таблицю розкладу уроків на понеділок
+                        </div>
+                        
+                        <div class="build-area">
+                            <div class="available-tags" id="availableTags">
+                                <h4>📦 Доступні елементи (клікай для додавання в правильному порядку):</h4>
+                                <div class="tags-container" id="tagsContainer">
+                                    <!-- Елементи в перемішаному порядку -->
+                                    <div class="build-item" data-tag="&lt;/tr&gt;">&lt;/tr&gt;</div>
+                                    <div class="build-item" data-tag="&lt;td&gt;Інформатика&lt;/td&gt;">&lt;td&gt;Інформатика&lt;/td&gt;</div>
+                                    <div class="build-item" data-tag="&lt;table&gt;">&lt;table&gt;</div>
+                                    <div class="build-item" data-tag="&lt;/tr&gt;">&lt;/tr&gt;</div>
+                                    <div class="build-item" data-tag="&lt;td&gt;Фізкультура&lt;/td&gt;">&lt;td&gt;Фізкультура&lt;/td&gt;</div>
+                                    <div class="build-item" data-tag="&lt;caption&gt;Розклад занять на вівторок&lt;/caption&gt;">&lt;caption&gt;Розклад занять на вівторок&lt;/caption&gt;</div>
+                                    <div class="build-item" data-tag="&lt;th&gt;Урок&lt;/th&gt;">&lt;th&gt;Урок&lt;/th&gt;</div>
+                                    <div class="build-item" data-tag="&lt;th&gt;№&lt;/th&gt;">&lt;th&gt;№&lt;/th&gt;</div>
+                                    <div class="build-item" data-tag="&lt;tr&gt;">&lt;tr&gt;</div>
+                                    <div class="build-item" data-tag="&lt;td&gt;Математика&lt;/td&gt;">&lt;td&gt;Математика&lt;/td&gt;</div>
+                                    <div class="build-item" data-tag="&lt;td&gt;3&lt;/td&gt;">&lt;td&gt;3&lt;/td&gt;</div>
+                                    <div class="build-item" data-tag="&lt;td&gt;1&lt;/td&gt;">&lt;td&gt;1&lt;/td&gt;</div>
+                                    <div class="build-item" data-tag="&lt;/tr&gt;">&lt;/tr&gt;</div>
+                                    <div class="build-item" data-tag="&lt;tr&gt;">&lt;tr&gt;</div>
+                                    <div class="build-item" data-tag="&lt;td&gt;2&lt;/td&gt;">&lt;td&gt;2&lt;/td&gt;</div>
+                                    <div class="build-item" data-tag="&lt;tr&gt;">&lt;tr&gt;</div>
+                                    <div class="build-item" data-tag="&lt;/tr&gt;">&lt;/tr&gt;</div>
+                                    <div class="build-item" data-tag="&lt;/table&gt;">&lt;/table&gt;</div>
+                                    <div class="build-item" data-tag="&lt;tr&gt;">&lt;tr&gt;</div>
+                                </div>
+                            </div>
+                            
+                            <div class="build-zone" id="buildZone">
+                                <h4>🏗️ Збирай таблицю тут (натискай на елементи вище):</h4>
+                                <div class="build-container" id="buildContainer"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="build-message" id="buildMessage"></div>
+                        <div class="build-score" id="buildScore">Рівень: 0 / 3</div>
+                        <div class="game-buttons">
+                            <button id="startBuildBtn" class="btn-run"><i class="fas fa-play"></i> Почати гру</button>
+                            <button id="resetBuildBtn" class="btn-clear"><i class="fas fa-redo-alt"></i> Скинути</button>
+                            <button id="checkBuildBtn" class="btn-run" style="background:#3498db;"><i class="fas fa-check"></i> Перевірити</button>
+                        </div>
+                    </div>
+
+                    <!-- Вікторина -->
+                    <div class="quiz-area" id="tagsQuiz">
+                        <h3><i class="fas fa-question-circle"></i> 📋 Вікторина: Перевір себе</h3>
+                        <div id="quizTagsContainer"></div>
+                        <div id="quizTagsFeedback" class="quiz-feedback"></div>
+                        <button id="checkTagsQuizBtn">✨ Перевірити відповіді</button>
+                        <button id="resetTagsQuizBtn" style="background:#7f8c8d;">🔄 Скинути</button>
+                    </div>
+
+                    <div class="extensions-list">
+                        <h3><i class="fas fa-sticky-note"></i> Що потрібно запам'ятати</h3>
+                        <ul style="margin-left: 25px;">
+                            <li>Таблиці створюються тегами: <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>, <code>&lt;th&gt;</code></li>
+                            <li><code>colspan</code> — об'єднання комірок по горизонталі</li>
+                            <li><code>rowspan</code> — об'єднання комірок по вертикалі</li>
+                            <li>Для стилізації таблиць використовуємо CSS, а не застарілі атрибути</li>
+                            <li>Таблиці використовуються ТІЛЬКИ для табличних даних, не для верстки сайтів!</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- ==================== ПРАКТИЧНА ЧАСТИНА ==================== -->
+                <section id="practice">
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #27ae60, #1e8449);"><i class="fas fa-laptop-code"></i> Заняття 2/2 • Практична частина • 2 години</span>
+                    <h2>💻 Практикуємося з таблицями</h2>
+                    <p>💪 <strong>Практичне завдання:</strong> створи кольорову таблицю з об'єднанням комірок та CSS-стилізацією.</p>
+
+                    <div class="task-card">
+                        <h3><i class="fas fa-bullseye"></i> Мета практичного заняття</h3>
+                        <ul style="margin-left: 25px; margin-top: 10px;">
+                            <li>Створити HTML-таблицю з розкладом уроків</li>
+                            <li>Використати об'єднання комірок (colspan, rowspan)</li>
+                            <li>Застосувати CSS для стилізації: кольори, рамки, відступи, центрування</li>
+                            <li>Додати заголовок таблиці (caption)</li>
+                        </ul>
+                    </div>
+
+                    <h3><i class="fas fa-list-ol"></i> Покрокова інструкція</h3>
+
+                    <div class="task-step">
+                        <div class="step-number">1</div>
+                        <div><strong>Створи базову структуру</strong> HTML-документа.</div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">2</div>
+                        <div><strong>Додай тег &lt;table&gt;</strong> та створи заголовки стовпців через &lt;th&gt;.</div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">3</div>
+                        <div><strong>Заповни таблицю</strong> даними (розклад уроків на тиждень).</div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">4</div>
+                        <div><strong>Додай об'єднання комірок</strong> (наприклад, велику зміну або класну годину).</div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">5</div>
+                        <div><strong>Застосуй CSS-стилі</strong> для таблиці: кольори фону, рамки, вирівнювання.</div>
+                    </div>
+
+                    <!-- Чекліст -->
+                    <div class="task-challenge">
+                        <div class="challenge-title"><i class="fas fa-tasks"></i> 🎯 Завдання-челендж</div>
+                        <p>Створи сторінку <strong>"Мій розклад уроків"</strong>, яка має містити:</p>
+                        <ul class="checklist" id="challengeChecklist">
+                            <li data-done="false">Таблицю 5x5 (5 днів, 5 уроків)</li>
+                            <li data-done="false">Заголовки днів тижня &lt;th&gt;</li>
+                            <li data-done="false">Об'єднання комірок (colspan або rowspan)</li>
+                            <li data-done="false">CSS-стилі: рамки, фон, відступи, центрування тексту</li>
+                            <li data-done="false">Заголовок таблиці &lt;caption&gt;</li>
+                            <li data-done="false">Різні кольори для різних типів уроків</li>
+                        </ul>
+                        <button id="resetChecklistBtn" class="btn-clear" style="margin-top: 10px;"><i class="fas fa-sync-alt"></i> Скинути чекліст</button>
+                    </div>
+
+                    <!-- Живий редактор -->
+                    <h3><i class="fas fa-laptop-code"></i> ✏️ Спробуй сам! Пиши код нижче</h3>
+                    <div class="code-editor-panel">
+                        <div class="editor-header">
+                            <div class="editor-dot red"></div>
+                            <div class="editor-dot yellow"></div>
+                            <div class="editor-dot green"></div>
+                            <div class="editor-title">schedule.html</div>
+                        </div>
+                        <div class="editor-container">
+                            <div class="editor-textarea">
+                                <textarea id="htmlCodeEditor" placeholder="Напиши свій HTML-код тут..."></textarea>
+                            </div>
+                            <div class="editor-preview">
+                                <div class="preview-frame">
+                                    <iframe id="previewFrame"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="editor-buttons">
+                            <button id="runCodeBtn" class="btn-run"><i class="fas fa-play"></i> Запустити код</button>
+                            <button id="clearCodeBtn" class="btn-clear"><i class="fas fa-trash-alt"></i> Очистити</button>
+                            <button id="loadExampleBtn" class="btn-run" style="background:#3498db;"><i class="fas fa-eye"></i> Завантажити приклад</button>
+                        </div>
+                    </div>
+
+                    <div class="hint-box">
+                        <i class="fas fa-info-circle"></i>
+                        <strong>Приклад готової сторінки:</strong>
+                        <button id="showSolutionBtn" class="solution-btn" style="margin-left: 15px;"><i class="fas fa-eye"></i> Показати приклад</button>
+                        <div id="solutionContent" class="solution-content">
+                            <pre style="margin:0; color:#ffd966;">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Мій розклад уроків&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f4f7fc;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #1e5f7a;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 2px solid #2c3e4e;
+            padding: 12px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        th {
+            background: #1e5f7a;
+            color: white;
+            font-size: 1.1rem;
+        }
+        td {
+            background: #f8f9fa;
+        }
+        .math { background: #ffe6e6; }
+        .ukr { background: #e6ffe6; }
+        .eng { background: #e6e6ff; }
+        .break {
+            background: #ffd966;
+            font-weight: bold;
+        }
+        caption {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #1e5f7a;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;📚 Мій розклад уроків&lt;/h1&gt;
+    
+    &lt;table&gt;
+        &lt;caption&gt;Розклад на тиждень (5-Б клас)&lt;/caption&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Час&lt;/th&gt;
+                &lt;th&gt;Понеділок&lt;/th&gt;
+                &lt;th&gt;Вівторок&lt;/th&gt;
+                &lt;th&gt;Середа&lt;/th&gt;
+                &lt;th&gt;Четвер&lt;/th&gt;
+                &lt;th&gt;П'ятниця&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;8:30&lt;/td&gt;
+                &lt;td class="math"&gt;Математика&lt;/td&gt;
+                &lt;td class="ukr"&gt;Українська&lt;/td&gt;
+                &lt;td class="eng"&gt;Англійська&lt;/td&gt;
+                &lt;td class="math"&gt;Математика&lt;/td&gt;
+                &lt;td class="ukr"&gt;Українська&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;9:30&lt;/td&gt;
+                &lt;td class="eng"&gt;Англійська&lt;/td&gt;
+                &lt;td class="math"&gt;Математика&lt;/td&gt;
+                &lt;td class="ukr"&gt;Українська&lt;/td&gt;
+                &lt;td class="eng"&gt;Англійська&lt;/td&gt;
+                &lt;td class="math"&gt;Математика&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;10:30&lt;/td&gt;
+                &lt;td class="break" colspan="5"&gt;🥪 ВЕЛИКА ЗМІНА (20 хв)&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;11:00&lt;/td&gt;
+                &lt;td&gt;Фізкультура&lt;/td&gt;
+                &lt;td&gt;Історія&lt;/td&gt;
+                &lt;td&gt;Фізкультура&lt;/td&gt;
+                &lt;td&gt;Історія&lt;/td&gt;
+                &lt;td&gt;Мистецтво&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;12:00&lt;/td&gt;
+                &lt;td&gt;Інформатика&lt;/td&gt;
+                &lt;td&gt;Біологія&lt;/td&gt;
+                &lt;td&gt;Інформатика&lt;/td&gt;
+                &lt;td&gt;Географія&lt;/td&gt;
+                &lt;td&gt;Трудове&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </div>
+                    </div>
+
+                    <!-- Контрольна вікторина -->
+                    <div class="quiz-area" id="controlQuiz">
+                        <h3><i class="fas fa-question-circle"></i> 📋 Контрольні питання</h3>
+                        <div id="quizControlContainer"></div>
+                        <div id="quizControlFeedback" class="quiz-feedback"></div>
+                        <button id="checkControlQuizBtn">✨ Перевірити відповіді</button>
+                        <button id="resetControlQuizBtn" style="background:#7f8c8d;">🔄 Скинути</button>
+                    </div>
+
+                    <div class="task-card" style="background: #fef5e8;">
+                        <h3><i class="fas fa-home"></i> Домашнє завдання</h3>
+                        <p>Створи HTML-файл <code>price_list.html</code> з таблицею цін на послуги (не менше 5 рядків). Додай CSS-стилі та об'єднання комірок.</p>
+                    </div>
+
+                    <div class="random-fact-box">
+                        <button id="randomFactBtn" class="fact-btn"><i class="fas fa-dice-d6"></i> Цікавий факт про таблиці</button>
+                        <p id="randomFactDisplay" class="fact-display">Натисни, щоб дізнатися щось нове!</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Гурток Web-програмування | Таблиці в HTML — Теорія + Практика</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

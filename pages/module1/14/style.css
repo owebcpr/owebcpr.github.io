@@ -1,0 +1,972 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f7fc;
+    color: #1e2a3e;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background: linear-gradient(135deg, #0b2b3b, #1a4a6f);
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #ffd966;
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px 0;
+}
+
+.lesson-card {
+    background: white;
+    border-radius: 28px;
+    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #1e5f7a;
+    margin-bottom: 20px;
+    border-left: 6px solid #ff9f4a;
+    padding-left: 20px;
+}
+
+h3 {
+    font-size: 1.6rem;
+    margin: 25px 0 15px 0;
+    color: #2c3e4e;
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: #2c3e4e;
+    margin: 15px 0 10px 0;
+}
+
+.topic-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff9f4a, #ff6b2c);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.theory-block {
+    margin: 30px 0;
+}
+
+.info-box {
+    background: #e8f4fd;
+    border-radius: 16px;
+    padding: 15px 20px;
+    margin: 15px 0;
+    border-left: 5px solid #1e5f7a;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.info-box i {
+    font-size: 1.5rem;
+    color: #ff9f4a;
+}
+
+.fun-fact {
+    background: linear-gradient(135deg, #fff3e0, #ffe8cc);
+    border-radius: 16px;
+    padding: 15px 20px;
+    margin: 15px 0;
+    border-left: 5px solid #ff9f4a;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.fun-fact i {
+    font-size: 1.5rem;
+    color: #ff9f4a;
+}
+
+.warning-box {
+    background: #fef5e8;
+    border-radius: 16px;
+    padding: 15px 20px;
+    margin: 15px 0;
+    border-left: 5px solid #e67e22;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.warning-box i {
+    font-size: 1.5rem;
+    color: #e67e22;
+}
+
+.tags-table {
+    background: #f8f9fa;
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 12px 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tag-row:last-child {
+    border-bottom: none;
+}
+
+.tag-name {
+    flex: 1;
+    min-width: 180px;
+    font-weight: 500;
+}
+
+.tag-name code {
+    background: #1e2a3e;
+    color: #ffd966;
+    padding: 2px 8px;
+    border-radius: 6px;
+}
+
+.tag-desc {
+    flex: 2;
+    color: #555;
+}
+
+.two-columns {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+.card {
+    background: #f8f9fa;
+    border-radius: 20px;
+    padding: 20px;
+    flex: 1;
+    min-width: 250px;
+    border: 1px solid #e0e0e0;
+}
+
+.card h4 {
+    margin-bottom: 12px;
+    color: #1e5f7a;
+}
+
+.card ul {
+    margin-left: 20px;
+}
+
+.code-example {
+    background: #1e2a3e;
+    color: #ffd966;
+    padding: 12px;
+    border-radius: 12px;
+    font-family: monospace;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    overflow-x: auto;
+}
+
+/* ==================== БЛОК ПРОЄКТУ ==================== */
+.project-setup {
+    background: linear-gradient(135deg, #e8f4fd, #d4eaf5);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 30px 0;
+}
+
+.project-setup h3 {
+    margin-top: 0;
+    color: #1e5f7a;
+}
+
+.project-setup-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.project-steps {
+    flex: 1;
+    min-width: 280px;
+}
+
+.project-steps ul {
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+.project-steps li {
+    margin: 8px 0;
+}
+
+.project-steps code {
+    background: #1e2a3e;
+    color: #ffd966;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 0.85rem;
+}
+
+.project-steps p {
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+.comparison-box {
+    background: #1e2a3e;
+    border-radius: 12px;
+    padding: 15px;
+    color: #ddd;
+}
+
+.comparison-box p {
+    margin: 5px 0;
+}
+
+.comparison-box strong {
+    color: #ffd966;
+}
+
+.project-video {
+    flex: 1;
+    min-width: 280px;
+}
+
+.project-video .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-video .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-note {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #666;
+    text-align: center;
+}
+
+/* ==================== ГРА З КУЛЬКАМИ ==================== */
+.balloon-game {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 28px;
+    padding: 20px 25px;
+    margin: 25px 0;
+    text-align: center;
+    color: white;
+}
+
+.balloon-game h3 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.game-timer, .game-score {
+    font-size: 1rem;
+    display: inline-block;
+    margin: 0 10px 10px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 5px 15px;
+    border-radius: 40px;
+}
+
+.game-question {
+    font-size: 1.2rem;
+    margin: 10px 0 15px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.balloons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 0;
+    min-height: 120px;
+}
+
+.balloon {
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.balloon:hover {
+    transform: scale(1.05);
+}
+
+.balloon-icon {
+    font-size: 45px;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+.balloon-label {
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-top: 3px;
+}
+
+/* Стилі для кульок до початку гри */
+.idle-balloon {
+    cursor: default;
+    animation: float 3s ease-in-out infinite;
+}
+
+.idle-balloon:nth-child(1) { animation-delay: 0s; }
+.idle-balloon:nth-child(2) { animation-delay: 0.5s; }
+.idle-balloon:nth-child(3) { animation-delay: 1s; }
+.idle-balloon:nth-child(4) { animation-delay: 1.5s; }
+.idle-balloon:nth-child(5) { animation-delay: 2s; }
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.game-balloon {
+    cursor: pointer;
+}
+
+.game-balloon:hover {
+    transform: scale(1.05);
+}
+
+.balloon-fly-up {
+    animation: flyUp 0.8s ease-out forwards;
+}
+
+@keyframes flyUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-250px);
+        opacity: 0;
+    }
+}
+
+.balloon-pop {
+    animation: pop 0.3s ease-out forwards;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.game-feedback {
+    margin: 10px 0;
+    padding: 8px;
+    border-radius: 16px;
+    font-size: 1rem;
+    min-height: 50px;
+}
+
+.game-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.game-buttons button {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+}
+/* ==================== ВІКТОРИНА ==================== */
+.quiz-area {
+    background: #fef5e8;
+    border-radius: 28px;
+    padding: 25px;
+    margin: 35px 0;
+    border: 1px solid #ffe0b5;
+}
+
+.quiz-question {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.quiz-option {
+    display: block;
+    background: white;
+    margin: 10px 0;
+    padding: 10px 18px;
+    border-radius: 60px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.quiz-option:hover {
+    background: #ffecce;
+}
+
+.quiz-option.selected {
+    background: #ffd966;
+    border-color: #e67e22;
+    font-weight: bold;
+}
+
+.quiz-feedback {
+    margin-top: 20px;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 30px;
+}
+
+.quiz-area button {
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+/* ==================== ІНТЕРАКТИВНЕ ЗАВДАННЯ ==================== */
+.interactive-task {
+    background: #f8f9fa;
+    border-radius: 24px;
+    padding: 25px;
+    margin: 25px 0;
+}
+
+.task-description {
+    margin-bottom: 20px;
+}
+
+.task-hints {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.hint-tag {
+    background: #e8f4fd;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border-left: 3px solid #ff9f4a;
+}
+
+.hint-tag code {
+    background: #1e2a3e;
+    color: #ffd966;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.initial-code-display,
+.user-code-area {
+    margin: 20px 0;
+}
+
+.code-header {
+    background: #1e2a3e;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.code-header i {
+    margin-right: 8px;
+}
+
+.copy-btn,
+.check-task-btn,
+.reset-task-btn {
+    background: #ff9f4a;
+    color: #1e2a3e;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: 0.2s;
+}
+
+.copy-btn:hover,
+.check-task-btn:hover,
+.reset-task-btn:hover {
+    transform: scale(1.02);
+    background: #ffb86c;
+}
+
+.check-task-btn {
+    background: #27ae60;
+    color: white;
+}
+
+.reset-task-btn {
+    background: #e67e22;
+    color: white;
+}
+
+.code-block {
+    background: #1e2a3e;
+    color: #ffd966;
+    padding: 20px;
+    border-radius: 0 0 12px 12px;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.code-block code {
+    font-family: 'Courier New', monospace;
+    white-space: pre;
+}
+
+.user-code-area textarea {
+    width: 100%;
+    background: #1e2a3e;
+    color: #f8f9fa;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 20px;
+    border: none;
+    border-radius: 0 0 12px 12px;
+    resize: vertical;
+    min-height: 400px;
+}
+
+.user-code-area textarea:focus {
+    outline: none;
+    background: #2a3a4a;
+}
+
+.task-result {
+    margin-top: 20px;
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.result-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.result-content i {
+    font-size: 2rem;
+}
+
+.result-details {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.result-details ul {
+    margin-left: 20px;
+    color: #555;
+}
+
+.try-again-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+.try-again-btn:hover {
+    background: #2980b9;
+}
+
+/* ==================== РЕДАКТОР КОДУ ==================== */
+.code-editor-panel {
+    background: #1e2a3e;
+    border-radius: 24px;
+    overflow: hidden;
+    margin: 25px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.editor-header {
+    background: #0d1c2a;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid #2c3e4e;
+}
+
+.editor-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.editor-dot.red {
+    background: #ff5f56;
+}
+
+.editor-dot.yellow {
+    background: #ffbd2e;
+}
+
+.editor-dot.green {
+    background: #27c93f;
+}
+
+.editor-title {
+    color: #aaa;
+    font-size: 0.85rem;
+    font-family: monospace;
+    margin-left: 10px;
+}
+
+.editor-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+}
+
+@media (min-width: 992px) {
+    .editor-container {
+        flex-direction: row;
+    }
+}
+
+.editor-textarea {
+    flex: 1;
+    padding: 20px;
+    min-width: 0;
+}
+
+.editor-textarea textarea {
+    width: 100%;
+    min-height: 500px;
+    background: #1a2a3a;
+    color: #f8f9fa;
+    font-family: 'Courier New', 'Fira Code', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    border: 1px solid #2c4a6e;
+    border-radius: 16px;
+    padding: 15px;
+    resize: vertical;
+    outline: none;
+}
+
+.editor-textarea textarea:focus {
+    border-color: #ff9f4a;
+}
+
+.editor-preview {
+    flex: 1;
+    padding: 20px;
+    background: #f5f7fa;
+    min-width: 0;
+}
+
+.preview-frame {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #ddd;
+    width: 100%;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.preview-frame iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    display: block;
+}
+
+.editor-buttons {
+    display: flex;
+    gap: 12px;
+    padding: 15px 20px;
+    background: #0d1c2a;
+    border-top: 1px solid #2c3e4e;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    background: #1e5f7a;
+    border: none;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+.btn-run {
+    background: #27ae60;
+}
+
+.btn-run:hover {
+    background: #219a52;
+}
+
+.btn-clear {
+    background: #e67e22;
+}
+
+.btn-clear:hover {
+    background: #d35400;
+}
+
+/* ==================== ІНШІ БЛОКИ ==================== */
+.extensions-list {
+    background: #eef2fa;
+    border-radius: 28px;
+    padding: 25px;
+    margin: 30px 0;
+}
+
+.extensions-list ul {
+    margin-left: 25px;
+}
+
+.hint-box {
+    background: #fff3e0;
+    border-radius: 16px;
+    padding: 15px 20px;
+    margin: 20px 0;
+}
+
+.hint-box ul {
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.random-fact-box {
+    background: #2c3e4e;
+    border-radius: 28px;
+    padding: 25px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.fact-btn {
+    background: #ff9f4a;
+    color: #1e2a3e;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+}
+
+.fact-display {
+    background: white;
+    border-radius: 30px;
+    padding: 20px;
+    margin-top: 20px;
+    color: #1e5f7a;
+    font-weight: 500;
+    min-height: 80px;
+}
+
+.congrats-box {
+    text-align: center;
+    background: linear-gradient(135deg, #27ae60, #1e8449);
+    border-radius: 28px;
+    padding: 40px;
+    margin: 30px 0;
+    color: white;
+}
+
+.congrats-box i {
+    font-size: 4rem;
+    color: #ffd966;
+    margin-bottom: 20px;
+}
+
+.congrats-box h3 {
+    color: #ffd966;
+    margin-bottom: 15px;
+}
+
+.footer {
+    background: #0b2b3b;
+    color: #ccc;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 20px;
+}
+
+/* ==================== ТОСТ ПОВІДОМЛЕННЯ ==================== */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    15% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    85% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+/* ==================== МОБІЛЬНА АДАПТАЦІЯ ==================== */
+@media (max-width: 768px) {
+    .lesson-card {
+        padding: 25px;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+    
+    .editor-container {
+        flex-direction: column;
+    }
+    
+    .editor-textarea textarea {
+        min-height: 300px;
+    }
+    
+    .preview-frame iframe {
+        height: 300px;
+    }
+    
+    .balloons-container {
+        gap: 10px;
+    }
+    
+    .balloon-icon {
+        font-size: 40px;
+    }
+    
+    .game-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .two-columns {
+        flex-direction: column;
+    }
+    
+    .code-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .user-code-area textarea {
+        min-height: 300px;
+    }
+}

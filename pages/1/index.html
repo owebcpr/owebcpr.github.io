@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Заняття 1: Вступ, безпека та Інтернет | Гурток програмування</title>
+    <!-- Підключення стилів -->
+    <link rel="stylesheet" href="../style.css">
+    <!-- Шрифти та іконки для кращого вигляду (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- ШАПКА (як у прикладі) -->
+    <header class="header">
+        <div class="container header-content">
+            <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+
+            <div class="nav">
+                <a href="/index.html">Головна</a>
+                <a href="/index.html#program">Заняття</a>
+                <a href="/index.html#contacts">Контакти</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основний контент -->
+    <main class="main-content">
+        <div class="container">
+            <div class="lesson-card">
+                <h2>📘 Заняття 1: Вступ. Безпека роботи. Що таке Інтернет і Web-сайти</h2>
+                <p>Ласкаво просимо до нашого гуртка програмування! Сьогодні ми познайомимося, дізнаємося про правила
+                    безпеки за комп'ютером, а також розкриємо секрети Інтернету та веб-сайтів. Готові до пригод?
+                    Поїхали!</p>
+
+                <!-- Блок Вступ -->
+                <div style="margin: 30px 0;">
+                    <h3><i class="fas fa-rocket"></i> Чим ми будемо займатися?</h3>
+                    <p>У цьому році ми станемо справжніми творцями вебсайтів, навчимося програмувати, створювати
+                        інтерактивні сторінки та ігри. Але спочатку — важливі основи: безпека в мережі та розуміння, як
+                        працює глобальна Павутина.</p>
+                    <div class="fact-grid">
+                        <div class="fact-card"><i class="fas fa-laptop-code"></i> <strong>Мова
+                                програмування</strong><br>HTML, CSS, JavaScript — це цеглинки сайтів.</div>
+                        <div class="fact-card"><i class="fas fa-shield-virus"></i>
+                            <strong>Кібербезпека</strong><br>Захист даних — головний супергерой.
+                        </div>
+                        <div class="fact-card"><i class="fas fa-globe"></i> <strong>Web-технології</strong><br>Створюємо
+                            сайти, які бачить увесь світ.</div>
+                    </div>
+                </div>
+
+                <!-- Цікаві факти про Інтернет -->
+                <h3><i class="fas fa-lightbulb"></i> Цікаві факти про Інтернет</h3>
+                <div class="fact-grid">
+                    <div class="fact-card"><i class="fas fa-hourglass-half"></i> <strong>Перший сайт</strong><br>
+                        З'явився 1991 року, і він досі доступний! info.cern.ch</div>
+                    <div class="fact-card"><i class="fas fa-database"></i> <strong>Об'єм даних</strong><br> Щодня в
+                        Інтернеті з'являється понад 2,5 квінтильйона байт даних!</div>
+                    <div class="fact-card"><i class="fas fa-fish"></i> <strong>Підводні кабелі</strong><br> 99%
+                        міжконтинентального трафіку йде по океанському дну.</div>
+                </div>
+
+                <!-- Інтерактивний блок: Що таке Веб-сайт? -->
+                <div class="interactive-box">
+                    <i class="fas fa-code-branch" style="font-size: 40px; color:#1e5f7a;"></i>
+                    <h3>🌐 А що ж таке WEB-сайт?</h3>
+                    <p>Вебсайт — це сукупність вебсторінок, об'єднаних темою, які доступні через Інтернет. Сайти
+                        складаються з коду (HTML — структура, CSS — стилі, JavaScript — поведінка). Коли ти відкриваєш
+                        сторінку, браузер завантажує файли з сервера і показує тобі гарну картинку!</p>
+                    <div style="background: white; border-radius: 24px; padding: 15px; margin-top: 20px;">
+                        <i class="fas fa-server"></i> <strong>Як це працює:</strong> Твій пристрій ➡️ Запит через
+                        Інтернет ➡️ Сервер віддає файли ➡️ Браузер малює сайт.
+                    </div>
+                </div>
+
+                <!-- Вікторина: Безпека роботи за комп'ютером -->
+                <div class="quiz-area" id="safetyQuiz">
+                    <h3><i class="fas fa-shield-hawk"></i> 🛡️ Тест з безпеки: Що ти знаєш про безпеку в Інтернеті?</h3>
+                    <div id="quizContainer"></div>
+                    <div id="quizFeedback" class="quiz-feedback"></div>
+                    <button id="checkQuizBtn">✨ Перевірити відповіді</button>
+                    <button id="resetQuizBtn" style="background:#7f8c8d; margin-left:10px;">🔄 Скинути</button>
+                </div>
+
+                <!-- Інтерактивна вправа на розуміння: "Розстав складові сайту" -->
+                <h3><i class="fas fa-puzzle-piece"></i> Інтерактивна вправа: З чого складається сайт?</h3>
+                <p>Перетягни поняття у відповідну категорію (спробуй натиснути на варіант). Це допоможе запам'яти
+                    структуру!</p>
+                <div id="dragDropGame"
+                    style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; margin-top: 15px;">
+                    <div style="flex:1; background:#f2f6fc; border-radius: 24px; padding: 15px;">
+                        <h4>📦 Складові (перетягни)</h4>
+                        <div id="termsList" style="display: flex; flex-direction: column; gap: 10px;"></div>
+                    </div>
+                    <div style="flex:2; display: flex; gap: 15px; flex-wrap: wrap;">
+                        <div style="flex:1; background:#fff2e0; border-radius: 24px; padding: 15px;"
+                            data-category="HTML">
+                            <i class="fab fa-html5"></i> <strong>HTML (структура)</strong>
+                            <div id="htmlDrop" class="dropzone"
+                                style="min-height: 100px; background: #fae6cf; margin-top: 10px; border-radius: 20px; padding: 8px;">
+                            </div>
+                        </div>
+                        <div style="flex:1; background:#e0f0fa; border-radius: 24px; padding: 15px;"
+                            data-category="CSS">
+                            <i class="fab fa-css3-alt"></i> <strong>CSS (стилі)</strong>
+                            <div id="cssDrop" class="dropzone"
+                                style="min-height: 100px; background: #cbe5f5; margin-top: 10px; border-radius: 20px; padding: 8px;">
+                            </div>
+                        </div>
+                        <div style="flex:1; background:#e9f7e1; border-radius: 24px; padding: 15px;" data-category="JS">
+                            <i class="fab fa-js"></i> <strong>JavaScript (логіка)</strong>
+                            <div id="jsDrop" class="dropzone"
+                                style="min-height: 100px; background: #d9f0cd; margin-top: 10px; border-radius: 20px; padding: 8px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="dragMessage" style="margin-top: 15px; font-weight: bold;"></div>
+
+                <!-- Безпечні поради -->
+                <h3><i class="fas fa-lock"></i> Правила безпеки роботи за комп'ютером</h3>
+                <ul style="margin-left: 25px; line-height: 1.8;">
+                    <li><i class="fas fa-check-circle" style="color:green"></i> Не повідомляй нікому свої паролі.</li>
+                    <li><i class="fas fa-check-circle" style="color:green"></i> Використовуй надійні паролі (букви +
+                        цифри + символи).</li>
+                    <li><i class="fas fa-check-circle" style="color:green"></i> Не відкривай підозрілі посилання та
+                        листи.</li>
+                    <li><i class="fas fa-check-circle" style="color:green"></i> Роби перерви кожні 20 хвилин —
+                        гімнастика для очей!</li>
+                    <li><i class="fas fa-check-circle" style="color:green"></i> Сиди рівно, відстань до монітора — 50-70
+                        см.</li>
+                </ul>
+
+                <!-- Додатковий блок: Безпека в картинках -->
+                <div style="display: flex; justify-content: center; gap: 30px; margin: 20px 0; flex-wrap: wrap;">
+                    <div style="text-align: center;"><i class="fas fa-user-secret fa-3x"
+                            style="color:#e67e22;"></i><br>Не ділися даними</div>
+                    <div style="text-align: center;"><i class="fas fa-shield-alt fa-3x"
+                            style="color:#2c3e50;"></i><br>Антивірус друг</div>
+                    <div style="text-align: center;"><i class="fas fa-child fa-3x"
+                            style="color:#27ae60;"></i><br>Повідом батькам</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Гурток Web-програмування | Перше заняття: Вступ, безпека, Інтернет</p>
+            <p><i class="fas fa-heart" style="color:#ff9f4a;"></i> Навчайся безпечно та створюй web-сайти разом з нами!
+            </p>
+        </div>
+    </footer>
+
+    <!-- СКРИПТИ (script.js) - інтерактивна вікторина та drag&drop вправа -->
+    <script src="script.js"></script>
+</body>
+
+</html>

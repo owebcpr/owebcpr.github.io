@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Практика 2: Перший HTML-файл. Частина 2 | Гурток програмування</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+            <div class="nav">
+                <a href="/index.html">Головна</a>
+                <a href="/index.html#program">Заняття</a>
+                <a href="/index.html#contacts">Контакти</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="lesson-card">
+                <span class="topic-badge"><i class="fas fa-code"></i> Практичне заняття 2/2</span>
+                <h2>📝 Перший HTML-файл. Частина 2</h2>
+                <p>💪 <strong>Продовжуємо практикуватися!</strong> Сьогодні ми закріпимо знання про структуру
+                    HTML-документа та навчимося додавати нові елементи на сторінку.</p>
+
+                <div class="task-card">
+                    <h3><i class="fas fa-bullseye"></i> Мета заняття</h3>
+                    <ul style="margin-left: 25px; margin-top: 10px;">
+                        <li>Закріпити знання про структуру HTML-документа</li>
+                        <li>Навчитися додавати зображення <code>&lt;img&gt;</code></li>
+                        <li>Навчитися створювати посилання <code>&lt;a&gt;</code></li>
+                        <li>Потренуватися писати HTML-код у редакторі</li>
+                    </ul>
+                </div>
+
+                <!-- Новий блок з відео та створенням проекту -->
+                <div class="project-setup">
+                    <h3><i class="fab fa-vs-code"></i> Як створити HTML-проєкт у Visual Studio Code</h3>
+                    <div class="project-setup-content">
+                        <div class="project-steps">
+                            <ol>
+                                <li>📁 Відкрий <strong>Visual Studio Code</strong></li>
+                                <li>📂 Натисни <strong>File → Open Folder</strong> і обери папку для проєкту</li>
+                                <li>➕ У лівій панелі (Explorer) натисни праву кнопку миші → <strong>New File</strong>
+                                </li>
+                                <li>📄 Назви файл <code>index.html</code></li>
+                                <li>✏️ Пиши код у файлі</li>
+                                <li>🌐 Збережи файл (<kbd>Ctrl+S</kbd>) і відкрий його у браузері (подвійний клік)</li>
+                            </ol>
+                        </div>
+                        <div class="project-video">
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/7dpnzsgh5p4"
+                                    title="Як створити HTML-файл у Visual Studio Code" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <p class="video-note"><i class="fas fa-info-circle"></i> Подивись відео-інструкцію, щоб
+                                краще зрозуміти процес</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Нові теги: зображення та посилання -->
+                <h3><i class="fas fa-image"></i> Нові HTML-теги</h3>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <i class="fas fa-image"></i>
+                        <h4>&lt;img&gt; — зображення</h4>
+                        <p>Вставляє картинку на сторінку. Має обов'язкові атрибути:</p>
+                        <code>src</code> — шлях до файлу<br>
+                        <code>alt</code> — альтернативний текст<br>
+                        <small>Приклад: <code>&lt;img src="photo.jpg" alt="Моє фото"&gt;</code></small>
+                    </div>
+                    <div class="tool-card">
+                        <i class="fas fa-link"></i>
+                        <h4>&lt;a&gt; — посилання</h4>
+                        <p>Створює гіперпосилання на іншу сторінку або сайт.</p>
+                        <code>href</code> — адреса переходу<br>
+                        <small>Приклад: <code>&lt;a href="https://google.com"&gt;Google&lt;/a&gt;</code></small>
+                    </div>
+                </div>
+
+                <!-- Практичне завдання з чеклістом -->
+                <div class="task-challenge">
+                    <div class="challenge-title"><i class="fas fa-tasks"></i> 🎯 Завдання-челендж</div>
+                    <p>Створи сторінку <strong>"Моя улюблена тварина"</strong>, яка має містити:</p>
+                    <ul class="checklist" id="challengeChecklist">
+                        <li data-done="false">Заголовок &lt;h1&gt; з назвою тварини</li>
+                        <li data-done="false">Абзац &lt;p&gt; з описом тварини</li>
+                        <li data-done="false">Зображення &lt;img&gt; тварини (можна використати посилання з інтернету)
+                        </li>
+                        <li data-done="false">Маркований список &lt;ul&gt; з цікавими фактами (3 факти)</li>
+                        <li data-done="false">Посилання &lt;a&gt; на вікіпедію або сайт про тварину</li>
+                    </ul>
+                    <button id="resetChecklistBtn" class="btn-clear" style="margin-top: 10px; padding: 8px 20px;"><i
+                            class="fas fa-sync-alt"></i> Скинути чекліст</button>
+                </div>
+
+                <!-- ЖИВИЙ РЕДАКТОР КОДУ -->
+                <h3><i class="fas fa-laptop-code"></i> ✏️ Виконай завдання в редакторі</h3>
+                <div class="code-editor-panel">
+                    <div class="editor-header">
+                        <div class="editor-dot red"></div>
+                        <div class="editor-dot yellow"></div>
+                        <div class="editor-dot green"></div>
+                        <div class="editor-title">my_pet.html</div>
+                    </div>
+                    <div class="editor-container">
+                        <div class="editor-textarea">
+                            <textarea id="htmlCodeEditor" placeholder="Напиши HTML-код тут..."></textarea>
+                        </div>
+                        <div class="editor-preview">
+                            <div class="preview-frame">
+                                <iframe id="previewFrame"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="editor-buttons">
+                        <button id="runCodeBtn" class="btn-run"><i class="fas fa-play"></i> Запустити код</button>
+                        <button id="clearCodeBtn" class="btn-clear"><i class="fas fa-trash-alt"></i> Очистити</button>
+                        <button id="loadExampleBtn" class="btn-run" style="background:#3498db;"><i
+                                class="fas fa-eye"></i> Завантажити приклад</button>
+                    </div>
+                </div>
+
+                <!-- Гра "Впіймай тег" -->
+                <div class="game-area" id="tagGame">
+                    <h3><i class="fas fa-gamepad"></i> 🎮 Гра: Впіймай тег!</h3>
+                    <div class="game-question" id="gameQuestion">Який тег створює заголовок першого рівня?</div>
+                    <div class="game-options" id="gameOptions"></div>
+                    <div class="game-feedback" id="gameFeedback"></div>
+                    <div class="game-score" id="gameScore">Рахунок: 0 / 10</div>
+                </div>
+
+                <!-- Вікторина про структуру HTML -->
+                <div class="quiz-area" id="structureQuiz">
+                    <h3><i class="fas fa-question-circle"></i> 📋 Вікторина: Структура HTML</h3>
+                    <div id="quizStructureContainer"></div>
+                    <div id="quizStructureFeedback" class="quiz-feedback"></div>
+                    <button id="checkStructureQuizBtn">✨ Перевірити відповіді</button>
+                    <button id="resetStructureQuizBtn" style="background:#7f8c8d;">🔄 Скинути</button>
+                </div>
+
+                <!-- Цікаві факти -->
+                <div class="random-fact-box">
+                    <button id="randomFactBtn" class="fact-btn"><i class="fas fa-dice-d6"></i> Цікавий факт про
+                        HTML</button>
+                    <p id="randomFactDisplay" class="fact-display">Натисни, щоб дізнатися щось нове!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Гурток Web-програмування | Перший HTML-файл. Частина 2 — практичне заняття</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

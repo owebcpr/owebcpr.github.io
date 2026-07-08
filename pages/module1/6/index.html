@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Списки на Web-сторінці | Теорія + Практика | Гурток програмування</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../5/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+            <div class="nav">
+                <a href="/index.html">Головна</a>
+                <a href="#theory">Теорія</a>
+                <a href="#practice">Практика</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="lesson-card">
+                <!-- ==================== ТЕОРЕТИЧНА ЧАСТИНА ==================== -->
+                <section id="theory">
+                    <span class="topic-badge"><i class="fas fa-book-open"></i> Заняття 1/2 • Теоретична частина • 2 години</span>
+                    <h2>📋 Списки на Web-сторінці</h2>
+                    <p>🎯 <strong>Мета заняття:</strong> Вивчити всі види списків у HTML, навчитися створювати марковані, нумеровані та списки визначень, використовувати вкладені списки.</p>
+
+                    <!-- Історія виникнення -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-history"></i> Історія виникнення списків у HTML</h3>
+                        <div class="info-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>Списки з'явилися в HTML ще в першій специфікації 1993 року! Тім Бернерс-Лі розумів, що структурована інформація надзвичайно важлива для веб-документів. Саме списки допомагають організувати інформацію логічно та зручно для сприйняття.</p>
+                        </div>
+                        <div class="fun-fact">
+                            <i class="fas fa-star"></i>
+                            <p><strong>Цікавий факт:</strong> Сучасні вебсайти використовують списки не тільки для тексту, але й для створення меню, навігації, карток товарів, галерей зображень та багато іншого!</p>
+                        </div>
+                    </div>
+
+                    <!-- Види списків -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-list-ul"></i> Види списків у HTML</h3>
+                        <div class="two-columns">
+                            <div class="card">
+                                <h4>📌 Маркований список (&lt;ul&gt;)</h4>
+                                <p>Використовується для непослідовних пунктів. Маркери можуть бути різних типів.</p>
+                                <div class="code-example">
+                                    &lt;ul&gt;<br>
+                                    &nbsp;&nbsp;&lt;li&gt;Елемент 1&lt;/li&gt;<br>
+                                    &nbsp;&nbsp;&lt;li&gt;Елемент 2&lt;/li&gt;<br>
+                                    &lt;/ul&gt;
+                                </div>
+                                <div class="demo-list">
+                                    <ul style="margin-top: 10px; margin-left: 20px;">
+                                        <li>Яблуко</li>
+                                        <li>Груша</li>
+                                        <li>Банан</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h4>🔢 Нумерований список (&lt;ol&gt;)</h4>
+                                <p>Використовується для послідовних пунктів. Нумерація може бути різних типів.</p>
+                                <div class="code-example">
+                                    &lt;ol&gt;<br>
+                                    &nbsp;&nbsp;&lt;li&gt;Перший&lt;/li&gt;<br>
+                                    &nbsp;&nbsp;&lt;li&gt;Другий&lt;/li&gt;<br>
+                                    &lt;/ol&gt;
+                                </div>
+                                <div class="demo-list">
+                                    <ol style="margin-top: 10px; margin-left: 20px;">
+                                        <li>Перший крок</li>
+                                        <li>Другий крок</li>
+                                        <li>Третій крок</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Список визначень -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-book"></i> Список визначень (&lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;)</h3>
+                        <div class="two-columns">
+                            <div class="card">
+                                <h4>📖 Як виглядає список визначень</h4>
+                                <div class="code-example">
+                                    &lt;dl&gt;<br>
+                                    &nbsp;&nbsp;&lt;dt&gt;HTML&lt;/dt&gt;<br>
+                                    &nbsp;&nbsp;&lt;dd&gt;Мова розмітки веб-сторінок&lt;/dd&gt;<br>
+                                    &nbsp;&nbsp;&lt;dt&gt;CSS&lt;/dt&gt;<br>
+                                    &nbsp;&nbsp;&lt;dd&gt;Мова стилів для оформлення&lt;/dd&gt;<br>
+                                    &lt;/dl&gt;
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h4>✨ Результат</h4>
+                                <dl style="margin-top: 10px;">
+                                    <dt><strong>HTML</strong></dt>
+                                    <dd style="margin-left: 20px;">Мова розмітки веб-сторінок</dd>
+                                    <dt><strong>CSS</strong></dt>
+                                    <dd style="margin-left: 20px;">Мова стилів для оформлення</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Типи маркерів та нумерації -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-palette"></i> Типи маркерів та нумерації</h3>
+                        <div class="tags-table">
+                            <div class="tag-row">
+                                <div class="tag-name"><code>list-style-type: disc</code></div>
+                                <div class="tag-desc">● Заповнений кружечок (тип за замовчуванням для ul)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>list-style-type: circle</code></div>
+                                <div class="tag-desc">○ Порожній кружечок</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>list-style-type: square</code></div>
+                                <div class="tag-desc">■ Квадратик</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>type="1"</code> (ol)</div>
+                                <div class="tag-desc">1, 2, 3, ... (цифри)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>type="A"</code> (ol)</div>
+                                <div class="tag-desc">A, B, C, ... (великі літери)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>type="a"</code> (ol)</div>
+                                <div class="tag-desc">a, b, c, ... (малі літери)</div>
+                            </div>
+                            <div class="tag-row">
+                                <div class="tag-name"><code>type="I"</code> (ol)</div>
+                                <div class="tag-desc">I, II, III, ... (римські великі)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Вкладені списки -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-sitemap"></i> Вкладені списки</h3>
+                        <div class="two-columns">
+                            <div class="card">
+                                <div class="code-example">
+                                    &lt;ul&gt;<br>
+                                    &nbsp;&nbsp;&lt;li&gt;Фрукти<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Яблуко&lt;/li&gt;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Груша&lt;/li&gt;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+                                    &nbsp;&nbsp;&lt;/li&gt;<br>
+                                    &nbsp;&nbsp;&lt;li&gt;Овочі&lt;/li&gt;<br>
+                                    &lt;/ul&gt;
+                                </div>
+                            </div>
+                            <div class="card">
+                                <ul style="margin-top: 10px; margin-left: 20px;">
+                                    <li>Фрукти
+                                        <ul>
+                                            <li>Яблуко</li>
+                                            <li>Груша</li>
+                                        </ul>
+                                    </li>
+                                    <li>Овочі</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Гра "Рятувальна місія: Склади правильний список" -->
+                    <div class="game-rescue" id="rescueGame">
+                        <h3><i class="fas fa-heartbeat"></i> 🚨 Рятувальна місія: Склади правильний список!</h3>
+                        <div class="rescue-story" id="rescueStory">
+                            <i class="fas fa-user-astronaut"></i> Астронавт Марк застряг на космічній станції! 
+                            Щоб відкрити рятувальну капсулу, потрібно ввести правильний код — 
+                            <strong>створити HTML-список</strong> з потрібних елементів!
+                        </div>
+                        
+                        <div class="rescue-mission" id="rescueMission">
+                            <div class="mission-task">
+                                <i class="fas fa-question-circle"></i> <strong>Завдання:</strong> 
+                                <span id="missionText">Створи маркований список з назвами планет</span>
+                            </div>
+                            
+                            <div class="drop-zones">
+                                <div class="drop-zone" data-list-type="ul">
+                                    <div class="drop-zone-title"><i class="fas fa-list-ul"></i> Маркований список (ul)</div>
+                                    <div class="drop-zone-container" id="dropZoneUl"></div>
+                                </div>
+                                <div class="drop-zone" data-list-type="ol">
+                                    <div class="drop-zone-title"><i class="fas fa-list-ol"></i> Нумерований список (ol)</div>
+                                    <div class="drop-zone-container" id="dropZoneOl"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="rescue-items" id="rescueItems">
+                                <div class="rescue-items-title"><i class="fas fa-grip-vertical"></i> Перетягни потрібні елементи:</div>
+                                <div class="items-container" id="itemsContainer"></div>
+                            </div>
+                            
+                            <div class="rescue-message" id="rescueMessage"></div>
+                            <div class="rescue-progress">
+                                <span id="rescueScore">Рівень: 0 / 5</span>
+                                <span id="rescueStatus">🚀 Статус: Очікуємо...</span>
+                            </div>
+                            <div class="game-buttons">
+                                <button id="startRescueBtn" class="btn-run"><i class="fas fa-play"></i> Почати місію</button>
+                                <button id="resetRescueBtn" class="btn-clear"><i class="fas fa-redo-alt"></i> Скинути</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Вікторина -->
+                    <div class="quiz-area" id="tagsQuiz">
+                        <h3><i class="fas fa-question-circle"></i> 📋 Вікторина: Перевір себе</h3>
+                        <div id="quizTagsContainer"></div>
+                        <div id="quizTagsFeedback" class="quiz-feedback"></div>
+                        <button id="checkTagsQuizBtn">✨ Перевірити відповіді</button>
+                        <button id="resetTagsQuizBtn" style="background:#7f8c8d;">🔄 Скинути</button>
+                    </div>
+
+                    <div class="extensions-list">
+                        <h3><i class="fas fa-sticky-note"></i> Що потрібно запам'ятати</h3>
+                        <ul style="margin-left: 25px;">
+                            <li>&lt;ul&gt; — маркований список (unordered list)</li>
+                            <li>&lt;ol&gt; — нумерований список (ordered list)</li>
+                            <li>&lt;li&gt; — елемент списку (list item)</li>
+                            <li>&lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt; — список визначень</li>
+                            <li>Списки можна вкладати один в одного</li>
+                            <li>Змінювати маркери можна за допомогою CSS властивості list-style-type</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- ==================== ПРАКТИЧНА ЧАСТИНА ==================== -->
+                <section id="practice">
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #27ae60, #1e8449);"><i class="fas fa-laptop-code"></i> Заняття 2/2 • Практична частина • 2 години</span>
+                    <h2>💻 Практикуємося зі списками</h2>
+                    <p>💪 <strong>Практичне завдання:</strong> створи сторінку з різними видами списків, навчися вкладати списки та змінювати типи маркерів.</p>
+
+                    <div class="task-card">
+                        <h3><i class="fas fa-bullseye"></i> Мета практичного заняття</h3>
+                        <ul style="margin-left: 25px; margin-top: 10px;">
+                            <li>Створити маркований список з продуктами</li>
+                            <li>Створити нумерований список з рецептом</li>
+                            <li>Створити вкладений список (меню ресторану)</li>
+                            <li>Створити список визначень (словник термінів)</li>
+                        </ul>
+                    </div>
+
+                    <h3><i class="fas fa-list-ol"></i> Покрокова інструкція</h3>
+
+                    <div class="task-step">
+                        <div class="step-number">1</div>
+                        <div><strong>Створи базову структуру</strong> HTML-документа.</div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">2</div>
+                        <div><strong>Додай маркований список</strong> продуктів для покупки.</div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">3</div>
+                        <div><strong>Додай нумерований список</strong> з рецептом приготування улюбленої страви.</div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">4</div>
+                        <div><strong>Створи вкладений список</strong> (меню ресторану з категоріями та стравами).</div>
+                    </div>
+
+                    <div class="task-step">
+                        <div class="step-number">5</div>
+                        <div><strong>Створи список визначень</strong> (словник нових термінів).</div>
+                    </div>
+
+                    <!-- Чекліст -->
+                    <div class="task-challenge">
+                        <div class="challenge-title"><i class="fas fa-tasks"></i> 🎯 Завдання-челендж</div>
+                        <p>Створи сторінку <strong>"Мій ідеальний день"</strong>, яка має містити:</p>
+                        <ul class="checklist" id="challengeChecklist">
+                            <li data-done="false">Маркований список &lt;ul&gt; з планами на день</li>
+                            <li data-done="false">Нумерований список &lt;ol&gt; з розкладом по годинах</li>
+                            <li data-done="false">Вкладений список (справи з підпунктами)</li>
+                            <li data-done="false">Список визначень &lt;dl&gt; з новими словами</li>
+                            <li data-done="false">Змінений тип маркера для одного зі списків</li>
+                        </ul>
+                        <button id="resetChecklistBtn" class="btn-clear" style="margin-top: 10px;"><i class="fas fa-sync-alt"></i> Скинути чекліст</button>
+                    </div>
+
+                    <!-- Живий редактор -->
+                    <h3><i class="fas fa-laptop-code"></i> ✏️ Спробуй сам! Пиши код нижче</h3>
+                    <div class="code-editor-panel">
+                        <div class="editor-header">
+                            <div class="editor-dot red"></div>
+                            <div class="editor-dot yellow"></div>
+                            <div class="editor-dot green"></div>
+                            <div class="editor-title">index.html</div>
+                        </div>
+                        <div class="editor-container">
+                            <div class="editor-textarea">
+                                <textarea id="htmlCodeEditor" placeholder="Напиши свій HTML-код тут..."></textarea>
+                            </div>
+                            <div class="editor-preview">
+                                <div class="preview-frame">
+                                    <iframe id="previewFrame"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="editor-buttons">
+                            <button id="runCodeBtn" class="btn-run"><i class="fas fa-play"></i> Запустити код</button>
+                            <button id="clearCodeBtn" class="btn-clear"><i class="fas fa-trash-alt"></i> Очистити</button>
+                            <button id="loadExampleBtn" class="btn-run" style="background:#3498db;"><i class="fas fa-eye"></i> Завантажити приклад</button>
+                        </div>
+                    </div>
+
+                    <div class="hint-box">
+                        <i class="fas fa-info-circle"></i>
+                        <strong>Приклад готової сторінки:</strong>
+                        <button id="showSolutionBtn" class="solution-btn" style="margin-left: 15px;"><i class="fas fa-eye"></i> Показати приклад</button>
+                        <div id="solutionContent" class="solution-content">
+                            <pre style="margin:0; color:#ffd966;">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Мій ідеальний день&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;🌟 Мій ідеальний день&lt;/h1&gt;
+    
+    &lt;h2&gt;📝 Плани на день&lt;/h2&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Ранкова зарядка&lt;/li&gt;
+        &lt;li&gt;Сніданок&lt;/li&gt;
+        &lt;li&gt;Навчання&lt;/li&gt;
+        &lt;li&gt;Прогулянка&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;h2&gt;⏰ Розклад по годинах&lt;/h2&gt;
+    &lt;ol&gt;
+        &lt;li&gt;08:00 - Підйом&lt;/li&gt;
+        &lt;li&gt;09:00 - Сніданок&lt;/li&gt;
+        &lt;li&gt;10:00 - Навчання&lt;/li&gt;
+        &lt;li&gt;14:00 - Обід&lt;/li&gt;
+        &lt;li&gt;16:00 - Прогулянка&lt;/li&gt;
+    &lt;/ol&gt;
+    
+    &lt;h2&gt;🍕 Меню ресторану (вкладений список)&lt;/h2&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Основні страви
+            &lt;ul&gt;
+                &lt;li&gt;Піца Маргарита&lt;/li&gt;
+                &lt;li&gt;Паста Карбонара&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;Десерти
+            &lt;ul&gt;
+                &lt;li&gt;Тірамісу&lt;/li&gt;
+                &lt;li&gt;Чізкейк&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;h2&gt;📖 Словник термінів&lt;/h2&gt;
+    &lt;dl&gt;
+        &lt;dt&gt;HTML&lt;/dt&gt;
+        &lt;dd&gt;Мова розмітки веб-сторінок&lt;/dd&gt;
+        &lt;dt&gt;CSS&lt;/dt&gt;
+        &lt;dd&gt;Мова стилів для оформлення&lt;/dd&gt;
+        &lt;dt&gt;UL&lt;/dt&gt;
+        &lt;dd&gt;Маркований список (unordered list)&lt;/dd&gt;
+    &lt;/dl&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </div>
+                    </div>
+
+                    <!-- Контрольна вікторина -->
+                    <div class="quiz-area" id="controlQuiz">
+                        <h3><i class="fas fa-question-circle"></i> 📋 Контрольні питання</h3>
+                        <div id="quizControlContainer"></div>
+                        <div id="quizControlFeedback" class="quiz-feedback"></div>
+                        <button id="checkControlQuizBtn">✨ Перевірити відповіді</button>
+                        <button id="resetControlQuizBtn" style="background:#7f8c8d;">🔄 Скинути</button>
+                    </div>
+
+                    <div class="task-card" style="background: #fef5e8;">
+                        <h3><i class="fas fa-home"></i> Домашнє завдання</h3>
+                        <p>Створи HTML-файл <code>my_school.html</code> з розкладом занять по дням тижня (використай вкладені списки).</p>
+                    </div>
+
+                    <div class="random-fact-box">
+                        <button id="randomFactBtn" class="fact-btn"><i class="fas fa-dice-d6"></i> Цікавий факт</button>
+                        <p id="randomFactDisplay" class="fact-display">Натисни, щоб дізнатися щось нове!</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Гурток Web-програмування | Списки на Web-сторінці — Теорія + Практика</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

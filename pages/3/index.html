@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Заняття 3: Програмне забезпечення Web-розробника | Гурток програмування</title>
+    <!-- Підключення стилів -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Шрифти та іконки для кращого вигляду (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- ШАПКА (як у прикладі) -->
+    <header class="header">
+        <div class="container header-content">
+            <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+
+            <div class="nav">
+                <a href="/index.html">Головна</a>
+                <a href="/index.html#program">Заняття</a>
+                <a href="/index.html#contacts">Контакти</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основний контент -->
+    <main class="main-content">
+        <div class="container">
+            <div class="lesson-card">
+                <span class="topic-badge"><i class="fas fa-laptop-code"></i> Інструменти професіонала</span>
+                <h2>🛠️ Програмне забезпечення Web-розробника</h2>
+                <p>💻 Щоб створювати сайти, потрібні правильні інструменти. Розберемо, які програми допомагають
+                    розробникам писати код, тестувати сайти та працювати в команді.</p>
+
+                <!-- Що таке сайти? -->
+                <div class="info-block">
+                    <h3><i class="fas fa-globe"></i> Що таке сайти?</h3>
+                    <p>Сайт — це набір веб-сторінок, які зберігаються на спеціальних комп'ютерах —
+                        <strong>веб-серверах</strong>. Розробники пишуть код (HTML, CSS, JavaScript), зберігають його у
+                        файли, і потім розміщують ці файли на сервері. Коли ми вводимо адресу сайту, браузер звертається
+                        до сервера й завантажує сторінки.
+                    </p>
+                    <div class="type-grid">
+                        <div class="type-card static"><i class="fas fa-file-code"></i> <strong>Статичні
+                                сайти</strong><br>Прості сторінки з текстом, зображеннями, без складної взаємодії.</div>
+                        <div class="type-card dynamic"><i class="fas fa-chart-line"></i> <strong>Динамічні
+                                сайти</strong><br>Вміст змінюється залежно від дій користувача (соцмережі, магазини).
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Програмне забезпечення (сітка) -->
+                <h3><i class="fas fa-tools"></i> Необхідне ПЗ для Web-розробника</h3>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <i class="fas fa-chrome"></i>
+                        <h4>Браузери</h4>
+                        <p>Google Chrome, Firefox, Edge — показують результат коду. Мають інструменти розробника, де
+                            можна перевірити код, стилі, помилки.</p>
+                    </div>
+                    <div class="tool-card">
+                        <i class="fas fa-server"></i>
+                        <h4>Локальні сервери</h4>
+                        <p>Live Server (розширення VSCode), MAMP, LocalWP — запускають сайт на вашому комп'ютері під час
+                            розробки.</p>
+                    </div>
+                    <div class="tool-card">
+                        <i class="fas fa-code"></i>
+                        <h4>Редактори коду</h4>
+                        <p>VSCode, Sublime Text, Notepad++ — для написання коду з підсвіткою та автодоповненням.</p>
+                    </div>
+                    <div class="tool-card">
+                        <i class="fab fa-git-alt"></i>
+                        <h4>Системи контролю версій</h4>
+                        <p>Git — зберігає історію змін у коді, дозволяє працювати в команді.</p>
+                    </div>
+                </div>
+
+                <!-- Знайомство з редакторами коду -->
+                <div class="code-editors">
+                    <h3><i class="fas fa-edit"></i> Знайомство з редакторами коду</h3>
+                    <p>Код для вебсайтів можна писати навіть у <strong>Блокноті</strong>. Ось приклад простого
+                        HTML-файлу:</p>
+                    <div class="code-block">
+                        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Мій перший сайт&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Привіт, світ!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    </div>
+                    <p>Але працювати з великими проєктами в Блокноті — незручно. Тому розробники використовують
+                        спеціальні редактори коду з підсвіткою, автодоповненням, розширеннями та інтеграцією з
+                        терміналом.</p>
+
+                    <div class="editors-comparison">
+                        <div class="editor-item">✅ <strong>Sublime Text</strong> — легкий і швидкий</div>
+                        <div class="editor-item">⚠️ <strong>Atom</strong> — зручний, але розвиток припинено у 2022 р.
+                        </div>
+                        <div class="editor-item">⚠️ <strong>Brackets</strong> — застарілий, live preview</div>
+                        <div class="editor-item">✅ <strong>Notepad++</strong> — розширений Блокнот</div>
+                    </div>
+
+                    <div class="vscode-highlight">
+                        <i class="fab fa-vs-code"></i>
+                        <h4>🏆 Найкращий вибір: Visual Studio Code (VSCode)</h4>
+                        <ul>
+                            <li>Безкоштовний та з відкритим кодом</li>
+                            <li>Працює на Windows, macOS, Linux</li>
+                            <li>Вбудований термінал, Git, дебагер</li>
+                            <li>Величезна бібліотека плагінів</li>
+                            <li>Постійно оновлюється</li>
+                        </ul>
+                        <p>Завантажити VSCode: <a href="https://code.visualstudio.com"
+                                target="_blank">code.visualstudio.com</a></p>
+                    </div>
+                </div>
+
+                <!-- Налаштування середовища + інтерактив -->
+                <h3><i class="fas fa-sliders-h"></i> Налаштування середовища програмування</h3>
+                <div class="setup-steps">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h4>Створення файлів і папок у VSCode</h4>
+                        <p>File → Open Folder → створи файл (New File) з розширенням .html, .css</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h4>Встановлення плагінів</h4>
+                        <p>Ctrl+Shift+X → пошук → Install. Найпопулярніші: Live Server, Auto Rename Tag, vscode-icons.
+                        </p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h4>Emmet та гарячі клавіші</h4>
+                        <p>Скорочення на кшталт <code>ul>li*3</code> → розгортаються у HTML. Ctrl+P, Ctrl+`, Alt+Shift+F
+                            — прискорюють роботу.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h4>Node.js</h4>
+                        <p>Потрібен для сучасних інструментів (SASS, webpack). Завантажте з <a href="https://nodejs.org"
+                                target="_blank">nodejs.org</a></p>
+                    </div>
+                </div>
+
+                <!-- ВІДЕО (з оригінальної сторінки) -->
+                <div class="video-container">
+                    <iframe width="100%" height="400px" src="https://www.youtube.com/embed/7dpnzsgh5p4"
+                        title="Заняття 1. Редактор коду. OpenWeb - програмуємо разом!" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Інтерактив: Вікторина "Що це за інструмент?" -->
+                <div class="quiz-area" id="toolsQuiz">
+                    <h3><i class="fas fa-question-circle"></i> 🧠 Інтерактивна вікторина: Впізнай інструмент!</h3>
+                    <div id="quizToolsContainer"></div>
+                    <div id="quizToolsFeedback" class="quiz-feedback"></div>
+                    <button id="checkToolsQuizBtn">✨ Перевірити відповіді</button>
+                    <button id="resetToolsQuizBtn" style="background:#7f8c8d;">🔄 Скинути</button>
+                </div>
+
+                <!-- Блок корисних розширень (список) -->
+                <div class="extensions-list">
+                    <h3><i class="fas fa-plug"></i> Корисні розширення для VSCode</h3>
+                    <div class="ext-grid">
+                        <div class="ext-item"><i class="fas fa-bolt"></i> Live Server</div>
+                        <div class="ext-item"><i class="fas fa-tag"></i> Auto Rename Tag</div>
+                        <div class="ext-item"><i class="fas fa-code"></i> JavaScript (ES6) snippets</div>
+                        <div class="ext-item"><i class="fab fa-sass"></i> Live Sass Compiler</div>
+                        <div class="ext-item"><i class="fas fa-palette"></i> Theme - Oceanic Next</div>
+                        <div class="ext-item"><i class="fas fa-folder-open"></i> vscode-icons</div>
+                    </div>
+                    <p class="ext-note">💡 Повний список гарячих клавіш: <a href="#">keyboard-shortcuts-windows.pdf</a>
+                        | <a href="https://docs.emmet.io/cheat-sheet/" target="_blank">Emmet cheat sheet</a></p>
+                </div>
+
+                <!-- Випадковий факт про ПЗ -->
+                <div class="random-fact-box">
+                    <button id="randomToolFactBtn" class="fact-btn"><i class="fas fa-dice-d6"></i> Цікавий факт про
+                        інструменти</button>
+                    <p id="randomToolFactDisplay" class="fact-display">Натисни, щоб дізнатися щось нове про ПЗ для
+                        розробки!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Гурток Web-програмування | Перше заняття: Вступ, безпека, Інтернет</p>
+            <p><i class="fas fa-heart" style="color:#ff9f4a;"></i> Навчайся безпечно та створюй web-сайти разом з нами!
+            </p>
+        </div>
+    </footer>
+
+    <!-- СКРИПТИ (script.js) - інтерактивна вікторина та drag&drop вправа -->
+    <script src="script.js"></script>
+</body>
+
+</html>

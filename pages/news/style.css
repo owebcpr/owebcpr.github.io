@@ -49,21 +49,36 @@ h2.news-title {
     margin-bottom: 20px;
 }
 
-.news-media {
+.news-media,
+.news-media-fl {
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: start;
+    align-items: start;
+    gap: 10px;
 }
 
-.news-media img {
-    max-width: 100%;
+.news-media img,
+.news-media-fl img {
+    width: 100%;
+    max-width: 600px;
     height: auto;
     border-radius: 4px;
     display: block;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 
 }
+
+.news-media-fl img {
+    max-width: 300px;
+}
+
+
+
 
 .news-media iframe {
     position: relative;
@@ -85,6 +100,7 @@ iframe {
     margin: 0 auto;
 }
 
+
 .news-content {
     text-align: justify;
 }
@@ -93,6 +109,7 @@ iframe {
     display: flex;
     justify-content: center;
 }
+
 
 .news-content img {
     max-width: 400px;
