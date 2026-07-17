@@ -135,8 +135,14 @@ function initCanvas() {
 }
 
 
-// ===== ВІКТОРИНА "Символи України" =====
-(function () {
+// Проверяем устройство при загрузке страницы
+document.addEventListener("DOMContentLoaded", checkDevice);
+
+// Также проверяем при изменении размера окна (на случай изменения ориентации)
+window.addEventListener("resize", checkDevice);
+
+// ===== ВІКТОРИНА "Символи України" (ВИПРАВЛЕНА) =====
+document.addEventListener('DOMContentLoaded', function () {
     'use strict';
 
     // Масив питань
@@ -189,7 +195,10 @@ function initCanvas() {
     const checkBtn = document.getElementById('check-answers-btn');
 
     // Якщо контейнер не знайдено — виходимо
-    if (!container) return;
+    if (!container) {
+        console.warn('Контейнер #quiz-container не знайдено');
+        return;
+    }
 
     // Рендеринг питань
     function renderQuiz() {
@@ -264,11 +273,9 @@ function initCanvas() {
     }
 
     // Подія на кнопку
-    checkBtn.addEventListener('click', checkAnswers);
-})();
-
-// Проверяем устройство при загрузке страницы
-document.addEventListener("DOMContentLoaded", checkDevice);
-
-// Также проверяем при изменении размера окна (на случай изменения ориентации)
-window.addEventListener("resize", checkDevice);
+    if (checkBtn) {
+        checkBtn.addEventListener('click', checkAnswers);
+    } else {
+        console.warn('Кнопка #check-answers-btn не знайдена');
+    }
+});
