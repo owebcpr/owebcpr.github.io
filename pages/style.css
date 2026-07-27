@@ -383,3 +383,359 @@ img.illustration {
         font-size: 1.6rem;
     }
 }
+
+/* ВКЛАДКИ */
+.tabs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0 15px 0;
+}
+
+.tab-btn {
+    background: #eef2f9;
+    color: #1e2a3e;
+    padding: 10px 24px;
+    border-radius: 40px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.tab-btn:hover {
+    background: #d5e0ec;
+}
+
+.tab-btn.active {
+    background: #1e5f7a;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px 0;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* ШАХОВИЙ ТРЕНАЖЕР */
+#chessBoard {
+    margin: 15px auto;
+    max-width: 420px;
+    border: 4px solid #7f6b4a;
+    border-radius: 8px;
+}
+
+#chessBoard table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#chessBoard td {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#chessBoard td:hover {
+    opacity: 0.8;
+}
+
+#chessProgress {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#chessControls {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+#chessControls button {
+    margin-top: 0;
+}
+
+/* ХРЕСТИКИ-НОЛІКИ */
+#tttBoard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 300px;
+    margin: 15px auto;
+    gap: 5px;
+}
+
+.ttt-cell {
+    background: #f0f7fc;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    font-weight: bold;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+    border: 2px solid #d5e0ec;
+}
+
+.ttt-cell:hover {
+    background: #e3f0fa;
+}
+
+.ttt-cell:active {
+    transform: scale(0.95);
+}
+
+#tttStatus {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#tttScore {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.mode-btn {
+    background: #eef2f9;
+    color: #1e2a3e;
+    padding: 8px 20px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.mode-btn.active {
+    background: #1e5f7a;
+    color: white;
+}
+
+.mode-btn:hover {
+    background: #d5e0ec;
+}
+
+.mode-btn.active:hover {
+    background: #0f4459;
+}
+
+/* КАРТКИ ЗАГАДОК */
+.puzzle-card {
+    background: #fef9f0;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 15px 0;
+    border-left: 5px solid #ff9f4a;
+}
+
+.puzzle-btn {
+    background: #ff9f4a;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.puzzle-btn:hover {
+    background: #e67e22;
+}
+
+.puzzle-answer {
+    margin-top: 10px;
+    padding: 10px;
+    background: #e8f5e9;
+    border-radius: 12px;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+/* ===== ШАХОВИЙ ТРЕНАЖЕР ===== */
+#chessBoard table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+#chessBoard td {
+    width: 52px;
+    height: 52px;
+    text-align: center;
+    font-size: 34px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    position: relative;
+    user-select: none;
+}
+
+#chessBoard td:hover {
+    filter: brightness(1.05);
+    transform: scale(1.02);
+    z-index: 2;
+}
+
+#chessBoard td:active {
+    transform: scale(0.95);
+}
+
+/* Підсвітка вибраної фігури */
+#chessBoard td.selected {
+    outline: 3px solid #2ecc71 !important;
+    outline-offset: -2px;
+}
+
+/* Підсвітка цільової клітинки */
+#chessBoard td.target {
+    box-shadow: inset 0 0 0 3px #ff6b2c;
+    animation: pulse-target 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-target {
+
+    0%,
+    100% {
+        box-shadow: inset 0 0 0 3px #ff6b2c;
+    }
+
+    50% {
+        box-shadow: inset 0 0 0 6px #ff6b2c, 0 0 15px rgba(255, 107, 44, 0.3);
+    }
+}
+
+/* Правильний хід */
+#chessBoard td.correct {
+    box-shadow: inset 0 0 0 4px #27ae60 !important;
+    animation: flash-correct 0.6s ease;
+}
+
+.ttt-cell.x-color {
+    color: #e74c3c !important;
+    /* Красный для X */
+}
+
+.ttt-cell.o-color {
+    color: #3498db !important;
+    /* Синий для O */
+}
+
+/* Модальное окно для результатов */
+.ttt-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.ttt-modal-content {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 320px;
+    width: 90%;
+    animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.ttt-modal-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ttt-modal-btn {
+    margin-top: 20px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.ttt-modal-btn:hover {
+    background: #219150;
+    transform: scale(1.05);
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes flash-correct {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+/* Підказка */
+#taskHint {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Поле для відповіді після правильного ходу */
+.move-legend {
+    margin-top: 10px;
+    padding: 10px;
+    background: #e8f5e9;
+    border-radius: 12px;
+    color: #2e7d32;
+    font-weight: bold;
+    animation: fadeIn 0.3s ease;
+}

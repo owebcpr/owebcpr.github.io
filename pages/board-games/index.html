@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Весняний турнір настільних ігор | Гурток Web-програмування</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- ШАПКА -->
+    <header class="header">
+        <div class="container header-content">
+            <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+            <div class="nav">
+                <a href="/index.html">Головна</a>
+                <a href="/index.html#program">Заняття</a>
+                <a href="/index.html#contacts">Контакти</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ОСНОВНИЙ КОНТЕНТ -->
+    <main class="main-content">
+        <div class="container">
+            <div class="lesson-card">
+                <h2>🎲 Весняний турнір настільних ігор</h2>
+                <p>Ласкаво просимо на наш весняний турнір! Сьогодні ми поринемо у світ настільних ігор — від давніх
+                    шахів до сучасних ігор-броділок. Тут ви дізнаєтеся цікаві факти, розгадаєте головоломки,
+                    познайомитеся з правилами і навіть потренуєте свій мозок у міні-грі. Готові до інтелектуальних
+                    баталій? Тоді поїхали! 🚀</p>
+
+                <!-- ЦІКАВІ ФАКТИ -->
+                <h3><i class="fas fa-lightbulb"></i> Цікаві факти про настільні ігри</h3>
+                <div class="fact-grid">
+                    <div class="fact-card"><i class="fas fa-chess-king"></i> <strong>Найдавніші
+                            ігри</strong><br>Найстаріші ігрові дошки знайдені в гробницях єгипетських фараонів і
+                        датуються 3500 роком до н.е.!</div>
+                    <div class="fact-card"><i class="fas fa-trophy"></i> <strong>Перший турнір</strong><br>Перший
+                        шаховий турнір відбувся в Лондоні в 1851 році. Переможець отримав 500 фунтів стерлінгів!</div>
+                    <div class="fact-card"><i class="fas fa-globe-europe"></i> <strong>Лото з Італії</strong><br>Лото
+                        винайшли в Італії в XVI столітті. Спочатку в нього грали виключно аристократи.</div>
+                    <div class="fact-card"><i class="fas fa-rocket"></i> <strong>Броділки</strong><br>Найвідоміша
+                        броділка — «Монополія» — була створена в 1935 році і продається донині!</div>
+                </div>
+
+                <!-- ПРАВИЛА ІГОР (Вкладки) -->
+                <h3><i class="fas fa-book-open"></i> Правила ігор</h3>
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="tab1">🏛️ Шахи</button>
+                    <button class="tab-btn" data-tab="tab2">⚫ Шашки</button>
+                    <button class="tab-btn" data-tab="tab3">🎲 Лото</button>
+                    <button class="tab-btn" data-tab="tab4">🌍 Броділки</button>
+                </div>
+
+                <div id="tab1" class="tab-content active">
+                    <h4>🏛️ Шахи — королівська гра</h4>
+                    <p><strong>Мета:</strong> Поставити «мат» королю суперника.</p>
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px; margin:15px 0;">
+                        <div><strong>♔ Король</strong> — на 1 клітинку будь-куди</div>
+                        <div><strong>♕ Ферзь</strong> — по горизонталі, вертикалі, діагоналі</div>
+                        <div><strong>♖ Тура</strong> — по горизонталі та вертикалі</div>
+                        <div><strong>♗ Слон</strong> — по діагоналі</div>
+                        <div><strong>♘ Кінь</strong> — літерою «Г»</div>
+                        <div><strong>♙ Пішак</strong> — тільки вперед на 1 клітину (з першого ходу на 2)</div>
+                    </div>
+                    <p><strong>Важливо:</strong> Пішак, який доходить до останньої горизонталі, перетворюється на
+                        будь-яку фігуру (крім короля)!</p>
+                    <div class="info-block"><i class="fas fa-lightbulb"></i> <strong>Цікавинка:</strong> Слово «шахи»
+                        походить від перського «шах мат» — «король помер».</div>
+                </div>
+
+                <div id="tab2" class="tab-content">
+                    <h4>⚫ Шашки</h4>
+                    <p><strong>Мета:</strong> Зняти всі шашки суперника або заблокувати їх.</p>
+                    <ul style="margin-left:25px; line-height:1.8;">
+                        <li>Грають на 64-клітинній дошці</li>
+                        <li>Кожен має по 12 шашок</li>
+                        <li>Ходять тільки по чорних клітинках</li>
+                        <li>Звичайна шашка ходить на 1 клітинку вперед по діагоналі</li>
+                        <li>Якщо за шашкою є порожня клітинка — можна бити (рубати)</li>
+                        <li>Шашка, яка доходить до останньої горизонталі, стає <strong>ДАМКОЮ</strong></li>
+                        <li>Дамка ходить на будь-яку кількість клітинок по діагоналі</li>
+                    </ul>
+                    <div class="info-block"><i class="fas fa-lightbulb"></i> <strong>Цікавинка:</strong> Шашки з'явилися
+                        ще в Стародавньому Єгипті — археологи знаходили дошки в гробницях фараонів!</div>
+                </div>
+
+                <div id="tab3" class="tab-content">
+                    <h4>🎲 Лото</h4>
+                    <p><strong>Мета:</strong> Першим закрити всі числа на своїй картці.</p>
+                    <ul style="margin-left:25px; line-height:1.8;">
+                        <li>Кожен гравець отримує картку з числами (3 ряди по 9 чисел)</li>
+                        <li>Ведучий дістає з мішечка бочонки з номерами та називає їх</li>
+                        <li>Гравець закриває число на своїй картці</li>
+                        <li>Перемагає той, хто першим закриє всі числа</li>
+                    </ul>
+                    <div class="info-block"><i class="fas fa-lightbulb"></i> <strong>Цікавинка:</strong> Сучасне лото з
+                        бочонками з'явилося в XIX столітті й одразу стало народною грою!</div>
+                </div>
+
+                <div id="tab4" class="tab-content">
+                    <h4>🌍 Ігри-броділки</h4>
+                    <p><strong>Мета:</strong> Першим дістатися фінішу.</p>
+                    <ul style="margin-left:25px; line-height:1.8;">
+                        <li>Кидаємо кубик по черзі</li>
+                        <li>Пересуваємо фішку на випавшу кількість кроків</li>
+                        <li>Якщо потрапляємо на спеціальну клітинку — виконуємо дію (стрибок вперед, повернення назад,
+                            пропуск ходу)</li>
+                        <li>Виграє той, хто першим досягне фінішу</li>
+                    </ul>
+                    <div class="info-block"><i class="fas fa-lightbulb"></i> <strong>Цікавинка:</strong> Ігри-броділки
+                        з'явилися в США в XIX столітті та одразу стали неймовірно популярними!</div>
+                </div>
+
+                <!-- ЗАГАДКИ ТА ГОЛОВОЛОМКИ -->
+                <h3><i class="fas fa-puzzle-piece"></i> Розминка для мозку</h3>
+                <div id="puzzleContainer">
+                    <div class="puzzle-card" id="puzzle1">
+                        <p><strong>Загадка 1:</strong> «Стоять на дошці дві армії в ряд, хто вміє думати, той буде рад.
+                            Король і ферзь, тура і кінь, стратегія тут — головний день!»</p>
+                        <button class="puzzle-btn" data-answer="шахи">Показати відповідь</button>
+                        <div class="puzzle-answer" style="display:none;">✅ <strong>Шахи</strong></div>
+                    </div>
+                    <div class="puzzle-card" id="puzzle2">
+                        <p><strong>Загадка 2:</strong> «Чорні й білі на полі стоять, назад не ходять, лише вперед
+                            летять. Просту суперницю візьмуть — і дамкою стануть, коли дійдуть.»</p>
+                        <button class="puzzle-btn" data-answer="шашки">Показати відповідь</button>
+                        <div class="puzzle-answer" style="display:none;">✅ <strong>Шашки</strong></div>
+                    </div>
+                    <div class="puzzle-card" id="puzzle3">
+                        <p><strong>Загадка 3:</strong> «Бочонки в мішечку лежать, ведучий їх дістає підряд. Треба картку
+                            закривати, першим "Лото!" вигукати.»</p>
+                        <button class="puzzle-btn" data-answer="лото">Показати відповідь</button>
+                        <div class="puzzle-answer" style="display:none;">✅ <strong>Лото</strong></div>
+                    </div>
+                    <div class="puzzle-card" id="puzzle4">
+                        <p><strong>Логічна задача:</strong> У шаховому турнірі грали 8 гравців. Кожен зіграв з кожним по
+                            одній партії. Скільки всього партій було зіграно?</p>
+                        <button class="puzzle-btn" data-answer="28">Показати відповідь</button>
+                        <div class="puzzle-answer" style="display:none;">✅ <strong>28 партій</strong> (8 × 7 ÷ 2 = 28)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ШАХОВИЙ ТРЕНАЖЕР -->
+                <h3><i class="fas fa-chess"></i> 🏆 Шаховий тренажер</h3>
+                <p>Розв'яжи шахові задачі різного рівня складності! Обирай фігуру (підсвітиться зеленим), потім клікни
+                    на цільову клітинку.</p>
+
+                <div id="chessTrainer">
+                    <div
+                        style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; margin-bottom:15px;">
+                        <div id="chessProgress" style="font-weight:bold; font-size:1.1rem;">
+                            🎯 Задача <span id="taskNum">1</span>/<span id="totalTasks">3</span>
+                            <span id="taskLevel"
+                                style="font-weight:normal; font-size:0.85rem; color:#f39c12; margin-left:8px;"></span>
+                            <span id="taskName"
+                                style="font-weight:normal; font-size:0.9rem; color:#555; margin-left:8px;"></span>
+                        </div>
+                        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                            <button id="hintChessBtn"
+                                style="background:#f39c12; border:none; color:white; padding:10px 20px; border-radius:40px; cursor:pointer; font-weight:bold;">💡
+                                Підказка</button>
+                            <button id="nextChessBtn"
+                                style="display:none; background:#27ae60; border:none; color:white; padding:10px 20px; border-radius:40px; cursor:pointer; font-weight:bold;">➡️
+                                Наступна задача</button>
+                        </div>
+                    </div>
+
+                    <div id="chessTaskText"
+                        style="margin-bottom:15px; padding:12px; background:#f8f9fa; border-radius:12px;"></div>
+
+                    <div id="chessBoard" style="max-width:480px; margin:0 auto;"></div>
+
+                    <div id="chessFeedback" class="quiz-feedback"
+                        style="margin-top:15px; text-align:center; min-height:40px;"></div>
+
+                    <div id="moveHistory"
+                        style="margin-top:15px; padding:10px; background:#f8f9fa; border-radius:12px; max-height:150px; overflow-y:auto; font-size:0.9rem;">
+                        <div style="text-align:center; color:#999; font-size:0.85rem;">📝 Історія ходів</div>
+                    </div>
+
+                    <div style="text-align:center; font-size:0.85rem; color:#7f8c8d; margin-top:10px;">
+                        💡 <strong>Як грати:</strong> Клікни на фігуру (підсвітиться зеленим) → клікни на клітинку для
+                        ходу
+                    </div>
+
+                    <!-- Легенда фігур -->
+                    <div
+                        style="display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-top:12px; padding:10px; background:#f0f4f8; border-radius:12px;">
+                        <span style="background:white; padding:3px 12px; border-radius:16px; font-size:0.85rem;">♔
+                            Король</span>
+                        <span style="background:white; padding:3px 12px; border-radius:16px; font-size:0.85rem;">♕
+                            Ферзь</span>
+                        <span style="background:white; padding:3px 12px; border-radius:16px; font-size:0.85rem;">♖
+                            Тура</span>
+                        <span style="background:white; padding:3px 12px; border-radius:16px; font-size:0.85rem;">♗
+                            Слон</span>
+                        <span style="background:white; padding:3px 12px; border-radius:16px; font-size:0.85rem;">♘
+                            Кінь</span>
+                        <span style="background:white; padding:3px 12px; border-radius:16px; font-size:0.85rem;">♙
+                            Пішак</span>
+                    </div>
+                </div>
+
+                <!-- ХРЕСТИКИ-НОЛІКИ -->
+                <h3><i class="fas fa-gamepad"></i> Тренуй мозок: Хрестики-ноліки</h3>
+                <p>Зіграй з другом або з комп'ютером. Хто перший збере 3 в ряд — переміг!</p>
+                <div id="ticTacToe">
+                    <div style="display:flex; gap:15px; margin-bottom:15px; flex-wrap:wrap;">
+                        <button id="tttMode2" class="mode-btn active">👫 З другом</button>
+                        <button id="tttMode1" class="mode-btn">🤖 З комп'ютером</button>
+                        <div id="tttDifficultyBlock"
+                            style="margin-top: 10px; display: none; justify-content: center; gap: 8px;">
+                            <span style="font-size: 0.85rem; color: #555; align-self: center;">Складність:</span>
+                            <button id="tttDiffEasy" class="tab-btn active"
+                                style="padding: 4px 12px; font-size: 0.8rem;">👶 Легкий</button>
+                            <button id="tttDiffSmart" class="tab-btn" style="padding: 4px 12px; font-size: 0.8rem;">🧠
+                                Розумний</button>
+                        </div>
+                        <button id="tttReset">🔄 Нова гра</button>
+                    </div>
+                    <div id="tttStatus">Хід гравця <strong>X</strong></div>
+                    <div id="tttBoard"></div>
+                    <div id="tttModal" class="ttt-modal" style="display: none;">
+                        <div class="ttt-modal-content">
+                            <div id="tttModalTitle" class="ttt-modal-title">🎉 Перемога!</div>
+                            <p id="tttModalText" style="color: #555; font-size: 1rem; margin: 0;"></p>
+                            <button id="tttModalClose" class="ttt-modal-btn">Зіграти ще раз 🔄</button>
+                        </div>
+                    </div>
+                    <div id="tttScore">
+                        <span>X: <span id="scoreX">0</span></span>
+                        <span>O: <span id="scoreO">0</span></span>
+                        <span>Нічиї: <span id="scoreDraw">0</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ФУТЕР -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Гурток Web-програмування | Весняний турнір настільних ігор</p>
+            <p><i class="fas fa-heart" style="color:#ff9f4a;"></i> Розвивай логіку та грай разом з нами!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
