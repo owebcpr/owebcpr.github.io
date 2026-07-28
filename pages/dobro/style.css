@@ -1,116 +1,777 @@
-﻿body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f4f9ff;
-    color: #333;
+﻿/* ===== Скидання та базові стилі ===== */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* .container {
-    max-width: 1000px;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f7fc;
+    color: #1e2a3e;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
-} */
-
-header {
-    background-color: #0057b7;
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
-    width: 100%;
+    padding: 0 20px;
 }
 
-header h2 {
-    margin: 0;
-    font-size: 20px;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-footer {
-    background-color: #0057b7;
+/* ===== HEADER (як у прикладі) ===== */
+.header {
+    background: linear-gradient(135deg, #0b2b3b, #1a4a6f);
     color: white;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 14px;
-    box-sizing: border-box;
-    width: 100%;
+    padding: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-main {
-    max-width: 900px;
-    margin: 2em auto;
-    padding: 0 1em;
-    padding-top: 20px;
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #ffd966;
+}
+
+/* ===== MAIN ===== */
+.main-content {
+    flex: 1;
+    padding: 40px 0;
+}
+
+.lesson-card {
     background: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
+    border-radius: 28px;
+    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin-bottom: 30px;
 }
 
+/* ===== Секції ===== */
+section {
+    margin-bottom: 50px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid #f0f2f5;
+}
+
+section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* ===== Заголовки ===== */
 h2 {
-    color: #003366;
+    font-size: 2rem;
+    color: #1e5f7a;
+    margin-bottom: 20px;
+    border-left: 6px solid #ff9f4a;
+    padding-left: 20px;
 }
 
-form input[type="text"],
-form textarea {
-    width: 100%;
-    padding: 12px 14px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 6px;
-    box-sizing: border-box;
-    transition: border-color 0.3s, box-shadow 0.3s;
+h2 i {
+    margin-right: 10px;
 }
 
-form input[type="text"]:focus,
-form textarea:focus {
-    border-color: #0057b7;
-    box-shadow: 0 0 8px rgba(0, 87, 183, 0.4);
+h3 {
+    font-size: 1.6rem;
+    margin: 25px 0 15px 0;
+    color: #2c3e4e;
+}
+
+h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #2c3e4e;
+}
+
+p {
+    color: #4a4a6a;
+    margin-bottom: 15px;
+}
+
+/* ===== Баджи ===== */
+.topic-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff9f4a, #ff6b2c);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.topic-badge i {
+    margin-right: 8px;
+}
+
+/* ===== ГЕРОЙ-БАНЕР ===== */
+.hero-banner {
+    text-align: center;
+    padding: 40px 20px 30px;
+    background: linear-gradient(135deg, #fff3e0, #ffe8cc);
+    border-radius: 24px;
+    margin-bottom: 10px;
+}
+
+.hero-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ff6b2c, #ff9f4a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    color: #1e5f7a;
+    margin-bottom: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ===== КНОПКИ ===== */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #ff9f4a, #ff6b2c);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 107, 44, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 44, 0.4);
+}
+
+.btn-secondary {
+    background: white;
+    color: #1e5f7a;
+    border: 2px solid #1e5f7a;
+}
+
+.btn-secondary:hover {
+    background: #1e5f7a;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* ===== КАРТКИ ===== */
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(30, 95, 122, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(30, 95, 122, 0.12);
+    border-color: rgba(30, 95, 122, 0.2);
+}
+
+.card h4 i {
+    margin-right: 10px;
+    color: #ff9f4a;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card ul li {
+    padding: 5px 0;
+    padding-left: 20px;
+    position: relative;
+    color: #4a4a6a;
+}
+
+.card ul li::before {
+    content: "•";
+    color: #ff9f4a;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+/* ===== ІНФОРМАЦІЙНІ БЛОКИ ===== */
+.info-box {
+    background: #e8f4fd;
+    border-radius: 16px;
+    padding: 15px 20px;
+    margin: 15px 0;
+    border-left: 5px solid #1e5f7a;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.info-box i {
+    font-size: 1.5rem;
+    color: #ff9f4a;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.info-box p {
+    margin: 0;
+    color: #1e2a3e;
+}
+
+.fun-fact {
+    background: linear-gradient(135deg, #fff3e0, #ffe8cc);
+    border-radius: 16px;
+    padding: 15px 20px;
+    margin: 15px 0;
+    border-left: 5px solid #ff9f4a;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.fun-fact i {
+    font-size: 1.5rem;
+    color: #ff9f4a;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.fun-fact p {
+    margin: 0;
+    color: #5d4037;
+}
+
+/* ===== ГЕНЕРАТОР ===== */
+.generator-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    background: #f8f9fa;
+    border-radius: 24px;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.generator-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #1e2a3e;
+    font-size: 0.9rem;
+}
+
+.form-group label i {
+    margin-right: 8px;
+    color: #ff9f4a;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px 16px;
+    border-radius: 14px;
+    border: 2px solid #e5e7eb;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
     outline: none;
+    border-color: #1e5f7a;
+    box-shadow: 0 0 0 4px rgba(30, 95, 122, 0.1);
 }
 
-form textarea {
-    height: 120px;
-    resize: none;
+.form-group input[type="color"] {
+    padding: 4px;
+    height: 45px;
+    cursor: pointer;
 }
 
-@media (max-width: 1000px) {
+.generator-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 18px;
+    padding: 20px;
+    min-height: 280px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.02);
+}
 
-    .container,
-    main {
-        width: 100%;
-        max-width: 100%;
-        padding: 10px;
-        margin: 0;
-        box-shadow: none;
+.preview-card {
+    border-radius: 24px;
+    padding: 35px 25px;
+    text-align: center;
+    width: 100%;
+    max-width: 320px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.preview-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+    color: #1e2a3e;
+}
+
+.preview-card p {
+    color: #4a4a6a;
+    margin-bottom: 18px;
+}
+
+/* ===== ВІКТОРИНА ===== */
+.quiz-container {
+    background: #fef5e8;
+    border-radius: 28px;
+    padding: 25px;
+    margin-top: 20px;
+    border: 1px solid #ffe0b5;
+    text-align: center;
+}
+
+#quizStatus {
+    font-size: 1.05rem;
+    color: #1e2a3e;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 14px;
+}
+
+#quizStatus i {
+    margin-right: 8px;
+    color: #ff9f4a;
+}
+
+#quizQuestion {
+    margin-top: 20px;
+}
+
+#quizQuestion h3 {
+    margin-bottom: 15px;
+}
+
+#quizQuestion .btn-secondary {
+    width: 100%;
+    max-width: 400px;
+    margin: 6px auto;
+    display: block;
+}
+
+/* ===== ФУТЕР ===== */
+.footer {
+    background: #0b2b3b;
+    color: #ccc;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 20px;
+}
+
+.footer p {
+    margin: 0;
+    color: #ccc;
+}
+
+/* ===== ВИПАДКОВА ЦИТАТА ===== */
+.random-fact-box {
+    background: #2c3e4e;
+    border-radius: 28px;
+    padding: 25px;
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+}
+
+.random-fact-box i {
+    margin-right: 10px;
+}
+
+.random-fact-box h3 {
+    color: white;
+    margin-top: 10px;
+}
+
+.random-fact-box p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.fact-btn {
+    background: #ff9f4a;
+    color: #1e2a3e;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.fact-btn:hover {
+    transform: translateY(-2px);
+    background: #ff6b2c;
+}
+
+.fact-display {
+    background: white;
+    border-radius: 30px;
+    padding: 20px;
+    margin-top: 20px;
+    color: #1e5f7a;
+    font-weight: 500;
+    min-height: 80px;
+}
+
+/* ===== АДАПТИВНІСТЬ ===== */
+@media (max-width: 992px) {
+    .lesson-card {
+        padding: 30px 25px;
     }
 
-    header h1 {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .two-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .generator-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header h1 {
         font-size: 1.2rem;
-        padding: 10px;
     }
 
-    h2,
-    h3 {
+    .nav a {
+        margin-left: 0;
+        margin-right: 20px;
+        font-size: 0.9rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
         font-size: 1.1rem;
     }
 
-    input[type="text"],
-    textarea {
-        font-size: 1rem;
-        padding: 10px;
+    h2 {
+        font-size: 1.6rem;
+        padding-left: 15px;
     }
 
-    #quiz button {
+    .lesson-card {
+        padding: 25px;
+        border-radius: 20px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
         width: 100%;
-        font-size: 1rem;
+        max-width: 280px;
+    }
+
+    .generator-preview {
+        min-height: 200px;
+    }
+
+    .preview-card {
+        padding: 25px 15px;
+    }
+
+    .preview-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .quiz-container {
+        padding: 20px 15px;
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.6rem;
+    }
 
-    h2,
-    h3 {
+    h2 {
+        font-size: 1.4rem;
+        padding-left: 12px;
+    }
+
+    .topic-badge {
+        font-size: 0.75rem;
+        padding: 4px 12px;
+    }
+
+    .card {
+        padding: 18px 15px;
+    }
+
+    .info-box,
+    .fun-fact {
+        flex-direction: column;
+        align-items: center;
         text-align: center;
+    }
+
+    .generator-wrapper {
+        padding: 20px 15px;
+    }
+}
+
+/* ===== БЛОК "ПАМ'ЯТАЙ" ===== */
+.remember-box {
+    background: linear-gradient(135deg, #e8f4fd, #d6eaf8);
+    border-radius: 24px;
+    padding: 30px 35px;
+    margin: 20px 0 30px;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    border-left: 6px solid #1e5f7a;
+    box-shadow: 0 5px 20px rgba(30, 95, 122, 0.08);
+}
+
+.remember-icon {
+    font-size: 3.5rem;
+    color: #ff6b2c;
+    flex-shrink: 0;
+    animation: pulse-heart 2s ease-in-out infinite;
+}
+
+@keyframes pulse-heart {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.remember-text h3 {
+    color: #1e5f7a;
+    margin: 0 0 8px 0;
+    font-size: 1.4rem;
+}
+
+.remember-text p {
+    color: #1e2a3e;
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* ===== ВИПАДКОВІ ЦИТАТИ ===== */
+.random-fact-box {
+    background: linear-gradient(135deg, #1a4a6f, #0b2b3b);
+    border-radius: 28px;
+    padding: 35px 30px;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 10px 30px rgba(11, 43, 59, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.fact-icon {
+    font-size: 2.8rem;
+    color: #ffd966;
+    margin-bottom: 10px;
+}
+
+.random-fact-box h4 {
+    color: white;
+    margin: 0 0 15px 0;
+    font-size: 1.2rem;
+}
+
+.fact-display {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px 25px;
+    margin: 15px 0 25px;
+    color: #ffffff;
+    font-weight: 500;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+.fact-display.show {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fact-btn {
+    background: linear-gradient(135deg, #ff9f4a, #ff6b2c);
+    color: white;
+    padding: 14px 35px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.05rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(255, 107, 44, 0.3);
+}
+
+.fact-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 30px rgba(255, 107, 44, 0.4);
+}
+
+.fact-btn:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.fact-btn i {
+    margin-right: 10px;
+}
+
+/* ===== АДАПТИВНІСТЬ ДЛЯ БЛОКУ "ПАМ'ЯТАЙ" ===== */
+@media (max-width: 768px) {
+    .remember-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 20px;
+    }
+
+    .remember-icon {
+        font-size: 2.8rem;
+    }
+
+    .remember-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .remember-text p {
+        font-size: 1rem;
+    }
+
+    .random-fact-box {
+        padding: 25px 20px;
+    }
+
+    .fact-display {
+        font-size: 1rem;
+        padding: 15px 18px;
+        min-height: 60px;
+    }
+
+    .fact-btn {
+        padding: 12px 25px;
+        font-size: 0.95rem;
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .remember-box {
+        padding: 20px 15px;
+    }
+
+    .remember-icon {
+        font-size: 2.2rem;
+    }
+
+    .fact-icon {
+        font-size: 2rem;
+    }
+
+    .fact-display {
+        font-size: 0.9rem;
+        padding: 12px 15px;
+        min-height: 50px;
     }
 }

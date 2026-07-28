@@ -3,131 +3,210 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Квітневий хакатон добра — сайти для добрих справ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Квітневий хакатон добра | Гурток програмування</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+    <!-- ========== HEADER (залишаємо без змін) ========== -->
+    <header class="header">
+        <div class="container header-content">
+            <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+            <div class="nav">
+                <a href="/index.html">Головна</a>
+                <a href="#about">Про хакатон</a>
+                <a href="#examples">Приклади</a>
+                <a href="#generator">Генератор</a>
+                <a href="#quiz">Вікторина</a>
+                <a href="#ideas">Ідеї</a>
+            </div>
+        </div>
     </header>
 
-    <main class="container">
-        <!-- Головний блок: коротко і захопливо розповісти про ідею -->
-        <h2>Квітневий хакатон добра: сайти для добрих справ</h2>
-        <section aria-labelledby="welcome">
-            <h3 id="welcome">Що таке добро в інтернеті?</h3>
-            <p>Добро — це не тільки посмішка або допомога на вулиці. Добро можна творити й онлайн: створювати
-                сайти, збирати інформацію, допомагати знайти волонтерів, розповідати історії, збирати кошти для тварин
-                чи людей у біді — і все це через веб!</p>
-            <p>У нашому <strong>Квітневому хакатоні добра</strong> ми навчимося: як думати ідею, які сайти вже
-                допомагають, і навіть створимо власну просту сторінку для доброї справи.</p>
-        </section>
+    <!-- ========== MAIN (перероблений) ========== -->
+    <main class="main-content">
+        <div class="container">
+            <div class="lesson-card">
 
-        <!-- Які бувають сайти для добрих справ -->
-        <section aria-labelledby="types">
-            <h3 id="types">Які бувають сайти для добрих справ?</h3>
-            <ul>
-                <li><strong>Платформи збору коштів</strong> — сайти, де люди можуть створювати кампанії й збирати донати
-                    на лікування, проєкти, порятунок тварин.</li>
-                <li><strong>Волонтерські портали</strong> — місця, де шукають людей для допомоги подіям, приютам,
-                    онлайн-курсів.</li>
-                <li><strong>Інформаційні сайти та блоги</strong> — розповіді про добрі історії, інструкції як допомогти,
-                    огляди організацій.</li>
-                <li><strong>Локальні оголошення</strong> — спільноти міст, де розміщують прохання та пропозиції про
-                    допомогу ближнім.</li>
-                <li><strong>Освітні платформи</strong> — де діти та дорослі можуть вчитися безкоштовно (курси,
-                    майстер-класи), щоб потім допомагати іншим.</li>
-            </ul>
-        </section>
+                <!-- ===== БЛОК 1: ГЕРОЙ ===== -->
+                <section id="hero">
+                    <div class="hero-banner">
+                        <span class="topic-badge"><i class="fas fa-seedling"></i> Квітневий хакатон 2026</span>
+                        <h1 class="hero-title">🌱 Квітневий хакатон добра</h1>
+                        <p class="hero-subtitle">Створюємо сайти, які роблять світ кращим</p>
+                        <div class="hero-buttons">
+                            <a href="#generator" class="btn btn-primary"><i class="fas fa-rocket"></i> Створити сторінку</a>
+                            <a href="#quiz" class="btn btn-secondary"><i class="fas fa-brain"></i> Пройти вікторину</a>
+                        </div>
+                    </div>
+                </section>
 
-        <!-- Приклади ідей -->
-        <section aria-labelledby="ideas">
-            <h3 id="ideas">Приклади сайтів — і що вони роблять</h3>
-            <ol>
-                <li><strong>"Допоможи тваринці"</strong> — простий сайт з профілями тварин з притулку, де можна
-                    прочитати історію і залишити заявку на допомогу або донат.</li>
-                <li><strong>"Добрі знайомства"</strong> — волонтерський портал, де можна знайти завдання поруч:
-                    допомогти похилому сусіду, виставці, заходу.</li>
-                <li><strong>"Книжка в обмін"</strong> — майданчик для обміну книгами і збирання книжок для шкіл у
-                    віддалених селах.</li>
-            </ol>
-            <p>Порада: кожен сайт починається з простої ідеї. Запиши свою ідею — ми допоможемо її втілити в мінімальний
-                сайт-перехоплювач (landing page).</p>
-        </section>
+                <!-- ===== БЛОК 2: ПРО ХАКАТОН ===== -->
+                <section id="about">
+                    <span class="topic-badge"><i class="fas fa-heart"></i> Що таке добро в інтернеті?</span>
+                    <h2>💡 Добро — це не тільки посмішка або допомога на вулиці</h2>
+                    <p>Добро можна творити й онлайн: створювати сайти, збирати інформацію, допомагати знайти волонтерів, розповідати історії, збирати кошти для тварин чи людей у біді — і все це через веб!</p>
+                    
+                    <div class="info-box">
+                        <i class="fas fa-bullhorn"></i>
+                        <p>У нашому Квітневому хакатоні добра ми навчимося: як думати ідею, які сайти вже допомагають, і навіть створимо власну просту сторінку для доброї справи.</p>
+                    </div>
 
-        <!-- Малі практичні кроки -->
-        <section aria-labelledby="create">
-            <h3 id="create">Створи власну сторінку для доброї справи</h3>
-            <p>Ось простий інструмент — введи назву, короткий опис і вибери колір фону — і побачиш попередній перегляд
-                своєї сторінки.</p>
+                    <div class="two-columns">
+                        <div class="card">
+                            <h4><i class="fas fa-hand-holding-heart"></i> Які бувають сайти для добрих справ?</h4>
+                            <ul style="margin-left: 20px; margin-top: 10px;">
+                                <li><strong>Платформи збору коштів</strong> — сайти, де люди можуть створювати кампанії й збирати донати на лікування, проєкти, порятунок тварин.</li>
+                                <li><strong>Волонтерські портали</strong> — місця, де шукають людей для допомоги подіям, приютам, онлайн-курсів.</li>
+                                <li><strong>Інформаційні сайти та блоги</strong> — розповіді про добрі історії, інструкції як допомогти, огляди організацій.</li>
+                                <li><strong>Локальні оголошення</strong> — спільноти міст, де розміщують прохання та пропозиції про допомогу ближнім.</li>
+                                <li><strong>Освітні платформи</strong> — де діти та дорослі можуть вчитися безкоштовно (курси, майстер-класи), щоб потім допомагати іншим.</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h4><i class="fas fa-lightbulb"></i> Порада</h4>
+                            <p>кожен сайт починається з простої ідеї. Запиши свою ідею — ми допоможемо її втілити в мінімальний сайт-перехоплювач (landing page).</p>
+                            <div class="fun-fact" style="margin-top: 15px;">
+                                <i class="fas fa-star"></i>
+                                <p><strong>Цікавий факт:</strong> Перший у світі сайт для збору коштів з'явився у 1997 році!</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-            <form id="miniBuilder" onsubmit="return false;" aria-label="Форма створення сторінки">
-                <label>
-                    Назва проєкту:<br>
-                    <input type="text" id="projTitle" placeholder="Наприклад: Спільна бібліотека" required>
-                </label>
-                <br><br>
-                <label>
-                    Короткий опис:<br>
-                    <textarea id="projDesc" placeholder="Коротко розкажи, навіщо цей проєкт" rows="3"
-                        required></textarea>
-                </label>
-                <br><br>
-                <label>
-                    Колір фону (назва або hex):<br>
-                    <input type="text" id="bgColor" placeholder="#fff8e1 або lightyellow">
-                </label>
-                <br><br>
-                <button id="buildBtn" type="button">Показати попередній перегляд</button>
-                <button id="downloadBtn" type="button">Завантажити HTML</button>
-            </form>
+                <!-- ===== БЛОК 3: ПРИКЛАДИ САЙТІВ ===== -->
+                <section id="examples">
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #27ae60, #1e8449);"><i class="fas fa-globe"></i> Надихайся</span>
+                    <h2>🌟 Приклади сайтів — і що вони роблять</h2>
 
-            <div id="previewWrap" style="margin-top:1em;">
-                <h3>Попередній перегляд</h3>
-                <iframe id="preview" style="width:100%;height:260px;border:1px solid #ccc;border-radius:6px;"></iframe>
+                    <div class="two-columns" style="margin-top: 20px;">
+                        <div class="card">
+                            <h4><i class="fas fa-paw"></i> "Допоможи тваринці"</h4>
+                            <p>Простий сайт з профілями тварин з притулку, де можна прочитати історію і залишити заявку на допомогу або донат.</p>
+                        </div>
+                        <div class="card">
+                            <h4><i class="fas fa-handshake"></i> "Добрі знайомства"</h4>
+                            <p>Волонтерський портал, де можна знайти завдання поруч: допомогти похилому сусіду, виставці, заходу.</p>
+                        </div>
+                        <div class="card">
+                            <h4><i class="fas fa-book"></i> "Книжка в обмін"</h4>
+                            <p>Майданчик для обміну книгами і збирання книжок для шкіл у віддалених селах.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== БЛОК 4: ГЕНЕРАТОР СТОРІНКИ ===== -->
+                <section id="generator">
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #8e44ad, #6c3483);"><i class="fas fa-magic"></i> Інтерактив</span>
+                    <h2>🛠️ Створи власну сторінку для доброї справи</h2>
+                    <p>Введи назву, короткий опис і вибери колір фону — і побачиш попередній перегляд своєї сторінки.</p>
+
+                    <div class="generator-wrapper">
+                        <div class="generator-controls">
+                            <div class="form-group">
+                                <label for="projectName"><i class="fas fa-tag"></i> Назва проєкту</label>
+                                <input type="text" id="projectName" placeholder="Наприклад, Допоможи левам" value="Допоможи левам">
+                            </div>
+                            <div class="form-group">
+                                <label for="projectDesc"><i class="fas fa-align-left"></i> Опис</label>
+                                <textarea id="projectDesc" rows="3" placeholder="Короткий опис вашої доброї справи...">Ми збираємо кошти на порятунок левів у Африці.</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="bgColor"><i class="fas fa-palette"></i> Колір фону</label>
+                                <input type="color" id="bgColor" value="#f0f8ff">
+                            </div>
+                        </div>
+                        <div class="generator-preview" id="preview">
+                            <div class="preview-card" id="previewCard">
+                                <h3 id="previewTitle">Допоможи левам</h3>
+                                <p id="previewDesc">Ми збираємо кошти на порятунок левів у Африці.</p>
+                                <button class="btn btn-primary" style="font-size: 0.9rem; padding: 10px 24px;"><i class="fas fa-hand-holding-heart"></i> Підтримати</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ===== БЛОК 5: ВІКТОРИНА ===== -->
+                <section id="quiz">
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #f39c12, #e67e22);"><i class="fas fa-question-circle"></i> Перевір знання</span>
+                    <h2>🧩 Вікторина: чи ти знаєш, як допомагати в мережі?</h2>
+
+                    <div class="quiz-container" id="mainQuiz">
+                        <div id="quizStatus"><i class="fas fa-info-circle"></i> Натисни кнопку "Почати вікторину" щоб почати.</div>
+                        <button id="quizStartBtn" class="btn btn-primary"><i class="fas fa-play"></i> Почати вікторину</button>
+                        <div id="quizQuestion" style="display: none; margin-top: 20px;"></div>
+                    </div>
+                </section>
+
+                <!-- ===== БЛОК 6: ІДЕЇ ДЛЯ ХАКАТОНУ ===== -->
+                <section id="ideas">
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #2980b9, #1a5276);"><i class="fas fa-lightbulb"></i> Творчість</span>
+                    <h2>💭 Що далі? Ідеї для завдань хакатону</h2>
+                    <p>Невеликий список завдань, які ви можете обрати для свого міні-проєкту:</p>
+
+                    <div class="two-columns" style="margin-top: 20px;">
+                        <div class="card">
+                            <h4><i class="fas fa-heartbeat"></i> Простий лендінг</h4>
+                            <p>Допомога на лікування</p>
+                        </div>
+                        <div class="card">
+                            <h4><i class="fas fa-cat"></i> Каталог тварин</h4>
+                            <p>З притулку з формою для волонтерів.</p>
+                        </div>
+                        <div class="card">
+                            <h4><i class="fas fa-map-marked-alt"></i> Карта добрих справ</h4>
+                            <p>Позначати місця, де потрібна допомога.</p>
+                        </div>
+                        <div class="card">
+                            <h4><i class="fas fa-blog"></i> Блог історій добра</h4>
+                            <p>Текст + фото з можливістю коментувати.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box" style="margin-top: 20px;">
+                        <i class="fas fa-users"></i>
+                        <p><strong>Порада для команд:</strong> оберіть простий прототип, зробіть макет у Figma або на папері, а потім — верстку та тестування.</p>
+                    </div>
+                </section>
+
+                <!-- ===== БЛОК 7: ПАМ'ЯТАЙ ===== -->
+                <section id="remember">
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #ff6b2c, #ff9f4a);"><i class="fas fa-heart"></i> Головне</span>
+                    <h2>💖 Пам'ятай!</h2>
+                    
+                    <div class="remember-box">
+                        <div class="remember-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <div class="remember-text">
+                            <h3>Добрі справи змінюють світ!</h3>
+                            <p>Кожна маленька дія, кожна сторінка, створена з любов'ю, наближає нас до кращого майбутнього.</p>
+                        </div>
+                    </div>
+
+                    <div class="random-fact-box">
+                        <div class="fact-icon">
+                            <i class="fas fa-dice-d6"></i>
+                        </div>
+                        <h4 style="color: white; margin-bottom: 10px;">🌟 Випадкова цитата про добро</h4>
+                        <p id="randomFactDisplay" class="fact-display">Натисни кнопку, щоб отримати натхнення!</p>
+                        <button id="randomFactBtn" class="fact-btn"><i class="fas fa-sync-alt"></i> Отримати цитату</button>
+                    </div>
+                </section>
+
             </div>
-        </section>
-
-        <!-- Інтерактив: вікторина -->
-        <section aria-labelledby="quiz">
-            <h3 id="quiz">Вікторина: чи ти знаєш, як допомагати в мережі?</h3>
-            <div id="quizCard">
-                <p id="questionText">Натисни кнопку "Почати вікторину" щоб почати.</p>
-                <div id="answers"></div>
-                <button id="startQuiz">Почати вікторину</button>
-                <p id="quizResult" style="font-weight:bold;margin-top:.5em;"></p>
-            </div>
-        </section>
-
-        <!-- Заклик до дії і корисні ресурси -->
-        <section aria-labelledby="cta">
-            <h3 id="cta">Що далі? Ідеї для завдань хакатону</h3>
-            <p>Невеликий список завдань, які ви можете обрати для свого міні-проєкту:</p>
-            <ul>
-                <li>Простий лендінг для збору книжок у школі.</li>
-                <li>Каталог тварин з притулку з формою для волонтерів.</li>
-                <li>Карта добрих справ: позначати місця, де потрібна допомога.</li>
-                <li>Блог історій добра (текст + фото) з можливістю коментувати.</li>
-            </ul>
-            <p>Порада для команд: оберіть простий прототип, зробіть макет у Figma або на папері, а потім — верстку та
-                тестування.</p>
-        </section>
-        <section id="slogan">
-            <h3>Пам’ятай!</h3>
-            <p>Добрі справи змінюють світ! Кожна маленька дія, кожна сторінка, створена з любов’ю, наближає нас до
-                кращого майбутнього.</p>
-        </section>
-
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2025-2026 Гурток "Web-програмування"</p>
+    <!-- ========== FOOTER (залишаємо без змін) ========== -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Гурток Web-програмування | Квітневий хакатон добра</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
-
 </body>
-
 </html>
