@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Квітневий хакатон добра | Квест</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <audio id="tabAudioIndicator" style="display:none;" loop></audio>
+    <!-- ========== HEADER ========== -->
+    <header class="header">
+        <div class="container header-content">
+            <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+            <div class="nav">
+                <a href="#" class="active" data-mission="0">🚀 Старт</a>
+                <a href="#" data-mission="1">🔍 Місія 1</a>
+                <a href="#" data-mission="2">🎨 Місія 2</a>
+                <a href="#" data-mission="fitness">🏃 Руханка</a>
+                <a href="#" data-mission="3">💻 Місія 3</a>
+                <a href="#" data-mission="4">✅ Місія 4</a>
+                <a href="#" data-mission="5">🏆 Фінал</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== MAIN ========== -->
+    <main class="main-content">
+        <div class="container">
+            <div class="kvest-card">
+
+                <!-- ===== ТОП-БАР: ТАЙМЕР + ВИБІР КОМАНДИ ===== -->
+                <div class="top-bar">
+                    <div class="timer-box" id="timerBox">
+                        <i class="fas fa-hourglass-half"></i>
+                        <span id="timerDisplay">120:00</span>
+                    </div>
+                    <div class="team-selector">
+                        <button class="team-btn active" data-team="1">🟠 Команда 1</button>
+                        <button class="team-btn" data-team="2">🔵 Команда 2</button>
+                    </div>
+                </div>
+
+                <!-- ===== ТРЕКЕР МІСІЙ ===== -->
+                <div class="mission-tracker" id="missionTracker">
+                    <div class="mission-dot active" data-mission="0"><span>1</span></div>
+                    <div class="mission-connector"></div>
+                    <div class="mission-dot" data-mission="1"><span>2</span></div>
+                    <div class="mission-connector"></div>
+                    <div class="mission-dot" data-mission="fitness"><span>🏃</span></div>
+                    <div class="mission-connector"></div>
+                    <div class="mission-dot" data-mission="3"><span>3</span></div>
+                    <div class="mission-connector"></div>
+                    <div class="mission-dot" data-mission="4"><span>4</span></div>
+                    <div class="mission-connector"></div>
+                    <div class="mission-dot" data-mission="5"><span>🏆</span></div>
+                </div>
+
+                <!-- ===== МІСІЯ 0: СТАРТ ===== -->
+                <div class="mission-screen active" id="mission0">
+                    <span class="mission-badge"><i class="fas fa-rocket"></i> Старт хакатону</span>
+                    <h2 class="mission-title">🌱 Квітневий хакатон добра</h2>
+                    <p class="mission-subtitle">Створюємо сайти, які роблять світ кращим</p>
+
+                    <div class="two-columns">
+                        <div class="card">
+                            <h3><i class="fas fa-info-circle card-icon-accent"></i> Легенда</h3>
+                            <p>Ви — агенти цифрового добра. Ваша місія: за 2 години пройти шлях від ідеї до готового
+                                прототипу сайту, який допомагатиме людям, тваринам або планеті.</p>
+                            <p><strong>Правила хакатону:</strong></p>
+                            <ul class="rules-list">
+                                <li>Працюємо в командах (Команда 1 та Команда 2)</li>
+                                <li>Кожна місія відкривається після виконання попередньої</li>
+                                <li>Після Місії 2 на вас чекає весела фізкультхвилинка-гра!</li>
+                                <li>У фіналі — презентація проєкту та цифровий сертифікат</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h3><i class="fas fa-hand-holding-heart card-icon-accent"></i> Що на вас чекає?</h3>
+                            <div class="mission-preview">
+                                <p><span class="preview-num">1</span> <strong>Розвідка</strong> — придумати ідею доброї
+                                    справи</p>
+                                <p><span class="preview-num">2</span> <strong>Прототип</strong> — зібрати візуальний
+                                    макет сайту</p>
+                                <p><span class="preview-num">🏃</span> <strong>Руханка</strong> — гра «Впіймай фігуру»
+                                </p>
+                                <p><span class="preview-num">3</span> <strong>Верстка</strong> — написати код сторінки
+                                </p>
+                                <p><span class="preview-num">4</span> <strong>Тестування</strong> — перевірити проєкт
+                                    іншої команди</p>
+                                <p><span class="preview-num">🏆</span> <strong>Фінал</strong> — презентація та
+                                    сертифікат</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn-center">
+                        <button class="btn btn-primary" id="startBtn">
+                            <i class="fas fa-play"></i> Розпочати квест
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ===== МІСІЯ 1: РОЗВІДКА ===== -->
+                <div class="mission-screen" id="mission1">
+                    <span class="mission-badge"><i class="fas fa-search"></i> Місія 1</span>
+                    <h2 class="mission-title">🔍 Розвідка: Мозковий штурм</h2>
+                    <p>Обговоріть у команді: яку добру справу може робити ваш сайт? Хто ваш «супергерой» в інтернеті?
+                        Запишіть назву проєкту та короткий опис.</p>
+
+                    <div class="two-columns">
+                        <div class="card">
+                            <h3><i class="fas fa-lightbulb card-icon-accent"></i> Ідеї для натхнення</h3>
+                            <div class="idea-grid">
+                                <span class="idea-tag">🐾 Допомога тваринам</span>
+                                <span class="idea-tag">💙 Підтримка ЗСУ</span>
+                                <span class="idea-tag">🌿 Екологічна ініціатива</span>
+                                <span class="idea-tag">📚 Книжковий обмін</span>
+                                <span class="idea-tag">👵 Допомога літнім людям</span>
+                                <span class="idea-tag">🎓 Безкоштовні уроки</span>
+                                <span class="idea-tag">🏥 Збір на лікування</span>
+                                <span class="idea-tag">🤝 Волонтерський портал</span>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3><i class="fas fa-edit card-icon-accent"></i> Ваш проєкт</h3>
+                            <div class="form-group">
+                                <label for="projectName"><i class="fas fa-tag"></i> Назва проєкту:</label>
+                                <input type="text" id="projectName" placeholder="Наприклад: Допоможи лапкам">
+                            </div>
+                            <div class="form-group">
+                                <label for="projectDesc"><i class="fas fa-align-left"></i> Опис доброї справи:</label>
+                                <textarea id="projectDesc" rows="3"
+                                    placeholder="Опишіть, кому і як допомагає ваш сайт..."></textarea>
+                            </div>
+                            <div class="result-box" id="mission1Result" style="display:none;">
+                                <p><i class="fas fa-check-circle"></i> <strong>Зафіксовано:</strong> <span
+                                        id="mission1Summary"></span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn-center">
+                        <button class="btn btn-primary" id="m1Btn">
+                            <i class="fas fa-check"></i> Зафіксувати ідею
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ===== МІСІЯ 2: ПРОТОТИП ===== -->
+                <div class="mission-screen" id="mission2">
+                    <span class="mission-badge"><i class="fas fa-paint-brush"></i> Місія 2</span>
+                    <h2 class="mission-title">🎨 Прототип: Збери макет сайту</h2>
+                    <p>Перетягніть блоки в <strong>правильному порядку</strong>, щоб скласти структуру майбутнього
+                        сайту. Правильна послідовність: <em>Хедер → Герой → Картки → Форма → Футер</em>.</p>
+                    <p class="hint-text">💡 Підказка: сайт починається з шапки (хедер), потім іде головний блок (герой),
+                        далі — картки з інформацією, форма для зв'язку і підвал (футер).</p>
+
+                    <div id="sortableArea" class="sortable-area">
+                        <!-- JS заповнить -->
+                    </div>
+                    <p id="mission2Feedback" class="feedback-text"></p>
+
+                    <div class="btn-center">
+                        <button class="btn btn-primary" id="m2Btn" disabled>
+                            <i class="fas fa-check"></i> Макет зібрано правильно
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ===== ФІЗКУЛЬТХВИЛИНКА (ОВЕРЛЕЙ) ===== -->
+                <div class="fitness-overlay" id="fitnessOverlay">
+                    <div class="fitness-container">
+                        <div id="fitnessRules" class="fitness-rules">
+                            <p>🔵 <strong>Коло</strong> — Руки вгору!</p>
+                            <p>🔺 <strong>Трикутник</strong> — Присісти!</p>
+                            <p>⬛ <strong>Квадрат</strong> — Нахилитися праворуч!</p>
+                            <p>⭐ <strong>Зірка</strong> — Стрибок!</p>
+                            <p>🟨 <strong>Жовтий квадрат</strong> — Руки в сторони!</p>
+                            <p>🔷 <strong>Ромб</strong> — Нахилитися ліворуч!</p>
+                            <p class="fitness-note">🎵 Зараз заграє музика — будьте уважні! Спочатку повільно з
+                                підказками, потім швидше!</p>
+                        </div>
+                        <div class="fitness-round" id="fitnessRound"></div>
+                        <div class="fitness-countdown" id="fitnessCountdown">3</div>
+                        <div class="fitness-shape" id="fitnessShape">🔵</div>
+                        <div class="fitness-hint" id="fitnessHint">Руки вгору!</div>
+                        <button class="btn btn-primary" id="fitnessStartBtn">
+                            <i class="fas fa-play"></i> Почати розминку
+                        </button>
+                        <button class="btn btn-secondary fitness-skip-btn" id="fitnessSkipBtn" style="display:none;">
+                            <i class="fas fa-forward"></i> Завершити розминку
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ===== МІСІЯ 3: ВЕРСТКА ===== -->
+                <div class="mission-screen" id="mission3">
+                    <span class="mission-badge"><i class="fas fa-code"></i> Місія 3</span>
+                    <h2 class="mission-title">💻 Верстка: Напиши код своєї сторінки</h2>
+                    <p>Перед вами — готовий HTML-шаблон благодійної сторінки. Ваше завдання:</p>
+                    <ol class="task-list">
+                        <li>Знайдіть коментар <code>&lt;!-- МІСІЯ: Вставте сюди гасло вашого проєкту --&gt;</code></li>
+                        <li>Замініть його на гасло вашої доброї справи (наприклад:
+                            <code>&lt;h2&gt;Разом до перемоги!&lt;/h2&gt;</code>)
+                        </li>
+                        <li>Змініть кольори у змінних <code>--primary</code> та <code>--accent</code> на ваші</li>
+                        <li>Замініть текст на свій</li>
+                        <li>Натисніть «Оновити перегляд», щоб побачити результат</li>
+                    </ol>
+
+                    <div class="code-editor-wrapper">
+                        <textarea id="htmlCode" spellcheck="false"></textarea>
+                        <iframe id="previewFrame" class="preview-iframe"
+                            sandbox="allow-scripts allow-same-origin"></iframe>
+                    </div>
+
+                    <div class="btn-center btn-row">
+                        <button class="btn btn-secondary" id="updatePreviewBtn">
+                            <i class="fas fa-sync-alt"></i> Оновити перегляд
+                        </button>
+                        <button class="btn btn-primary" id="m3Btn">
+                            <i class="fas fa-check"></i> Код готовий
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ===== МІСІЯ 4: ТЕСТУВАННЯ ===== -->
+                <div class="mission-screen" id="mission4">
+                    <span class="mission-badge"><i class="fas fa-clipboard-check"></i> Місія 4</span>
+                    <h2 class="mission-title">✅ Тестування: Перевір іншу команду</h2>
+                    <p>Покажіть свою сторінку іншій команді (на екрані вашого ноутбука). Водночас перегляньте сторінку
+                        іншої команди на їхньому ноутбуці та заповніть чек-лист нижче.</p>
+
+                    <!-- Таби -->
+                    <div class="tab-nav" style="display:flex; gap:6px; margin:20px 0; flex-wrap:wrap;">
+                        <button class="tab-btn active" data-tab="tab-my-page">
+                            <i class="fas fa-laptop"></i> Наша сторінка
+                        </button>
+                        <button class="tab-btn" data-tab="tab-checklist">
+                            <i class="fas fa-tasks"></i> Чек-лист
+                        </button>
+                    </div>
+
+                    <!-- Таб: Наша сторінка -->
+                    <div class="tab-content active" id="tab-my-page">
+                        <h3 style="margin-bottom:10px;">💻 Ваша створена сторінка</h3>
+                        <p style="color:var(--text-light); margin-bottom:10px;">📱 Покажіть цей екран іншій команді для
+                            перевірки.</p>
+                        <iframe id="myPagePreview" class="preview-iframe"
+                            style="min-height:400px; width:100%; border-radius:16px; border:2px solid #e5e7eb; background:white;"
+                            sandbox="allow-scripts allow-same-origin"></iframe>
+                    </div>
+
+                    <!-- Таб: Чек-лист -->
+                    <div class="tab-content" id="tab-checklist">
+                        <h3 style="margin-bottom:10px;">📋 Чек-лист перевірки</h3>
+                        <p style="color:var(--text-light); margin-bottom:15px;">Дивіться на сторінку іншої команди (на
+                            їхньому ноутбуці) та оцінюйте. Клікайте на пункти, щоб відмітити виконане.</p>
+                        <ul class="checklist" id="checklist">
+                            <li data-check="0"><i class="far fa-square"></i> Сторінка має заголовок (тег title)</li>
+                            <li data-check="1"><i class="far fa-square"></i> Є опис доброї справи</li>
+                            <li data-check="2"><i class="far fa-square"></i> Присутнє гасло проєкту (виконана Місія 3)
+                            </li>
+                            <li data-check="3"><i class="far fa-square"></i> Кольори змінені під тему проєкту</li>
+                            <li data-check="4"><i class="far fa-square"></i> Сторінка виглядає охайно та завершено</li>
+                        </ul>
+                    </div>
+
+                    <div class="btn-center">
+                        <button class="btn btn-primary" id="m4Btn" disabled>
+                            <i class="fas fa-check"></i> Тестування завершено (всі 5 пунктів)
+                        </button>
+                    </div>
+                </div>
+                <!-- ===== МІСІЯ 5: ФІНАЛ ===== -->
+                <div class="mission-screen" id="mission5">
+                    <span class="mission-badge"><i class="fas fa-trophy"></i> Фінал</span>
+                    <h2 class="mission-title">🏆 Презентація проєкту</h2>
+                    <p>Спікер від кожної команди презентує проєкт за <strong>1 хвилину</strong>. Використовуйте таймер
+                        нижче для відліку часу.</p>
+
+                    <div class="presentation-area">
+                        <div class="present-timer" id="presentTimer">1:00</div>
+                        <button class="btn btn-primary" id="presTimerBtn">
+                            <i class="fas fa-play"></i> Запустити таймер презентації
+                        </button>
+                    </div>
+
+                    <div class="btn-center" style="margin-top:30px;">
+                        <button class="btn btn-success" id="finishBtn">
+                            <i class="fas fa-flag-checkered"></i> Завершити хакатон
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== МОДАЛЬНЕ ВІКНО ФІНІШУ ========== -->
+    <div class="modal-overlay" id="finishModal">
+        <div class="modal-content">
+            <div class="modal-icon">🎉</div>
+            <h2>Хакатон завершено!</h2>
+            <div class="certificate">
+                <h3>🏅 Сертифікат агента добра</h3>
+                <p>Видається команді за успішне проходження</p>
+                <p><strong>«Квітневого хакатону добра»</strong></p>
+                <p class="cert-project" id="certProjectName"></p>
+                <p class="cert-date">Квітень</p>
+            </div>
+            <p id="certMessage"></p>
+            <button class="btn btn-primary" id="reloadBtn">
+                <i class="fas fa-redo-alt"></i> Пройти ще раз
+            </button>
+        </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Гурток Web-програмування | Квітневий хакатон добра</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
