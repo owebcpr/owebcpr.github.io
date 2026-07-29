@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Синтаксис CSS | Гурток програмування</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+            <div class="nav">
+                <a href="/index.html">Головна</a>
+                <a href="#theory">Заняття 1</a>
+                <a href="#practice2">Заняття 2</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="lesson-card">
+                <!-- ==================== ЗАНЯТТЯ 1: ТЕОРІЯ + ПРАКТИКА ==================== -->
+                <section id="theory">
+                    <span class="topic-badge"><i class="fas fa-book-open"></i> Заняття 1/2 • Теорія + Практика • 2 години</span>
+                    <h2>📝 Синтаксис CSS</h2>
+                    <p>🎯 <strong>Мета заняття:</strong> Вивчити структуру CSS-правила, основні селектори, властивості та значення. Навчитися писати правильний CSS-код.</p>
+
+                    <!-- Теоретична частина -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-code"></i> Структура CSS-правила</h3>
+                        <div class="info-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>CSS-правило складається з <strong>селектора</strong>, <strong>фігурних дужок</strong> {}, всередині яких знаходяться <strong>оголошення</strong> (властивість: значення;). Кожне оголошення закінчується <strong>крапкою з комою</strong> ;</p>
+                        </div>
+                        <div class="code-block">
+                            <span class="selector">селектор</span> { <br>
+                            &nbsp;&nbsp;<span class="property">властивість</span>: <span class="value">значення</span>;<br>
+                            }
+                        </div>
+                        <div class="code-block">
+                            <span class="comment">/* Приклад */</span><br>
+                            <span class="selector">h1</span> { <br>
+                            &nbsp;&nbsp;<span class="property">color</span>: <span class="value">blue</span>;<br>
+                            &nbsp;&nbsp;<span class="property">font-size</span>: <span class="value">24px</span>;<br>
+                            }
+                        </div>
+                        <div class="warning-box">
+                            <i class="fas fa-info-circle"></i>
+                            <p><strong>Запам'ятай!</strong> Кожне оголошення має бути написане саме так: <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">властивість: значення;</code>. Крапка з комою в кінці обов'язкова!</p>
+                        </div>
+                    </div>
+
+                    <!-- Інтерактивні завдання-приклади -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-tasks"></i> Виконай завдання-приклади</h3>
+                        <p style="font-size:18px;">👆 Кожне завдання показує шматочок сторінки. Тобі потрібно додати правильний CSS-стиль.</p>
+                        
+                        <!-- Прогрес -->
+                        <div class="task-progress">
+                            <span><i class="fas fa-check-circle" style="color:#27ae60;"></i> <strong id="tasksCompleted">0</strong> з <strong id="tasksTotal">6</strong> завдань виконано</span>
+                            <span id="progressMessage">Почни з першого завдання!</span>
+                        </div>
+
+                        <!-- Завдання 1: Селектор тегу -->
+                        <div class="task-example" id="task1">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 1</span>
+                                <span class="task-status" id="task1Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong style="font-size:18px;">🎯 Завдання:</strong> <span style="font-size:18px;">Додай стиль для тегу <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">p</code>: <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">color: blue;</code></span>
+                            </div>
+                            <div class="demo-area" id="demo1">
+                                <p style="margin:0;">Цей текст має стати синім.</p>
+                            </div>
+                            <div class="code-hint">
+                                <span class="selector">p</span> { <br>
+                                &nbsp;&nbsp;<span class="hl">color: blue;</span> <span class="comment">// Додай цей рядок</span><br>
+                                }
+                            </div>
+                            <button class="btn-apply" data-task="1">🎨 Застосувати стиль</button>
+                            <div class="task-result" id="result1"></div>
+                        </div>
+
+                        <!-- Завдання 2: Селектор класу -->
+                        <div class="task-example" id="task2">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 2</span>
+                                <span class="task-status" id="task2Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong style="font-size:18px;">🎯 Завдання:</strong> <span style="font-size:18px;">Додай стиль для класу <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">.highlight</code>: <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">background: yellow;</code></span>
+                            </div>
+                            <div class="demo-area" id="demo2">
+                                <p style="margin:0;" class="highlight">Цей текст має отримати жовтий фон.</p>
+                            </div>
+                            <div class="code-hint">
+                                <span class="selector">.highlight</span> { <br>
+                                &nbsp;&nbsp;<span class="hl">background: yellow;</span> <span class="comment">// Додай цей рядок</span><br>
+                                }
+                            </div>
+                            <button class="btn-apply" data-task="2">🎨 Застосувати стиль</button>
+                            <div class="task-result" id="result2"></div>
+                        </div>
+
+                        <!-- Завдання 3: Селектор ID -->
+                        <div class="task-example" id="task3">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 3</span>
+                                <span class="task-status" id="task3Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong style="font-size:18px;">🎯 Завдання:</strong> <span style="font-size:18px;">Додай стиль для ID <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">#main</code>: <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">font-size: 24px;</code></span>
+                            </div>
+                            <div class="demo-area" id="demo3">
+                                <p style="margin:0;" id="main">Цей текст має стати більшим (24px).</p>
+                            </div>
+                            <div class="code-hint">
+                                <span class="selector">#main</span> { <br>
+                                &nbsp;&nbsp;<span class="hl">font-size: 24px;</span> <span class="comment">// Додай цей рядок</span><br>
+                                }
+                            </div>
+                            <button class="btn-apply" data-task="3">🎨 Застосувати стиль</button>
+                            <div class="task-result" id="result3"></div>
+                        </div>
+
+                        <!-- Завдання 4: Кілька властивостей -->
+                        <div class="task-example" id="task4">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 4</span>
+                                <span class="task-status" id="task4Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong style="font-size:18px;">🎯 Завдання:</strong> <span style="font-size:18px;">Додай два стилі для <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">h2</code>: <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">color: green;</code> та <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">text-decoration: underline;</code></span>
+                            </div>
+                            <div class="demo-area" id="demo4">
+                                <h2 style="margin:0;">Цей заголовок має стати зеленим і підкресленим.</h2>
+                            </div>
+                            <div class="code-hint">
+                                <span class="selector">h2</span> { <br>
+                                &nbsp;&nbsp;<span class="hl">color: green;</span> <span class="comment">// Додай цей рядок</span><br>
+                                &nbsp;&nbsp;<span class="hl">text-decoration: underline;</span> <span class="comment">// І цей</span><br>
+                                }
+                            </div>
+                            <button class="btn-apply" data-task="4">🎨 Застосувати стиль</button>
+                            <div class="task-result" id="result4"></div>
+                        </div>
+
+                        <!-- Завдання 5: Комбінований селектор -->
+                        <div class="task-example" id="task5">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 5</span>
+                                <span class="task-status" id="task5Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong style="font-size:18px;">🎯 Завдання:</strong> <span style="font-size:18px;">Додай стиль для <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">div p</code>: <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">font-weight: bold;</code></span>
+                            </div>
+                            <div class="demo-area" id="demo5">
+                                <div>
+                                    <p style="margin:0;">Цей текст у div має стати жирним.</p>
+                                </div>
+                            </div>
+                            <div class="code-hint">
+                                <span class="selector">div p</span> { <br>
+                                &nbsp;&nbsp;<span class="hl">font-weight: bold;</span> <span class="comment">// Додай цей рядок</span><br>
+                                }
+                            </div>
+                            <button class="btn-apply" data-task="5">🎨 Застосувати стиль</button>
+                            <div class="task-result" id="result5"></div>
+                        </div>
+
+                        <!-- Завдання 6: Групування селекторів -->
+                        <div class="task-example" id="task6">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 6</span>
+                                <span class="task-status" id="task6Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong style="font-size:18px;">🎯 Завдання:</strong> <span style="font-size:18px;">Додай стиль для <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">h3, h4</code>: <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">color: purple;</code></span>
+                            </div>
+                            <div class="demo-area" id="demo6">
+                                <h3 style="margin:0;">Цей заголовок h3 має стати фіолетовим.</h3>
+                                <h4 style="margin:8px 0 0 0;">І цей h4 теж має стати фіолетовим.</h4>
+                            </div>
+                            <div class="code-hint">
+                                <span class="selector">h3, h4</span> { <br>
+                                &nbsp;&nbsp;<span class="hl">color: purple;</span> <span class="comment">// Додай цей рядок</span><br>
+                                }
+                            </div>
+                            <button class="btn-apply" data-task="6">🎨 Застосувати стиль</button>
+                            <div class="task-result" id="result6"></div>
+                        </div>
+                    </div>
+
+                    <!-- Гра "Знайди та виправ помилки" -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-gamepad"></i> 🎮 Гра: Знайди та виправ помилки</h3>
+                        <p style="font-size:18px;">⬇️ У коді ліворуч є помилки. Виправляй їх безпосередньо в редакторі — сторінка праворуч оновлюється в реальному часі!</p>
+                        
+                        <div class="error-game-container">
+                            <div class="error-game-editor">
+                                <div class="editor-header-mini">
+                                    <span class="editor-dot red"></span>
+                                    <span class="editor-dot yellow"></span>
+                                    <span class="editor-dot green"></span>
+                                    <span class="editor-title-mini">style.css</span>
+                                    <span class="error-hint">🔴 Знайди 5 помилок</span>
+                                </div>
+                                <textarea id="errorCodeEditor" spellcheck="false">/* Знайди та виправ помилки */
+
+h1 {
+  color: red
+  font-size: 32px;
+}
+
+. card {
+  background: blue;
+  padding: 20px
+}
+
+# main {
+  width: 100%;
+  height: auto;
+
+p {
+  color: green;
+}</textarea>
+                            </div>
+                            <div class="error-game-preview">
+                                <div class="editor-header-mini">
+                                    <span class="editor-dot red"></span>
+                                    <span class="editor-dot yellow"></span>
+                                    <span class="editor-dot green"></span>
+                                    <span class="editor-title-mini">Попередній перегляд</span>
+                                    <span id="errorStatus" class="error-status">⏳ Очікує виправлення</span>
+                                </div>
+                                <div class="error-preview-frame">
+                                    <iframe id="errorPreviewFrame"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top:15px;display:flex;gap:15px;flex-wrap:wrap;align-items:center;">
+                            <button id="resetErrorsBtn" class="btn-reset">🔄 Скинути код</button>
+                            <button id="checkErrorsBtn" class="btn-check">✅ Перевірити помилки</button>
+                            <span id="errorsFound" style="font-size:18px;font-weight:bold;color:#1e5f7a;">Знайдено: 0 / 5</span>
+                            <span id="errorsFeedback" style="font-size:18px;"></span>
+                        </div>
+                    </div>
+
+                    <!-- Вікторина -->
+                    <div class="quiz-area">
+                        <h3><i class="fas fa-question-circle"></i> 📋 Вікторина: перевір себе</h3>
+                        <div id="quizCssContainer"></div>
+                        <div id="quizCssFeedback" class="quiz-feedback"></div>
+                        <button id="checkCssQuizBtn" class="btn-check">✨ Перевірити</button>
+                        <button id="resetCssQuizBtn" class="btn-reset" style="background:#7f8c8d;">🔄 Скинути</button>
+                    </div>
+                </section>
+
+                <!-- ==================== ЗАНЯТТЯ 2: ПРАКТИКА ==================== -->
+                <section id="practice2">
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #27ae60, #1e8449);"><i class="fas fa-laptop-code"></i> Заняття 2/2 • Практика • 2 години</span>
+                    <h2>💻 Практикуємо синтаксис CSS</h2>
+                    <p style="font-size:18px;">💪 <strong>Практичне завдання:</strong> створи та стилізуй сторінку про улюблену тварину, використовуючи різні селектори та властивості.</p>
+
+                    <!-- Покрокова інструкція -->
+                    <div class="task-card">
+                        <h3><i class="fas fa-list-ol"></i> Покрокова інструкція</h3>
+                        <div class="task-step"><div class="step-number">1</div><div>Створи базову HTML-структуру з заголовками, абзацами, списком.</div></div>
+                        <div class="task-step"><div class="step-number">2</div><div>Додай стилі для тегів <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">h1</code>, <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">h2</code>, <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">p</code>.</div></div>
+                        <div class="task-step"><div class="step-number">3</div><div>Створи клас <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">.card</code> для оформлення картки.</div></div>
+                        <div class="task-step"><div class="step-number">4</div><div>Додай ID <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">#footer</code> для підвалу сторінки.</div></div>
+                        <div class="task-step"><div class="step-number">5</div><div>Використай комбінований селектор для списку.</div></div>
+                    </div>
+
+                    <!-- Чекліст -->
+                    <div class="task-challenge" style="background:#fef5e8;border-radius:20px;padding:20px;margin:20px 0;border:2px dashed #ff9f4a;">
+                        <div class="challenge-title" style="color:#e67e22;font-size:1.2rem;margin-bottom:10px;">
+                            <i class="fas fa-tasks"></i> 🎯 Чекліст завдання
+                        </div>
+                        <ul class="checklist" id="challengeChecklist">
+                            <li data-done="false">
+                                <input type="checkbox" id="check1">
+                                <label for="check1">Заголовок &lt;h1&gt; з назвою тварини</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check2">
+                                <label for="check2">Розділ "Опис" &lt;h2&gt; + абзац</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check3">
+                                <label for="check3">Розділ "Цікаві факти" &lt;h2&gt; + список</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check4">
+                                <label for="check4">Виділення важливих слів &lt;strong&gt;</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check5">
+                                <label for="check5">Курсив &lt;em&gt; для наголосу</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check6">
+                                <label for="check6">Клас .card для оформлення</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check7">
+                                <label for="check7">ID #footer для підвалу</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check8">
+                                <label for="check8">Стилі для всіх елементів</label>
+                            </li>
+                        </ul>
+                        <button id="resetChecklistBtn" class="btn-clear" style="margin-top:10px;">
+                            <i class="fas fa-sync-alt"></i> Скинути чекліст
+                        </button>
+                    </div>
+
+                    <!-- Гра "Перетягування" -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-drag-drop"></i> 🎯 Гра: Перетягни правильний селектор</h3>
+                        <p style="font-size:18px;">⬇️ Перетягни селектор до правильного опису. Перевір свої знання!</p>
+                        
+                        <div class="drag-game" id="dragGame">
+                            <div class="drag-items" id="dragItems">
+                                <div class="drag-item" draggable="true" data-selector="h1">h1</div>
+                                <div class="drag-item" draggable="true" data-selector=".class">.class</div>
+                                <div class="drag-item" draggable="true" data-selector="#id">#id</div>
+                                <div class="drag-item" draggable="true" data-selector="*">*</div>
+                                <div class="drag-item" draggable="true" data-selector="div p">div p</div>
+                            </div>
+                            <div class="drop-zones">
+                                <div class="drop-zone" data-expected="h1">
+                                    <span class="drop-label">Найголовніший заголовок</span>
+                                    <span class="drop-placeholder">⬇️ Перетягни сюди</span>
+                                </div>
+                                <div class="drop-zone" data-expected=".class">
+                                    <span class="drop-label">Селектор для класу</span>
+                                    <span class="drop-placeholder">⬇️ Перетягни сюди</span>
+                                </div>
+                                <div class="drop-zone" data-expected="#id">
+                                    <span class="drop-label">Селектор для ідентифікатора</span>
+                                    <span class="drop-placeholder">⬇️ Перетягни сюди</span>
+                                </div>
+                                <div class="drop-zone" data-expected="*">
+                                    <span class="drop-label">Універсальний селектор</span>
+                                    <span class="drop-placeholder">⬇️ Перетягни сюди</span>
+                                </div>
+                                <div class="drop-zone" data-expected="div p">
+                                    <span class="drop-label">Вкладений селектор (div всередині p)</span>
+                                    <span class="drop-placeholder">⬇️ Перетягни сюди</span>
+                                </div>
+                            </div>
+                            <div class="drag-controls">
+                                <button id="resetDragBtn" class="btn-reset">🔄 Скинути гру</button>
+                                <span id="dragScore">Правильно: 0 / 5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Контрольна вікторина -->
+                    <div class="quiz-area">
+                        <h3><i class="fas fa-question-circle"></i> 📋 Контрольні питання (синтаксис)</h3>
+                        <div id="quizControlContainer"></div>
+                        <div id="quizControlFeedback" class="quiz-feedback"></div>
+                        <button id="checkControlQuizBtn" class="btn-check">✨ Перевірити</button>
+                        <button id="resetControlQuizBtn" class="btn-reset" style="background:#7f8c8d;">🔄 Скинути</button>
+                    </div>
+
+                    <!-- Живий редактор для самостійної роботи -->
+                    <h3><i class="fas fa-laptop-code"></i> ✏️ Напиши свій код</h3>
+                    <p style="font-size:18px;">Створи власну сторінку про улюблену тварину. Використовуй різні селектори та властивості.</p>
+                    
+                    <div class="code-editor-panel">
+                        <div class="editor-header">
+                            <div class="editor-dot red"></div>
+                            <div class="editor-dot yellow"></div>
+                            <div class="editor-dot green"></div>
+                            <div class="editor-title">index.html + style.css</div>
+                        </div>
+                        <div class="editor-container">
+                            <div class="editor-textarea">
+                                <textarea id="htmlCodeEditor" placeholder="Напиши HTML+CSS код тут..."></textarea>
+                            </div>
+                            <div class="editor-preview">
+                                <div class="preview-frame">
+                                    <iframe id="previewFrame"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="editor-buttons">
+                            <button id="runCodeBtn" class="btn-run"><i class="fas fa-play"></i> Запустити</button>
+                            <button id="clearCodeBtn" class="btn-clear"><i class="fas fa-trash-alt"></i> Очистити</button>
+                            <button id="loadExampleBtn" class="btn-run" style="background:#3498db;"><i class="fas fa-eye"></i> Приклад</button>
+                        </div>
+                    </div>
+
+                    <div class="task-card" style="background: #fef5e8;">
+                        <h3><i class="fas fa-home"></i> Домашнє завдання</h3>
+                        <p style="font-size:18px;">Створи HTML-файл <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">my_style.html</code> з розповіддю про своє хобі. Використай щонайменше 5 різних селекторів та 10 різних властивостей CSS.</p>
+                    </div>
+
+                    <div class="random-fact-box">
+                        <button id="randomFactBtn" class="fact-btn"><i class="fas fa-dice-d6"></i> Цікавий факт</button>
+                        <p id="randomFactDisplay" class="fact-display">Натисни, щоб дізнатися щось нове!</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Гурток Web-програмування | Синтаксис CSS — Теорія + Практика</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
