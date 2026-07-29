@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Що таке CSS. Підключення стилів | Гурток програмування</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+            <div class="nav">
+                <a href="/index.html">Головна</a>
+                <a href="#theory">Теорія</a>
+                <a href="#practice">Практика</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="lesson-card">
+                <!-- ==================== ТЕОРЕТИЧНА ЧАСТИНА ==================== -->
+                <section id="theory">
+                    <span class="topic-badge"><i class="fas fa-book-open"></i> Заняття 1/2 • Теоретична частина • 2 години</span>
+                    <h2>🎨 Що таке CSS. Способи підключення</h2>
+                    <p>🎯 <strong>Мета заняття:</strong> Зрозуміти, що таке CSS, дізнатися історію виникнення стилів, вивчити три способи підключення та основні селектори.</p>
+
+                    <!-- Історія виникнення CSS -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-history"></i> Історія виникнення CSS</h3>
+                        <div class="info-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>До появи CSS веб-сторінки виглядали дуже просто і однотипно. Дизайн робили за допомогою тегів <strong>&lt;font&gt;</strong>, <strong>&lt;b&gt;</strong> та атрибутів <strong>color</strong>, <strong>bgcolor</strong>. Це було незручно, бо код ставав величезним і важким для підтримки.</p>
+                        </div>
+                        <div class="fun-fact">
+                            <i class="fas fa-star"></i>
+                            <p><strong>Цікавий факт:</strong> CSS (Cascading Style Sheets) був створений у 1996 році норвезьким програмістом <strong>Хоконом Віум Лі</strong>. Він хотів, щоб веб-сторінки мали не лише структуру, а й гарний зовнішній вигляд. Перший браузер, який підтримав CSS — Internet Explorer 3.0 у 1997 році.</p>
+                        </div>
+                        <div class="warning-box">
+                            <i class="fas fa-info-circle"></i>
+                            <p><strong>Важливо!</strong> Сьогодні CSS — це мова, яка постійно розвивається. CSS3 додав анімації, Flexbox, Grid та багато інших сучасних можливостей.</p>
+                        </div>
+                    </div>
+
+                    <!-- Інтерактивні завдання-приклади -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-tasks"></i> Виконай завдання-приклади</h3>
+                        <p>👆 Кожне завдання показує шматочок сторінки. Тобі потрібно додати один CSS-стиль, щоб змінити вигляд. Натискай кнопку <strong>"Застосувати стиль"</strong>, щоб побачити результат.</p>
+                        
+                        <!-- Прогрес -->
+                        <div class="task-progress">
+                            <span><i class="fas fa-check-circle" style="color:#27ae60;"></i> <strong id="tasksCompleted">0</strong> з <strong id="tasksTotal">5</strong> завдань виконано</span>
+                            <span id="progressMessage">Почни з першого завдання!</span>
+                        </div>
+
+                        <!-- Завдання 1: Колір тексту -->
+                        <div class="task-example" id="task1">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 1</span>
+                                <span class="task-status" id="task1Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong>🎯 Завдання:</strong> Зроби текст червоним. Додай стиль <code>color: red;</code> до селектора <code>h1</code>.
+                            </div>
+                            <div class="demo-area" id="demo1">
+                                <h1 style="margin:0;">🐼 Моя улюблена тварина</h1>
+                                <p>Це текст, який змінить колір після застосування стилю.</p>
+                            </div>
+                            <div class="code-hint">
+                                <span class="selector">h1</span> { <br>
+                                &nbsp;&nbsp;<span class="hl">color: red;</span> <span class="comment">// Додай цей рядок</span><br>
+                                }
+                            </div>
+                            <button class="btn-apply" data-task="1">🎨 Застосувати стиль</button>
+                            <div class="task-result" id="result1"></div>
+                        </div>
+
+                        <!-- Завдання 2: Шрифт -->
+                        <div class="task-example" id="task2">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 2</span>
+                                <span class="task-status" id="task2Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong>🎯 Завдання:</strong> Зроби текст незвичайним. Додай стиль <code>font-family: 'Courier New', monospace;</code> до селектора <code>.demo-area</code>.
+                            </div>
+                            <div class="demo-area" id="demo2">
+                                <p style="margin:0;font-size:1.1rem;" class="task2-text">Цей текст змінить шрифт на моноширинний (як у коді).</p>
+                                <p style="margin:8px 0 0 0;font-size:1.1rem;" class="task2-text">Такий шрифт використовують програмісти в редакторах коду!</p>
+                            </div>
+                            <div class="code-hint">
+                                <span class="selector">.demo-area</span> { <br>
+                                &nbsp;&nbsp;<span class="hl">font-family: 'Courier New', monospace;</span> <span class="comment">// Додай цей рядок</span><br>
+                                }
+                            </div>
+                            <button class="btn-apply" data-task="2">🎨 Застосувати стиль</button>
+                            <div class="task-result" id="result2"></div>
+                        </div>
+
+                        <!-- Завдання 3: Фон -->
+                        <div class="task-example" id="task3">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 3</span>
+                                <span class="task-status" id="task3Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong>🎯 Завдання:</strong> Додай яскравий фоновий колір. Додай стиль <code>background: #ffd93d;</code> до селектора <code>.demo-area</code>.
+                            </div>
+                            <div class="demo-area" id="demo3">
+                                <div style="padding:15px;border-radius:12px;">
+                                    <p style="margin:0;">Цей блок отримає яскравий жовтий фон після застосування стилю.</p>
+                                    <p style="margin:8px 0 0 0;">Жовтий колір привертає увагу та підіймає настрій!</p>
+                                </div>
+                            </div>
+                            <div class="code-hint">
+                                <span class="selector">.demo-area</span> { <br>
+                                &nbsp;&nbsp;<span class="hl">background: #ffd93d;</span> <span class="comment">// Додай цей рядок</span><br>
+                                }
+                            </div>
+                            <button class="btn-apply" data-task="3">🎨 Застосувати стиль</button>
+                            <div class="task-result" id="result3"></div>
+                        </div>
+
+                        <!-- Завдання 4: Розмір шрифту -->
+                        <div class="task-example" id="task4">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 4</span>
+                                <span class="task-status" id="task4Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong>🎯 Завдання:</strong> Зроби заголовок більшим. Додай стиль <code>font-size: 2.5rem;</code> до селектора <code>h1</code>.
+                            </div>
+                            <div class="demo-area" id="demo4">
+                                <h1 style="margin:0;">🐼 Великий заголовок</h1>
+                                <p style="margin:8px 0 0 0;">Розмір заголовка зміниться після застосування стилю.</p>
+                            </div>
+                            <div class="code-hint">
+                                <span class="selector">h1</span> { <br>
+                                &nbsp;&nbsp;<span class="hl">font-size: 2.5rem;</span> <span class="comment">// Додай цей рядок</span><br>
+                                }
+                            </div>
+                            <button class="btn-apply" data-task="4">🎨 Застосувати стиль</button>
+                            <div class="task-result" id="result4"></div>
+                        </div>
+
+                        <!-- Завдання 5: Колір фону сторінки -->
+                        <div class="task-example" id="task5">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 5</span>
+                                <span class="task-status" id="task5Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong>🎯 Завдання:</strong> Зміни колір фону цього блоку. Додай стиль <code>background: #a8e6cf;</code> до селектора <code>.demo-area</code>.
+                            </div>
+                            <div class="demo-area" id="demo5" style="background:white;">
+                                <p style="margin:0;">Фон цього блоку зміниться на м'ятний після застосування стилю.</p>
+                                <p style="margin:8px 0 0 0;">М'ятний колір заспокоює та створює відчуття свіжості!</p>
+                            </div>
+                            <div class="code-hint">
+                                <span class="selector">.demo-area</span> { <br>
+                                &nbsp;&nbsp;<span class="hl">background: #a8e6cf;</span> <span class="comment">// Додай цей рядок</span><br>
+                                }
+                            </div>
+                            <button class="btn-apply" data-task="5">🎨 Застосувати стиль</button>
+                            <div class="task-result" id="result5"></div>
+                        </div>
+                    </div>
+
+                    <!-- Три способи підключення CSS -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-link"></i> Три способи підключення CSS</h3>
+                        
+                        <h4>1️⃣ Inline-стилі (вбудовані)</h4>
+                        <p>Додаються безпосередньо в HTML-тег через атрибут <strong>style</strong>.</p>
+                        <div class="code-block">
+                            <span class="comment">&lt;!-- Inline-стиль --&gt;</span><br>
+                            <span class="tag">&lt;h1</span> <span class="attr">style</span>=<span class="string">"color: red; font-size: 32px;"</span><span class="tag">&gt;</span>Привіт, світ!<span class="tag">&lt;/h1&gt;</span>
+                        </div>
+                        <div class="warning-box">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <p><strong>Мінуси:</strong> Погано підтримується, важко змінювати, порушує принцип розділення змісту і вигляду. Сьогодні майже не використовується.</p>
+                        </div>
+
+                        <h4>2️⃣ Внутрішні стилі (internal)</h4>
+                        <p>Пишуться в блоці <strong>&lt;style&gt;</strong> у розділі <strong>&lt;head&gt;</strong>.</p>
+                        <div class="code-block">
+                            <span class="comment">&lt;!-- Внутрішній стиль --&gt;</span><br>
+                            <span class="tag">&lt;style&gt;</span><br>
+                            &nbsp;&nbsp;<span class="selector">h1</span> {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">color</span>: <span class="string">red</span>;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">font-size</span>: <span class="number">32px</span>;<br>
+                            &nbsp;&nbsp;}<br>
+                            <span class="tag">&lt;/style&gt;</span>
+                        </div>
+                        <div class="warning-box">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <p><strong>Мінуси:</strong> Підходить лише для однієї сторінки. Якщо сторінок багато — доведеться копіювати код в кожну.</p>
+                        </div>
+
+                        <h4>3️⃣ Зовнішній файл (external) — <span style="color:#27ae60;">найкращий спосіб!</span></h4>
+                        <p>Створюється окремий файл з розширенням <strong>.css</strong>, який підключається через тег <strong>&lt;link&gt;</strong>.</p>
+                        <div class="code-block">
+                            <span class="comment">&lt;!-- Спочатку створюємо файл style.css --&gt;</span><br>
+                            <span class="comment">/* style.css */</span><br>
+                            <span class="selector">h1</span> {<br>
+                            &nbsp;&nbsp;<span class="property">color</span>: <span class="string">red</span>;<br>
+                            &nbsp;&nbsp;<span class="property">font-size</span>: <span class="number">32px</span>;<br>
+                            }<br><br>
+                            <span class="comment">&lt;!-- Потім підключаємо в HTML --&gt;</span><br>
+                            <span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"style.css"</span><span class="tag">&gt;</span>
+                        </div>
+                        <div class="info-box">
+                            <i class="fas fa-check-circle" style="color:#27ae60;"></i>
+                            <p><strong>Переваги:</strong> Код перевикористовується на багатьох сторінках, легше підтримувати, кешується браузером (швидше завантаження), краще для SEO.</p>
+                        </div>
+                    </div>
+
+                    <!-- Основні селектори -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-crosshairs"></i> Основні селектори CSS</h3>
+                        <div class="methods-table">
+                            <div class="header">Селектор</div>
+                            <div class="header">Приклад</div>
+                            <div class="item"><code>тег</code></div>
+                            <div class="item"><code>p { color: red; }</code> — всі &lt;p&gt; червоні</div>
+                            <div class="item"><code>.class</code></div>
+                            <div class="item"><code>.header { font-size: 24px; }</code> — клас <strong>header</strong></div>
+                            <div class="item"><code>#id</code></div>
+                            <div class="item"><code>#logo { width: 100px; }</code> — унікальний ідентифікатор</div>
+                            <div class="item"><code>*</code></div>
+                            <div class="item"><code>* { margin: 0; }</code> — універсальний селектор</div>
+                        </div>
+                    </div>
+
+                    <!-- Вікторина 1 -->
+                    <div class="quiz-area">
+                        <h3><i class="fas fa-question-circle"></i> 📋 Вікторина: перевір себе</h3>
+                        <div id="quizCssContainer"></div>
+                        <div id="quizCssFeedback" class="quiz-feedback"></div>
+                        <button id="checkCssQuizBtn" class="btn-check">✨ Перевірити</button>
+                        <button id="resetCssQuizBtn" class="btn-reset" style="background:#7f8c8d;">🔄 Скинути</button>
+                    </div>
+
+                    <div class="extensions-list">
+                        <h3><i class="fas fa-sticky-note"></i> Що запам'ятати</h3>
+                        <ul style="margin-left: 25px;">
+                            <li>CSS — каскадні таблиці стилів, відповідають за вигляд сторінки.</li>
+                            <li>3 способи підключення: <strong>inline</strong>, <strong>internal</strong>, <strong>external</strong>.</li>
+                            <li>Зовнішній CSS (<strong>external</strong>) — найкращий для великих проєктів.</li>
+                            <li>Основні селектори: <strong>тег</strong>, <strong>.class</strong>, <strong>#id</strong>, <strong>*</strong>.</li>
+                            <li>CSS називається "каскадним", бо враховує порядок та пріоритет правил.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- ==================== ПРАКТИЧНА ЧАСТИНА ==================== -->
+                <section id="practice">
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #27ae60, #1e8449);"><i class="fas fa-laptop-code"></i> Заняття 2/2 • Практична частина • 2 години</span>
+                    <h2>💻 Практикуємо CSS: стилізуємо сторінку</h2>
+                    <p>💪 <strong>Практичне завдання:</strong> створи та стилізуй сторінку про улюблену тварину, використовуючи різні способи підключення CSS.</p>
+
+                    <div class="task-card">
+                        <h3><i class="fas fa-bullseye"></i> Мета практичного заняття</h3>
+                        <ul style="margin-left: 25px; margin-top: 10px;">
+                            <li>Навчитися підключати CSS трьома способами.</li>
+                            <li>Використовувати селектори, кольори, шрифти.</li>
+                            <li>Створити власний дизайн для сторінки "Моя улюблена тварина".</li>
+                        </ul>
+                    </div>
+
+                    <h3><i class="fas fa-list-ol"></i> Покрокова інструкція</h3>
+                    <div class="task-step"><div class="step-number">1</div><div>Створи базову HTML-структуру з заголовками, абзацами, списком.</div></div>
+                    <div class="task-step"><div class="step-number">2</div><div>Додай <strong>внутрішній CSS</strong> у &lt;head&gt; для основних кольорів та шрифтів.</div></div>
+                    <div class="task-step"><div class="step-number">3</div><div>Створи <strong>зовнішній файл style.css</strong> (можна імітувати в редакторі) для складніших стилів.</div></div>
+                    <div class="task-step"><div class="step-number">4</div><div>Використай <strong>inline-стилі</strong> для одного елемента (наприклад, колір заголовка).</div></div>
+
+                    <!-- Чекліст -->
+                    <div class="task-challenge" style="background:#fef5e8;border-radius:20px;padding:20px;margin:20px 0;border:2px dashed #ff9f4a;">
+                        <div class="challenge-title" style="color:#e67e22;font-size:1.2rem;margin-bottom:10px;"><i class="fas fa-tasks"></i> 🎯 Чекліст завдання</div>
+                        <ul class="checklist" id="challengeChecklist">
+                            <li data-done="false">Заголовок &lt;h1&gt; з назвою тварини</li>
+                            <li data-done="false">Розділ "Опис" &lt;h2&gt; + абзац</li>
+                            <li data-done="false">Розділ "Цікаві факти" &lt;h2&gt; + список</li>
+                            <li data-done="false">Виділення важливих слів &lt;strong&gt;</li>
+                            <li data-done="false">Курсив &lt;em&gt; для наголосу</li>
+                            <li data-done="false">Підключений внутрішній CSS (зміна кольору тла)</li>
+                            <li data-done="false">Зовнішній CSS (стилі для карток, тіней)</li>
+                            <li data-done="false">Inline-стиль (наприклад, колір заголовка)</li>
+                        </ul>
+                        <button id="resetChecklistBtn" class="btn-clear" style="margin-top:10px;"><i class="fas fa-sync-alt"></i> Скинути чекліст</button>
+                    </div>
+
+                    <!-- Живий редактор -->
+                    <h3><i class="fas fa-laptop-code"></i> ✏️ Спробуй сам! Пиши код нижче</h3>
+                    <div class="code-editor-panel">
+                        <div class="editor-header">
+                            <div class="editor-dot red"></div>
+                            <div class="editor-dot yellow"></div>
+                            <div class="editor-dot green"></div>
+                            <div class="editor-title">index.html + style.css (вбудований)</div>
+                        </div>
+                        <div class="editor-container">
+                            <div class="editor-textarea">
+                                <textarea id="htmlCodeEditor" placeholder="Напиши HTML+CSS код тут..."></textarea>
+                            </div>
+                            <div class="editor-preview">
+                                <div class="preview-frame">
+                                    <iframe id="previewFrame"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="editor-buttons">
+                            <button id="runCodeBtn" class="btn-run"><i class="fas fa-play"></i> Запустити</button>
+                            <button id="clearCodeBtn" class="btn-clear"><i class="fas fa-trash-alt"></i> Очистити</button>
+                            <button id="loadExampleBtn" class="btn-run" style="background:#3498db;"><i class="fas fa-eye"></i> Приклад</button>
+                        </div>
+                    </div>
+
+                    <div class="hint-box" style="background:#fff3e0;border-radius:16px;padding:15px;margin:15px 0;border-left:4px solid #ff9f4a;">
+                        <i class="fas fa-info-circle"></i>
+                        <strong>Підказка:</strong> Використовуй тег &lt;style&gt; у &lt;head&gt; для внутрішнього CSS, або атрибут style для inline.
+                        <button id="showSolutionBtn" class="solution-btn" style="background:#1e5f7a;margin-top:10px;padding:8px 20px;border:none;color:white;border-radius:40px;cursor:pointer;transition:0.2s;margin-left:15px;"><i class="fas fa-eye"></i> Показати приклад коду</button>
+                        <div id="solutionContent" class="solution-content" style="display:none;margin-top:15px;padding:15px;background:#1e2a3e;border-radius:16px;color:#f8f9fa;font-family:monospace;overflow-x:auto;">
+                            <pre style="margin:0;color:#ffd966;">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Панда&lt;/title&gt;
+    &lt;style&gt;
+        body { background: #f0f8ff; font-family: 'Segoe UI', sans-serif; }
+        .card { background: white; border-radius: 20px; padding: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); margin: 20px; }
+        h1 { color: #2c3e50; }
+        .highlight { background: #ffd966; padding: 0 5px; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="card"&gt;
+        &lt;h1 style="color:#1e5f7a;"&gt;🐼 Панда&lt;/h1&gt;
+        &lt;h2&gt;Опис&lt;/h2&gt;
+        &lt;p&gt;Панда — &lt;strong&gt;рідкісна&lt;/strong&gt; тварина, що живе в Китаї. &lt;em&gt;Чорно-біле забарвлення&lt;/em&gt; робить її впізнаваною.&lt;/p&gt;
+        &lt;h2&gt;Факти&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Їсть &lt;span class="highlight"&gt;14 годин&lt;/span&gt; на день&lt;/li&gt;
+            &lt;li&gt;Має &lt;strong&gt;6 пальців&lt;/strong&gt; на лапах&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </div>
+                    </div>
+
+                    <!-- Контрольна вікторина 2 -->
+                    <div class="quiz-area">
+                        <h3><i class="fas fa-question-circle"></i> 📋 Контрольні питання (CSS)</h3>
+                        <div id="quizControlContainer"></div>
+                        <div id="quizControlFeedback" class="quiz-feedback"></div>
+                        <button id="checkControlQuizBtn" class="btn-check">✨ Перевірити</button>
+                        <button id="resetControlQuizBtn" class="btn-reset" style="background:#7f8c8d;">🔄 Скинути</button>
+                    </div>
+
+                    <div class="task-card" style="background: #fef5e8;">
+                        <h3><i class="fas fa-home"></i> Домашнє завдання</h3>
+                        <p>Створи HTML-файл <code>my_style.html</code> з розповіддю про хобі. Підключи зовнішній CSS (файл <code>style.css</code>) і зроби дизайн на свій смак.</p>
+                    </div>
+
+                    <div class="random-fact-box">
+                        <button id="randomFactBtn" class="fact-btn"><i class="fas fa-dice-d6"></i> Цікавий факт</button>
+                        <p id="randomFactDisplay" class="fact-display">Натисни, щоб дізнатися щось нове!</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Гурток Web-програмування | CSS. Підключення стилів — Теорія + Практика</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
