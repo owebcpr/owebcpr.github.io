@@ -2,119 +2,389 @@
 <html lang="uk">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Мова – наша суперсила!</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Мова – наша суперсила!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header>
-    <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
-  </header>
+    <header class="header">
+        <div class="container header-content">
+            <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+            <div class="nav">
+                <a href="#about">Про свято</a>
+                <a href="#history">Історія</a>
+                <a href="#facts">Факти</a>
+                <a href="#games">Ігри</a>
+            </div>
+        </div>
+    </header>
 
-  <main>
-    <section>
-      <img src="img/ukrayinska-mova.jpeg" alt="Мова — це наша суперсила!">
-      <h2>"Мова - душа народу"</h2>
-      <i>"Без мови немає народу" — Тарас Шевченко</i>
-    </section>
+    <main class="main-content">
+        <div class="container">
+            <div class="lesson-card">
 
-    <section>
-      <h2>Що це за свято?</h2>
-      <p>Кожного року 9 листопада ми відзначаємо <strong>День української писемності та мови</strong>. Це свято не лише
-        нагадує нам про важливість рідного слова, а й вшановує пам’ять <strong>Нестора Літописця</strong> — першого
-        українського історика.</p>
-      <img src="img/nestor.jpg" alt="Нестор Літописець">
-    </section>
+                <!-- Головний банер -->
+                <section id="hero">
+                    <div class="hero-banner">
+                        <div class="hero-text">
+                            <span class="topic-badge"><i class="fas fa-star"></i> Виховний захід</span>
+                            <h2 style="border-left: none; padding-left: 0; font-size: 2.8rem; color: #fff; text-shadow: 0 4px 12px rgba(0,0,0,0.3);">Мова — наша суперсила!</h2>
+                            <p style="font-size: 1.3rem; color: #f0f0f0;"><i class="fas fa-quote-left"></i> "Без мови немає народу" — Тарас Шевченко</p>
+                            <img src="img/ukrayinska-mova.jpeg" alt="Українська мова" style="max-width: 300px; border-radius: 20px; margin-top: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.3);">
+                        </div>
+                    </div>
+                </section>
 
-    <section>
-      <h2>Мандрівка крізь віки</h2>
-      <p>Українська мова має багатолітню історію. Від перших літописів — до сучасних чат-ботів!</p>
-      <ul>
-        <li><strong>XI ст.</strong> — з’являються перші літописи у Київській Русі</li>
-        <li><strong>XVI ст.</strong> — Іван Федоров друкує перші українські книги</li>
-        <li><strong>XIX ст.</strong> — Тарас Шевченко, Леся Українка та Франко формують нову українську літературну мову
-        </li>
-        <li><strong>XXI ст.</strong> — українська активно розвивається в інтернеті, ІТ, на телебаченні та в кіно</li>
-      </ul>
-    </section>
+                <!-- ==================== ПРО СВЯТО ==================== -->
+                <section id="about">
+                    <span class="topic-badge"><i class="fas fa-calendar-alt"></i> 9 листопада</span>
+                    <h2>📖 Що це за свято?</h2>
+                    <div class="theory-block">
+                        <div class="info-box">
+                            <i class="fas fa-feather-alt"></i>
+                            <p><strong>День української писемності та мови</strong> — свято, яке об'єднує всіх, хто любить рідне слово. Воно присвячене <strong>Нестору Літописцю</strong> — першому українському історику.</p>
+                        </div>
+                        <div class="fun-fact">
+                            <i class="fas fa-star"></i>
+                            <p><strong>Цікавий факт:</strong> У 2019 році свято офіційно перенесли на 27 жовтня, але традиційно ми відзначаємо його 9 листопада — у день вшанування Нестора.</p>
+                        </div>
+                        <img src="img/nestor.jpg" alt="Нестор Літописець" style="max-width: 300px; border-radius: 20px; margin: 15px auto; display: block; box-shadow: 0 6px 20px rgba(0,0,0,0.1);">
+                    </div>
+                </section>
 
-    <section>
-      <h2>Неймовірна українська</h2>
-      <ul>
-        <li>Посідає 7-ме місце у світі за милозвучністю</li>
-        <li>Має близько 256 000 слів!</li>
-        <li>Одна з найдавніших слов’янських мов</li>
-        <li>Має багато діалектів: <em>гуцульський, лемківський, поліський</em></li>
-      </ul>
-      <img src="img/mova-kalynova.jpg" alt="Діалекти української мови">
-    </section>
+                <!-- ==================== ІСТОРІЯ ==================== -->
+                <section id="history">
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #8e44ad, #6c3483);"><i class="fas fa-history"></i> Мандрівка крізь віки</span>
+                    <h2>📜 Історія української мови</h2>
+                    <div class="theory-block">
+                        <p>Українська мова має багатолітню історію. Від перших літописів до сучасних чат-ботів!</p>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <span class="timeline-year">XI ст.</span>
+                                <p>Перші літописи у Київській Русі</p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-year">XVI ст.</span>
+                                <p>Іван Федоров друкує перші українські книги</p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-year">XIX ст.</span>
+                                <p>Шевченко, Леся Українка, Франко — нова літературна мова</p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-year">XXI ст.</span>
+                                <p>Українська в інтернеті, ІТ, кіно та телебаченні</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-    <section>
-      <h2>Гра «Знайди пару: староукраїнські слова»</h2>
-      <p>Спробуй знайти правильне значення слова!</p>
+                <!-- ==================== ІСТОРІЯ УКРАЇНСЬКОЇ МОВИ ==================== -->
+                <section id="languageHistory">
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #8e44ad, #6c3483);">
+                        <i class="fas fa-clock"></i> Історична подорож
+                    </span>
+                    <h2>📜 Як українська мова перемагала часи</h2>
+                    <p style="font-size: 1.1rem; color: #555; margin-bottom: 25px;">
+                        Коротка історія про те, як наша мова виживала, коли її хотіли знищити, і стала нашою суперсилою!
+                    </p>
 
-      <div id="match-game"></div>
-    </section>
+                    <div class="history-timeline">
+                        <!-- 448 рік -->
+                        <div class="timeline-item">
+                            <div class="timeline-year">
+                                <span class="year-badge">448</span>
+                                <span class="year-label">рік</span>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-icon">📜</div>
+                                <div class="timeline-text">
+                                    <h4>Перша згадка</h4>
+                                    <p>Візантійський історик записав українські слова <strong>«мед»</strong> і <strong>«страва»</strong>. Це перші документовані українські слова в історії!</p>
+                                </div>
+                            </div>
+                        </div>
 
-    <section>
-      <h2>Зірки української літератури</h2>
-      <ul>
-        <li><strong>Тарас Шевченко:</strong> <em>"І чужому научайтесь, й свого не цурайтесь"</em></li>
-        <li><strong>Леся Українка:</strong> <em>"Contra spem spero!"</em></li>
-        <li><strong>Іван Франко:</strong> <em>"Я син народу, що вгору йде"</em></li>
-        <li><strong>Сучасність:</strong> Володимир Рутківський, Лада Лузіна, Сашко Дерманський</li>
-      </ul>
-      <img src="img/unnamed-file-9.webp" alt="Українські письменники" style="max-width: 100%; height: auto;">
-    </section>
+                        <!-- 1574 рік -->
+                        <div class="timeline-item">
+                            <div class="timeline-year">
+                                <span class="year-badge">1574</span>
+                                <span class="year-label">рік</span>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-icon">📖</div>
+                                <div class="timeline-text">
+                                    <h4>Перший буквар</h4>
+                                    <p>Іван Федоров друкує перший український <strong>«Буквар»</strong>. До наших днів зберігся лише <strong>один примірник</strong> — його знайшли в Римі в 1927 році!</p>
+                                </div>
+                            </div>
+                        </div>
 
-    <section>
-      <h2>Підтримуємо мову щодня</h2>
-      <ul>
-        <li>Читай українське — книги, блоги, комікси!</li>
-        <li>Дивись фільми українською</li>
-        <li>Говори рідною мовою щодня</li>
-        <li>Грай українською — ігри, квести, вікторини</li>
-        <li>Створюй контент — TikTok, YouTube, Instagram українською!</li>
-      </ul>
-    </section>
+                        <!-- 1627 рік - спалення книг -->
+                        <div class="timeline-item danger">
+                            <div class="timeline-year">
+                                <span class="year-badge">1627</span>
+                                <span class="year-label">рік</span>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-icon">🔥</div>
+                                <div class="timeline-text">
+                                    <h4>Перше спалення книг</h4>
+                                    <p>Московський цар наказав спалити українське «Учительне Євангеліє». Книгу знищили <strong>лише через мову</strong>, якою вона була написана!</p>
+                                </div>
+                            </div>
+                        </div>
 
-    <section>
-      <h2>Вікторина</h2>
-      <div class="quiz-question">
-        <p>1. Хто написав "Кобзаря"?</p>
-        <div class="quiz-option" onclick="checkAnswer(this, true)">Тарас Шевченко</div>
-        <div class="quiz-option" onclick="checkAnswer(this, false)">Леся Українка</div>
-        <div class="quiz-option" onclick="checkAnswer(this, false)">Іван Франко</div>
-      </div>
+                        <!-- 1720 рік -->
+                        <div class="timeline-item danger">
+                            <div class="timeline-year">
+                                <span class="year-badge">1720</span>
+                                <span class="year-label">рік</span>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-icon">🚫</div>
+                                <div class="timeline-text">
+                                    <h4>Перша заборона</h4>
+                                    <p>Петро I заборонив друкувати книги українською мовою. Указ наказував, щоб книги були <strong>«ніякої різниці й окремого наріччя»</strong> від російських.</p>
+                                </div>
+                            </div>
+                        </div>
 
-      <div class="quiz-question">
-        <p>2. Як звали першого українського друкаря?</p>
-        <div class="quiz-option" onclick="checkAnswer(this, true)">Іван Федоров</div>
-        <div class="quiz-option" onclick="checkAnswer(this, false)">Петро Могила</div>
-        <div class="quiz-option" onclick="checkAnswer(this, false)">Михайло Грушевський</div>
-      </div>
+                        <!-- 1863 рік -->
+                        <div class="timeline-item danger">
+                            <div class="timeline-year">
+                                <span class="year-badge">1863</span>
+                                <span class="year-label">рік</span>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-icon">📜</div>
+                                <div class="timeline-text">
+                                    <h4>Валуєвський циркуляр</h4>
+                                    <p>Влада офіційно заявила: <strong>«жодної окремої малоросійської мови не було і бути не може»</strong>. Вони просто <strong>не визнавали</strong> існування нашої мови!</p>
+                                </div>
+                            </div>
+                        </div>
 
-      <div class="quiz-question">
-        <p>3. Як буде англійське "computer" українською?</p>
-        <div class="quiz-option" onclick="checkAnswer(this, false)">Компутер</div>
-        <div class="quiz-option" onclick="checkAnswer(this, true)">Комп’ютер</div>
-        <div class="quiz-option" onclick="checkAnswer(this, false)">Машина</div>
-      </div>
-    </section>
+                        <!-- 1876 рік -->
+                        <div class="timeline-item danger">
+                            <div class="timeline-year">
+                                <span class="year-badge">1876</span>
+                                <span class="year-label">рік</span>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-icon">⛔</div>
+                                <div class="timeline-text">
+                                    <h4>Емський указ</h4>
+                                    <p>Заборонено друкувати та ввозити з-за кордону <strong>будь-які</strong> українські книги. Мову намагалися задушити повністю.</p>
+                                </div>
+                            </div>
+                        </div>
 
-    <section>
-      <h2>Наша суперсила — українська мова!</h2>
-      <p>"Любіть і бережіть українську мову — це наш найбільший скарб!"</р>
-    </section>
-  </main>
+                        <!-- 1933 рік -->
+                        <div class="timeline-item danger">
+                            <div class="timeline-year">
+                                <span class="year-badge">1933</span>
+                                <span class="year-label">рік</span>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-icon">✖️</div>
+                                <div class="timeline-text">
+                                    <h4>Вилучення літери «Ґ»</h4>
+                                    <p>Літеру <strong>«Ґ»</strong> оголосили «буржуазною» та вилучили з абетки. Повернули її <strong>лише 1991 року</strong>, коли Україна стала незалежною!</p>
+                                </div>
+                            </div>
+                        </div>
 
-  <footer>
-    <p>&copy; 2025-2026 Гурток "Web-програмування"</p>
-  </footer>
+                        <!-- 1991 рік -->
+                        <div class="timeline-item victory">
+                            <div class="timeline-year">
+                                <span class="year-badge">1991</span>
+                                <span class="year-label">рік</span>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-icon">🇺🇦</div>
+                                <div class="timeline-text">
+                                    <h4>Незалежність України</h4>
+                                    <p>Українська мова стає <strong>державною</strong> у власній країні. До цього моменту її намагалися знищити <strong>134 рази</strong> за чотири століття. Але вона вистояла! 💪</p>
+                                </div>
+                            </div>
+                        </div>
 
-  <script src="script.js"></script>
+                        <!-- Сьогодні -->
+                        <div class="timeline-item victory">
+                            <div class="timeline-year">
+                                <span class="year-badge">Сьогодні</span>
+                                <span class="year-label"></span>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-icon">🌟</div>
+                                <div class="timeline-text">
+                                    <h4>Наша суперсила</h4>
+                                    <p>Українська мова — одна з <strong>30 найпоширеніших</strong> у світі. Нею говорять <strong>45 мільйонів</strong> людей. І це <strong>завдяки вам</strong> — тим, хто говорить, читає й пише українською!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Підсумок -->
+                    <div class="history-conclusion">
+                        <div class="conclusion-text">
+                            <i class="fas fa-quote-left"></i>
+                            <p>
+                                <strong>134 рази</strong> намагалися знищити українську мову. 
+                                Але вона вижила. Вона перемогла. 
+                                <br>Бо <strong>мова — це наша суперсила!</strong> 🇺🇦
+                            </p>
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ==================== ФАКТИ ==================== -->
+                <section id="facts">
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #27ae60, #1e8449);"><i class="fas fa-lightbulb"></i> Неймовірна українська</span>
+                    <h2>📊 Цікаві факти про мову</h2>
+                    <div class="facts-grid">
+                        <div class="fact-card">
+                            <i class="fas fa-globe-americas"></i>
+                            <h4>7-ме місце у світі</h4>
+                            <p>за милозвучністю серед усіх мов</p>
+                        </div>
+                        <div class="fact-card">
+                            <i class="fas fa-book"></i>
+                            <h4>~256 000 слів</h4>
+                            <p>у словнику української мови</p>
+                        </div>
+                        <div class="fact-card">
+                            <i class="fas fa-history"></i>
+                            <h4>Давня слов'янська</h4>
+                            <p>одна з найстаріших слов'янських мов</p>
+                        </div>
+                        <div class="fact-card">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <h4>Діалекти</h4>
+                            <p>гуцульський, лемківський, поліський та ін.</p>
+                        </div>
+                    </div>
+                    <img src="img/mova-kalynova.jpg" alt="Діалекти" style="max-width: 400px; border-radius: 20px; margin: 20px auto; display: block; box-shadow: 0 6px 20px rgba(0,0,0,0.1);">
+                </section>
+
+                <!-- ==================== ГРА "ЗНАЙДИ ПАРУ" ==================== -->
+                <section id="games">
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #e67e22, #d35400);"><i class="fas fa-gamepad"></i> Гра</span>
+                    <h2>🧩 Гра «Знайди пару: староукраїнські слова»</h2>
+                    <p style="margin-bottom: 20px;">Спробуй знайти правильне значення кожного слова!</p>
+
+                    <div class="match-game" id="matchGame">
+                        <div class="match-row" id="matchRow1">
+                            <div class="match-word" data-pair="1">Борошно</div>
+                            <div class="match-word" data-pair="1">Мука</div>
+                        </div>
+                        <div class="match-row" id="matchRow2">
+                            <div class="match-word" data-pair="2">Гроші</div>
+                            <div class="match-word" data-pair="2">Кошти</div>
+                        </div>
+                        <div class="match-row" id="matchRow3">
+                            <div class="match-word" data-pair="3">Лікар</div>
+                            <div class="match-word" data-pair="3">Знахар</div>
+                        </div>
+                        <div class="match-row" id="matchRow4">
+                            <div class="match-word" data-pair="4">Вогонь</div>
+                            <div class="match-word" data-pair="4">Полум'я</div>
+                        </div>
+                        <div id="matchFeedback" class="match-feedback"></div>
+                        <button id="resetMatchBtn" class="btn-clear" style="margin-top: 15px;"><i class="fas fa-redo-alt"></i> Перемішати</button>
+                    </div>
+                </section>
+
+                <!-- ==================== ЗІРКИ ЛІТЕРАТУРИ ==================== -->
+                <section>
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #2980b9, #1a5276);"><i class="fas fa-star"></i> Література</span>
+                    <h2>🌟 Зірки української літератури</h2>
+                    <div class="quote-grid">
+                        <div class="quote-card">
+                            <p><i class="fas fa-quote-left"></i> І чужому научайтесь, й свого не цурайтесь</p>
+                            <span>— Тарас Шевченко</span>
+                        </div>
+                        <div class="quote-card">
+                            <p><i class="fas fa-quote-left"></i> Contra spem spero!</p>
+                            <span>— Леся Українка</span>
+                        </div>
+                        <div class="quote-card">
+                            <p><i class="fas fa-quote-left"></i> Я син народу, що вгору йде</p>
+                            <span>— Іван Франко</span>
+                        </div>
+                    </div>
+                    <img src="img/unnamed-file-9.webp" alt="Письменники" style="max-width: 600px; border-radius: 20px; margin: 20px auto; display: block; box-shadow: 0 6px 20px rgba(0,0,0,0.1);">
+                </section>
+
+                <!-- ==================== ВІКТОРИНА ==================== -->
+                <section>
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #8e44ad, #6c3483);"><i class="fas fa-question-circle"></i> Вікторина</span>
+                    <h2>📋 Перевір свої знання</h2>
+                    <div class="quiz-area" id="quizArea">
+                        <div id="quizContainer"></div>
+                        <div id="quizFeedback" class="quiz-feedback"></div>
+                        <button id="checkQuizBtn">✨ Перевірити</button>
+                        <button id="resetQuizBtn" style="background:#7f8c8d;">🔄 Скинути</button>
+                    </div>
+                </section>
+
+                <!-- ==================== РЕБУС ==================== -->
+                <section>
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #f39c12, #e67e22);">
+                        <i class="fas fa-puzzle-piece"></i> Ребус
+                    </span>
+                    <h2>🧠 Розгадай ребус</h2>
+                    <div class="rebus-box">
+                        <div id="rebusGame"></div>
+                    </div>
+                </section>
+                <!-- ==================== ГРА "МОВОЗНАВЧИЙ КВІЗ" ==================== -->
+                <section id="quizGameSection">
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #8e44ad, #6c3483);">
+                        <i class="fas fa-graduation-cap"></i> Квіз
+                    </span>
+                    <h2>📚 Мовознавчий квіз «Знавець староукраїнської»</h2>
+                    <p style="margin-bottom: 25px; font-size: 1.1rem; color: #555;">
+                        Перевір свої знання! Обери правильне значення для кожного староукраїнського слова.
+                    </p>
+
+                    <div id="modernQuizGame" class="modern-quiz-game">
+                        <!-- Слова будуть додані через JavaScript -->
+                    </div>
+                </section>
+                <!-- ==================== ПІДТРИМКА ==================== -->
+                <section>
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #1abc9c, #16a085);"><i class="fas fa-heart"></i> Підтримуй мову</span>
+                    <h2>💪 Наша суперсила — українська мова!</h2>
+                    <div class="support-grid">
+                        <div class="support-item"><i class="fas fa-book"></i> Читай українське</div>
+                        <div class="support-item"><i class="fas fa-film"></i> Дивись українською</div>
+                        <div class="support-item"><i class="fas fa-comment"></i> Говори рідною</div>
+                        <div class="support-item"><i class="fas fa-gamepad"></i> Грай українською</div>
+                        <div class="support-item"><i class="fas fa-video"></i> Створюй контент</div>
+                    </div>
+                    <div class="info-box" style="margin-top: 20px;">
+                        <i class="fas fa-heart" style="color: #e74c3c;"></i>
+                        <p><strong>"Любіть і бережіть українську мову — це наш найбільший скарб!"</strong></p>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025-2026 Гурток "Web-програмування" | Мова — наша суперсила!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
