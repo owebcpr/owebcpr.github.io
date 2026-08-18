@@ -743,3 +743,59 @@ button:hover {
         padding: 8px 16px;
     }
 }
+/* ===== Кроки дій ===== */
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 15px 0;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 1px solid #e0e8f0;
+    transition: transform 0.2s ease;
+}
+
+.step-item:hover {
+    transform: translateX(5px);
+}
+
+.step-num {
+    background: #1e5f7a;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.step-desc {
+    font-size: 17px;
+    color: #2c3e4e;
+}
+
+/* ===== Адаптивність ===== */
+@media (max-width: 768px) {
+    .step-item {
+        padding: 10px 14px;
+    }
+    .step-desc {
+        font-size: 15px;
+    }
+    .step-num {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+}
