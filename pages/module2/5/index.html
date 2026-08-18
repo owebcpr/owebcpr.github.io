@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Робота з кольором | Гурток програмування</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+            <div class="nav">
+                <a href="/index.html">Головна</a>
+                <a href="#theory">Заняття 1</a>
+                <a href="#practice2">Заняття 2</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="lesson-card">
+                <!-- ==================== ЗАНЯТТЯ 1: ТЕОРІЯ + ПРАКТИКА ==================== -->
+                <section id="theory">
+                    <span class="topic-badge"><i class="fas fa-book-open"></i> Заняття 1/2 • Теорія + Практика • 2 години</span>
+                    <h2>🎨 Робота з кольором у CSS</h2>
+                    <p>🎯 <strong>Мета заняття:</strong> Вивчити способи задання кольорів у CSS: за назвою, HEX, RGB, RGBA. Навчитися використовувати властивості <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">color</code> та <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">background-color</code>.</p>
+
+                    <!-- ЦІКАВА ІСТОРІЯ -->
+                    <div class="story-block">
+                        <h3><i class="fas fa-book-reader"></i> 📖 Цікава історія: Як кольори потрапили в інтернет</h3>
+                        <div class="story-content">
+                            <div class="story-image">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <div class="story-text">
+                                <p><strong>1994 рік.</strong> Перші веб-сторінки були <span style="color:#666;">сірими</span> і <span style="color:#666;">нудними</span>. Вони мали лише чорний текст на сірому фоні.</p>
+                                <p>Все змінилося, коли <strong>браузери</strong> почали підтримувати кольори. Спочатку було лише <strong>16 базових кольорів</strong> (як-от <span style="color:red;">red</span>, <span style="color:blue;">blue</span>, <span style="color:green;">green</span>).</p>
+                                
+                                <!-- БЛОК ПРО RGB -->
+                                <div class="rgb-story">
+                                    <h4 style="color:#1e5f7a;font-size:1.2rem;margin:15px 0 10px 0;">
+                                        <i class="fas fa-lightbulb" style="color:#f39c12;"></i> 
+                                        Чому саме червоний, зелений і синій?
+                                    </h4>
+                                    <div class="rgb-story-content">
+                                        <div class="rgb-story-item">
+                                            <div class="rgb-story-icon" style="color:#e74c3c;">👁️</div>
+                                            <div class="rgb-story-text">
+                                                <p><strong>Біологія ока:</strong> Людське око має <strong>три типи колбочок</strong> — фоторецепторів, чутливих до червоного, зеленого та синього світла. Саме ці три кольори наш мозок використовує для створення <strong>всіх інших кольорів</strong>, які ми бачимо.</p>
+                                            </div>
+                                        </div>
+                                        <div class="rgb-story-item">
+                                            <div class="rgb-story-icon" style="color:#27ae60;">🖥️</div>
+                                            <div class="rgb-story-text">
+                                                <p><strong>Технологія моніторів:</strong> Кожен піксель на екрані монітора складається з <strong>трьох субпікселів</strong> — червоного, зеленого та синього. Змінюючи яскравість кожного з них, монітор може відтворити <strong>понад 16 мільйонів</strong> різних кольорів!</p>
+                                            </div>
+                                        </div>
+                                        <div class="rgb-story-item">
+                                            <div class="rgb-story-icon" style="color:#3498db;">🎨</div>
+                                            <div class="rgb-story-text">
+                                                <p><strong>Модель RGB:</strong> Це <strong>адитивна модель</strong> кольору — чим більше світла, тим світліший колір. Коли всі три канали (R, G, B) мають значення <strong>255</strong>, ми бачимо <span style="color:white;background:#333;padding:0 6px;border-radius:4px;">білий</span> колір. Коли всі <strong>0</strong> — <span style="color:#333;background:#ddd;padding:0 6px;border-radius:4px;">чорний</span>.</p>
+                                            </div>
+                                        </div>
+                                        <div class="rgb-story-item">
+                                            <div class="rgb-story-icon" style="color:#8e44ad;">🌈</div>
+                                            <div class="rgb-story-text">
+                                                <p><strong>Цікавий факт:</strong> Ваш монітор, смартфон або телевізор використовують <strong>RGB-модель</strong> для відображення всіх кольорів. Саме тому CSS використовує <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">rgb(255, 0, 0)</code> — це команда для монітора: «зроби червоний субпіксель максимально яскравим, а зелений і синій — вимкни».</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <p>Сьогодні CSS підтримує <strong>понад 16 мільйонів кольорів</strong>! Це стало можливим завдяки <strong>HEX-кодам</strong> та <strong>RGB-моделі</strong>. Кожен колір можна описати точними значеннями.</p>
+                                <p>🎨 <strong>Цікавий факт:</strong> Назва <span style="color:#8e44ad;font-weight:bold;">'rebeccapurple'</span> була додана до CSS на честь Ребекки Меєр, доньки відомого веб-розробника Еріка Меєра.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Теоретична частина -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-palette"></i> Способи задання кольорів у CSS</h3>
+                        <div class="info-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>У CSS існує <strong>4 основні способи</strong> задання кольорів. Кожен з них має свої переваги та використовується в різних ситуаціях.</p>
+                        </div>
+
+                        <!-- 1. Кольори за назвою -->
+                        <div class="color-method">
+                            <h4>🔤 1. Кольори за назвою (Color Names)</h4>
+                            <p>Найпростіший спосіб — використовувати <strong>англійські назви</strong> кольорів. У CSS доступно <strong>140 стандартних назв</strong>.</p>
+                            <div class="code-block">
+                                <span class="selector">p</span> { <br>
+                                &nbsp;&nbsp;<span class="property">color</span>: <span class="value">red</span>; <span class="comment">/* червоний */</span><br>
+                                &nbsp;&nbsp;<span class="property">background-color</span>: <span class="value">lightblue</span>; <span class="comment">/* світло-синій фон */</span><br>
+                                }
+                            </div>
+                            <div class="color-samples">
+                                <div class="color-sample" style="background:red;color:white;">red</div>
+                                <div class="color-sample" style="background:blue;color:white;">blue</div>
+                                <div class="color-sample" style="background:green;color:white;">green</div>
+                                <div class="color-sample" style="background:yellow;color:black;">yellow</div>
+                                <div class="color-sample" style="background:purple;color:white;">purple</div>
+                                <div class="color-sample" style="background:orange;color:white;">orange</div>
+                                <div class="color-sample" style="background:pink;color:black;">pink</div>
+                                <div class="color-sample" style="background:teal;color:white;">teal</div>
+                            </div>
+                            <div class="info-box" style="margin-top:10px;">
+                                <i class="fas fa-info-circle"></i>
+                                <p>📌 <strong>Повний список</strong> кольорів за назвою можна знайти за посиланням: <a href="https://www.w3schools.com/colors/colors_names.asp" target="_blank" style="color:#1e5f7a;font-weight:bold;">w3schools.com/colors/colors_names</a></p>
+                            </div>
+                        </div>
+
+                        <!-- 2. HEX-коди -->
+                        <div class="color-method">
+                            <h4>🔢 2. Шістнадцятковий код (HEX)</h4>
+                            <p>HEX-код починається з <strong>решітки (#)</strong> і містить <strong>6 символів</strong> (0-9, A-F). Кожна пара символів відповідає за <strong>червоний, зелений та синій</strong> канали.</p>
+                            <div class="code-block">
+                                <span class="selector">p</span> { <br>
+                                &nbsp;&nbsp;<span class="property">color</span>: <span class="value">#ff0000</span>; <span class="comment">/* червоний */</span><br>
+                                &nbsp;&nbsp;<span class="property">background-color</span>: <span class="value">#00ff00</span>; <span class="comment">/* зелений фон */</span><br>
+                                }
+                            </div>
+                            <div class="hex-explanation">
+                                <div class="hex-row">
+                                    <span style="color:#ff0000;font-weight:bold;">#FF</span>
+                                    <span style="color:#00aa00;font-weight:bold;">00</span>
+                                    <span style="color:#0000ff;font-weight:bold;">00</span>
+                                    <span style="color:#666;margin-left:10px;">= червоний</span>
+                                </div>
+                                <div class="hex-row">
+                                    <span style="color:#ff0000;font-weight:bold;">00</span>
+                                    <span style="color:#00aa00;font-weight:bold;">FF</span>
+                                    <span style="color:#0000ff;font-weight:bold;">00</span>
+                                    <span style="color:#666;margin-left:10px;">= зелений</span>
+                                </div>
+                                <div class="hex-row">
+                                    <span style="color:#ff0000;font-weight:bold;">00</span>
+                                    <span style="color:#00aa00;font-weight:bold;">00</span>
+                                    <span style="color:#0000ff;font-weight:bold;">FF</span>
+                                    <span style="color:#666;margin-left:10px;">= синій</span>
+                                </div>
+                                <div class="hex-row">
+                                    <span style="color:#ff0000;font-weight:bold;">FF</span>
+                                    <span style="color:#00aa00;font-weight:bold;">FF</span>
+                                    <span style="color:#0000ff;font-weight:bold;">FF</span>
+                                    <span style="color:#666;margin-left:10px;">= білий</span>
+                                </div>
+                                <div class="hex-row">
+                                    <span style="color:#ff0000;font-weight:bold;">00</span>
+                                    <span style="color:#00aa00;font-weight:bold;">00</span>
+                                    <span style="color:#0000ff;font-weight:bold;">00</span>
+                                    <span style="color:#666;margin-left:10px;">= чорний</span>
+                                </div>
+                            </div>
+                            <div class="info-box" style="margin-top:10px;">
+                                <i class="fas fa-info-circle"></i>
+                                <p>💡 <strong>Скорочений запис:</strong> якщо символи повторюються, можна писати 3 символи. Наприклад: <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">#f00</code> = <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">#ff0000</code>, <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">#0f0</code> = <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">#00ff00</code></p>
+                            </div>
+                        </div>
+
+                        <!-- 3. RGB -->
+                        <div class="color-method">
+                            <h4>🌈 3. RGB (Red, Green, Blue)</h4>
+                            <p>RGB задає колір через <strong>три числа</strong> від <strong>0 до 255</strong>, які відповідають за інтенсивність червоного, зеленого та синього.</p>
+                            <div class="code-block">
+                                <span class="selector">p</span> { <br>
+                                &nbsp;&nbsp;<span class="property">color</span>: <span class="value">rgb(255, 0, 0)</span>; <span class="comment">/* червоний */</span><br>
+                                &nbsp;&nbsp;<span class="property">background-color</span>: <span class="value">rgb(0, 255, 0)</span>; <span class="comment">/* зелений фон */</span><br>
+                                }
+                            </div>
+                            <div class="rgb-explanation">
+                                <div class="rgb-row">
+                                    <span style="color:#ff0000;font-weight:bold;">rgb(255, 0, 0)</span>
+                                    <span style="color:#666;margin-left:10px;">→ червоний</span>
+                                </div>
+                                <div class="rgb-row">
+                                    <span style="color:#00aa00;font-weight:bold;">rgb(0, 255, 0)</span>
+                                    <span style="color:#666;margin-left:10px;">→ зелений</span>
+                                </div>
+                                <div class="rgb-row">
+                                    <span style="color:#0000ff;font-weight:bold;">rgb(0, 0, 255)</span>
+                                    <span style="color:#666;margin-left:10px;">→ синій</span>
+                                </div>
+                                <div class="rgb-row">
+                                    <span style="color:#000;font-weight:bold;">rgb(0, 0, 0)</span>
+                                    <span style="color:#666;margin-left:10px;">→ чорний</span>
+                                </div>
+                                <div class="rgb-row">
+                                    <span style="color:#666;font-weight:bold;">rgb(255, 255, 255)</span>
+                                    <span style="color:#666;margin-left:10px;">→ білий</span>
+                                </div>
+                            </div>
+                            <div class="info-box" style="margin-top:10px;">
+                                <i class="fas fa-info-circle"></i>
+                                <p>💡 <strong>Порада:</strong> <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">rgb(255, 255, 255)</code> — це білий, а <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">rgb(0, 0, 0)</code> — чорний. Змінюючи числа, можна отримати будь-який колір!</p>
+                            </div>
+                        </div>
+
+                        <!-- 4. RGBA -->
+                        <div class="color-method">
+                            <h4>👻 4. RGBA (з прозорістю)</h4>
+                            <p>RGBA — це <strong>той самий RGB</strong>, але з додатковим параметром <strong>прозорості (Alpha)</strong> від <strong>0 (повністю прозорий)</strong> до <strong>1 (повністю непрозорий)</strong>.</p>
+                            <div class="code-block">
+                                <span class="selector">p</span> { <br>
+                                &nbsp;&nbsp;<span class="property">color</span>: <span class="value">rgba(255, 0, 0, 0.5)</span>; <span class="comment">/* червоний з 50% прозорістю */</span><br>
+                                &nbsp;&nbsp;<span class="property">background-color</span>: <span class="value">rgba(0, 0, 255, 0.3)</span>; <span class="comment">/* синій фон з 30% прозорістю */</span><br>
+                                }
+                            </div>
+                            <div class="rgba-demo">
+                                <div class="rgba-box" style="background-color:rgba(255, 0, 0, 1);">
+                                    <span>rgba(255, 0, 0, 1) — 100%</span>
+                                </div>
+                                <div class="rgba-box" style="background-color:rgba(255, 0, 0, 0.7);">
+                                    <span>rgba(255, 0, 0, 0.7) — 70%</span>
+                                </div>
+                                <div class="rgba-box" style="background-color:rgba(255, 0, 0, 0.4);">
+                                    <span>rgba(255, 0, 0, 0.4) — 40%</span>
+                                </div>
+                                <div class="rgba-box" style="background-color:rgba(255, 0, 0, 0.1);">
+                                    <span>rgba(255, 0, 0, 0.1) — 10%</span>
+                                </div>
+                            </div>
+                            <div class="warning-box">
+                                <i class="fas fa-info-circle"></i>
+                                <p><strong>Важливо!</strong> Прозорість впливає на те, що знаходиться <strong>під</strong> елементом. Якщо фон прозорий, крізь нього буде видно те, що знаходиться ззаду.</p>
+                            </div>
+                        </div>
+
+                        <!-- Зведена таблиця -->
+                        <h4>📊 Зведена таблиця способів задання кольорів</h4>
+                        <table class="properties-table">
+                            <thead>
+                                <tr>
+                                    <th>Спосіб</th>
+                                    <th>Формат</th>
+                                    <th>Приклад</th>
+                                    <th>Колір</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Назва</strong></td>
+                                    <td><code>назва</code></td>
+                                    <td><code>red</code></td>
+                                    <td style="background:red;color:white;text-align:center;">●</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>HEX</strong></td>
+                                    <td><code>#RRGGBB</code></td>
+                                    <td><code>#ff0000</code></td>
+                                    <td style="background:#ff0000;color:white;text-align:center;">●</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>HEX (скороч.)</strong></td>
+                                    <td><code>#RGB</code></td>
+                                    <td><code>#f00</code></td>
+                                    <td style="background:#ff0000;color:white;text-align:center;">●</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>RGB</strong></td>
+                                    <td><code>rgb(r,g,b)</code></td>
+                                    <td><code>rgb(255,0,0)</code></td>
+                                    <td style="background:rgb(255,0,0);color:white;text-align:center;">●</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>RGBA</strong></td>
+                                    <td><code>rgba(r,g,b,a)</code></td>
+                                    <td><code>rgba(255,0,0,0.5)</code></td>
+                                    <td style="background:rgba(255,0,0,0.5);color:white;text-align:center;">●</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="info-box" style="margin-top:20px;">
+                            <i class="fas fa-link"></i>
+                            <div>
+                                <p><strong>🔗 Корисні посилання на таблиці кольорів:</strong></p>
+                                <ul style="margin-left:20px;font-size:17px;">
+                                    <li><a href="https://www.w3schools.com/colors/colors_names.asp" target="_blank" style="color:#1e5f7a;font-weight:bold;">w3schools.com — Назви кольорів</a></li>
+                                    <li><a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank" style="color:#1e5f7a;font-weight:bold;">w3schools.com — Color Picker (підбір кольорів)</a></li>
+                                    <li><a href="https://htmlcolorcodes.com/" target="_blank" style="color:#1e5f7a;font-weight:bold;">htmlcolorcodes.com — Таблиця HEX-кодів</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Властивості color та background-color -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-paint-brush"></i> Властивості color та background-color</h3>
+                        
+                        <div class="color-properties-demo">
+                            <div class="cp-demo-item">
+                                <div class="cp-demo-label">color</div>
+                                <div class="cp-demo-example" style="color:#e74c3c;font-size:24px;font-weight:bold;">
+                                    Це колір тексту
+                                </div>
+                                <div class="code-block" style="font-size:15px;">
+                                    <span class="selector">h1</span> { <br>
+                                    &nbsp;&nbsp;<span class="property">color</span>: <span class="value">#e74c3c</span>;<br>
+                                    }
+                                </div>
+                            </div>
+                            <div class="cp-demo-item">
+                                <div class="cp-demo-label">background-color</div>
+                                <div class="cp-demo-example" style="background-color:#3498db;padding:20px;border-radius:12px;color:white;font-weight:bold;font-size:24px;">
+                                    Це колір фону
+                                </div>
+                                <div class="code-block" style="font-size:15px;">
+                                    <span class="selector">div</span> { <br>
+                                    &nbsp;&nbsp;<span class="property">background-color</span>: <span class="value">#3498db</span>;<br>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="warning-box">
+                            <i class="fas fa-info-circle"></i>
+                            <p><strong>Запам'ятай!</strong></p>
+                            <ul style="font-size:18px;margin-left:20px;">
+                                <li><code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">color</code> — відповідає за <strong>колір тексту</strong></li>
+                                <li><code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">background-color</code> — відповідає за <strong>колір фону</strong> елемента</li>
+                                <li>Ці властивості можна використовувати <strong>разом</strong> або <strong>окремо</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Інтерактивна демонстрація -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-laptop"></i> Інтерактивна демонстрація</h3>
+                        <p style="font-size:18px;">Спробуй різні способи задання кольорів! Текст і фон змінюватимуться в реальному часі.</p>
+                        
+                        <div class="interactive-demo color-demo-interactive">
+                            <div class="demo-text-container" id="colorDemoContainer">
+                                <div class="demo-text-display" id="colorDemoDisplay">
+                                    <p id="colorDemoText">Цей текст змінює колір і фон!</p>
+                                </div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <!-- Колір тексту -->
+                                <div class="control-group">
+                                    <div class="control-label"><i class="fas fa-palette"></i> color (колір тексту)</div>
+                                    <div class="control-buttons">
+                                        <button class="demo-btn color-btn" data-target="colorDemoText" data-property="color" data-value="red">red</button>
+                                        <button class="demo-btn color-btn" data-target="colorDemoText" data-property="color" data-value="#e74c3c">#e74c3c</button>
+                                        <button class="demo-btn color-btn" data-target="colorDemoText" data-property="color" data-value="rgb(41, 128, 185)">rgb(41,128,185)</button>
+                                        <button class="demo-btn color-btn" data-target="colorDemoText" data-property="color" data-value="#27ae60">#27ae60</button>
+                                        <button class="demo-btn color-btn" data-target="colorDemoText" data-property="color" data-value="#8e44ad">#8e44ad</button>
+                                        <button class="demo-btn color-btn" data-target="colorDemoText" data-property="color" data-value="#f39c12">#f39c12</button>
+                                        <button class="demo-btn reset-btn color-reset" data-target="colorDemoText" data-property="color" data-value="#1e2a3e">↺ скинути</button>
+                                    </div>
+                                </div>
+
+                                <!-- Колір фону (темніші відтінки) -->
+                                <div class="control-group">
+                                    <div class="control-label"><i class="fas fa-fill-drip"></i> background-color (колір фону)</div>
+                                    <div class="control-buttons">
+                                        <button class="demo-btn bg-btn" data-target="colorDemoContainer" data-property="background-color" data-value="#c0392b" style="background:#c0392b;color:white;border-color:#c0392b;">#c0392b</button>
+                                        <button class="demo-btn bg-btn" data-target="colorDemoContainer" data-property="background-color" data-value="#16a085" style="background:#16a085;color:white;border-color:#16a085;">#16a085</button>
+                                        <button class="demo-btn bg-btn" data-target="colorDemoContainer" data-property="background-color" data-value="#d4ac0d" style="background:#d4ac0d;color:white;border-color:#d4ac0d;">#d4ac0d</button>
+                                        <button class="demo-btn bg-btn" data-target="colorDemoContainer" data-property="background-color" data-value="#8e44ad" style="background:#8e44ad;color:white;border-color:#8e44ad;">#8e44ad</button>
+                                        <button class="demo-btn bg-btn" data-target="colorDemoContainer" data-property="background-color" data-value="#2980b9" style="background:#2980b9;color:white;border-color:#2980b9;">#2980b9</button>
+                                        <button class="demo-btn bg-btn" data-target="colorDemoContainer" data-property="background-color" data-value="#e74c3c" style="background:#e74c3c;color:white;border-color:#e74c3c;">#e74c3c</button>
+                                        <button class="demo-btn bg-btn" data-target="colorDemoContainer" data-property="background-color" data-value="#27ae60" style="background:#27ae60;color:white;border-color:#27ae60;">#27ae60</button>
+                                        <button class="demo-btn bg-btn" data-target="colorDemoContainer" data-property="background-color" data-value="#2c3e50" style="background:#2c3e50;color:white;border-color:#2c3e50;">#2c3e50</button>
+                                        <button class="demo-btn bg-btn" data-target="colorDemoContainer" data-property="background-color" data-value="#d35400" style="background:#d35400;color:white;border-color:#d35400;">#d35400</button>
+                                        <button class="demo-btn reset-btn bg-reset" data-target="colorDemoContainer" data-property="background-color" data-value="white">↺ скинути</button>
+                                    </div>
+                                </div>
+
+                                <!-- Прозорість -->
+                                <div class="control-group">
+                                    <div class="control-label"><i class="fas fa-eye"></i> Прозорість (alpha) для фону</div>
+                                    <div class="control-buttons">
+                                        <button class="demo-btn alpha-btn" data-target="colorDemoContainer" data-alpha="1" data-default="true">100%</button>
+                                        <button class="demo-btn alpha-btn" data-target="colorDemoContainer" data-alpha="0.7">70%</button>
+                                        <button class="demo-btn alpha-btn" data-target="colorDemoContainer" data-alpha="0.4">40%</button>
+                                        <button class="demo-btn alpha-btn" data-target="colorDemoContainer" data-alpha="0.1">10%</button>
+                                        <button class="demo-btn reset-btn alpha-reset" data-target="colorDemoContainer" data-property="background-color" data-value="white">↺ скинути фон</button>
+                                    </div>
+                                    <div style="margin-top:8px;font-size:15px;color:#666;background:#f0f4f8;padding:8px 14px;border-radius:8px;">
+                                        💡 <strong>Як це працює:</strong> обери фон → змінюй прозорість. Якщо фону немає — клік на прозорість створить червоний фон з цією прозорістю.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Інтерактивні завдання -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-tasks"></i> Виконай завдання-приклади</h3>
+                        <p style="font-size:18px;">👆 У кожному завданні потрібно вписати CSS-стиль у текстове поле, а потім натиснути кнопку.</p>
+                        
+                        <!-- Прогрес -->
+                        <div class="task-progress">
+                            <span><i class="fas fa-check-circle" style="color:#27ae60;"></i> <strong id="tasksCompleted">0</strong> з <strong id="tasksTotal">6</strong> завдань виконано</span>
+                            <span id="progressMessage">Почни з першого завдання!</span>
+                        </div>
+
+                        <!-- Завдання 1: color (назва) - синій -->
+                        <div class="task-example" id="task1">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 1</span>
+                                <span class="task-status" id="task1Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong style="font-size:18px;">🎯 Завдання:</strong> <span style="font-size:18px;">Напиши CSS-стиль, щоб текст став <strong style="color:blue;">синім</strong>.</span>
+                                <div style="margin-top:8px;font-size:16px;color:#666;">
+                                    💡 Використай <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">color: blue;</code> або <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">color: #0000ff;</code> або <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">color: rgb(0, 0, 255);</code>
+                                </div>
+                            </div>
+                            <div class="demo-area" id="demo1">
+                                <p style="margin:0;">Цей текст має стати синім.</p>
+                            </div>
+                            <div class="code-editor-task">
+                                <div class="code-editor-task-header">
+                                    <span class="editor-label">✏️ Напиши CSS:</span>
+                                </div>
+                                <div class="code-editor-task-body">
+                                    <span class="selector">p</span> { 
+                                    <input type="text" class="task-input" id="input1" placeholder="властивість: значення;" autocomplete="off">
+                                    }
+                                </div>
+                            </div>
+                            <button class="btn-apply" data-task="1">🎨 Застосувати</button>
+                            <button class="btn-hint" data-task="1">💡 Підказка</button>
+                            <div class="task-hint-content" id="hint1" style="display:none;">
+                                <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:4px 12px;border-radius:4px;">color: blue;</code>
+                            </div>
+                            <div class="task-result" id="result1"></div>
+                        </div>
+
+                        <!-- Завдання 2: color (HEX) - червоний -->
+                        <div class="task-example" id="task2">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 2</span>
+                                <span class="task-status" id="task2Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong style="font-size:18px;">🎯 Завдання:</strong> <span style="font-size:18px;">Напиши CSS-стиль, щоб текст став <strong style="color:#e74c3c;">червоним</strong>.</span>
+                                <div style="margin-top:8px;font-size:16px;color:#666;">
+                                    💡 Використай <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">color: #e74c3c;</code> або <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">color: red;</code> або <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">color: #ff0000;</code> або <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">color: rgb(255, 0, 0);</code>
+                                </div>
+                            </div>
+                            <div class="demo-area" id="demo2">
+                                <p style="margin:0;">Цей текст має стати червоним.</p>
+                            </div>
+                            <div class="code-editor-task">
+                                <div class="code-editor-task-header">
+                                    <span class="editor-label">✏️ Напиши CSS:</span>
+                                </div>
+                                <div class="code-editor-task-body">
+                                    <span class="selector">p</span> { 
+                                    <input type="text" class="task-input" id="input2" placeholder="властивість: значення;" autocomplete="off">
+                                    }
+                                </div>
+                            </div>
+                            <button class="btn-apply" data-task="2">🎨 Застосувати</button>
+                            <button class="btn-hint" data-task="2">💡 Підказка</button>
+                            <div class="task-hint-content" id="hint2" style="display:none;">
+                                <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:4px 12px;border-radius:4px;">color: red;</code>
+                            </div>
+                            <div class="task-result" id="result2"></div>
+                        </div>
+
+                        <!-- Завдання 3: color (RGB) - зелений -->
+                        <div class="task-example" id="task3">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 3</span>
+                                <span class="task-status" id="task3Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong style="font-size:18px;">🎯 Завдання:</strong> <span style="font-size:18px;">Напиши CSS-стиль, щоб текст став <strong style="color:#27ae60;">зеленим</strong>.</span>
+                                <div style="margin-top:8px;font-size:16px;color:#666;">
+                                    💡 Використай <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">color: green;</code> або <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">color: #27ae60;</code> або <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">color: rgb(39, 174, 96);</code> або <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">color: #00ff00;</code>
+                                </div>
+                            </div>
+                            <div class="demo-area" id="demo3">
+                                <p style="margin:0;">Цей текст має стати зеленим.</p>
+                            </div>
+                            <div class="code-editor-task">
+                                <div class="code-editor-task-header">
+                                    <span class="editor-label">✏️ Напиши CSS:</span>
+                                </div>
+                                <div class="code-editor-task-body">
+                                    <span class="selector">p</span> { 
+                                    <input type="text" class="task-input" id="input3" placeholder="властивість: значення;" autocomplete="off">
+                                    }
+                                </div>
+                            </div>
+                            <button class="btn-apply" data-task="3">🎨 Застосувати</button>
+                            <button class="btn-hint" data-task="3">💡 Підказка</button>
+                            <div class="task-hint-content" id="hint3" style="display:none;">
+                                <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:4px 12px;border-radius:4px;">color: green;</code>
+                            </div>
+                            <div class="task-result" id="result3"></div>
+                        </div>
+
+                        <!-- Завдання 4: background-color - жовтий -->
+                        <div class="task-example" id="task4">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 4</span>
+                                <span class="task-status" id="task4Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong style="font-size:18px;">🎯 Завдання:</strong> <span style="font-size:18px;">Напиши CSS-стиль, щоб фон став <strong style="background:#ffd93d;padding:2px 8px;border-radius:4px;color:#333;">жовтим</strong>.</span>
+                                <div style="margin-top:8px;font-size:16px;color:#666;">
+                                    💡 Використай <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">background-color: yellow;</code> або <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">background-color: #ffd93d;</code> або <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">background-color: #ffff00;</code> або <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">background-color: rgb(255, 255, 0);</code>
+                                </div>
+                            </div>
+                            <div class="demo-area" id="demo4">
+                                <p style="margin:0;">Цей текст має жовтий фон.</p>
+                            </div>
+                            <div class="code-editor-task">
+                                <div class="code-editor-task-header">
+                                    <span class="editor-label">✏️ Напиши CSS:</span>
+                                </div>
+                                <div class="code-editor-task-body">
+                                    <span class="selector">p</span> { 
+                                    <input type="text" class="task-input" id="input4" placeholder="властивість: значення;" autocomplete="off">
+                                    }
+                                </div>
+                            </div>
+                            <button class="btn-apply" data-task="4">🎨 Застосувати</button>
+                            <button class="btn-hint" data-task="4">💡 Підказка</button>
+                            <div class="task-hint-content" id="hint4" style="display:none;">
+                                <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:4px 12px;border-radius:4px;">background-color: yellow;</code>
+                            </div>
+                            <div class="task-result" id="result4"></div>
+                        </div>
+
+                        <!-- Завдання 5: color + background-color -->
+                        <div class="task-example" id="task5">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 5</span>
+                                <span class="task-status" id="task5Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong style="font-size:18px;">🎯 Завдання:</strong> <span style="font-size:18px;">Напиши CSS-стиль, щоб текст став <strong style="color:white;">білим</strong> на <strong style="background:#2c3e50;color:white;padding:2px 8px;border-radius:4px;">темному фоні</strong>.</span>
+                                <div style="margin-top:8px;font-size:16px;color:#666;">
+                                    💡 Використай <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">color: white; background-color: #2c3e50;</code> або <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">color: #ffffff; background-color: #2c3e50;</code> або <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">color: #fff; background-color: #2c3e50;</code>
+                                </div>
+                            </div>
+                            <div class="demo-area" id="demo5">
+                                <p style="margin:0;">Цей текст має бути білим на темному фоні.</p>
+                            </div>
+                            <div class="code-editor-task">
+                                <div class="code-editor-task-header">
+                                    <span class="editor-label">✏️ Напиши CSS (через крапку з комою):</span>
+                                </div>
+                                <div class="code-editor-task-body">
+                                    <span class="selector">p</span> { 
+                                    <input type="text" class="task-input" id="input5" placeholder="властивість1: значення1; властивість2: значення2;" autocomplete="off" style="min-width:300px;">
+                                    }
+                                </div>
+                            </div>
+                            <button class="btn-apply" data-task="5">🎨 Застосувати</button>
+                            <button class="btn-hint" data-task="5">💡 Підказка</button>
+                            <div class="task-hint-content" id="hint5" style="display:none;">
+                                <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:4px 12px;border-radius:4px;">color: white; background-color: #2c3e50;</code>
+                            </div>
+                            <div class="task-result" id="result5"></div>
+                        </div>
+
+                        <!-- Завдання 6: RGBA -->
+                        <div class="task-example" id="task6">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 6</span>
+                                <span class="task-status" id="task6Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong style="font-size:18px;">🎯 Завдання:</strong> <span style="font-size:18px;">Напиши CSS-стиль, щоб фон став <strong style="background:rgba(255,0,0,0.3);padding:2px 8px;border-radius:4px;">червоним з 30% прозорістю</strong>.</span>
+                                <div style="margin-top:8px;font-size:16px;color:#666;">
+                                    💡 Використай <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">background-color: rgba(255, 0, 0, 0.3);</code> або <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">background-color: rgba(255,0,0,0.3);</code> (без пробілів)
+                                </div>
+                            </div>
+                            <div class="demo-area" id="demo6" style="background:white;">
+                                <p style="margin:0;">Цей текст має червоний напівпрозорий фон.</p>
+                            </div>
+                            <div class="code-editor-task">
+                                <div class="code-editor-task-header">
+                                    <span class="editor-label">✏️ Напиши CSS:</span>
+                                </div>
+                                <div class="code-editor-task-body">
+                                    <span class="selector">p</span> { 
+                                    <input type="text" class="task-input" id="input6" placeholder="властивість: значення;" autocomplete="off">
+                                    }
+                                </div>
+                            </div>
+                            <button class="btn-apply" data-task="6">🎨 Застосувати</button>
+                            <button class="btn-hint" data-task="6">💡 Підказка</button>
+                            <div class="task-hint-content" id="hint6" style="display:none;">
+                                <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:4px 12px;border-radius:4px;">background-color: rgba(255, 0, 0, 0.3);</code>
+                            </div>
+                            <div class="task-result" id="result6"></div>
+                        </div>
+                    </div>
+
+                    <!-- Вікторина -->
+                    <div class="quiz-area">
+                        <h3><i class="fas fa-question-circle"></i> 📋 Вікторина: перевір себе</h3>
+                        <div id="quizCssContainer"></div>
+                        <div id="quizCssFeedback" class="quiz-feedback"></div>
+                        <button id="checkCssQuizBtn" class="btn-check">✨ Перевірити</button>
+                        <button id="resetCssQuizBtn" class="btn-reset" style="background:#7f8c8d;">🔄 Скинути</button>
+                    </div>
+                </section>
+
+                <!-- ==================== ЗАНЯТТЯ 2: ПРАКТИКА ==================== -->
+                <section id="practice2">
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #27ae60, #1e8449);"><i class="fas fa-laptop-code"></i> Заняття 2/2 • Практика • 2 години</span>
+                    <h2>💻 Практикуємо роботу з кольором</h2>
+                    <p style="font-size:18px;">💪 <strong>Практичне завдання:</strong> створи сторінку з веселкою кольорів, використовуючи різні способи задання кольорів.</p>
+
+                    <!-- ГРА "ВГАДАЙ КОЛІР" -->
+                    <div class="game-block">
+                        <h3><i class="fas fa-puzzle-piece"></i> 🎮 Гра: Вгадай колір</h3>
+                        <p style="font-size:18px;margin-bottom:15px;">Подивися на колір і обери правильний спосіб його задання в CSS!</p>
+                        
+                        <div class="color-guess-game" id="colorGuessGame">
+                            <div class="guess-color-box" id="guessColorBox" style="background:#e74c3c;border-radius:16px;height:120px;margin-bottom:20px;transition:background 0.5s ease;">
+                            </div>
+                            <div class="guess-options" id="guessOptions">
+                                <!-- Кнопки будуть створені через JavaScript -->
+                            </div>
+                            <div class="guess-feedback" id="guessFeedback"></div>
+                            <div class="guess-score">
+                                <span>🏆 Очки: <strong id="guessScore">0</strong></span>
+                                <span style="margin-left:20px;">🎯 Всього: <strong id="guessTotal">0</strong></span>
+                                <button id="nextGuessBtn" class="btn-run" style="padding:8px 24px;font-size:16px;">▶ Наступний</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Покрокова інструкція -->
+                    <div class="task-card">
+                        <h3><i class="fas fa-list-ol"></i> Покрокова інструкція</h3>
+                        <div class="task-step"><div class="step-number">1</div><div>Створи HTML-сторінку з заголовком та абзацами.</div></div>
+                        <div class="task-step"><div class="step-number">2</div><div>Додай різні кольори тексту (назви, HEX, RGB).</div></div>
+                        <div class="task-step"><div class="step-number">3</div><div>Додай різні кольори фону для елементів.</div></div>
+                        <div class="task-step"><div class="step-number">4</div><div>Створи блоки з різними кольорами веселки.</div></div>
+                        <div class="task-step"><div class="step-number">5</div><div>Додай прозорість (RGBA) для деяких елементів.</div></div>
+                    </div>
+
+                    <!-- Чекліст -->
+                    <div class="task-challenge">
+                        <div class="challenge-title"><i class="fas fa-tasks"></i> 🎯 Чекліст завдання</div>
+                        <ul class="checklist" id="challengeChecklist">
+                            <li data-done="false">
+                                <input type="checkbox" id="check1">
+                                <label for="check1">Заголовок &lt;h1&gt; з кольором за назвою</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check2">
+                                <label for="check2">Абзац з кольором HEX</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check3">
+                                <label for="check3">Абзац з кольором RGB</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check4">
+                                <label for="check4">Елемент з фоном за назвою</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check5">
+                                <label for="check5">Елемент з фоном HEX</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check6">
+                                <label for="check6">Елемент з фоном RGB</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check7">
+                                <label for="check7">Елемент з прозорістю RGBA</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check8">
+                                <label for="check8">Блоки з кольорами веселки</label>
+                            </li>
+                        </ul>
+                        <button id="resetChecklistBtn" class="btn-clear" style="margin-top:10px;">
+                            <i class="fas fa-sync-alt"></i> Скинути чекліст
+                        </button>
+                    </div>
+
+                    <!-- Живий редактор -->
+                    <h3><i class="fas fa-laptop-code"></i> ✏️ Напиши свій код</h3>
+                    <p style="font-size:18px;">Створи власну сторінку з різними кольорами, використовуючи всі вивчені способи.</p>
+                    
+                    <div class="code-editor-panel">
+                        <div class="editor-header">
+                            <div class="editor-dot red"></div>
+                            <div class="editor-dot yellow"></div>
+                            <div class="editor-dot green"></div>
+                            <div class="editor-title">index.html + style.css</div>
+                        </div>
+                        <div class="editor-container">
+                            <div class="editor-textarea">
+                                <textarea id="htmlCodeEditor" placeholder="Напиши HTML+CSS код тут..."></textarea>
+                            </div>
+                            <div class="editor-preview">
+                                <div class="preview-frame">
+                                    <iframe id="previewFrame"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="editor-buttons">
+                            <button id="runCodeBtn" class="btn-run"><i class="fas fa-play"></i> Запустити</button>
+                            <button id="clearCodeBtn" class="btn-clear"><i class="fas fa-trash-alt"></i> Очистити</button>
+                            <button id="loadExampleBtn" class="btn-run" style="background:#3498db;"><i class="fas fa-eye"></i> Приклад</button>
+                        </div>
+                    </div>
+
+                    <div class="task-card" style="background: #fef5e8;">
+                        <h3><i class="fas fa-home"></i> Домашнє завдання</h3>
+                        <p style="font-size:18px;">Створи HTML-файл <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">colors.html</code> з палітрою кольорів. Використай щонайменше 10 різних кольорів різними способами.</p>
+                    </div>
+
+                    <div class="random-fact-box">
+                        <button id="randomFactBtn" class="fact-btn"><i class="fas fa-dice-d6"></i> Цікавий факт</button>
+                        <p id="randomFactDisplay" class="fact-display">Натисни, щоб дізнатися щось нове!</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Гурток Web-програмування | Робота з кольором — Теорія + Практика</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

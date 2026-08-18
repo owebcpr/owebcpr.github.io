@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Стилі для тексту | Гурток програмування</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+            <div class="nav">
+                <a href="/index.html">Головна</a>
+                <a href="#theory">Заняття 1</a>
+                <a href="#practice2">Заняття 2</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="lesson-card">
+                <!-- ==================== ЗАНЯТТЯ 1: ТЕОРІЯ + ПРАКТИКА ==================== -->
+                <section id="theory">
+                    <span class="topic-badge"><i class="fas fa-book-open"></i> Заняття 1/2 • Теорія + Практика • 2 години</span>
+                    <h2>📝 Стилі для тексту</h2>
+                    <p>🎯 <strong>Мета заняття:</strong> Вивчити основні CSS-властивості для стилізації тексту: колір, розмір, жирність, нахил, вирівнювання, трансформацію, інтервали та оформлення.</p>
+
+                    <!-- ЦІКАВА ІСТОРІЯ -->
+                    <div class="story-block">
+                        <h3><i class="fas fa-book-reader"></i> 📖 Цікава історія: Як текст став стильним</h3>
+                        <div class="story-content">
+                            <div class="story-image">
+                                <i class="fas fa-scroll"></i>
+                            </div>
+                            <div class="story-text">
+                                <p><strong>1989 рік, Європа.</strong> Молодий учений <strong>Тім Бернерс-Лі</strong> працював над створенням <strong>Всесвітньої павутини</strong> (World Wide Web). Він хотів, щоб люди могли обмінюватися документами через інтернет.</p>
+                                <p>Але була проблема — усі сторінки виглядали однаково: <span style="color:#666;">сірий текст на сірому тлі</span>. Не було ні кольорів, ні жирного шрифту, ні курсиву. Це було <span style="font-style:italic;">нудно</span> і <span style="font-weight:bold;">невиразно</span>.</p>
+                                <p><strong>1996 рік</strong> — з'явився <strong>CSS</strong> (Cascading Style Sheets). Тепер веб-сторінки могли бути <span style="color:#e74c3c;">яскравими</span>, <span style="font-weight:bold;">жирними</span>, <span style="font-style:italic;">елегантними</span> та <span style="text-decoration:underline;">оформленими</span>.</p>
+                                <p>Сьогодні CSS — це <strong>мова стилів</strong>, яка робить інтернет <span style="color:#2980b9;">красивим</span> та <span style="font-size:24px;">різноманітним</span>. Кожна сторінка, яку ти бачиш, використовує CSS-властивості для тексту!</p>
+                                <div class="story-fact">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>📌 Цікавий факт: Перший браузер, який підтримав CSS, вийшов у 1996 році — це був Internet Explorer 3.0.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Теоретична частина -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-palette"></i> Основні властивості тексту</h3>
+                        <div class="info-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>CSS надає багато властивостей для керування зовнішнім виглядом тексту. Розглянемо найважливіші з них.</p>
+                        </div>
+
+                        <!-- ІНТЕРАКТИВНА ДЕМОНСТРАЦІЯ -->
+                        <div class="interactive-demo">
+                            <h4>🎮 Інтерактивна демонстрація</h4>
+                            <p style="font-size:18px;margin-bottom:15px;">Клікай на значення CSS-властивостей, щоб побачити, як змінюється текст!</p>
+
+                            <!-- 1. Колір тексту -->
+                            <div class="demo-group">
+                                <div class="demo-group-title"><i class="fas fa-palette"></i> Колір тексту (color)</div>
+                                <div class="demo-row">
+                                    <div class="demo-options">
+                                        <button class="demo-option" data-target="color-demo" data-property="color" data-value="red">red</button>
+                                        <button class="demo-option" data-target="color-demo" data-property="color" data-value="#e74c3c">#e74c3c</button>
+                                        <button class="demo-option" data-target="color-demo" data-property="color" data-value="rgb(41, 128, 185)">rgb(41, 128, 185)</button>
+                                        <button class="demo-option" data-target="color-demo" data-property="color" data-value="#27ae60">#27ae60</button>
+                                        <button class="demo-option" data-target="color-demo" data-property="color" data-value="#8e44ad">#8e44ad</button>
+                                        <button class="demo-option" data-target="color-demo" data-property="color" data-value="#f39c12">#f39c12</button>
+                                        <button class="demo-option reset-option" data-target="color-demo" data-property="color" data-value="#1e2a3e">↺ скинути</button>
+                                    </div>
+                                    <div class="demo-preview" id="color-demo">
+                                        <p>Цей текст демонструє властивість color</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 2. Розмір шрифту -->
+                            <div class="demo-group">
+                                <div class="demo-group-title"><i class="fas fa-font"></i> Розмір шрифту (font-size)</div>
+                                <div class="demo-row">
+                                    <div class="demo-options">
+                                        <button class="demo-option" data-target="size-demo" data-property="font-size" data-value="12px">12px</button>
+                                        <button class="demo-option" data-target="size-demo" data-property="font-size" data-value="16px">16px</button>
+                                        <button class="demo-option" data-target="size-demo" data-property="font-size" data-value="20px">20px</button>
+                                        <button class="demo-option" data-target="size-demo" data-property="font-size" data-value="28px">28px</button>
+                                        <button class="demo-option" data-target="size-demo" data-property="font-size" data-value="36px">36px</button>
+                                        <button class="demo-option" data-target="size-demo" data-property="font-size" data-value="48px">48px</button>
+                                        <button class="demo-option reset-option" data-target="size-demo" data-property="font-size" data-value="18px">↺ скинути</button>
+                                    </div>
+                                    <div class="demo-preview" id="size-demo">
+                                        <p>Цей текст демонструє властивість font-size</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 3. Жирність тексту -->
+                            <div class="demo-group">
+                                <div class="demo-group-title"><i class="fas fa-bold"></i> Жирність тексту (font-weight)</div>
+                                <div class="demo-row">
+                                    <div class="demo-options">
+                                        <button class="demo-option" data-target="weight-demo" data-property="font-weight" data-value="normal">normal</button>
+                                        <button class="demo-option" data-target="weight-demo" data-property="font-weight" data-value="100">100</button>
+                                        <button class="demo-option" data-target="weight-demo" data-property="font-weight" data-value="300">300</button>
+                                        <button class="demo-option" data-target="weight-demo" data-property="font-weight" data-value="400">400</button>
+                                        <button class="demo-option" data-target="weight-demo" data-property="font-weight" data-value="600">600</button>
+                                        <button class="demo-option" data-target="weight-demo" data-property="font-weight" data-value="bold">bold</button>
+                                        <button class="demo-option" data-target="weight-demo" data-property="font-weight" data-value="900">900</button>
+                                        <button class="demo-option reset-option" data-target="weight-demo" data-property="font-weight" data-value="normal">↺ скинути</button>
+                                    </div>
+                                    <div class="demo-preview" id="weight-demo">
+                                        <p>Цей текст демонструє властивість font-weight</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 4. Нахил тексту -->
+                            <div class="demo-group">
+                                <div class="demo-group-title"><i class="fas fa-italic"></i> Нахил тексту (font-style)</div>
+                                <div class="demo-row">
+                                    <div class="demo-options">
+                                        <button class="demo-option" data-target="style-demo" data-property="font-style" data-value="normal">normal</button>
+                                        <button class="demo-option" data-target="style-demo" data-property="font-style" data-value="italic">italic</button>
+                                        <button class="demo-option" data-target="style-demo" data-property="font-style" data-value="oblique">oblique</button>
+                                        <button class="demo-option reset-option" data-target="style-demo" data-property="font-style" data-value="normal">↺ скинути</button>
+                                    </div>
+                                    <div class="demo-preview" id="style-demo">
+                                        <p>Цей текст демонструє властивість font-style</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 5. Вирівнювання тексту -->
+                            <div class="demo-group">
+                                <div class="demo-group-title"><i class="fas fa-align-left"></i> Вирівнювання тексту (text-align)</div>
+                                <div class="demo-row">
+                                    <div class="demo-options">
+                                        <button class="demo-option" data-target="align-demo" data-property="text-align" data-value="left">left</button>
+                                        <button class="demo-option" data-target="align-demo" data-property="text-align" data-value="center">center</button>
+                                        <button class="demo-option" data-target="align-demo" data-property="text-align" data-value="right">right</button>
+                                        <button class="demo-option" data-target="align-demo" data-property="text-align" data-value="justify">justify</button>
+                                        <button class="demo-option reset-option" data-target="align-demo" data-property="text-align" data-value="left">↺ скинути</button>
+                                    </div>
+                                    <div class="demo-preview" id="align-demo">
+                                        <p>Цей текст демонструє властивість text-align. Він може змінювати своє положення.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 6. Трансформація тексту -->
+                            <div class="demo-group">
+                                <div class="demo-group-title"><i class="fas fa-text-height"></i> Трансформація тексту (text-transform)</div>
+                                <div class="demo-row">
+                                    <div class="demo-options">
+                                        <button class="demo-option" data-target="transform-demo" data-property="text-transform" data-value="none">none</button>
+                                        <button class="demo-option" data-target="transform-demo" data-property="text-transform" data-value="uppercase">uppercase</button>
+                                        <button class="demo-option" data-target="transform-demo" data-property="text-transform" data-value="lowercase">lowercase</button>
+                                        <button class="demo-option" data-target="transform-demo" data-property="text-transform" data-value="capitalize">capitalize</button>
+                                        <button class="demo-option reset-option" data-target="transform-demo" data-property="text-transform" data-value="none">↺ скинути</button>
+                                    </div>
+                                    <div class="demo-preview" id="transform-demo">
+                                        <p>Цей текст демонструє властивість text-transform</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 7. Оформлення тексту -->
+                            <div class="demo-group">
+                                <div class="demo-group-title"><i class="fas fa-underline"></i> Оформлення тексту (text-decoration)</div>
+                                <div class="demo-row">
+                                    <div class="demo-options">
+                                        <button class="demo-option" data-target="decoration-demo" data-property="text-decoration" data-value="none">none</button>
+                                        <button class="demo-option" data-target="decoration-demo" data-property="text-decoration" data-value="underline">underline</button>
+                                        <button class="demo-option" data-target="decoration-demo" data-property="text-decoration" data-value="overline">overline</button>
+                                        <button class="demo-option" data-target="decoration-demo" data-property="text-decoration" data-value="line-through">line-through</button>
+                                        <button class="demo-option" data-target="decoration-demo" data-property="text-decoration" data-value="underline overline">underline overline</button>
+                                        <button class="demo-option reset-option" data-target="decoration-demo" data-property="text-decoration" data-value="none">↺ скинути</button>
+                                    </div>
+                                    <div class="demo-preview" id="decoration-demo">
+                                        <p>Цей текст демонструє властивість text-decoration</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 8. Міжрядковий інтервал -->
+                            <div class="demo-group">
+                                <div class="demo-group-title"><i class="fas fa-arrows-alt-v"></i> Міжрядковий інтервал (line-height)</div>
+                                <div class="demo-row">
+                                    <div class="demo-options">
+                                        <button class="demo-option" data-target="lineheight-demo" data-property="line-height" data-value="1">1</button>
+                                        <button class="demo-option" data-target="lineheight-demo" data-property="line-height" data-value="1.2">1.2</button>
+                                        <button class="demo-option" data-target="lineheight-demo" data-property="line-height" data-value="1.5">1.5</button>
+                                        <button class="demo-option" data-target="lineheight-demo" data-property="line-height" data-value="2">2</button>
+                                        <button class="demo-option" data-target="lineheight-demo" data-property="line-height" data-value="2.5">2.5</button>
+                                        <button class="demo-option" data-target="lineheight-demo" data-property="line-height" data-value="3">3</button>
+                                        <button class="demo-option reset-option" data-target="lineheight-demo" data-property="line-height" data-value="1.7">↺ скинути</button>
+                                    </div>
+                                    <div class="demo-preview" id="lineheight-demo">
+                                        <p>Цей текст демонструє властивість line-height.<br>Він має два рядки для наочності.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 9. Міжлітерний інтервал -->
+                            <div class="demo-group">
+                                <div class="demo-group-title"><i class="fas fa-arrows-alt-h"></i> Міжлітерний інтервал (letter-spacing)</div>
+                                <div class="demo-row">
+                                    <div class="demo-options">
+                                        <button class="demo-option" data-target="letterspacing-demo" data-property="letter-spacing" data-value="normal">normal</button>
+                                        <button class="demo-option" data-target="letterspacing-demo" data-property="letter-spacing" data-value="1px">1px</button>
+                                        <button class="demo-option" data-target="letterspacing-demo" data-property="letter-spacing" data-value="3px">3px</button>
+                                        <button class="demo-option" data-target="letterspacing-demo" data-property="letter-spacing" data-value="5px">5px</button>
+                                        <button class="demo-option" data-target="letterspacing-demo" data-property="letter-spacing" data-value="8px">8px</button>
+                                        <button class="demo-option" data-target="letterspacing-demo" data-property="letter-spacing" data-value="12px">12px</button>
+                                        <button class="demo-option reset-option" data-target="letterspacing-demo" data-property="letter-spacing" data-value="normal">↺ скинути</button>
+                                    </div>
+                                    <div class="demo-preview" id="letterspacing-demo">
+                                        <p>Цей текст демонструє властивість letter-spacing</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Таблиця властивостей -->
+                        <h4>📊 Зведена таблиця властивостей</h4>
+                        <table class="properties-table">
+                            <thead>
+                                <tr>
+                                    <th>Властивість</th>
+                                    <th>Опис</th>
+                                    <th>Приклади значень</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="prop-name">color</td>
+                                    <td>Колір тексту</td>
+                                    <td class="prop-value">red, #ff0000, rgb(255,0,0)</td>
+                                </tr>
+                                <tr>
+                                    <td class="prop-name">font-size</td>
+                                    <td>Розмір шрифту</td>
+                                    <td class="prop-value">18px, 1.2rem, 120%</td>
+                                </tr>
+                                <tr>
+                                    <td class="prop-name">font-weight</td>
+                                    <td>Жирність тексту</td>
+                                    <td class="prop-value">normal, bold, 400, 700</td>
+                                </tr>
+                                <tr>
+                                    <td class="prop-name">font-style</td>
+                                    <td>Нахил тексту</td>
+                                    <td class="prop-value">normal, italic, oblique</td>
+                                </tr>
+                                <tr>
+                                    <td class="prop-name">text-align</td>
+                                    <td>Вирівнювання</td>
+                                    <td class="prop-value">left, center, right, justify</td>
+                                </tr>
+                                <tr>
+                                    <td class="prop-name">text-transform</td>
+                                    <td>Трансформація</td>
+                                    <td class="prop-value">none, uppercase, lowercase, capitalize</td>
+                                </tr>
+                                <tr>
+                                    <td class="prop-name">text-decoration</td>
+                                    <td>Оформлення</td>
+                                    <td class="prop-value">none, underline, overline, line-through</td>
+                                </tr>
+                                <tr>
+                                    <td class="prop-name">line-height</td>
+                                    <td>Міжрядковий інтервал</td>
+                                    <td class="prop-value">1.5, 1.8, 30px</td>
+                                </tr>
+                                <tr>
+                                    <td class="prop-name">text-indent</td>
+                                    <td>Відступ першого рядка</td>
+                                    <td class="prop-value">20px, 2em</td>
+                                </tr>
+                                <tr>
+                                    <td class="prop-name">letter-spacing</td>
+                                    <td>Міжлітерний інтервал</td>
+                                    <td class="prop-value">normal, 2px, 0.1em</td>
+                                </tr>
+                                <tr>
+                                    <td class="prop-name">word-spacing</td>
+                                    <td>Міжслівний інтервал</td>
+                                    <td class="prop-value">normal, 4px, 0.2em</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="warning-box">
+                            <i class="fas fa-info-circle"></i>
+                            <p><strong>Запам'ятай!</strong> Властивості тексту пишуться за правилом: <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">властивість: значення;</code>. Крапка з комою в кінці обов'язкова!</p>
+                        </div>
+                    </div>
+
+                    <!-- Інтерактивні завдання -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-tasks"></i> Виконай завдання-приклади</h3>
+                        <p style="font-size:18px;">👆 У кожному завданні потрібно вписати CSS-стиль у текстове поле, а потім натиснути кнопку, щоб застосувати його.</p>
+                        
+                        <!-- Прогрес -->
+                        <div class="task-progress">
+                            <span><i class="fas fa-check-circle" style="color:#27ae60;"></i> <strong id="tasksCompleted">0</strong> з <strong id="tasksTotal">6</strong> завдань виконано</span>
+                            <span id="progressMessage">Почни з першого завдання!</span>
+                        </div>
+
+                        <!-- Завдання 1: Колір -->
+                        <div class="task-example" id="task1">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 1</span>
+                                <span class="task-status" id="task1Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong style="font-size:18px;">🎯 Завдання:</strong> <span style="font-size:18px;">Напиши CSS-стиль, щоб текст став <strong style="color:#e74c3c;">червоним</strong>.</span>
+                                <div style="margin-top:8px;font-size:16px;color:#666;">
+                                    💡 Підказка: використай властивість <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">color</code> зі значенням <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">#e74c3c</code> або <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">red</code>
+                                </div>
+                            </div>
+                            <div class="demo-area" id="demo1">
+                                <p style="margin:0;">Цей текст має стати червоним.</p>
+                            </div>
+                            <div class="code-editor-task">
+                                <div class="code-editor-task-header">
+                                    <span class="editor-label">✏️ Напиши CSS:</span>
+                                </div>
+                                <div class="code-editor-task-body">
+                                    <span class="selector">p</span> { 
+                                    <input type="text" class="task-input" id="input1" placeholder="властивість: значення;" autocomplete="off">
+                                    }
+                                </div>
+                            </div>
+                            <button class="btn-apply" data-task="1">🎨 Застосувати стиль</button>
+                            <button class="btn-hint" data-task="1">💡 Показати підказку</button>
+                            <div class="task-hint-content" id="hint1" style="display:none;margin-top:10px;padding:12px 18px;background:#fff8e1;border-radius:12px;border-left:4px solid #ff9f4a;">
+                                <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:4px 12px;border-radius:4px;">color: #e74c3c;</code>
+                            </div>
+                            <div class="task-result" id="result1"></div>
+                        </div>
+
+                        <!-- Завдання 2: Жирність -->
+                        <div class="task-example" id="task2">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 2</span>
+                                <span class="task-status" id="task2Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong style="font-size:18px;">🎯 Завдання:</strong> <span style="font-size:18px;">Напиши CSS-стиль, щоб текст став <strong>жирним</strong>.</span>
+                                <div style="margin-top:8px;font-size:16px;color:#666;">
+                                    💡 Підказка: використай властивість <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">font-weight</code> зі значенням <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">bold</code>
+                                </div>
+                            </div>
+                            <div class="demo-area" id="demo2">
+                                <p style="margin:0;">Цей текст має стати жирним.</p>
+                            </div>
+                            <div class="code-editor-task">
+                                <div class="code-editor-task-header">
+                                    <span class="editor-label">✏️ Напиши CSS:</span>
+                                </div>
+                                <div class="code-editor-task-body">
+                                    <span class="selector">p</span> { 
+                                    <input type="text" class="task-input" id="input2" placeholder="властивість: значення;" autocomplete="off">
+                                    }
+                                </div>
+                            </div>
+                            <button class="btn-apply" data-task="2">🎨 Застосувати стиль</button>
+                            <button class="btn-hint" data-task="2">💡 Показати підказку</button>
+                            <div class="task-hint-content" id="hint2" style="display:none;margin-top:10px;padding:12px 18px;background:#fff8e1;border-radius:12px;border-left:4px solid #ff9f4a;">
+                                <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:4px 12px;border-radius:4px;">font-weight: bold;</code>
+                            </div>
+                            <div class="task-result" id="result2"></div>
+                        </div>
+
+                        <!-- Завдання 3: Курсив -->
+                        <div class="task-example" id="task3">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 3</span>
+                                <span class="task-status" id="task3Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong style="font-size:18px;">🎯 Завдання:</strong> <span style="font-size:18px;">Напиши CSS-стиль, щоб текст став <em>курсивом</em>.</span>
+                                <div style="margin-top:8px;font-size:16px;color:#666;">
+                                    💡 Підказка: використай властивість <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">font-style</code> зі значенням <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">italic</code>
+                                </div>
+                            </div>
+                            <div class="demo-area" id="demo3">
+                                <p style="margin:0;">Цей текст має стати курсивом.</p>
+                            </div>
+                            <div class="code-editor-task">
+                                <div class="code-editor-task-header">
+                                    <span class="editor-label">✏️ Напиши CSS:</span>
+                                </div>
+                                <div class="code-editor-task-body">
+                                    <span class="selector">p</span> { 
+                                    <input type="text" class="task-input" id="input3" placeholder="властивість: значення;" autocomplete="off">
+                                    }
+                                </div>
+                            </div>
+                            <button class="btn-apply" data-task="3">🎨 Застосувати стиль</button>
+                            <button class="btn-hint" data-task="3">💡 Показати підказку</button>
+                            <div class="task-hint-content" id="hint3" style="display:none;margin-top:10px;padding:12px 18px;background:#fff8e1;border-radius:12px;border-left:4px solid #ff9f4a;">
+                                <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:4px 12px;border-radius:4px;">font-style: italic;</code>
+                            </div>
+                            <div class="task-result" id="result3"></div>
+                        </div>
+
+                        <!-- Завдання 4: Підкреслення -->
+                        <div class="task-example" id="task4">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 4</span>
+                                <span class="task-status" id="task4Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong style="font-size:18px;">🎯 Завдання:</strong> <span style="font-size:18px;">Напиши CSS-стиль, щоб текст став <u>підкресленим</u>.</span>
+                                <div style="margin-top:8px;font-size:16px;color:#666;">
+                                    💡 Підказка: використай властивість <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">text-decoration</code> зі значенням <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">underline</code>
+                                </div>
+                            </div>
+                            <div class="demo-area" id="demo4">
+                                <p style="margin:0;">Цей текст має стати підкресленим.</p>
+                            </div>
+                            <div class="code-editor-task">
+                                <div class="code-editor-task-header">
+                                    <span class="editor-label">✏️ Напиши CSS:</span>
+                                </div>
+                                <div class="code-editor-task-body">
+                                    <span class="selector">p</span> { 
+                                    <input type="text" class="task-input" id="input4" placeholder="властивість: значення;" autocomplete="off">
+                                    }
+                                </div>
+                            </div>
+                            <button class="btn-apply" data-task="4">🎨 Застосувати стиль</button>
+                            <button class="btn-hint" data-task="4">💡 Показати підказку</button>
+                            <div class="task-hint-content" id="hint4" style="display:none;margin-top:10px;padding:12px 18px;background:#fff8e1;border-radius:12px;border-left:4px solid #ff9f4a;">
+                                <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:4px 12px;border-radius:4px;">text-decoration: underline;</code>
+                            </div>
+                            <div class="task-result" id="result4"></div>
+                        </div>
+
+                        <!-- Завдання 5: Вирівнювання -->
+                        <div class="task-example" id="task5">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 5</span>
+                                <span class="task-status" id="task5Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong style="font-size:18px;">🎯 Завдання:</strong> <span style="font-size:18px;">Напиши CSS-стиль, щоб текст вирівнявся <strong>по центру</strong>.</span>
+                                <div style="margin-top:8px;font-size:16px;color:#666;">
+                                    💡 Підказка: використай властивість <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">text-align</code> зі значенням <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">center</code>
+                                </div>
+                            </div>
+                            <div class="demo-area" id="demo5">
+                                <p style="margin:0;">Цей текст має вирівнятися по центру.</p>
+                            </div>
+                            <div class="code-editor-task">
+                                <div class="code-editor-task-header">
+                                    <span class="editor-label">✏️ Напиши CSS:</span>
+                                </div>
+                                <div class="code-editor-task-body">
+                                    <span class="selector">p</span> { 
+                                    <input type="text" class="task-input" id="input5" placeholder="властивість: значення;" autocomplete="off">
+                                    }
+                                </div>
+                            </div>
+                            <button class="btn-apply" data-task="5">🎨 Застосувати стиль</button>
+                            <button class="btn-hint" data-task="5">💡 Показати підказку</button>
+                            <div class="task-hint-content" id="hint5" style="display:none;margin-top:10px;padding:12px 18px;background:#fff8e1;border-radius:12px;border-left:4px solid #ff9f4a;">
+                                <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:4px 12px;border-radius:4px;">text-align: center;</code>
+                            </div>
+                            <div class="task-result" id="result5"></div>
+                        </div>
+
+                        <!-- Завдання 6: Великі літери -->
+                        <div class="task-example" id="task6">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 6</span>
+                                <span class="task-status" id="task6Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong style="font-size:18px;">🎯 Завдання:</strong> <span style="font-size:18px;">Напиши CSS-стиль, щоб текст став <strong>ВЕЛИКИМИ ЛІТЕРАМИ</strong>.</span>
+                                <div style="margin-top:8px;font-size:16px;color:#666;">
+                                    💡 Підказка: використай властивість <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">text-transform</code> зі значенням <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">uppercase</code>
+                                </div>
+                            </div>
+                            <div class="demo-area" id="demo6">
+                                <p style="margin:0;">цей текст має стати великими літерами.</p>
+                            </div>
+                            <div class="code-editor-task">
+                                <div class="code-editor-task-header">
+                                    <span class="editor-label">✏️ Напиши CSS:</span>
+                                </div>
+                                <div class="code-editor-task-body">
+                                    <span class="selector">p</span> { 
+                                    <input type="text" class="task-input" id="input6" placeholder="властивість: значення;" autocomplete="off">
+                                    }
+                                </div>
+                            </div>
+                            <button class="btn-apply" data-task="6">🎨 Застосувати стиль</button>
+                            <button class="btn-hint" data-task="6">💡 Показати підказку</button>
+                            <div class="task-hint-content" id="hint6" style="display:none;margin-top:10px;padding:12px 18px;background:#fff8e1;border-radius:12px;border-left:4px solid #ff9f4a;">
+                                <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:4px 12px;border-radius:4px;">text-transform: uppercase;</code>
+                            </div>
+                            <div class="task-result" id="result6"></div>
+                        </div>
+                    </div>
+
+                    <!-- Вікторина -->
+                    <div class="quiz-area">
+                        <h3><i class="fas fa-question-circle"></i> 📋 Вікторина: перевір себе</h3>
+                        <div id="quizCssContainer"></div>
+                        <div id="quizCssFeedback" class="quiz-feedback"></div>
+                        <button id="checkCssQuizBtn" class="btn-check">✨ Перевірити</button>
+                        <button id="resetCssQuizBtn" class="btn-reset" style="background:#7f8c8d;">🔄 Скинути</button>
+                    </div>
+                </section>
+
+                <!-- ==================== ЗАНЯТТЯ 2: ПРАКТИКА ==================== -->
+                <section id="practice2">
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #27ae60, #1e8449);"><i class="fas fa-laptop-code"></i> Заняття 2/2 • Практика • 2 години</span>
+                    <h2>💻 Практикуємо стилі для тексту</h2>
+                    <p style="font-size:18px;">💪 <strong>Практичне завдання:</strong> створи та стилізуй сторінку з віршем або текстом пісні, використовуючи різні властивості тексту.</p>
+
+                    <!-- ГРА "ЗНАЙДИ ПАРУ" -->
+                    <div class="game-block">
+                        <h3><i class="fas fa-puzzle-piece"></i> 🎮 Гра: Знайди пару</h3>
+                        <p style="font-size:18px;margin-bottom:15px;">З'єднай CSS-властивість з її описом. Клікай на картку, щоб відкрити її, і шукай пару!</p>
+                        
+                        <div class="match-game" id="matchGame">
+                            <div class="match-grid" id="matchGrid">
+                                <!-- Картки будуть створюватися через JavaScript -->
+                            </div>
+                            <div class="match-controls">
+                                <div class="match-score">
+                                    <span>🎯 Знайдено пар: <strong id="matchScore">0</strong> з <strong id="matchTotal">0</strong></span>
+                                    <span id="matchMessage" style="margin-left:20px;font-weight:bold;"></span>
+                                </div>
+                                <button id="resetMatchBtn" class="btn-reset">🔄 Нова гра</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Покрокова інструкція -->
+                    <div class="task-card">
+                        <h3><i class="fas fa-list-ol"></i> Покрокова інструкція</h3>
+                        <div class="task-step"><div class="step-number">1</div><div>Створи базову HTML-структуру з заголовками та абзацами для вірша.</div></div>
+                        <div class="task-step"><div class="step-number">2</div><div>Застосуй різні кольори для різних частин тексту.</div></div>
+                        <div class="task-step"><div class="step-number">3</div><div>Використай жирність та курсив для виділення важливих слів.</div></div>
+                        <div class="task-step"><div class="step-number">4</div><div>Додай вирівнювання тексту (центр, лівий край).</div></div>
+                        <div class="task-step"><div class="step-number">5</div><div>Експериментуй з відступами та інтервалами.</div></div>
+                    </div>
+
+                    <!-- Чекліст -->
+                    <div class="task-challenge">
+                        <div class="challenge-title"><i class="fas fa-tasks"></i> 🎯 Чекліст завдання</div>
+                        <ul class="checklist" id="challengeChecklist">
+                            <li data-done="false">
+                                <input type="checkbox" id="check1">
+                                <label for="check1">Заголовок &lt;h1&gt; з назвою вірша</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check2">
+                                <label for="check2">Автор &lt;h2&gt; або &lt;p&gt;</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check3">
+                                <label for="check3">Текст вірша з абзаців &lt;p&gt;</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check4">
+                                <label for="check4">Різні кольори для різних частин</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check5">
+                                <label for="check5">Жирний текст &lt;strong&gt; або font-weight</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check6">
+                                <label for="check6">Курсив &lt;em&gt; або font-style</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check7">
+                                <label for="check7">Вирівнювання тексту (text-align)</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check8">
+                                <label for="check8">Міжрядковий інтервал (line-height)</label>
+                            </li>
+                        </ul>
+                        <button id="resetChecklistBtn" class="btn-clear" style="margin-top:10px;">
+                            <i class="fas fa-sync-alt"></i> Скинути чекліст
+                        </button>
+                    </div>
+
+                    <!-- Живий редактор -->
+                    <h3><i class="fas fa-laptop-code"></i> ✏️ Напиши свій код</h3>
+                    <p style="font-size:18px;">Створи власну сторінку з віршем, використовуючи різні властивості тексту.</p>
+                    
+                    <div class="code-editor-panel">
+                        <div class="editor-header">
+                            <div class="editor-dot red"></div>
+                            <div class="editor-dot yellow"></div>
+                            <div class="editor-dot green"></div>
+                            <div class="editor-title">index.html + style.css</div>
+                        </div>
+                        <div class="editor-container">
+                            <div class="editor-textarea">
+                                <textarea id="htmlCodeEditor" placeholder="Напиши HTML+CSS код тут..."></textarea>
+                            </div>
+                            <div class="editor-preview">
+                                <div class="preview-frame">
+                                    <iframe id="previewFrame"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="editor-buttons">
+                            <button id="runCodeBtn" class="btn-run"><i class="fas fa-play"></i> Запустити</button>
+                            <button id="clearCodeBtn" class="btn-clear"><i class="fas fa-trash-alt"></i> Очистити</button>
+                            <button id="loadExampleBtn" class="btn-run" style="background:#3498db;"><i class="fas fa-eye"></i> Приклад</button>
+                        </div>
+                    </div>
+
+                    <div class="task-card" style="background: #fef5e8;">
+                        <h3><i class="fas fa-home"></i> Домашнє завдання</h3>
+                        <p style="font-size:18px;">Створи HTML-файл <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">text_styles.html</code> з улюбленим віршем. Використай щонайменше 8 різних властивостей для стилізації тексту.</p>
+                    </div>
+
+                    <div class="random-fact-box">
+                        <button id="randomFactBtn" class="fact-btn"><i class="fas fa-dice-d6"></i> Цікавий факт</button>
+                        <p id="randomFactDisplay" class="fact-display">Натисни, щоб дізнатися щось нове!</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Гурток Web-програмування | Стилі для тексту — Теорія + Практика</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
