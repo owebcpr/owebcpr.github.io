@@ -1,0 +1,745 @@
+/* ===== Загальні скидання та базові стилі ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f7fc;
+    color: #1e2a3e;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== Хедер та навігація ===== */
+.header {
+    background: linear-gradient(135deg, #0b2b3b, #1a4a6f);
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.nav a:hover {
+    color: #ffd966;
+}
+
+/* ===== Основний контент ===== */
+.main-content {
+    flex: 1;
+    padding: 40px 0;
+}
+
+.lesson-card {
+    background: white;
+    border-radius: 28px;
+    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: #1e5f7a;
+    margin-bottom: 20px;
+    border-left: 6px solid #ff9f4a;
+    padding-left: 20px;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin: 30px 0 15px 0;
+    color: #2c3e4e;
+}
+
+h4 {
+    font-size: 1.4rem;
+    margin: 20px 0 10px 0;
+    color: #1e5f7a;
+}
+
+h5 {
+    font-size: 1.2rem;
+    margin: 8px 0;
+    color: #1e5f7a;
+}
+
+p {
+    font-size: 18px;
+}
+
+.topic-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff9f4a, #ff6b2c);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* ===== Цікава історія ===== */
+.story-block {
+    background: linear-gradient(135deg, #fef9f0, #fdf0e0);
+    border-radius: 24px;
+    padding: 30px;
+    margin: 25px 0;
+    border: 2px solid #ffd6a5;
+    position: relative;
+    overflow: hidden;
+}
+
+.story-block::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 159, 74, 0.08);
+    border-radius: 50%;
+}
+
+.story-block h3 {
+    color: #e67e22;
+    margin-top: 0;
+}
+
+.story-content {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.story-image {
+    font-size: 4rem;
+    color: #e67e22;
+    flex-shrink: 0;
+    padding-top: 10px;
+}
+
+.story-text p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    color: #2c3e4e;
+}
+
+.story-text ul {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.story-fact {
+    background: white;
+    border-radius: 12px;
+    padding: 14px 20px;
+    margin-top: 15px;
+    border-left: 4px solid #f39c12;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-size: 16px;
+    color: #1e5f7a;
+}
+
+.story-fact i {
+    color: #f39c12;
+    font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+    .story-content {
+        flex-direction: column;
+    }
+    .story-image {
+        text-align: center;
+        font-size: 3rem;
+    }
+    .nav a {
+        margin-left: 10px;
+        font-size: 14px;
+    }
+}
+
+/* ===== Теоретичні блоки ===== */
+.info-box {
+    background: #e8f4fd;
+    border-radius: 16px;
+    padding: 18px 24px;
+    margin: 15px 0;
+    border-left: 5px solid #1e5f7a;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.info-box i {
+    font-size: 1.8rem;
+    color: #ff9f4a;
+}
+
+.info-box p {
+    font-size: 18px;
+}
+
+.warning-box {
+    background: #fef5e8;
+    border-radius: 16px;
+    padding: 18px 24px;
+    margin: 15px 0;
+    border-left: 5px solid #e67e22;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.warning-box i {
+    font-size: 1.8rem;
+    color: #e67e22;
+}
+
+.warning-box p {
+    font-size: 18px;
+}
+
+/* ===== Методи вербувальників ===== */
+.methods-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+@media (max-width: 992px) {
+    .methods-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .methods-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.method-card {
+    background: #f8f9fa;
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid #e8e8e8;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.method-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.method-icon {
+    font-size: 2rem;
+    color: #1e5f7a;
+    flex-shrink: 0;
+}
+
+.method-content h5 {
+    margin-top: 0;
+    color: #1e5f7a;
+}
+
+.method-content p {
+    font-size: 16px;
+    color: #2c3e4e;
+    margin: 5px 0 0 0;
+}
+
+/* ===== Приклади ===== */
+.examples-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 15px 0;
+}
+
+@media (max-width: 768px) {
+    .examples-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.example-card {
+    background: #f8f9fa;
+    border-radius: 16px;
+    padding: 20px;
+    border-left: 4px solid #e74c3c;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.example-number {
+    background: #e74c3c;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.example-text p {
+    font-size: 16px;
+    margin: 0 0 5px 0;
+}
+
+.example-lesson {
+    background: #fef9f0;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-top: 8px !important;
+    font-size: 15px !important;
+    border-left: 3px solid #f39c12;
+}
+
+/* ===== Правила безпеки ===== */
+.rules-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+@media (max-width: 992px) {
+    .rules-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .rules-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.rule-card {
+    background: #f0f7fb;
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid #d6eaf8;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    transition: transform 0.2s ease;
+}
+
+.rule-card:hover {
+    transform: translateY(-3px);
+}
+
+.rule-number {
+    background: #1e5f7a;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.rule-content h5 {
+    margin: 0 0 5px 0;
+    color: #1e5f7a;
+}
+
+.rule-content p {
+    font-size: 15px;
+    margin: 0;
+    color: #2c3e4e;
+}
+
+/* ===== Контакти допомоги ===== */
+.help-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 15px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 16px;
+    justify-content: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.contact-item i {
+    font-size: 1.4rem;
+}
+
+/* ===== Гра "Безпечно чи небезпечно" ===== */
+.drag-game {
+    background: #f8f9fa;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 20px 0;
+    border: 2px solid #e0e0e0;
+}
+
+.drag-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+    padding: 15px;
+    background: white;
+    border-radius: 12px;
+    border: 2px dashed #ccc;
+    min-height: 80px;
+}
+
+.drag-item {
+    padding: 10px 18px;
+    background: #1e5f7a;
+    color: white;
+    border-radius: 30px;
+    cursor: grab;
+    font-weight: 500;
+    user-select: none;
+    transition: 0.2s;
+    font-size: 15px;
+}
+
+.drag-item:hover {
+    transform: scale(1.03);
+    background: #2a7a9a;
+}
+
+.drag-item:active {
+    cursor: grabbing;
+}
+
+.drag-item.dragging {
+    opacity: 0.5;
+}
+
+.drag-item.placed {
+    opacity: 0.4;
+    cursor: default;
+    pointer-events: none;
+}
+
+.drop-zones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+@media (max-width: 600px) {
+    .drop-zones {
+        grid-template-columns: 1fr;
+    }
+}
+
+.drop-zone {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    border: 2px dashed #ccc;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.drop-zone.drag-over {
+    border-color: #1e5f7a;
+    background: #e8f4fd;
+}
+
+.drop-zone.correct {
+    border-color: #27ae60;
+    background: #d4edda;
+}
+
+.drop-zone.wrong {
+    border-color: #e74c3c;
+    background: #f8d7da;
+}
+
+.drop-zone .drop-label {
+    font-weight: bold;
+    color: #1e5f7a;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.drop-zone .drop-placeholder {
+    color: #999;
+    font-size: 16px;
+}
+
+.drop-zone .dropped-item {
+    padding: 8px 16px;
+    margin: 4px 0;
+    background: #27ae60;
+    color: white;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+}
+
+.drop-zone .dropped-item.wrong-item {
+    background: #e74c3c;
+}
+
+.drag-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+#dragScore {
+    font-weight: bold;
+    color: #1e5f7a;
+    font-size: 18px;
+}
+
+.drag-feedback {
+    margin-top: 15px;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 17px;
+    display: none;
+}
+
+.drag-feedback.success {
+    display: block;
+    background: #d4edda;
+    color: #155724;
+}
+
+.drag-feedback.error {
+    display: block;
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.drag-feedback.complete {
+    display: block;
+    background: #d4edda;
+    color: #155724;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* ===== Кнопки ===== */
+button {
+    background: #1e5f7a;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+.btn-check {
+    background: #27ae60;
+    margin-right: 10px;
+}
+
+.btn-check:hover {
+    background: #219a52;
+}
+
+.btn-reset {
+    background: #7f8c8d;
+}
+
+.btn-reset:hover {
+    background: #6c7a7a;
+}
+
+/* ===== Вікторина ===== */
+.quiz-area {
+    background: #fef5e8;
+    border-radius: 28px;
+    padding: 25px;
+    margin: 20px 0;
+    border: 1px solid #ffe0b5;
+}
+
+.quiz-question {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    padding: 14px 20px;
+    background: #fff8f0;
+    border-radius: 12px;
+    border-left: 4px solid #ff9f4a;
+}
+
+.quiz-option {
+    display: block;
+    background: white;
+    margin: 10px 0;
+    padding: 14px 20px;
+    border-radius: 60px;
+    border: 2px solid #e0e0e0;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 18px;
+}
+
+.quiz-option:hover {
+    background: #ffecce;
+    border-color: #ff9f4a;
+}
+
+.quiz-option.selected {
+    background: #ffd966;
+    border-color: #e67e22;
+    font-weight: bold;
+}
+
+.quiz-feedback {
+    margin-top: 20px;
+    font-weight: bold;
+    padding: 18px 24px;
+    border-radius: 30px;
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    font-size: 18px;
+}
+
+/* ===== Випадковий факт ===== */
+.random-fact-box {
+    background: #2c3e4e;
+    border-radius: 28px;
+    padding: 25px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.fact-btn {
+    background: #ff9f4a;
+    color: #1e2a3e;
+    padding: 14px 32px;
+    font-size: 1.2rem;
+}
+
+.fact-display {
+    background: white;
+    border-radius: 30px;
+    padding: 20px;
+    margin-top: 20px;
+    color: #1e5f7a;
+    font-weight: 500;
+    min-height: 80px;
+    font-size: 18px;
+}
+
+/* ===== Футер ===== */
+.footer {
+    background: #0b2b3b;
+    color: #ccc;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* ===== Адаптивність ===== */
+@media (max-width: 768px) {
+    .lesson-card {
+        padding: 25px;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    body {
+        font-size: 16px;
+    }
+    p {
+        font-size: 16px;
+    }
+    .contact-item {
+        font-size: 15px;
+        padding: 8px 16px;
+    }
+}
