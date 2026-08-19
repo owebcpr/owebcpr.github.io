@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Web-шрифти | Гурток програмування</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <h1>Комунальний заклад - центр позашкільної роботи Путивльської міської ради</h1>
+            <div class="nav">
+                <a href="/index.html">Головна</a>
+                <a href="#theory">Заняття 1</a>
+                <a href="#practice2">Заняття 2</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="lesson-card">
+                <!-- ==================== ЗАНЯТТЯ 1: ТЕОРІЯ + ПРАКТИКА ==================== -->
+                <section id="theory">
+                    <span class="topic-badge"><i class="fas fa-book-open"></i> Заняття 1/2 • Теорія + Практика • 2 години</span>
+                    <h2>🔤 Web-шрифти</h2>
+                    <p>🎯 <strong>Мета заняття:</strong> Вивчити, що таке веб-шрифти, як їх підключати до сторінки та використовувати різні способи підключення.</p>
+
+                    <!-- ЦІКАВА ІСТОРІЯ -->
+                    <div class="story-block">
+                        <h3><i class="fas fa-book-reader"></i> 📖 Цікава історія: Як з'явилися веб-шрифти</h3>
+                        <div class="story-content">
+                            <div class="story-image">
+                                <i class="fas fa-font"></i>
+                            </div>
+                            <div class="story-text">
+                                <p><strong>1990-ті роки.</strong> Веб-сторінки використовували лише <span style="font-family:serif;">шрифти</span>, встановлені на комп'ютері користувача. Якщо шрифту не було — браузер показував <span style="font-family:serif;">стандартний</span>.</p>
+                                <p>У <strong>1996 році</strong> CSS представив властивість <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">font-family</code>, але дизайнери все одно залежали від того, які шрифти встановлені на комп'ютері користувача.</p>
+                                <p>Справжній прорив стався у <strong>2009 році</strong>, коли з'явився <strong>@font-face</strong> — CSS-правило, яке дозволяло завантажувати шрифти з сервера. Тепер будь-який шрифт міг бути використаний на будь-якій сторінці!</p>
+                                <p>Сьогодні існують <strong>тисячі безкоштовних шрифтів</strong> на <span style="font-weight:bold;color:#1e5f7a;">Google Fonts</span> та інших платформах. Веб-шрифти зробили інтернет <span style="font-family:'Georgia',serif;font-style:italic;">елегантним</span>, <span style="font-family:'Impact',sans-serif;font-weight:bold;">яскравим</span> та <span style="font-family:'Courier New',monospace;">різноманітним</span>.</p>
+                                <div class="story-fact">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>📌 <strong>Цікавий факт:</strong> Назва <span style="font-family:'Georgia',serif;font-style:italic;">'Georgia'</span> була створена спеціально для екранів моніторів у 1996 році.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== ТЕОРЕТИЧНА ЧАСТИНА ===== -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-palette"></i> Що таке веб-шрифти?</h3>
+                        <div class="info-box">
+                            <i class="fas fa-info-circle"></i>
+                            <p><strong>Веб-шрифт</strong> — це шрифт, який завантажується з інтернету і відображається на сторінці незалежно від того, чи є цей шрифт на комп'ютері користувача. Це дозволяє використовувати <strong>будь-які</strong> шрифти на вашому сайті.</p>
+                        </div>
+
+                        <h4>📂 Формати шрифтів</h4>
+                        <table class="properties-table">
+                            <thead>
+                                <tr>
+                                    <th>Формат</th>
+                                    <th>Розширення</th>
+                                    <th>Підтримка браузерами</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>TTF</strong></td>
+                                    <td>.ttf</td>
+                                    <td>Всі сучасні браузери</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>OTF</strong></td>
+                                    <td>.otf</td>
+                                    <td>Всі сучасні браузери</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>WOFF</strong></td>
+                                    <td>.woff</td>
+                                    <td>Всі сучасні браузери (стиснутий)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>WOFF2</strong></td>
+                                    <td>.woff2</td>
+                                    <td>Всі сучасні браузери (краще стиснутий)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>EOT</strong></td>
+                                    <td>.eot</td>
+                                    <td>Тільки Internet Explorer (застарілий)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>SVG</strong></td>
+                                    <td>.svg</td>
+                                    <td>Застарілий, не використовується</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="info-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>💡 <strong>Сучасні браузери:</strong> WOFF та WOFF2 — це найкращий вибір, оскільки вони <strong>стиснуті</strong> і швидко завантажуються.</p>
+                        </div>
+
+                        <h4>🏷️ Сімейства шрифтів (font-family)</h4>
+                        <div class="code-block">
+                            <span class="selector">p</span> { <br>
+                            &nbsp;&nbsp;<span class="property">font-family</span>: <span class="value">"Arial", "Helvetica", sans-serif</span>;<br>
+                            &nbsp;&nbsp;<span class="comment">/* Браузер шукає Arial, якщо ні — Helvetica, якщо ні — будь-який sans-serif */</span><br>
+                            }
+                        </div>
+                        <div class="warning-box">
+                            <i class="fas fa-info-circle"></i>
+                            <p><strong>Важливо:</strong> Якщо назва шрифту складається з кількох слів — беріть її в <strong>лапки</strong>. Наприклад: <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">"Times New Roman"</code></p>
+                        </div>
+                    </div>
+
+                    <!-- ===== СПОСОБИ ПІДКЛЮЧЕННЯ ===== -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-plug"></i> Способи підключення веб-шрифтів</h3>
+
+                        <!-- 1. СТАНДАРТНІ ШРИФТИ -->
+                        <div class="font-method">
+                            <h4>🔤 1. Стандартні шрифти браузера</h4>
+                            <p>Це шрифти, які вже встановлені на комп'ютері користувача. Вони <strong>не потребують завантаження</strong> і працюють одразу.</p>
+                            <div class="code-block">
+                                <span class="comment">/* Найпоширеніші стандартні шрифти */</span><br>
+                                <span class="selector">.serif-text</span> { <span class="property">font-family</span>: <span class="value">Georgia, "Times New Roman", serif</span>; }<br>
+                                <span class="selector">.sans-text</span> { <span class="property">font-family</span>: <span class="value">Arial, "Helvetica", sans-serif</span>; }<br>
+                                <span class="selector">.mono-text</span> { <span class="property">font-family</span>: <span class="value">"Courier New", monospace</span>; }
+                            </div>
+                            <div class="font-demo">
+                                <div class="font-sample" style="font-family:Georgia, 'Times New Roman', serif;font-size:20px;">
+                                    <span class="font-label">Serif</span>
+                                    <span>Це шрифт із засічками</span>
+                                </div>
+                                <div class="font-sample" style="font-family:Arial, Helvetica, sans-serif;font-size:20px;">
+                                    <span class="font-label">Sans-serif</span>
+                                    <span>Це шрифт без засічок</span>
+                                </div>
+                                <div class="font-sample" style="font-family:'Courier New', monospace;font-size:20px;">
+                                    <span class="font-label">Monospace</span>
+                                    <span>Це моноширинний шрифт</span>
+                                </div>
+                            </div>
+                            <div class="info-box">
+                                <i class="fas fa-check-circle" style="color:#27ae60;"></i>
+                                <p><strong>Плюси:</strong> Не потребують завантаження, працюють миттєво.</p>
+                            </div>
+                            <div class="warning-box">
+                                <i class="fas fa-exclamation-triangle" style="color:#e67e22;"></i>
+                                <p><strong>Мінуси:</strong> Обмежений вибір, вигляд залежить від комп'ютера користувача.</p>
+                            </div>
+                        </div>
+
+                        <!-- 2. @FONT-FACE -->
+                        <div class="font-method">
+                            <h4>📦 2. Підключення через <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">@font-face</code></h4>
+                            <p>Це CSS-правило, яке дозволяє завантажити шрифт з <strong>вашого сервера</strong> або з <strong>зовнішнього джерела</strong>.</p>
+                            <div class="code-block">
+                                <span class="selector">@font-face</span> {<br>
+                                &nbsp;&nbsp;<span class="property">font-family</span>: <span class="value">"MyFont"</span>;<br>
+                                &nbsp;&nbsp;<span class="property">src</span>: <span class="value">url("fonts/MyFont.woff2") format("woff2")</span>,<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="value">url("fonts/MyFont.woff") format("woff")</span>;<br>
+                                &nbsp;&nbsp;<span class="property">font-weight</span>: <span class="value">normal</span>;<br>
+                                &nbsp;&nbsp;<span class="property">font-style</span>: <span class="value">normal</span>;<br>
+                                }<br><br>
+                                <span class="selector">p</span> { <span class="property">font-family</span>: <span class="value">"MyFont", sans-serif</span>; }
+                            </div>
+                            <div class="steps-container">
+                                <div class="step-item">
+                                    <div class="step-num">1</div>
+                                    <div class="step-desc">Завантаж шрифт у форматі <strong>WOFF2</strong> (або WOFF).</div>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-num">2</div>
+                                    <div class="step-desc">Помісти файл у папку <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">fonts/</code> на сервері.</div>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-num">3</div>
+                                    <div class="step-desc">Додай <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">@font-face</code> у CSS.</div>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-num">4</div>
+                                    <div class="step-desc">Використовуй шрифт через <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">font-family</code>.</div>
+                                </div>
+                            </div>
+                            <div class="info-box">
+                                <i class="fas fa-check-circle" style="color:#27ae60;"></i>
+                                <p><strong>Плюси:</strong> Повний контроль над шрифтами, працює без інтернету (після завантаження).</p>
+                            </div>
+                            <div class="warning-box">
+                                <i class="fas fa-exclamation-triangle" style="color:#e67e22;"></i>
+                                <p><strong>Мінуси:</strong> Потрібен хостинг для файлів, можуть бути проблеми з ліцензіями.</p>
+                            </div>
+                        </div>
+
+                        <!-- 3. GOOGLE FONTS -->
+                        <div class="font-method">
+                            <h4>🌐 3. Підключення через Google Fonts</h4>
+                            <p><strong>Google Fonts</strong> — це безкоштовна бібліотека з <strong>понад 1500 шрифтів</strong>. Підключення займає <strong>2 хвилини</strong>!</p>
+                            
+                            <h5 style="margin-top:15px;">Спосіб А: Через HTML-посилання (у &lt;head&gt;)</h5>
+                            <div class="code-block">
+                                <span class="comment">&lt;!-- У &lt;head&gt; додай це посилання --&gt;</span><br>
+                                <span class="tag">&lt;link</span> <span class="property">href</span>=<span class="value">"https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap"</span> <span class="property">rel</span>=<span class="value">"stylesheet"</span><span class="tag">&gt;</span>
+                            </div>
+                            
+                            <h5 style="margin-top:15px;">Спосіб Б: Через @import у CSS</h5>
+                            <div class="code-block">
+                                <span class="comment">/* На початку CSS-файлу */</span><br>
+                                <span class="selector">@import</span> <span class="value">url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap');</span><br><br>
+                                <span class="selector">p</span> { <span class="property">font-family</span>: <span class="value">'Roboto', sans-serif</span>; }
+                            </div>
+
+                            <div class="steps-container">
+                                <div class="step-item">
+                                    <div class="step-num">1</div>
+                                    <div class="step-desc">Зайди на <a href="https://fonts.google.com" target="_blank" style="color:#1e5f7a;font-weight:bold;">fonts.google.com</a></div>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-num">2</div>
+                                    <div class="step-desc">Обери шрифт (наприклад, <strong>Roboto</strong>)</div>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-num">3</div>
+                                    <div class="step-desc">Натисни <strong>Select</strong> та обери потрібні стилі (жирність)</div>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-num">4</div>
+                                    <div class="step-desc">Скопіюй посилання або код імпорту</div>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-num">5</div>
+                                    <div class="step-desc">Додай у свій HTML або CSS</div>
+                                </div>
+                            </div>
+
+                            <div class="font-demo">
+                                <div class="font-sample" style="font-family:'Roboto',sans-serif;font-size:20px;background:#e8f4fd;padding:15px;border-radius:12px;text-align:center;">
+                                    <span class="font-label">Google Fonts</span>
+                                    <span style="font-weight:400;">Roboto —</span>
+                                    <span style="font-weight:700;">це сучасний шрифт</span>
+                                </div>
+                            </div>
+
+                            <div class="info-box">
+                                <i class="fas fa-check-circle" style="color:#27ae60;"></i>
+                                <p><strong>Плюси:</strong> Безкоштовно, величезний вибір, швидке завантаження.</p>
+                            </div>
+                            <div class="warning-box">
+                                <i class="fas fa-exclamation-triangle" style="color:#e67e22;"></i>
+                                <p><strong>Мінуси:</strong> Потрібен інтернет для завантаження, можливі невеликі затримки.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== ІНТЕРАКТИВНА ДЕМОНСТРАЦІЯ ===== -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-laptop"></i> Інтерактивна демонстрація шрифтів</h3>
+                        <p style="font-size:18px;">Клікай на шрифт, щоб змінити вигляд тексту! Спробуй різні шрифти та стилі.</p>
+                        
+                        <div class="interactive-demo font-demo-interactive">
+                            <div class="demo-text-container" id="fontDemoContainer">
+                                <div class="demo-text-display" id="fontDemoDisplay">
+                                    <p id="fontDemoText">Цей текст змінює шрифт! Спробуй різні варіанти.</p>
+                                </div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <!-- Шрифти Google -->
+                                <div class="control-group">
+                                    <div class="control-label"><i class="fab fa-google"></i> Google Fonts</div>
+                                    <div class="control-buttons">
+                                        <button class="demo-btn font-btn" data-target="fontDemoText" data-property="font-family" data-value="'Roboto', sans-serif">Roboto</button>
+                                        <button class="demo-btn font-btn" data-target="fontDemoText" data-property="font-family" data-value="'Open Sans', sans-serif">Open Sans</button>
+                                        <button class="demo-btn font-btn" data-target="fontDemoText" data-property="font-family" data-value="'Lora', serif">Lora</button>
+                                        <button class="demo-btn font-btn" data-target="fontDemoText" data-property="font-family" data-value="'Montserrat', sans-serif">Montserrat</button>
+                                        <button class="demo-btn font-btn" data-target="fontDemoText" data-property="font-family" data-value="'Playfair Display', serif">Playfair Display</button>
+                                        <button class="demo-btn font-btn" data-target="fontDemoText" data-property="font-family" data-value="'Dancing Script', cursive">Dancing Script</button>
+                                    </div>
+                                </div>
+
+                                <!-- Стандартні шрифти -->
+                                <div class="control-group">
+                                    <div class="control-label"><i class="fas fa-desktop"></i> Стандартні шрифти</div>
+                                    <div class="control-buttons">
+                                        <button class="demo-btn font-btn" data-target="fontDemoText" data-property="font-family" data-value="Arial, Helvetica, sans-serif">Arial</button>
+                                        <button class="demo-btn font-btn" data-target="fontDemoText" data-property="font-family" data-value="Georgia, serif">Georgia</button>
+                                        <button class="demo-btn font-btn" data-target="fontDemoText" data-property="font-family" data-value="'Times New Roman', serif">Times New Roman</button>
+                                        <button class="demo-btn font-btn" data-target="fontDemoText" data-property="font-family" data-value="'Courier New', monospace">Courier New</button>
+                                        <button class="demo-btn font-btn" data-target="fontDemoText" data-property="font-family" data-value="Impact, sans-serif">Impact</button>
+                                        <button class="demo-btn font-btn" data-target="fontDemoText" data-property="font-family" data-value="'Comic Sans MS', cursive">Comic Sans</button>
+                                        <button class="demo-btn reset-btn" data-target="fontDemoText" data-property="font-family" data-value="'Segoe UI', sans-serif">↺ Скинути</button>
+                                    </div>
+                                </div>
+
+                                <!-- Додаткові стилі -->
+                                <div class="control-group">
+                                    <div class="control-label"><i class="fas fa-magic"></i> Додаткові стилі</div>
+                                    <div class="control-buttons">
+                                        <!-- Жирність - синій -->
+                                        <!-- <span class="group-label" style="color:#2980b9;font-size:13px;font-weight:bold;margin-right:4px;">Жирність:</span> -->
+                                        <button class="demo-btn style-btn weight-btn" data-target="fontDemoText" data-property="font-weight" data-value="normal" data-group="weight">Normal</button>
+                                        <button class="demo-btn style-btn weight-btn" data-target="fontDemoText" data-property="font-weight" data-value="bold" data-group="weight">Bold</button>
+                                        
+                                        <!-- Нахил - зелений -->
+                                        <!-- <span class="group-label" style="color:#27ae60;font-size:13px;font-weight:bold;margin-right:4px;margin-left:8px;">Нахил:</span> -->
+                                        <button class="demo-btn style-btn style-group-btn" data-target="fontDemoText" data-property="font-style" data-value="normal" data-group="style">Normal</button>
+                                        <button class="demo-btn style-btn style-group-btn" data-target="fontDemoText" data-property="font-style" data-value="italic" data-group="style">Italic</button>
+                                        
+                                        <!-- Трансформація - помаранчевий -->
+                                        <!-- <span class="group-label" style="color:#e67e22;font-size:13px;font-weight:bold;margin-right:4px;margin-left:8px;">Регістр:</span> -->
+                                        <button class="demo-btn style-btn transform-btn" data-target="fontDemoText" data-property="text-transform" data-value="uppercase" data-group="transform">UPPERCASE</button>
+                                        <button class="demo-btn style-btn transform-btn" data-target="fontDemoText" data-property="text-transform" data-value="lowercase" data-group="transform">lowercase</button>
+                                        <button class="demo-btn style-btn transform-btn" data-target="fontDemoText" data-property="text-transform" data-value="capitalize" data-group="transform">Capitalize</button>
+                                        
+                                        <!-- Скидання -->
+                                        <button class="demo-btn reset-btn style-reset" data-target="fontDemoText" style="margin-left:8px;">↺ Скинути всі</button>
+                                    </div>
+                                    <div style="margin-top:8px;font-size:14px;color:#888;">
+                                        💡 Клікай на кнопки — вони перемикаються в межах кожної групи
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== ПРАКТИЧНІ ЗАВДАННЯ ===== -->
+                    <div class="theory-block">
+                        <h3><i class="fas fa-tasks"></i> Виконай завдання-приклади</h3>
+                        <p style="font-size:18px;">👆 У кожному завданні потрібно вписати CSS-стиль у текстове поле, а потім натиснути кнопку.</p>
+                        
+                        <div class="task-progress">
+                            <span><i class="fas fa-check-circle" style="color:#27ae60;"></i> <strong id="tasksCompleted">0</strong> з <strong id="tasksTotal">6</strong> завдань виконано</span>
+                            <span id="progressMessage">Почни з першого завдання!</span>
+                        </div>
+
+                        <!-- Завдання 1: font-family (стандартний) -->
+                        <div class="task-example" id="task1">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 1</span>
+                                <span class="task-status" id="task1Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong style="font-size:18px;">🎯 Завдання:</strong> <span style="font-size:18px;">Напиши CSS-стиль, щоб текст використовував шрифт <strong style="font-family:Georgia,serif;">Georgia</strong>.</span>
+                                <div style="margin-top:8px;font-size:16px;color:#666;">
+                                    💡 Використай <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">font-family: Georgia, serif;</code>
+                                </div>
+                            </div>
+                            <div class="demo-area" id="demo1">
+                                <p style="margin:0;">Цей текст має використовувати шрифт Georgia.</p>
+                            </div>
+                            <div class="code-editor-task">
+                                <div class="code-editor-task-header">
+                                    <span class="editor-label">✏️ Напиши CSS:</span>
+                                </div>
+                                <div class="code-editor-task-body">
+                                    <span class="selector">p</span> { 
+                                    <input type="text" class="task-input" id="input1" placeholder="властивість: значення;" autocomplete="off">
+                                    }
+                                </div>
+                            </div>
+                            <button class="btn-apply" data-task="1">🎨 Застосувати</button>
+                            <button class="btn-hint" data-task="1">💡 Підказка</button>
+                            <div class="task-hint-content" id="hint1" style="display:none;">
+                                <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:4px 12px;border-radius:4px;">font-family: Georgia, serif;</code>
+                            </div>
+                            <div class="task-result" id="result1"></div>
+                        </div>
+
+                        <!-- Завдання 2: font-family (Google Fonts) -->
+                        <div class="task-example" id="task2">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 2</span>
+                                <span class="task-status" id="task2Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong style="font-size:18px;">🎯 Завдання:</strong> <span style="font-size:18px;">Напиши CSS-стиль, щоб текст використовував шрифт <strong style="font-family:'Roboto',sans-serif;">Roboto</strong> (Google Font).</span>
+                                <div style="margin-top:8px;font-size:16px;color:#666;">
+                                    💡 Використай <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">font-family: 'Roboto', sans-serif;</code>
+                                </div>
+                            </div>
+                            <div class="demo-area" id="demo2">
+                                <p style="margin:0;">Цей текст має використовувати шрифт Roboto.</p>
+                            </div>
+                            <div class="code-editor-task">
+                                <div class="code-editor-task-header">
+                                    <span class="editor-label">✏️ Напиши CSS:</span>
+                                </div>
+                                <div class="code-editor-task-body">
+                                    <span class="selector">p</span> { 
+                                    <input type="text" class="task-input" id="input2" placeholder="властивість: значення;" autocomplete="off">
+                                    }
+                                </div>
+                            </div>
+                            <button class="btn-apply" data-task="2">🎨 Застосувати</button>
+                            <button class="btn-hint" data-task="2">💡 Підказка</button>
+                            <div class="task-hint-content" id="hint2" style="display:none;">
+                                <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:4px 12px;border-radius:4px;">font-family: 'Roboto', sans-serif;</code>
+                            </div>
+                            <div class="task-result" id="result2"></div>
+                        </div>
+
+                        <!-- Завдання 3: font-weight -->
+                        <div class="task-example" id="task3">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 3</span>
+                                <span class="task-status" id="task3Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong style="font-size:18px;">🎯 Завдання:</strong> <span style="font-size:18px;">Напиши CSS-стиль, щоб текст став <strong>жирним</strong> (font-weight: bold).</span>
+                                <div style="margin-top:8px;font-size:16px;color:#666;">
+                                    💡 Використай <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">font-weight: bold;</code> або <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">font-weight: 700;</code>
+                                </div>
+                            </div>
+                            <div class="demo-area" id="demo3">
+                                <p style="margin:0;">Цей текст має стати жирним.</p>
+                            </div>
+                            <div class="code-editor-task">
+                                <div class="code-editor-task-header">
+                                    <span class="editor-label">✏️ Напиши CSS:</span>
+                                </div>
+                                <div class="code-editor-task-body">
+                                    <span class="selector">p</span> { 
+                                    <input type="text" class="task-input" id="input3" placeholder="властивість: значення;" autocomplete="off">
+                                    }
+                                </div>
+                            </div>
+                            <button class="btn-apply" data-task="3">🎨 Застосувати</button>
+                            <button class="btn-hint" data-task="3">💡 Підказка</button>
+                            <div class="task-hint-content" id="hint3" style="display:none;">
+                                <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:4px 12px;border-radius:4px;">font-weight: bold;</code>
+                            </div>
+                            <div class="task-result" id="result3"></div>
+                        </div>
+
+                        <!-- Завдання 4: font-style -->
+                        <div class="task-example" id="task4">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 4</span>
+                                <span class="task-status" id="task4Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong style="font-size:18px;">🎯 Завдання:</strong> <span style="font-size:18px;">Напиши CSS-стиль, щоб текст став <em>курсивом</em> (font-style: italic).</span>
+                                <div style="margin-top:8px;font-size:16px;color:#666;">
+                                    💡 Використай <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">font-style: italic;</code>
+                                </div>
+                            </div>
+                            <div class="demo-area" id="demo4">
+                                <p style="margin:0;">Цей текст має стати курсивом.</p>
+                            </div>
+                            <div class="code-editor-task">
+                                <div class="code-editor-task-header">
+                                    <span class="editor-label">✏️ Напиши CSS:</span>
+                                </div>
+                                <div class="code-editor-task-body">
+                                    <span class="selector">p</span> { 
+                                    <input type="text" class="task-input" id="input4" placeholder="властивість: значення;" autocomplete="off">
+                                    }
+                                </div>
+                            </div>
+                            <button class="btn-apply" data-task="4">🎨 Застосувати</button>
+                            <button class="btn-hint" data-task="4">💡 Підказка</button>
+                            <div class="task-hint-content" id="hint4" style="display:none;">
+                                <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:4px 12px;border-radius:4px;">font-style: italic;</code>
+                            </div>
+                            <div class="task-result" id="result4"></div>
+                        </div>
+
+                        <!-- Завдання 5: комбінація -->
+                        <div class="task-example" id="task5">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 5</span>
+                                <span class="task-status" id="task5Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong style="font-size:18px;">🎯 Завдання:</strong> <span style="font-size:18px;">Напиши CSS-стиль, щоб текст був <strong style="font-family:'Georgia',serif;">Georgia</strong>, <strong>жирний</strong> та <em>курсивний</em>.</span>
+                                <div style="margin-top:8px;font-size:16px;color:#666;">
+                                    💡 Використай <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">font-family: Georgia, serif; font-weight: bold; font-style: italic;</code>
+                                </div>
+                            </div>
+                            <div class="demo-area" id="demo5">
+                                <p style="margin:0;">Цей текст має бути Georgia, жирним і курсивним.</p>
+                            </div>
+                            <div class="code-editor-task">
+                                <div class="code-editor-task-header">
+                                    <span class="editor-label">✏️ Напиши CSS (через крапку з комою):</span>
+                                </div>
+                                <div class="code-editor-task-body">
+                                    <span class="selector">p</span> { 
+                                    <input type="text" class="task-input" id="input5" placeholder="властивість1: значення1; властивість2: значення2; ..." autocomplete="off" style="min-width:350px;">
+                                    }
+                                </div>
+                            </div>
+                            <button class="btn-apply" data-task="5">🎨 Застосувати</button>
+                            <button class="btn-hint" data-task="5">💡 Підказка</button>
+                            <div class="task-hint-content" id="hint5" style="display:none;">
+                                <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:4px 12px;border-radius:4px;">font-family: Georgia, serif; font-weight: bold; font-style: italic;</code>
+                            </div>
+                            <div class="task-result" id="result5"></div>
+                        </div>
+
+                        <!-- Завдання 6: @font-face -->
+                        <div class="task-example" id="task6">
+                            <div class="task-header">
+                                <span class="task-number">Завдання 6</span>
+                                <span class="task-status" id="task6Status">⏳ Очікує</span>
+                            </div>
+                            <div class="task-description">
+                                <strong style="font-size:18px;">🎯 Завдання:</strong> <span style="font-size:18px;">Напиши CSS-правило <strong>@font-face</strong> для підключення шрифту з папки <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">fonts/</code>.</span>
+                                <div style="margin-top:8px;font-size:16px;color:#666;">
+                                    💡 Назва шрифту — <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">"MyCustomFont"</code>, файли — <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">MyFont.woff2</code> та <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">MyFont.woff</code>
+                                </div>
+                            </div>
+                            <div class="demo-area" id="demo6">
+                                <p style="margin:0;">@font-face — це CSS-правило для підключення шрифтів.</p>
+                            </div>
+                            
+                            <!-- Редактор для @font-face -->
+                            <div class="code-editor-task" style="background:#1e2a3e;border-radius:12px;overflow:hidden;margin:12px 0;">
+                                <div class="code-editor-task-header">
+                                    <span class="editor-label">✏️ Напиши @font-face (заповни всі поля):</span>
+                                </div>
+                                <div class="code-editor-task-body" style="flex-direction:column;align-items:stretch;gap:6px;padding:16px;">
+                                    <div><span class="selector">@font-face</span> {</div>
+                                    <div style="padding-left:20px;display:flex;align-items:center;flex-wrap:wrap;gap:6px;">
+                                        <span class="property">font-family</span>: 
+                                        <input type="text" class="task-input" id="input6a" placeholder="'MyCustomFont'" autocomplete="off" style="min-width:180px;flex:none;width:auto;">
+                                        <span style="color:#6a9955;font-size:14px;">(назва в лапках)</span>
+                                    </div>
+                                    <div style="padding-left:20px;display:flex;align-items:center;flex-wrap:wrap;gap:6px;">
+                                        <span class="property">src</span>: 
+                                        <input type="text" class="task-input" id="input6b" placeholder="url('fonts/MyFont.woff2') format('woff2')" autocomplete="off" style="min-width:300px;flex:none;width:auto;">
+                                        <span style="color:#6a9955;font-size:14px;">(шлях до файлу)</span>
+                                    </div>
+                                    <div style="padding-left:20px;display:flex;align-items:center;flex-wrap:wrap;gap:6px;">
+                                        <span class="property">font-weight</span>: 
+                                        <input type="text" class="task-input" id="input6c" placeholder="normal" autocomplete="off" style="min-width:120px;flex:none;width:auto;">
+                                        <span style="color:#6a9955;font-size:14px;">(normal або 400)</span>
+                                    </div>
+                                    <div style="padding-left:20px;display:flex;align-items:center;flex-wrap:wrap;gap:6px;">
+                                        <span class="property">font-style</span>: 
+                                        <input type="text" class="task-input" id="input6d" placeholder="normal" autocomplete="off" style="min-width:120px;flex:none;width:auto;">
+                                        <span style="color:#6a9955;font-size:14px;">(normal або italic)</span>
+                                    </div>
+                                    <div>}</div>
+                                </div>
+                            </div>
+                            
+                            <button class="btn-apply" data-task="6">✅ Перевірити</button>
+                            <button class="btn-hint" data-task="6">💡 Підказка</button>
+                            <div class="task-hint-content" id="hint6" style="display:none;">
+                                <code style="font-size:16px;background:#1e2a3e;color:#ffd966;padding:4px 12px;border-radius:4px;display:block;white-space:pre-wrap;line-height:1.8;">
+                        @font-face {
+                            font-family: 'MyCustomFont';
+                            src: url('fonts/MyFont.woff2') format('woff2'),
+                                url('fonts/MyFont.woff') format('woff');
+                            font-weight: normal;
+                            font-style: normal;
+                        }
+                                </code>
+                            </div>
+                            <div class="task-result" id="result6"></div>
+                        </div>
+                    </div>          
+                    <!-- ===== ВІКТОРИНА ===== -->
+                    <div class="quiz-area">
+                        <h3><i class="fas fa-question-circle"></i> 📋 Вікторина: перевір себе</h3>
+                        <div id="quizFontsContainer"></div>
+                        <div id="quizFontsFeedback" class="quiz-feedback"></div>
+                        <button id="checkFontsQuizBtn" class="btn-check">✨ Перевірити</button>
+                        <button id="resetFontsQuizBtn" class="btn-reset" style="background:#7f8c8d;">🔄 Скинути</button>
+                    </div>
+                </section>
+
+                <!-- ==================== ЗАНЯТТЯ 2: ПРАКТИКА ==================== -->
+                <section id="practice2">
+                    <span class="topic-badge" style="background: linear-gradient(135deg, #27ae60, #1e8449);"><i class="fas fa-laptop-code"></i> Заняття 2/2 • Практика • 2 години</span>
+                    <h2>💻 Практикуємо роботу з веб-шрифтами</h2>
+                    <p style="font-size:18px;">💪 <strong>Практичне завдання:</strong> створи сторінку з різними шрифтами, використовуючи всі вивчені способи підключення.</p>
+
+                    <!-- ===== ГРА "ВГАДАЙ ШРИФТ" ===== -->
+                    <div class="game-block">
+                        <h3><i class="fas fa-puzzle-piece"></i> 🎮 Гра: Вгадай шрифт</h3>
+                        <p style="font-size:18px;margin-bottom:15px;">Подивися на текст і обери правильну назву шрифту!</p>
+                        
+                        <div class="font-guess-game" id="fontGuessGame">
+                            <div class="guess-font-box" id="guessFontBox" style="font-family:'Roboto',sans-serif;font-size:32px;padding:30px;background:#f8f9fa;border-radius:16px;text-align:center;margin-bottom:20px;transition:all 0.3s ease;">
+                                Це приклад шрифту
+                            </div>
+                            <div class="guess-options" id="guessFontOptions">
+                                <!-- Кнопки будуть створені через JavaScript -->
+                            </div>
+                            <div class="guess-feedback" id="guessFontFeedback"></div>
+                            <div class="guess-score">
+                                <span>🏆 Очки: <strong id="guessFontScore">0</strong></span>
+                                <span style="margin-left:20px;">🎯 Всього: <strong id="guessFontTotal">0</strong></span>
+                                <button id="nextFontGuessBtn" class="btn-run" style="padding:8px 24px;font-size:16px;">▶ Наступний</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== ПОКРОКОВА ІНСТРУКЦІЯ ===== -->
+                    <div class="task-card">
+                        <h3><i class="fas fa-list-ol"></i> Покрокова інструкція</h3>
+                        <div class="task-step"><div class="step-number">1</div><div>Створи HTML-сторінку з заголовками та абзацами.</div></div>
+                        <div class="task-step"><div class="step-number">2</div><div>Підключи 3 різних шрифти з <strong>Google Fonts</strong>.</div></div>
+                        <div class="task-step"><div class="step-number">3</div><div>Додай стандартні шрифти (Arial, Georgia, Courier New).</div></div>
+                        <div class="task-step"><div class="step-number">4</div><div>Створи блоки з різними шрифтами для порівняння.</div></div>
+                        <div class="task-step"><div class="step-number">5</div><div>Додай різні стилі (жирність, курсив, розмір).</div></div>
+                    </div>
+
+                    <!-- ===== ЧЕКЛІСТ ===== -->
+                    <div class="task-challenge">
+                        <div class="challenge-title"><i class="fas fa-tasks"></i> 🎯 Чекліст завдання</div>
+                        <ul class="checklist" id="challengeChecklist">
+                            <li data-done="false">
+                                <input type="checkbox" id="check1">
+                                <label for="check1">Підключення Google Fonts через &lt;link&gt;</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check2">
+                                <label for="check2">Підключення Google Fonts через @import</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check3">
+                                <label for="check3">Використання стандартних шрифтів</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check4">
+                                <label for="check4">Різні сімейства шрифтів (serif, sans-serif, monospace)</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check5">
+                                <label for="check5">Різні розміри шрифтів (font-size)</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check6">
+                                <label for="check6">Різна жирність (font-weight)</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check7">
+                                <label for="check7">Курсив (font-style: italic)</label>
+                            </li>
+                            <li data-done="false">
+                                <input type="checkbox" id="check8">
+                                <label for="check8">Порівняння різних шрифтів на сторінці</label>
+                            </li>
+                        </ul>
+                        <button id="resetChecklistBtn" class="btn-clear" style="margin-top:10px;">
+                            <i class="fas fa-sync-alt"></i> Скинути чекліст
+                        </button>
+                    </div>
+
+                    <!-- ===== ЖИВИЙ РЕДАКТОР ===== -->
+                    <h3><i class="fas fa-laptop-code"></i> ✏️ Напиши свій код</h3>
+                    <p style="font-size:18px;">Створи власну сторінку з різними шрифтами, використовуючи всі вивчені способи.</p>
+                    
+                    <div class="code-editor-panel">
+                        <div class="editor-header">
+                            <div class="editor-dot red"></div>
+                            <div class="editor-dot yellow"></div>
+                            <div class="editor-dot green"></div>
+                            <div class="editor-title">index.html + style.css</div>
+                        </div>
+                        <div class="editor-container">
+                            <div class="editor-textarea">
+                                <textarea id="htmlCodeEditor" placeholder="Напиши HTML+CSS код тут..."></textarea>
+                            </div>
+                            <div class="editor-preview">
+                                <div class="preview-frame">
+                                    <iframe id="previewFrame"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="editor-buttons">
+                            <button id="runCodeBtn" class="btn-run"><i class="fas fa-play"></i> Запустити</button>
+                            <button id="clearCodeBtn" class="btn-clear"><i class="fas fa-trash-alt"></i> Очистити</button>
+                            <button id="loadExampleBtn" class="btn-run" style="background:#3498db;"><i class="fas fa-eye"></i> Приклад</button>
+                        </div>
+                    </div>
+
+                    <div class="task-card" style="background: #fef5e8;">
+                        <h3><i class="fas fa-home"></i> Домашнє завдання</h3>
+                        <p style="font-size:18px;">Створи HTML-файл <code style="font-size:18px;background:#1e2a3e;color:#ffd966;padding:2px 8px;border-radius:4px;">fonts.html</code> з різними шрифтами. Використай щонайменше 5 різних шрифтів (Google Fonts + стандартні) та різні стилі.</p>
+                    </div>
+
+                    <div class="random-fact-box">
+                        <button id="randomFactBtn" class="fact-btn"><i class="fas fa-dice-d6"></i> Цікавий факт</button>
+                        <p id="randomFactDisplay" class="fact-display">Натисни, щоб дізнатися щось нове!</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Гурток Web-програмування | Web-шрифти — Теорія + Практика</p>
+        </div>
+    </footer>
+
+    <!-- Підключаємо Google Fonts для демонстрації -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&family=Lora:wght@400;700&family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="script.js"></script>
+</body>
+</html>
